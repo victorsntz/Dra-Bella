@@ -51,28 +51,26 @@
         "src": "assets/illustrations/food-noise/02-estomago-cheio.svg",
         "prompt": "estômago cheio à esquerda, cérebro à direita ainda emitindo ondas de sinal",
         "inset": {
-          "top": 70
+          "top": 30
         },
         "labels": [
           {
-            "x": 12,
-            "y": 6,
+            "sx": 200,
+            "sy": 34,
             "text": "Estômago cheio",
             "tone": "cream",
             "sub": [
               "A fome física passou"
-            ],
-            "edge": "top"
+            ]
           },
           {
-            "x": 58,
-            "y": 6,
+            "sx": 560,
+            "sy": 22,
             "text": "Sinal de fome ligado",
             "tone": "coffee",
             "sub": [
               "O barulho continua"
-            ],
-            "edge": "top"
+            ]
           }
         ]
       }
@@ -208,32 +206,30 @@
         "src": "assets/illustrations/food-noise/05-ciclo-dopamina.svg",
         "prompt": "cérebro à esquerda e, à direita, um círculo de moléculas girando: o ciclo da recompensa",
         "inset": {
-          "top": 70
+          "top": 20
         },
         "labels": [
           {
-            "x": 14,
-            "y": 6,
+            "sx": 230,
+            "sy": 40,
             "text": "Dopamina",
             "tone": "coffee",
             "sub": [
               "Pico a cada doce"
-            ],
-            "edge": "top"
+            ]
           },
           {
-            "x": 76,
-            "y": 6,
+            "sx": 680,
+            "sy": 42,
             "text": "Recompensa",
             "tone": "cream",
             "sub": [
               "O cérebro aprende"
-            ],
-            "edge": "top"
+            ]
           },
           {
-            "x": 76,
-            "y": 56,
+            "sx": 680,
+            "sy": 202,
             "text": "Pede de novo",
             "tone": "outline"
           }

@@ -89,7 +89,9 @@ function figure(fig) {
         case "bottom": pos = `left:${l.x}%;bottom:${(ins.bottom || 0) - GAP}px;transform:translate(-50%,100%)`; break;
         case "left":   pos = `top:${l.y}%;left:${(ins.left || 0) - GAP}px;transform:translate(-100%,-50%)`; align = align || "right"; break;
         case "right":  pos = `top:${l.y}%;right:${(ins.right || 0) - GAP}px;transform:translate(100%,-50%)`; align = align || "left"; break;
-        default:       pos = `left:${l.x}%;top:${l.y}%`;
+        default:
+          // sx/sy: coordenadas em pixels da própria cena (figura de largura cheia desenha em escala 1:1)
+          pos = l.sx != null ? `left:${(ins.left || 0) + l.sx}px;top:${(ins.top || 0) + l.sy}px` : `left:${l.x}%;top:${l.y}%`;
       }
       return `<div class="label tone-${l.tone || "cream"}${align === "right" ? " align-right" : ""}" style="${pos}"><span class="pill">${rich(l.text)}</span>${sub}</div>`;
     })

@@ -65,6 +65,10 @@ em volta. Nada de desenho cruza faixa e nada de etiqueta cruza o miolo.
 composta numa caixa mais alta (888 × 520) com as peças maiores, pra preencher o espaço. O slide
 nunca fica com um terço vazio. Com três parágrafos, a caixa é 888 × 380.
 
+**Etiqueta sobre a peça (padrão):** a pílula vai em cima da peça que nomeia, na borda superior
+dela, como na capa e na referência. Em figura de largura cheia, posicione em pixels da própria
+cena (`sx`, `sy` no JSON). Faixas e colunas só quando a ilustração não tem onde receber a pílula.
+
 **Etiquetas coladas:** uma etiqueta que vive numa faixa é ancorada na borda do miolo (`edge: top`,
 `bottom`, `left` ou `right` no JSON) e invade a ilustração em 14 px, sempre por cima dela, nunca solta no meio da faixa.
 A peça que ela nomeia encosta nessa mesma borda, do lado de dentro.
