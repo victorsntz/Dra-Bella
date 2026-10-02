@@ -51,20 +51,26 @@ function header(brand) {
   return `<div class="hdr">${esc(brand.handle)}</div>`;
 }
 
-// Regra da assinatura: logo completo no primeiro e no último slide; só o monograma nos do meio.
-// Sem os arquivos (brand/logo.svg e brand/monogram.svg), cai no lockup tipográfico.
+// Regra da assinatura: logo completo no primeiro e no último slide; só o monograma nos do meio,
+// no canto inferior esquerdo, alinhado com a margem do texto. A seta fica à direita, no traço
+// das ilustrações (linha fina, ponta aberta, uma molécula na cauda).
+// Sem os arquivos (brand/logo.png e brand/monogram.png), cai no lockup tipográfico.
+const ARROW = `<svg class="arrow" viewBox="0 0 120 16" width="120" height="16" aria-hidden="true">
+  <circle cx="5" cy="8" r="4" fill="currentColor" opacity="0.55"/>
+  <path d="M12,8 H112 M103,2 L112,8 L103,14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>`;
 function footer(brand, slide, i, total) {
-  const arrow = slide.type === "closing" || slide.type === "cta" ? "" : `<div class="arrow"></div>`;
+  const arrow = slide.type === "closing" || slide.type === "cta" ? "" : `<div class="ftr-right">${ARROW}</div>`;
   const edge = i === 0 || i === total - 1;
   const dark = slide.theme === "coffee";
   const logo = dark && brand.logoLight ? brand.logoLight : brand.logo;
   const mono = dark && brand.monogramLight ? brand.monogramLight : brand.monogram;
-  if (edge && logo) return `<div class="ftr">${arrow}<img class="logo" src="${relFromBuild(logo)}" alt="${esc(brand.name)}"></div>`;
-  if (!edge && mono) return `<div class="ftr">${arrow}<img class="monogram" src="${relFromBuild(mono)}" alt="${esc(brand.name)}"></div>`;
-  return `<div class="ftr">${arrow}<div class="lockup"><div>
-    <div class="name">${esc(brand.name)}</div>
-    <div class="sub"><span></span>${esc(brand.tagline)}<span></span></div>
-  </div></div></div>`;
+  let mark;
+  if (edge && logo) mark = `<img class="logo" src="${relFromBuild(logo)}" alt="${esc(brand.name)}">`;
+  else if (!edge && mono) mark = `<img class="monogram" src="${relFromBuild(mono)}" alt="${esc(brand.name)}">`;
+  else mark = `<div class="lockup"><div><div class="name">${esc(brand.name)}</div>
+    <div class="sub"><span></span>${esc(brand.tagline)}<span></span></div></div></div>`;
+  return `<div class="ftr-left">${mark}</div>${arrow}`;
 }
 
 function figure(fig) {

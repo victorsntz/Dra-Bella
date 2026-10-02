@@ -145,7 +145,7 @@ ${slides}
   <section id="comp">
     <div class="eyebrow">04 · Componentes</div>
     <h2>Peças repetidas</h2>
-    <p class="sub">O que aparece em todo slide, sempre no mesmo lugar: @ no canto superior esquerdo, seta e assinatura no canto inferior direito. As pílulas marcam moléculas e órgãos em cima da ilustração.</p>
+    <p class="sub">O que aparece em todo slide, sempre no mesmo lugar: @ no canto superior esquerdo, logo ou monograma no canto inferior esquerdo alinhado com o texto, seta no canto inferior direito. As pílulas marcam moléculas e órgãos em cima da ilustração.</p>
     <div class="bench">
       <span class="lbl">Pílulas · cinco tons</span>
       <div class="label tone-cream"><span class="pill">Irisina</span><div class="sub">↑ Gordura ativa</div></div>
@@ -159,9 +159,9 @@ ${slides}
       <ul class="bullets"><li><span class="k">Irisina</span><span class="arr">→</span>gordura branca vira gordura que gasta energia.</li><li><span class="k">IL-6</span><span class="arr">→</span>o sinal mestre: acalma a inflamação, libera combustível.</li></ul>
     </div>
     <div class="bench" style="margin-top:16px; justify-content: space-between">
-      <span class="lbl">Cabeçalho e assinatura</span>
+      <span class="lbl">Cabeçalho, logo (capa e último), monograma (meio) e seta</span>
       <div class="hdr">@bellabrasao</div>
-      <div class="ftr"><div class="arrow"></div><div class="lockup"><div><div class="name">Dra. Izabella Brasão</div><div class="sub"><span></span>Obesidade &amp; Emagrecimento<span></span></div></div></div></div>
+      <div class="ftr-left"><img class="logo" src="brand/logo.png" alt="Dra. Izabella Brasão"></div><div class="ftr-left"><img class="monogram" src="brand/monogram.png" alt="IB"></div><div class="ftr-right"><svg class="arrow" viewBox="0 0 120 16" width="120" height="16"><circle cx="5" cy="8" r="4" fill="currentColor" opacity="0.55"/><path d="M12,8 H112 M103,2 L112,8 L103,14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
     </div>
   </section>
 
@@ -170,7 +170,7 @@ ${slides}
     <h2>Regras de espaço</h2>
     <div class="rules">
       <div class="rule"><h4>Formato 1080 × 1350</h4><p>Retrato 4:5 do Instagram. Tudo é desenhado nesse tamanho e exportado em JPG qualidade 92.</p></div>
-      <div class="rule"><h4>Margens 96 px</h4><p>Laterais de 96. Topo de 108 (o @ fica a 96 do topo). Embaixo, 236 reservados pra seta e assinatura nunca encostarem no conteúdo.</p></div>
+      <div class="rule"><h4>Margens 96 px</h4><p>Laterais de 96. Topo de 108 (o @ fica a 96 do topo). Logo e seta a 120 da base. Embaixo, 268 reservados pro conteúdo nunca encostar na assinatura.</p></div>
       <div class="rule"><h4>Capa</h4><p>Título ocupa a metade esquerda, até 510 px de largura. Ilustração ocupa a direita, 520 × 900, e pode invadir um pouco o título, como na referência.</p></div>
       <div class="rule"><h4>Diagrama</h4><p>Figura com altura fixa de 390 px. Até quatro bullets de uma linha. Nota opcional no canto inferior esquerdo, ao lado da assinatura.</p></div>
       <div class="rule"><h4>Texto com figura</h4><p>Até três parágrafos curtos. A figura ocupa o que sobrar, nunca menos que 340 px.</p></div>
