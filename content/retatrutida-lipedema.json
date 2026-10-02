@@ -11,30 +11,36 @@
         "prompt": "pernas femininas com lipedema, de frente, e um adipócito fibrótico ampliado ao lado",
         "labels": [
           {
-            "x": 42,
-            "y": 10,
+            "x": 60,
+            "y": 9,
             "text": "Lipedema",
             "tone": "coffee"
           },
           {
-            "x": 84,
-            "y": 58,
-            "text": "Gordura fibrosada",
+            "x": 86,
+            "y": 42,
+            "text": "Dor e inchaço",
+            "tone": "sand",
+            "align": "right"
+          },
+          {
+            "x": 74,
+            "y": 81,
+            "text": "Gordura para no tornozelo",
             "tone": "cream",
             "align": "right"
           },
           {
             "x": 28,
-            "y": 46,
-            "text": "Dor e inchaço",
-            "tone": "sand"
+            "y": 76,
+            "text": "Gordura fibrosada",
+            "tone": "cream"
           },
           {
-            "x": 84,
-            "y": 78,
+            "x": 28,
+            "y": 92,
             "text": "Inflamação",
-            "tone": "sand",
-            "align": "right"
+            "tone": "sand"
           }
         ]
       },
@@ -272,8 +278,8 @@
             ]
           },
           {
-            "sx": 660,
-            "sy": 40,
+            "sx": 690,
+            "sy": 30,
             "text": "Gordura das pernas",
             "tone": "coffee",
             "sub": [

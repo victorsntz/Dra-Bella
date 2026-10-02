@@ -333,19 +333,16 @@ export function fatClusterFibrotic({ s = 1 } = {}) {
   return `<g transform="scale(${s})">${fatCluster({ s: 1 })}${strands}${macro}</g>`;
 }
 
-// ---------- pernas com lipedema (vista de frente, caixa 260x420, origem no canto superior esquerdo) ----------
+// ---------- pernas (vista de frente, da cintura aos pés, caixa 300x540, origem no canto superior esquerdo) ----------
+// lipedema: quadril e coxas largas, panturrilha em coluna e o "degrau" no tornozelo (a gordura para antes do pé).
 export function legs({ lipedema = true } = {}) {
-  const w = lipedema ? 1 : 0.78;
   const d = lipedema
-    ? "M70,0 L190,0 C206,40 222,80 232,130 C244,190 236,250 226,300 C220,330 216,360 214,380 C214,400 206,412 196,412 C184,412 178,402 176,384 C174,350 178,310 178,270 C178,230 170,190 162,160 C156,180 150,230 150,270 C150,310 154,350 152,384 C150,402 144,412 132,412 C122,412 114,400 114,380 C112,360 108,330 102,300 C92,250 84,190 96,130 C106,80 122,40 70,0 Z".replace("122,40 70,0", "60,40 70,0")
-    : "M80,0 L180,0 C190,40 196,80 198,130 C200,190 194,250 190,300 C188,330 186,360 186,380 C186,400 180,412 172,412 C162,412 158,402 158,384 C158,350 160,310 158,270 C156,230 150,190 146,160 C142,190 136,230 134,270 C132,310 134,350 134,384 C134,402 130,412 120,412 C112,412 106,400 106,380 C106,360 104,330 102,300 C98,250 92,190 94,130 C96,80 102,40 80,0 Z";
-  const feet = `<path d="M110,384 C100,392 92,404 96,414 L140,414 C146,402 148,392 150,384 Z" fill="${C.skinLo}"/><path d="M176,384 C178,392 180,402 186,414 L230,414 C234,404 226,392 216,384 Z" fill="${C.skinLo}"/>`;
-  const marks = lipedema ? `<path d="M100,230 C110,250 112,280 108,300" fill="none" stroke="${C.skinLo}" stroke-width="2" stroke-linecap="round" opacity="0.9"/><path d="M226,230 C218,250 216,280 220,300" fill="none" stroke="${C.skinLo}" stroke-width="2" stroke-linecap="round" opacity="0.9"/>` : "";
-  // quadril e cintura por cima, pra figura terminar na cintura e não parecer cortada
-  const hips = lipedema
-    ? `<path d="M84,-90 C86,-40 56,0 50,60 C48,90 60,110 80,116 L220,116 C240,110 252,90 250,60 C244,0 214,-40 216,-90 Z" fill="url(#gSkin)" stroke="${C.skinLo}" stroke-opacity="0.8" stroke-width="1.5"/>`
-    : `<path d="M92,-90 C92,-40 76,0 74,60 C74,90 84,110 100,116 L200,116 C216,110 226,90 226,60 C224,0 208,-40 208,-90 Z" fill="url(#gSkin)" stroke="${C.skinLo}" stroke-opacity="0.8" stroke-width="1.5"/>`;
-  return `<g>${feet}<path d="${d}" fill="url(#gSkin)" stroke="${C.skinLo}" stroke-opacity="0.8" stroke-width="1.5"/>${hips}${marks}</g>`;
+    ? "M95,0 C70,40 44,80 42,130 C40,190 50,250 56,300 C60,340 60,380 62,420 C63,445 62,468 94,478 L84,500 C80,520 96,534 120,532 L140,532 C148,532 150,520 146,506 L142,482 C134,440 130,400 128,360 C126,330 128,290 134,250 C140,220 148,200 150,190 C152,200 160,220 166,250 C172,290 174,330 172,360 C170,400 166,440 158,482 L154,506 C150,520 152,532 160,532 L180,532 C204,534 220,520 216,500 L206,478 C238,468 237,445 238,420 C240,380 240,340 244,300 C250,250 260,190 258,130 C256,80 230,40 205,0 Z"
+    : "M105,0 C88,40 66,80 66,130 C66,190 76,250 82,300 C86,340 88,380 90,420 C92,450 94,468 100,478 L90,500 C86,520 100,534 122,532 L140,532 C148,532 150,520 146,506 L142,482 C136,440 132,400 130,360 C128,330 130,290 136,250 C142,220 148,200 150,190 C152,200 158,220 164,250 C170,290 172,330 170,360 C168,400 164,440 158,482 L154,506 C150,520 152,532 160,532 L178,532 C200,534 214,520 210,500 L200,478 C206,468 208,450 210,420 C212,380 214,340 218,300 C224,250 234,190 234,130 C234,80 212,40 195,0 Z";
+  const knees = `<path d="M92,336 C104,330 118,332 126,340" fill="none" stroke="${C.skinLo}" stroke-width="2" stroke-linecap="round" opacity="0.9"/><path d="M174,340 C182,332 196,330 208,336" fill="none" stroke="${C.skinLo}" stroke-width="2" stroke-linecap="round" opacity="0.9"/>`;
+  const cuff = lipedema ? `<path d="M66,470 C76,478 88,480 94,478" fill="none" stroke="${C.skinLo}" stroke-width="2" stroke-linecap="round"/><path d="M234,470 C224,478 212,480 206,478" fill="none" stroke="${C.skinLo}" stroke-width="2" stroke-linecap="round"/>` : "";
+  const toes = `<path d="M84,500 L146,506 M154,506 L216,500" fill="none" stroke="${C.skinLo}" stroke-opacity="0.6" stroke-width="1.5"/>`;
+  return `<g><path d="${d}" fill="url(#gSkin)" stroke="${C.skinLo}" stroke-opacity="0.8" stroke-width="1.5" stroke-linejoin="round"/>${knees}${cuff}${toes}</g>`;
 }
 
 // ---------- célula com três receptores (caixa 420x220, origem canto superior esquerdo) ----------
