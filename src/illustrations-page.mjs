@@ -43,6 +43,11 @@ const html = `<title>Ilustrações Dra. Bella</title>
   .parts { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; margin-top: 20px; }
   .parts div { background: var(--card); color: #362D28; border-radius: 6px; padding: 14px; font-size: 13px; line-height: 1.4; min-width: 0; }
   .parts b { display: block; font-weight: 600; margin-bottom: 2px; }
+  .rules { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; margin-top: 18px; }
+  .rule { background: var(--card); color: #362D28; border-radius: 6px; padding: 16px 18px; min-width: 0; }
+  .rule h4 { margin: 0 0 6px; font: 600 14px/1.3 var(--font-ui); }
+  .rule p { margin: 0; font-size: 13.5px; line-height: 1.5; color: #6F6356; }
+  #manual { grid-template-columns: 1fr; }
   .sw { display: inline-block; width: 12px; height: 12px; border-radius: 3px; vertical-align: -1px; margin-right: 6px; }
 </style>
 <div class="wrap">
@@ -62,6 +67,22 @@ const html = `<title>Ilustrações Dra. Bella</title>
     <div><b><span class="sw" style="background:#A9B3BC"></span>Moléculas</b>Esferas em três tons, em fluxo.</div>
     <div><b><span class="sw" style="background:#CDB9A6"></span>Figura</b>Mulher correndo, musculatura visível. Versão apagada pra apoio.</div>
   </div>
+
+  <section class="item" id="manual" style="display:block">
+    <div class="eyebrow">Manual</div>
+    <h2>Pra toda ilustração sair igual</h2>
+    <p class="intro" style="margin-top:8px">O código já aplica estas regras. O texto existe pra quem desenhar fora dele e pra criar peça nova. A versão completa fica no repositório, em <strong>brand/ILLUSTRATION-GUIDE.md</strong>.</p>
+    <div class="rules">
+      <div class="rule"><h4>Traço chapado</h4><p>Cor sólida por forma. Contorno de 1,5 px no tom escuro da própria peça. Uma luz branca em forma, a 20%. Sem degradê, sem sombra.</p></div>
+      <div class="rule"><h4>Cores nascem da paleta</h4><p>Tudo deriva do Deep Coffee e do Serene Sand puxados pro rosa-terroso. Cor nova só como variação de uma existente. Nunca verde, azul puro ou amarelo vivo.</p></div>
+      <div class="rule"><h4>Moléculas com significado</h4><p>Azul-acinzentado: sinal nervoso ou imune. Areia: sinal metabólico. Bege: gordura e energia. Mistura: o corpo todo recebe. Sempre em arco, 6 a 12 esferas.</p></div>
+      <div class="rule"><h4>Miolo e faixas</h4><p>Ilustração no miolo, etiquetas nas faixas em volta. Diagrama: colunas de 200 px nas laterais. Texto com figura: faixa de 70 px no topo. Nada cruza.</p></div>
+      <div class="rule"><h4>Cada peça inteira</h4><p>Peça principal no centro, secundárias nos cantos, nenhuma cortada pela borda. O canto que recebe etiqueta fica vazio.</p></div>
+      <div class="rule"><h4>Figura humana</h4><p>Mulher de perfil correndo pra direita, lado perto com músculo, lado longe apagado, coque, sem rosto. Como apoio, versão apagada a 30%.</p></div>
+      <div class="rule"><h4>Linhas internas</h4><p>Fibras, giros e cristas no tom escuro da peça, 30 a 55% de opacidade, pontas arredondadas. É o que faz a peça ser lida sem sombra.</p></div>
+      <div class="rule"><h4>Peça nova</h4><p>Caixa própria, cor cadastrada no mapa, contorno, luz em forma, sem filtro. Entra numa cena com posição, escala e rotação. Confere no slide, não solta.</p></div>
+    </div>
+  </section>
   ${items.map((it) => `
   <section class="item" id="il${it.n}">
     <div class="board">${it.svg}</div>
