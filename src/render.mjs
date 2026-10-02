@@ -42,7 +42,9 @@ const bullet = (s = "") => {
   return `<li><span class="k">${rich(m[1])}</span><span class="arr">→</span>${rich(m[2])}</li>`;
 };
 
-const relFromBuild = (p) => path.relative(path.join(ROOT, "build", "x"), path.join(ROOT, p)).split(path.sep).join("/");
+let assetBase = "../../";           // de build/<nome>/ até a raiz do repo
+export const setAssetBase = (b) => { assetBase = b; };
+const relFromBuild = (p) => assetBase + p;
 
 // ---------- blocos ----------
 function header(brand) {
@@ -102,7 +104,7 @@ const renderers = {
     ${s.hint ? `<div class="hint">${esc(s.hint)}</div>` : ""}`,
 };
 
-function slideHTML(brand, slide, i, total) {
+export function slideHTML(brand, slide, i, total) {
   const r = renderers[slide.type];
   if (!r) throw new Error(`Slide ${i + 1}: tipo desconhecido "${slide.type}"`);
   return `<div class="slide-wrap" data-n="${String(i + 1).padStart(2, "0")} · ${slide.type}">
@@ -131,12 +133,25 @@ ${slides}
 }
 
 // ---------- pipeline ----------
-async function loadBrand() {
+export async function loadBrand() {
   const brand = JSON.parse(await fs.readFile(path.join(ROOT, "brand", "brand.json"), "utf8"));
   if (brand.logo) {
     try { await fs.access(path.join(ROOT, brand.logo)); } catch { brand.logo = null; }
   }
   return brand;
+}
+
+export async function loadDoc(name, brand) {
+  const file = path.join(ROOT, "content", `${name}.json`);
+  const doc = JSON.parse(await fs.readFile(file, "utf8"));
+  doc.brand = { ...brand, ...(doc.brand || {}) };
+  for (const s of doc.slides) {
+    if (s.figure?.src) {
+      try { await fs.access(path.join(ROOT, s.figure.src)); }
+      catch { s.figure.missing = s.figure.src; s.figure.src = null; }
+    }
+  }
+  return doc;
 }
 
 async function buildOne(name, brand) {
@@ -215,4 +230,6 @@ async function main() {
   }
 }
 
-main().catch((e) => { console.error(e); process.exit(1); });
+if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
+  main().catch((e) => { console.error(e); process.exit(1); });
+}
