@@ -66,7 +66,11 @@ function footer(brand, slide, i, total) {
   const logo = dark && brand.logoLight ? brand.logoLight : brand.logo;
   const mono = dark && brand.monogramLight ? brand.monogramLight : brand.monogram;
   let mark;
-  if (edge && logo) mark = `<img class="logo" src="${relFromBuild(logo)}" alt="${esc(brand.name)}">`;
+  const BADGE = `<svg class="badge" viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path d="M12 1.5l2.6 2 3.2-.5 1.2 3 3 1.2-.5 3.2 2 2.6-2 2.6.5 3.2-3 1.2-1.2 3-3.2-.5-2.6 2-2.6-2-3.2.5-1.2-3-3-1.2.5-3.2-2-2.6 2-2.6-.5-3.2 3-1.2 1.2-3 3.2.5z" fill="#1D9BF0"/><path d="M7.5 12.4l3 3 6-6.4" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+  // primeiro e último slide: card de perfil (foto redonda com anel, nome com selo, @)
+  if (edge && brand.profile) mark = `<div class="profile"><div class="avatar"><img src="${relFromBuild(brand.profile)}" alt=""></div>
+    <div class="who"><div class="pname">${esc(brand.displayName || brand.name)} ${BADGE}</div><div class="phandle">${esc(brand.handle)}</div></div></div>`;
+  else if (edge && logo) mark = `<img class="logo" src="${relFromBuild(logo)}" alt="${esc(brand.name)}">`;
   else if (!edge && mono) mark = `<img class="monogram" src="${relFromBuild(mono)}" alt="${esc(brand.name)}">`;
   else mark = `<div class="lockup"><div><div class="name">${esc(brand.name)}</div>
     <div class="sub"><span></span>${esc(brand.tagline)}<span></span></div></div></div>`;
@@ -161,7 +165,7 @@ ${slides}
 // ---------- pipeline ----------
 export async function loadBrand() {
   const brand = JSON.parse(await fs.readFile(path.join(ROOT, "brand", "brand.json"), "utf8"));
-  for (const k of ["logo", "monogram", "logoLight", "monogramLight"]) {
+  for (const k of ["logo", "monogram", "logoLight", "monogramLight", "profile"]) {
     if (!brand[k]) continue;
     try { await fs.access(path.join(ROOT, brand[k])); } catch { brand[k] = null; }
   }
