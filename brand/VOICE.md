@@ -65,6 +65,11 @@ food noise · especialista em si mesma · a mulher inteira · conhecimento gera 
 investigar antes de prescrever · mecanismo conhecido · tratamento com evidência ·
 "calma, não se culpe" · porto seguro · wellness médico (não good vibes).
 
+## Tamanho do carrossel
+
+De 7 a 10 slides. Use até 10 quando o tema pedir mais explicação; não estique por esticar.
+Capa, miolo (até 7 slides de conteúdo), fechamento quando houver tese, pergunta no final.
+
 ## Legenda (padrão dos roteiros aprovados)
 
 Tamanho fixo: 4 a 5 parágrafos curtos, entre 90 e 130 palavras no total. Nem mais, nem menos.
