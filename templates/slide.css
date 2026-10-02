@@ -49,11 +49,11 @@ body.preview .slide-wrap::after {
 .ftr-left img.logo { height: 88px; width: auto; display: block; }
 .ftr-left img.monogram { height: 52px; width: auto; display: block; }
 /* card de perfil (capa e último slide): foto com anel, nome com selo, @ */
-.profile { display: flex; align-items: center; gap: 22px; }
-.profile .avatar { width: 124px; height: 124px; border-radius: 50%; padding: 4px;
+.profile { display: flex; align-items: center; gap: 16px; }
+.profile .avatar { width: 82px; height: 82px; border-radius: 50%; padding: 3px;
   background: conic-gradient(from 200deg, #F9CE34, #EE2A7B, #6228D7, #F9CE34); }
 .profile .avatar img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; display: block;
-  border: 4px solid var(--paper); box-sizing: border-box; background: #fff; }
+  border: 3px solid var(--paper); box-sizing: border-box; background: #fff; }
 .profile .pname { font: 600 34px/1.1 var(--font-body); color: var(--deep-coffee); display: flex; align-items: center; gap: 8px; letter-spacing: -0.01em; }
 .profile .pname .badge { flex: none; }
 .profile .phandle { margin-top: 6px; font: 500 24px/1 var(--font-body); color: var(--cozy-brown); }
