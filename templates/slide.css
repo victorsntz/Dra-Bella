@@ -30,7 +30,7 @@ body.preview .slide-wrap::after {
   width: 1080px; height: 1350px;
   background: var(--paper);
   overflow: hidden;
-  padding: 108px 96px 268px 96px;
+  padding: 108px 96px 252px 96px;
   display: flex; flex-direction: column;
 }
 
@@ -70,26 +70,26 @@ body.preview .slide-wrap::after {
 
 /* ---------- tipografia ---------- */
 .title {
-  font: 300 62px/1.06 var(--font-display);
+  font: 300 58px/1.06 var(--font-display);
   letter-spacing: var(--tracking-display);
   color: var(--deep-coffee);
 }
 .title strong { font-weight: 400; }
 .lead {
-  margin-top: 26px;
-  font: 300 31px/1.42 var(--font-body);
+  margin-top: 22px;
+  font: 300 29px/1.4 var(--font-body);
 }
 .body {
-  font: 300 31px/1.5 var(--font-body);
-  display: flex; flex-direction: column; gap: 22px;
+  font: 300 29px/1.5 var(--font-body);
+  display: flex; flex-direction: column; gap: 18px;
 }
 strong { font-weight: 600; }
 em { font-style: normal; font-weight: 500; color: var(--cozy-brown); }
 
-.bullets { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+.bullets { list-style: none; display: flex; flex-direction: column; gap: 10px; }
 .bullets li {
   position: relative; padding-left: 38px;
-  font: 300 28px/1.38 var(--font-body);
+  font: 300 26px/1.38 var(--font-body);
 }
 .bullets li::before {
   content: ""; position: absolute; left: 6px; top: 16px;
@@ -141,8 +141,8 @@ em { font-style: normal; font-weight: 500; color: var(--cozy-brown); }
 }
 
 /* ---------- DIAGRAMA ---------- */
-.slide.diagram .title { margin-top: 30px; }
-.slide.diagram .fig { flex: none; height: 370px; margin: 30px 0 28px; }
+.slide.diagram .title { margin-top: 150px; }
+.slide.diagram .fig { flex: none; height: 310px; margin: 24px 0 22px; }
 .slide.diagram .bullets { margin-bottom: 0; }
 .slide.diagram .note {
   position: absolute; left: 100px; bottom: 104px; max-width: 420px;
@@ -150,9 +150,9 @@ em { font-style: normal; font-weight: 500; color: var(--cozy-brown); }
 }
 
 /* ---------- TEXTO + FIGURA ---------- */
-.slide.text .title { margin-top: 30px; }
-.slide.text .body { margin-top: 44px; }
-.slide.text .fig { flex: 1; margin-top: 32px; min-height: 320px; }
+.slide.text .title { margin-top: 150px; }
+.slide.text .body { margin-top: 36px; }
+.slide.text .fig { flex: 1; margin-top: 28px; min-height: 240px; }
 .slide.text .fig img { object-position: center top; }
 
 /* ---------- FECHAMENTO (só texto) ---------- */

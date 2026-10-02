@@ -59,7 +59,7 @@
     {
       "type": "diagram",
       "title": "Músculo em contração\né um **órgão.**",
-      "lead": "Ele libera centenas de moléculas sinalizadoras, as **miocinas**, que viajam pelo sangue até o cérebro, a gordura, o fígado e os vasos.",
+      "lead": "Ele libera centenas de moléculas, as **miocinas**, que viajam pelo sangue até os outros órgãos.",
       "figure": {
         "src": "assets/illustrations/musculo-remedio/02-musculo-central.svg",
         "labels": [
@@ -265,8 +265,7 @@
       "title": "Reset imune e **inflamatório.**",
       "paragraphs": [
         "O treino vira a chave anti-inflamatória do corpo. **IL-10**, **IL-1ra** e receptores solúveis de TNF sobem. A **inflamação crônica** cai.",
-        "O paradoxo da **IL-6**: liberada pelo músculo, é anti-inflamatória. Cronicamente alta no repouso, alimenta doença.",
-        "Inflamação crônica é uma das quatro raízes que travam o emagrecimento. O treino age na raiz."
+        "O paradoxo da **IL-6**: liberada pelo músculo, é anti-inflamatória. Alta no repouso, alimenta doença. Inflamação crônica é uma das quatro raízes. O treino age na raiz."
       ],
       "figure": {
         "src": "assets/illustrations/musculo-remedio/05-inflamacao.svg",
