@@ -64,8 +64,8 @@
         "src": "assets/illustrations/musculo-remedio/02-musculo-central.svg",
         "labels": [
           {
-            "x": 27,
-            "y": 8,
+            "x": 11,
+            "y": 16,
             "text": "Irisina",
             "tone": "cream",
             "sub": [
@@ -74,27 +74,8 @@
             ]
           },
           {
-            "x": 50,
-            "y": 8,
-            "text": "IL-6",
-            "tone": "sand",
-            "sub": [
-              "↓ Inflamação",
-              "↑ Queima de gordura"
-            ]
-          },
-          {
-            "x": 64,
-            "y": 8,
-            "text": "BDNF",
-            "tone": "coffee",
-            "sub": [
-              "↑ Memória e humor"
-            ]
-          },
-          {
-            "x": 12,
-            "y": 52,
+            "x": 11,
+            "y": 50,
             "text": "Miostatina",
             "tone": "outline",
             "sub": [
@@ -102,7 +83,26 @@
             ]
           },
           {
-            "x": 72,
+            "x": 11,
+            "y": 82,
+            "text": "Mionectina",
+            "tone": "cream",
+            "sub": [
+              "↑ Sensibilidade à insulina"
+            ]
+          },
+          {
+            "x": 89,
+            "y": 16,
+            "text": "BDNF",
+            "tone": "coffee",
+            "sub": [
+              "↑ Memória e humor"
+            ],
+            "align": "right"
+          },
+          {
+            "x": 89,
             "y": 50,
             "text": "IL-15",
             "tone": "cream",
@@ -112,35 +112,39 @@
             "align": "right"
           },
           {
-            "x": 31,
-            "y": 80,
-            "text": "Mionectina",
-            "tone": "cream",
-            "sub": [
-              "↑ Sensibilidade à insulina"
-            ]
-          },
-          {
-            "x": 50,
-            "y": 84,
-            "text": "Decorina",
-            "tone": "sand",
-            "sub": [
-              "↑ Regeneração"
-            ]
-          },
-          {
-            "x": 69,
-            "y": 78,
+            "x": 89,
+            "y": 82,
             "text": "FGF21",
             "tone": "cream",
             "sub": [
               "↑ Mitocôndrias"
             ],
             "align": "right"
+          },
+          {
+            "x": 50,
+            "y": 8,
+            "text": "IL-6",
+            "tone": "sand",
+            "sub": [
+              "↓ Inflamação · ↑ Queima de gordura"
+            ]
+          },
+          {
+            "x": 50,
+            "y": 90,
+            "text": "Decorina",
+            "tone": "sand",
+            "sub": [
+              "↑ Regeneração"
+            ]
           }
         ],
-        "prompt": "ilustração: um músculo esquelético no centro, pequenas esferas saindo dele em direção a cérebro, fígado, gordura e vaso sanguíneo ao redor"
+        "prompt": "ilustração: um músculo esquelético no centro, pequenas esferas saindo dele em direção a cérebro, fígado, gordura e vaso sanguíneo ao redor",
+        "inset": {
+          "left": 200,
+          "right": 200
+        }
       },
       "bullets": [
         "Irisina → gordura branca vira gordura que gasta energia.",
@@ -161,8 +165,8 @@
         "src": "assets/illustrations/musculo-remedio/03-cerebro.svg",
         "labels": [
           {
-            "x": 18,
-            "y": 10,
+            "x": 16,
+            "y": 6,
             "text": "Contração muscular",
             "tone": "cream",
             "sub": [
@@ -170,8 +174,8 @@
             ]
           },
           {
-            "x": 40,
-            "y": 88,
+            "x": 64,
+            "y": 6,
             "text": "BDNF",
             "tone": "coffee",
             "sub": [
@@ -179,7 +183,10 @@
             ]
           }
         ],
-        "prompt": "ilustração: cérebro humano em corte, neurônios se conectando, uma silhueta pequena correndo à esquerda com setas chegando ao cérebro"
+        "prompt": "ilustração: cérebro humano em corte, neurônios se conectando, uma silhueta pequena correndo à esquerda com setas chegando ao cérebro",
+        "inset": {
+          "top": 70
+        }
       }
     },
     {
@@ -189,8 +196,8 @@
         "src": "assets/illustrations/musculo-remedio/04-gordura-mitocondria.svg",
         "labels": [
           {
-            "x": 30,
-            "y": 10,
+            "x": 11,
+            "y": 18,
             "text": "Irisina",
             "tone": "cream",
             "sub": [
@@ -198,8 +205,17 @@
             ]
           },
           {
-            "x": 60,
-            "y": 10,
+            "x": 11,
+            "y": 82,
+            "text": "PGC-1α e AMPK",
+            "tone": "coffee",
+            "sub": [
+              "Constroem mitocôndrias"
+            ]
+          },
+          {
+            "x": 89,
+            "y": 18,
             "text": "Folistatina",
             "tone": "sand",
             "sub": [
@@ -208,17 +224,8 @@
             "align": "right"
           },
           {
-            "x": 38,
-            "y": 86,
-            "text": "PGC-1α e AMPK",
-            "tone": "coffee",
-            "sub": [
-              "Constroem mitocôndrias"
-            ]
-          },
-          {
-            "x": 78,
-            "y": 56,
+            "x": 89,
+            "y": 82,
             "text": "IGF-1 e células satélite",
             "tone": "cream",
             "sub": [
@@ -227,7 +234,11 @@
             "align": "right"
           }
         ],
-        "prompt": "ilustração: feixe muscular em corte no centro, células de gordura amarelas à esquerda em cima, mitocôndria em corte embaixo à esquerda, célula satélite à direita"
+        "prompt": "ilustração: feixe muscular em corte no centro, células de gordura amarelas à esquerda em cima, mitocôndria em corte embaixo à esquerda, célula satélite à direita",
+        "inset": {
+          "left": 190,
+          "right": 190
+        }
       },
       "bullets": [
         "Gordura, mitocôndria e músculo se adaptam **juntos**.",
@@ -248,8 +259,8 @@
         "src": "assets/illustrations/musculo-remedio/05-inflamacao.svg",
         "labels": [
           {
-            "x": 22,
-            "y": 14,
+            "x": 16,
+            "y": 6,
             "text": "Músculo em contração",
             "tone": "cream",
             "sub": [
@@ -257,8 +268,8 @@
             ]
           },
           {
-            "x": 48,
-            "y": 4,
+            "x": 46,
+            "y": 6,
             "text": "IL-10",
             "tone": "sand",
             "sub": [
@@ -266,8 +277,8 @@
             ]
           },
           {
-            "x": 44,
-            "y": 34,
+            "x": 42,
+            "y": 42,
             "text": "IL-1ra",
             "tone": "sand",
             "sub": [
@@ -276,7 +287,7 @@
           },
           {
             "x": 42,
-            "y": 66,
+            "y": 76,
             "text": "sTNF-R",
             "tone": "sand",
             "sub": [
@@ -284,28 +295,41 @@
             ]
           },
           {
-            "x": 65,
-            "y": 10,
+            "x": 90,
+            "y": 24,
             "text": "Gordura",
             "tone": "cream",
+            "sub": [
+              "↓ Inflamação"
+            ],
             "align": "right"
           },
           {
-            "x": 64,
-            "y": 44,
+            "x": 90,
+            "y": 54,
             "text": "Fígado",
             "tone": "cream",
+            "sub": [
+              "↓ Sinal inflamatório"
+            ],
             "align": "right"
           },
           {
-            "x": 62,
-            "y": 78,
+            "x": 90,
+            "y": 86,
             "text": "Vasos",
             "tone": "cream",
+            "sub": [
+              "↓ Inflamação sistêmica"
+            ],
             "align": "right"
           }
         ],
-        "prompt": "ilustração: músculo à esquerda liberando esferas, que chegam em tecido adiposo, fígado e vaso sanguíneo à direita"
+        "prompt": "ilustração: músculo à esquerda liberando esferas, que chegam em tecido adiposo, fígado e vaso sanguíneo à direita",
+        "inset": {
+          "top": 70,
+          "right": 170
+        }
       }
     },
     {
@@ -323,14 +347,14 @@
         "src": "assets/illustrations/musculo-remedio/06-figado-vaso.svg",
         "labels": [
           {
-            "x": 24,
-            "y": 16,
+            "x": 20,
+            "y": 6,
             "text": "Músculo em contração",
             "tone": "cream"
           },
           {
-            "x": 52,
-            "y": 12,
+            "x": 56,
+            "y": 6,
             "text": "Mionectina · FGF21",
             "tone": "sand",
             "sub": [
@@ -338,8 +362,8 @@
             ]
           },
           {
-            "x": 48,
-            "y": 74,
+            "x": 46,
+            "y": 66,
             "text": "NO · VEGF",
             "tone": "coffee",
             "sub": [
@@ -347,7 +371,10 @@
             ]
           }
         ],
-        "prompt": "ilustração: músculo em corte à esquerda, fígado à direita em cima, vaso sanguíneo em corte com hemácias à direita embaixo"
+        "prompt": "ilustração: músculo em corte à esquerda, fígado à direita em cima, vaso sanguíneo em corte com hemácias à direita embaixo",
+        "inset": {
+          "top": 70
+        }
       }
     },
     {

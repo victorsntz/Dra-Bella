@@ -72,7 +72,7 @@ export function muscle({ w = 300, h = 110, cut = false, fill = "url(#gMuscle)", 
     return `<path d="M${-a * 0.96},${(yy * 0.22).toFixed(1)} C${-a * 0.4},${yy.toFixed(1)} ${xr * 0.4},${yy.toFixed(1)} ${xr},${(cut ? yy * 0.95 : yy * 0.22).toFixed(1)}" fill="none" stroke="${C.fiber}" stroke-opacity="0.32" stroke-width="1.6"/>`;
   }).join("");
   const hi = `<path d="M${-a * 0.8},${-b * 0.35} C${-a * 0.3},${-b * 0.8} ${a * 0.25},${-b * 0.8} ${cut ? cx * 0.8 : a * 0.75},${-b * 0.4}" fill="none" stroke="#fff" stroke-opacity="0.22" stroke-width="${b * 0.18}" stroke-linecap="round"/>`;
-  return `<g ${shadow ? 'filter="url(#shadow)"' : ""}>${tend}<path d="${belly}" fill="${fill}"/>${hi}${fib}${cutFace}</g>`;
+  return `<g ${shadow ? 'filter="url(#shadow)"' : ""}>${tend}<path d="${belly}" fill="${fill}" stroke="${C.muscleLo}" stroke-opacity="0.5" stroke-width="1.5"/>${hi}${fib}${cutFace}</g>`;
 }
 
 // ---------- cérebro (caixa 220x170, canto em 0,0) ----------
@@ -88,13 +88,13 @@ export function brain({ neurons = false } = {}) {
       <path d="M${x},${y} l-14,-18 m14,18 l16,-14 m-16,14 l-18,10 m18,-10 l14,16 m-14,-16 l6,-22"/>
       <circle cx="${x}" cy="${y}" r="7" fill="${C.neuron}" stroke="none"/></g>`).join("") : "";
   return `<g filter="url(#shadow)"><path d="${stem}" fill="${C.brainLo}"/><path d="${cereb}" fill="${C.brain}" stroke="${C.brainLo}" stroke-width="1.5"/>
-    <path d="${outline}" fill="url(#gBrain)"/>${gyri}${neur}</g>`;
+    <path d="${outline}" fill="url(#gBrain)" stroke="${C.brainLo}" stroke-opacity="0.7" stroke-width="1.5"/>${gyri}${neur}</g>`;
 }
 
 // ---------- fígado (caixa 220x140) ----------
 export function liver() {
   const d = "M10,60 C10,25 50,10 95,12 C150,14 210,30 212,70 C214,100 180,122 140,126 C100,130 60,135 35,115 C15,100 8,80 10,60 Z";
-  return `<g filter="url(#shadow)"><path d="${d}" fill="url(#gLiver)"/>
+  return `<g filter="url(#shadow)"><path d="${d}" fill="url(#gLiver)" stroke="${C.liverLo}" stroke-opacity="0.6" stroke-width="1.5"/>
     <path d="M118,16 C124,60 118,96 104,126" fill="none" stroke="${C.liverLo}" stroke-opacity="0.5" stroke-width="3"/>
     <ellipse cx="60" cy="52" rx="34" ry="14" fill="#fff" opacity="0.18" transform="rotate(-12 60 52)"/>
     <ellipse cx="128" cy="116" rx="24" ry="11" fill="${C.bile}"/></g>`;
@@ -116,7 +116,7 @@ export function vessel({ w = 240, h = 70, rbcs = 6, open = true } = {}) {
     return `<g transform="translate(${x.toFixed(1)} ${y.toFixed(1)})"><ellipse rx="${r}" ry="${r * 0.72}" fill="url(#gRbc)"/><ellipse rx="${r * 0.45}" ry="${r * 0.3}" fill="${C.rbc}" opacity="0.8"/></g>`;
   }).join("");
   return `<g filter="url(#shadow)">
-    <path d="M${-a},${-b} L${a},${-b} L${a},${b} L${-a},${b} Z" fill="url(#gVessel)"/>
+    <path d="M${-a},${-b} L${a},${-b} L${a},${b} L${-a},${b} Z" fill="url(#gVessel)" stroke="${C.vesselLo}" stroke-opacity="0.6" stroke-width="1.5"/>
     <ellipse cx="${-a}" cy="0" rx="${rx}" ry="${b}" fill="${C.vessel}"/>
     <path d="M${-a},${-b * 0.55} L${a},${-b * 0.55} L${a},${b * 0.55} L${-a},${b * 0.55} Z" fill="url(#gLumen)" opacity="0.9"/>
     ${cells}
@@ -128,7 +128,7 @@ export function vessel({ w = 240, h = 70, rbcs = 6, open = true } = {}) {
 export function mitochondrion() {
   const cristae = [-56, -32, -8, 16, 40, 60].map((x) =>
     `<path d="M${x},-36 C${x - 12},-14 ${x + 12},12 ${x},36" fill="none" stroke="${C.mitoLo}" stroke-opacity="0.85" stroke-width="7" stroke-linecap="round"/>`).join("");
-  return `<g filter="url(#shadow)"><ellipse rx="100" ry="55" fill="url(#gMito)"/><ellipse rx="86" ry="42" fill="${C.mitoHi}" opacity="0.55"/>${cristae}
+  return `<g filter="url(#shadow)"><ellipse rx="100" ry="55" fill="url(#gMito)" stroke="${C.mitoLo}" stroke-opacity="0.6" stroke-width="1.5"/><ellipse rx="86" ry="42" fill="${C.mitoHi}" opacity="0.55"/>${cristae}
     <ellipse cx="-30" cy="-30" rx="40" ry="12" fill="#fff" opacity="0.2" transform="rotate(-10 -30 -30)"/></g>`;
 }
 
@@ -141,7 +141,8 @@ export function fiberWithSatellite({ w = 220, h = 64 } = {}) {
 
 // ---------- moléculas: esferas ao longo de uma curva ----------
 export function sphere(x, y, r, tone = 1) {
-  return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${r.toFixed(1)}" fill="url(#gMol${tone})"/>`;
+  return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${r.toFixed(1)}" fill="url(#gMol${tone})"/>` +
+    `<circle cx="${(x - r * 0.3).toFixed(1)}" cy="${(y - r * 0.3).toFixed(1)}" r="${(r * 0.28).toFixed(1)}" fill="#fff" opacity="0.55"/>`;
 }
 export function stream({ from, to, ctrl, n = 12, rmin = 4, rmax = 10, tone = 1, seed = 1, spread = 14 }) {
   let s = seed * 9301 + 49297;
@@ -211,5 +212,15 @@ export function runner({ muted = false } = {}) {
   return `<g>${far}${torso}${neck}${head}${nearLegs}${nearArm}</g>`;
 }
 
+// Estilo: "flat" (padrão, chapado, mais vetorial) ou "shaded" (degradês e sombras).
+export const STYLE = process.env.ILLUS_STYLE || "flat";
+const FLAT_MAP = { gMuscle: C.muscle, gMuted: C.muted, gTendon: C.tendon, gVessel: C.vessel, gSkin: C.skin, gFat: C.fat, gLiver: C.liver,
+  gBrain: C.brain, gLumen: C.lumen, gRbc: C.rbc, gMito: C.mito, gMol1: C.mol1, gMol2: C.mol2, gMol3: C.mol3, gSat: C.satellite };
+export function flatten(markup) {
+  if (STYLE !== "flat") return markup;
+  let out = markup.replace(/filter="url\(#(shadow|soft)\)"/g, "");
+  for (const [id, color] of Object.entries(FLAT_MAP)) out = out.split(`url(#${id})`).join(color);
+  return out;
+}
 export const svg = (w, h, inner) =>
-  `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${w} ${h}" width="${w}" height="${h}">${defs()}${inner}</svg>\n`;
+  `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${w} ${h}" width="${w}" height="${h}">${defs()}${flatten(inner)}</svg>\n`;

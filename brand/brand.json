@@ -3,5 +3,6 @@
   "tagline": "Obesidade & Emagrecimento",
   "handle": "@bellabrasao",
   "logo": "brand/logo.svg",
-  "pager": false
+  "pager": false,
+  "monogram": "brand/monogram.svg"
 }

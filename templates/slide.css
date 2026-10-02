@@ -55,7 +55,8 @@ body.preview .slide-wrap::after {
   transform: rotate(45deg);
 }
 .lockup { display: flex; align-items: center; gap: 22px; }
-.lockup img.mono { height: 74px; width: auto; }
+.ftr img.logo { height: 96px; width: auto; }
+.ftr img.monogram { height: 84px; width: auto; }
 .lockup .name {
   font: 400 40px/1 var(--font-display);
   letter-spacing: -0.03em; color: var(--deep-coffee); text-align: right;
@@ -100,6 +101,7 @@ em { font-style: normal; font-weight: 500; color: var(--cozy-brown); }
 
 /* ---------- figura + etiquetas ---------- */
 .fig { position: relative; }
+.fig-inner { position: absolute; }
 .fig img { width: 100%; height: 100%; object-fit: contain; display: block; }
 .fig .placeholder {
   width: 100%; height: 100%;

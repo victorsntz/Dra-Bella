@@ -51,10 +51,14 @@ function header(brand) {
   return `<div class="hdr">${esc(brand.handle)}</div>`;
 }
 
-function footer(brand, slide) {
-  const mono = brand.logo ? `<img class="mono" src="${relFromBuild(brand.logo)}" alt="">` : "";
+// Regra da assinatura: logo completo no primeiro e no último slide; só o monograma nos do meio.
+// Sem os arquivos (brand/logo.svg e brand/monogram.svg), cai no lockup tipográfico.
+function footer(brand, slide, i, total) {
   const arrow = slide.type === "closing" || slide.type === "cta" ? "" : `<div class="arrow"></div>`;
-  return `<div class="ftr">${arrow}<div class="lockup">${mono}<div>
+  const edge = i === 0 || i === total - 1;
+  if (edge && brand.logo) return `<div class="ftr">${arrow}<img class="logo" src="${relFromBuild(brand.logo)}" alt="${esc(brand.name)}"></div>`;
+  if (!edge && brand.monogram) return `<div class="ftr">${arrow}<img class="monogram" src="${relFromBuild(brand.monogram)}" alt="${esc(brand.name)}"></div>`;
+  return `<div class="ftr">${arrow}<div class="lockup"><div>
     <div class="name">${esc(brand.name)}</div>
     <div class="sub"><span></span>${esc(brand.tagline)}<span></span></div>
   </div></div></div>`;
@@ -73,7 +77,9 @@ function figure(fig) {
     })
     .join("");
   const style = fig.style ? ` style="${esc(fig.style)}"` : "";
-  return `<figure class="fig"${style}>${img}${labels}</figure>`;
+  const i = fig.inset || {};
+  const inner = `<div class="fig-inner" style="top:${i.top || 0}px;right:${i.right || 0}px;bottom:${i.bottom || 0}px;left:${i.left || 0}px">${img}</div>`;
+  return `<figure class="fig"${style}>${inner}${labels}</figure>`;
 }
 
 const renderers = {
@@ -111,7 +117,7 @@ export function slideHTML(brand, slide, i, total) {
   <section class="slide ${slide.type}" id="s${i + 1}">
     ${header(brand)}
     ${r(slide)}
-    ${footer(brand, slide)}
+    ${footer(brand, slide, i, total)}
     ${brand.pager ? `<div class="pager">${i + 1} / ${total}</div>` : ""}
   </section></div>`;
 }
@@ -135,8 +141,9 @@ ${slides}
 // ---------- pipeline ----------
 export async function loadBrand() {
   const brand = JSON.parse(await fs.readFile(path.join(ROOT, "brand", "brand.json"), "utf8"));
-  if (brand.logo) {
-    try { await fs.access(path.join(ROOT, brand.logo)); } catch { brand.logo = null; }
+  for (const k of ["logo", "monogram"]) {
+    if (!brand[k]) continue;
+    try { await fs.access(path.join(ROOT, brand[k])); } catch { brand[k] = null; }
   }
   return brand;
 }
