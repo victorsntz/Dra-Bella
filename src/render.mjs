@@ -204,7 +204,7 @@ async function buildOne(name, brand) {
   const html = deckHTML(doc);
   const htmlPath = path.join(buildDir, "index.html");
   await fs.writeFile(htmlPath, html);
-  if (doc.caption) await fs.writeFile(path.join(outDir, "legenda.txt"), doc.caption.trim() + "\n");
+  await fs.writeFile(path.join(outDir, "texto.txt"), textoTxt(doc));
   console.log(`✓ ${name}: ${doc.slides.length} slides → build/${name}/index.html`);
   if (flags.has("--html")) return { name, outDir, count: doc.slides.length };
 
@@ -225,7 +225,41 @@ async function buildOne(name, brand) {
   }
   await browser.close();
   console.log(`  → output/${name}/01..${String(doc.slides.length).padStart(2, "0")}.jpg`);
+  await zipDelivery(name, outDir, doc.slides.length);
   return { name, outDir, count: doc.slides.length };
+}
+
+// Texto de entrega: o que está escrito em cada slide, depois a legenda.
+const plain = (t = "") => String(t).replace(/\*\*/g, "").replace(/\*/g, "");
+function textoTxt(doc) {
+  const lines = [doc.title.toUpperCase(), "=".repeat(doc.title.length), "", "SLIDES", ""];
+  doc.slides.forEach((s, i) => {
+    const nn = String(i + 1).padStart(2, "0");
+    const parts = [];
+    if (s.title) parts.push(plain(s.title).replace(/\n/g, " "));
+    if (s.lead) parts.push(plain(s.lead));
+    (s.paragraphs || []).forEach((p) => parts.push(plain(p)));
+    (s.bullets || []).forEach((b) => parts.push("• " + plain(b)));
+    if (s.hint) parts.push(`[${s.hint}]`);
+    lines.push(`${nn} · ${s.type}${s.theme === "coffee" ? " · fundo café" : ""}`);
+    parts.forEach((t) => lines.push("   " + t));
+    lines.push("");
+  });
+  lines.push("LEGENDA", "", (doc.caption || "").trim(), "");
+  return lines.join("\n");
+}
+
+// Zip de entrega: JPGs + texto.txt, pronto pra mandar.
+async function zipDelivery(name, outDir, count) {
+  const files = Array.from({ length: count }, (_, i) => `${String(i + 1).padStart(2, "0")}.jpg`).concat(["texto.txt"]);
+  const zipName = `${name}.zip`;
+  try {
+    await fs.rm(path.join(outDir, zipName), { force: true });
+    await exec("zip", ["-q", "-j", zipName, ...files], { cwd: outDir });
+    console.log(`  → output/${name}/${zipName}`);
+  } catch (e) {
+    console.warn("  (zip pulado: " + e.message.split("\n")[0] + ")");
+  }
 }
 
 async function sheet({ name, outDir, count }) {

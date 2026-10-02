@@ -67,6 +67,8 @@ investigar antes de prescrever · mecanismo conhecido · tratamento com evidênc
 
 ## Legenda (padrão dos roteiros aprovados)
 
+Tamanho fixo: 4 a 5 parágrafos curtos, entre 90 e 130 palavras no total. Nem mais, nem menos.
+
 0. Primeira linha, sempre: "Primeiro siga @bellabrasao 🤍". Linha em branco depois.
 1. Uma frase que reenquadra o tema (a sacada).
 2. Um parágrafo curto de mecanismo ou contexto. Um emoji discreto no fim do parágrafo, no máximo dois na legenda inteira.
