@@ -161,55 +161,94 @@ export function stream({ from, to, ctrl, n = 12, rmin = 4, rmax = 10, tone = 1, 
 }
 
 // ---------- figura correndo, musculatura visível (caixa 520x900) ----------
+// Perfil direito, correndo pra direita, tronco inclinado. Perna direita (perto) à frente com
+// joelho alto, braço direito (perto) atrás; perna e braço esquerdos (longe) no contrário.
+const V = {
+  sub: (a, b) => [a[0] - b[0], a[1] - b[1]], add: (a, b) => [a[0] + b[0], a[1] + b[1]],
+  mul: (a, k) => [a[0] * k, a[1] * k], len: (a) => Math.hypot(a[0], a[1]),
+  norm: (a) => { const l = Math.hypot(a[0], a[1]); return [-a[1] / l, a[0] / l]; },
+  lerp: (a, b, t) => [a[0] + (b[0] - a[0]) * t, a[1] + (b[1] - a[1]) * t],
+};
+const f1 = (n) => n.toFixed(1);
+// membro afunilado com pontas redondas: largura wA em A, wB em B
+function limb(A, B, wA, wB, fill, stroke) {
+  const n = V.norm(V.sub(B, A));
+  const a1 = V.add(A, V.mul(n, wA / 2)), a2 = V.sub(A, V.mul(n, wA / 2));
+  const b1 = V.add(B, V.mul(n, wB / 2)), b2 = V.sub(B, V.mul(n, wB / 2));
+  return `<path d="M${f1(a1[0])},${f1(a1[1])} L${f1(b1[0])},${f1(b1[1])} A${wB / 2},${wB / 2} 0 0 1 ${f1(b2[0])},${f1(b2[1])} L${f1(a2[0])},${f1(a2[1])} A${wA / 2},${wA / 2} 0 0 1 ${f1(a1[0])},${f1(a1[1])} Z" fill="${fill}" stroke="${stroke}" stroke-opacity="0.45" stroke-width="1.5"/>`;
+}
+// ventre muscular ao longo do membro: fração t0..t1 do segmento, altura h, deslocamento lateral off
+function belly(A, B, { t0 = 0.08, t1 = 0.92, h = 40, off = 0, fibers = 5, fill = "url(#gMuscle)" } = {}) {
+  const d = V.sub(B, A), L = V.len(d), ang = (Math.atan2(d[1], d[0]) * 180) / Math.PI;
+  const mid = V.lerp(A, B, (t0 + t1) / 2), n = V.norm(d), c = V.add(mid, V.mul(n, off));
+  return g(c[0], c[1], muscle({ w: L * (t1 - t0), h, fill, fibers, tendons: false, shadow: false }), { r: ang });
+}
 export function runner({ muted = false } = {}) {
   const fill = muted ? "url(#gMuted)" : "url(#gMuscle)";
-  const base = muted ? C.muted : C.muscle;
-  const seg = (A, B, t, color) => `<line x1="${A[0]}" y1="${A[1]}" x2="${B[0]}" y2="${B[1]}" stroke="${color}" stroke-width="${t}" stroke-linecap="round"/>`;
-  const lens = (A, B, { h, off = 0, frac = 0.9, shift = 0, fibers = 6 } = {}) => {
-    const dx = B[0] - A[0], dy = B[1] - A[1], L = Math.hypot(dx, dy), ang = (Math.atan2(dy, dx) * 180) / Math.PI;
-    const mx = (A[0] + B[0]) / 2 + (dx / L) * shift, my = (A[1] + B[1]) / 2 + (dy / L) * shift;
-    const nx = -dy / L, ny = dx / L;
-    return g(mx + nx * off, my + ny * off, muscle({ w: L * frac, h, fill, fibers, tendons: true, shadow: false }), { r: ang });
-  };
-  // articulações (perfil, correndo pra direita)
-  const H = [318, 118], N = [300, 172], S = [286, 202], P = [228, 440];
-  const E1 = [338, 302], W1 = [394, 226];           // braço da frente
-  const S2 = [272, 208], E2 = [196, 292], W2 = [152, 236]; // braço de trás
-  const K1 = [338, 570], A1 = [322, 712];           // perna da frente
-  const P2 = [222, 446], K2 = [166, 590], A2 = [120, 712]; // perna de trás
-  const farTone = C.mutedLo;
-  const far = `<g opacity="0.95">
-    ${seg(S2, E2, 30, farTone)}${seg(E2, W2, 24, farTone)}
-    ${seg(P2, K2, 50, farTone)}${seg(K2, A2, 34, farTone)}
-    <path d="M${A2[0] + 10},${A2[1] - 12} L${A2[0] - 34},${A2[1] + 40} L${A2[0] - 20},${A2[1] + 52} L${A2[0] + 22},${A2[1] + 4} Z" fill="${C.skinLo}"/>
-    <ellipse cx="${W2[0]}" cy="${W2[1]}" rx="12" ry="16" fill="${C.skinLo}" transform="rotate(20 ${W2[0]} ${W2[1]})"/>
-    ${g(0, 0, lens(P2, K2, { h: 40, frac: 0.8, fibers: 4 }).replace("url(#gMuscle)", "url(#gMuted)"))}
+  const lo = muted ? C.mutedLo : C.muscleLo;
+  const farFill = muted ? "#D9C6BB" : C.muted, farLo = muted ? C.mutedLo : C.mutedLo;
+  // articulações
+  const H = [332, 112];
+  const S = [292, 206], P = [250, 452];
+  const E1 = [214, 302], W1 = [180, 236];        // braço perto (direito), atrás
+  const S2 = [304, 214], E2 = [374, 318], W2 = [402, 232]; // braço longe (esquerdo), à frente
+  const K1 = [364, 556], A1 = [334, 688];        // perna perto (direita), à frente, joelho alto
+  const P2 = [242, 458], K2 = [180, 592], A2 = [118, 712]; // perna longe (esquerda), estendida atrás
+  const bel = (A, B, o) => belly(A, B, { ...o, fill });
+
+  // ---- lado longe (apagado) ----
+  const far = `<g>
+    ${limb(S2, E2, 34, 26, farFill, farLo)}${limb(E2, W2, 26, 18, farFill, farLo)}
+    <ellipse cx="${W2[0] + 8}" cy="${W2[1] - 8}" rx="11" ry="15" fill="${C.skinLo}" transform="rotate(-35 ${W2[0]} ${W2[1]})"/>
+    ${limb(P2, K2, 56, 36, farFill, farLo)}${limb(K2, A2, 36, 22, farFill, farLo)}
+    ${limb(A2, [A2[0] - 26, A2[1] + 54], 24, 14, C.skinLo, C.skinLo)}
+    ${belly(P2, K2, { h: 38, t0: 0.12, t1: 0.86, fibers: 4, fill: "url(#gMuted)" })}
+    ${belly(K2, A2, { h: 24, t0: 0.05, t1: 0.6, off: -6, fibers: 3, fill: "url(#gMuted)" })}
   </g>`;
-  const torso = `<g filter="url(#shadow)">
-    <path d="M306,170 C336,196 356,236 352,282 C350,330 338,370 318,402 C310,428 304,446 300,456 L214,462 C216,430 220,400 226,366 C236,318 246,266 262,232 C270,214 278,190 284,172 Z" fill="${fill}"/>
-    ${g(330, 248, muscle({ w: 76, h: 46, fill, fibers: 5, tendons: false, shadow: false }), { r: -18 })}
-    ${g(262, 300, muscle({ w: 120, h: 54, fill, fibers: 6, tendons: false, shadow: false }), { r: -72 })}
-    ${[[330, 306], [326, 344], [318, 382]].map(([x, y]) => `<rect x="${x - 18}" y="${y - 14}" width="36" height="28" rx="9" fill="${C.muscleHi}" opacity="0.55"/><rect x="${x - 18}" y="${y - 14}" width="36" height="28" rx="9" fill="none" stroke="${C.fiber}" stroke-opacity="0.35"/>`).join("")}
-    ${[0, 1, 2, 3].map((i) => `<path d="M${292 - i * 10},${330 + i * 18} C${286 - i * 10},${352 + i * 18} ${280 - i * 10},${372 + i * 18} ${276 - i * 10},${392 + i * 18}" fill="none" stroke="${C.fiber}" stroke-opacity="0.3" stroke-width="2"/>`).join("")}
+
+  // ---- tronco ----
+  const torso = `<g>
+    <path d="M312,172 C338,184 356,214 358,254 C360,300 350,346 334,382 C322,410 312,432 306,452 L224,474 C218,448 220,420 226,392 C232,350 244,300 258,262 C266,238 276,214 290,196 Z" fill="${fill}" stroke="${lo}" stroke-opacity="0.45" stroke-width="1.5"/>
+    <path d="M346,232 C362,246 366,268 358,288 C344,284 332,270 330,250 C332,240 338,234 346,232 Z" fill="${C.muscleHi}" opacity="0.55"/>
+    ${g(276, 300, muscle({ w: 126, h: 50, fill, fibers: 6, tendons: false, shadow: false }), { r: -74 })}
+    ${[[336, 312], [330, 350], [322, 388]].map(([x, y]) => `<rect x="${x - 17}" y="${y - 14}" width="34" height="28" rx="9" fill="${C.muscleHi}" opacity="0.5"/><rect x="${x - 17}" y="${y - 14}" width="34" height="28" rx="9" fill="none" stroke="${C.fiber}" stroke-opacity="0.35"/>`).join("")}
+    ${[0, 1, 2].map((i) => `<path d="M${300 - i * 9},${332 + i * 22} C${294 - i * 9},${352 + i * 22} ${288 - i * 9},${372 + i * 22} ${284 - i * 9},${392 + i * 22}" fill="none" stroke="${C.fiber}" stroke-opacity="0.3" stroke-width="2"/>`).join("")}
+    <path d="M232,440 C216,452 212,480 226,498 C242,506 262,496 270,478 C266,460 250,446 232,440 Z" fill="${fill}" stroke="${lo}" stroke-opacity="0.45" stroke-width="1.5"/>
+    <path d="M238,452 C230,462 230,480 240,490" fill="none" stroke="${C.fiber}" stroke-opacity="0.35" stroke-width="2"/>
   </g>`;
-  const neck = seg(N, [310, 150], 26, base);
-  const head = `<g filter="url(#shadow)"><circle cx="${H[0]}" cy="${H[1]}" r="44" fill="url(#gSkin)"/>
-    <path d="M276,110 C276,70 304,60 326,66 C348,70 362,86 358,104 C340,96 318,96 302,106 C292,114 286,124 284,138 C278,132 274,122 276,110 Z" fill="${C.hair}"/>
-    <circle cx="268" cy="118" r="20" fill="${C.hair}"/><path d="M356,110 C362,116 364,124 360,130" fill="none" stroke="${C.skinLo}" stroke-width="3" stroke-linecap="round"/></g>`;
-  const nearLegs = `<g filter="url(#shadow)">
-    ${seg(P, K1, 54, base)}${seg(K1, A1, 38, base)}
-    ${lens(P, K1, { h: 60, off: -8, frac: 0.88, fibers: 6 })}${lens(P, K1, { h: 40, off: 22, frac: 0.8, fibers: 4 })}
-    ${lens(K1, A1, { h: 42, off: 12, frac: 0.72, shift: -14, fibers: 5 })}${lens(K1, A1, { h: 22, off: -10, frac: 0.8, fibers: 3 })}
-    <circle cx="${K1[0]}" cy="${K1[1]}" r="17" fill="${C.tendon}" opacity="0.9"/>
-    <path d="M${A1[0] - 16},${A1[1]} L${A1[0] + 62},${A1[1] + 14} L${A1[0] + 56},${A1[1] + 30} L${A1[0] - 22},${A1[1] + 26} Z" fill="url(#gSkin)"/>
+
+  // ---- pescoço e cabeça ----
+  const neck = limb([318, 156], [306, 190], 26, 30, fill, lo);
+  const head = `<g>
+    <ellipse cx="${H[0]}" cy="${H[1]}" rx="40" ry="44" fill="url(#gSkin)" stroke="${C.skinLo}" stroke-opacity="0.6" stroke-width="1.5" transform="rotate(8 ${H[0]} ${H[1]})"/>
+    <path d="M366,120 C372,132 368,146 356,154 C346,158 336,156 330,150" fill="none" stroke="${C.skinLo}" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M294,96 C292,66 318,54 340,60 C360,64 374,80 372,100 C356,90 336,92 320,102 C308,110 300,122 298,136 C292,128 292,112 294,96 Z" fill="${C.hair}"/>
+    <circle cx="284" cy="112" r="19" fill="${C.hair}"/>
+    <path d="M300,104 C310,98 322,96 334,98" fill="none" stroke="#6B5A50" stroke-width="2" stroke-linecap="round" opacity="0.8"/>
   </g>`;
-  const nearArm = `<g filter="url(#shadow)">
-    ${seg(S, E1, 34, base)}${seg(E1, W1, 28, base)}
-    ${lens(S, E1, { h: 38, off: -6, frac: 0.8, fibers: 4 })}${lens(E1, W1, { h: 30, off: 4, frac: 0.78, shift: -6, fibers: 4 })}
-    <circle cx="${S[0] + 6}" cy="${S[1] - 6}" r="24" fill="${fill}"/>
-    <ellipse cx="${W1[0] + 6}" cy="${W1[1] - 10}" rx="13" ry="17" fill="url(#gSkin)" transform="rotate(-30 ${W1[0]} ${W1[1]})"/>
+
+  // ---- perna perto (direita), à frente ----
+  const nearLeg = `<g>
+    ${limb(P, K1, 62, 42, fill, lo)}${limb(K1, A1, 42, 24, fill, lo)}
+    ${bel(P, K1, { h: 46, t0: 0.06, t1: 0.9, off: -10, fibers: 5 })}
+    ${bel(P, K1, { h: 30, t0: 0.12, t1: 0.9, off: 14, fibers: 4 })}
+    ${bel(K1, A1, { h: 30, t0: 0.08, t1: 0.62, off: 9, fibers: 4 })}
+    ${bel(K1, A1, { h: 16, t0: 0.1, t1: 0.75, off: -9, fibers: 3 })}
+    <ellipse cx="${K1[0] + 4}" cy="${K1[1]}" rx="14" ry="17" fill="${C.tendon}" stroke="${C.tendonLo}" stroke-width="1.2"/>
+    <path d="M${A1[0] - 14},${A1[1] - 4} L${A1[0] + 56},${A1[1] + 8} C${A1[0] + 66},${A1[1] + 12} ${A1[0] + 64},${A1[1] + 26} ${A1[0] + 52},${A1[1] + 28} L${A1[0] - 20},${A1[1] + 24} C${A1[0] - 28},${A1[1] + 20} ${A1[0] - 26},${A1[1] + 2} ${A1[0] - 14},${A1[1] - 4} Z" fill="url(#gSkin)" stroke="${C.skinLo}" stroke-opacity="0.7" stroke-width="1.5"/>
   </g>`;
-  return `<g>${far}${torso}${neck}${head}${nearLegs}${nearArm}</g>`;
+
+  // ---- braço perto (direito), atrás ----
+  const nearArm = `<g>
+    ${limb(S, E1, 38, 28, fill, lo)}${limb(E1, W1, 28, 18, fill, lo)}
+    ${bel(S, E1, { h: 30, t0: 0.12, t1: 0.9, off: -6, fibers: 4 })}
+    ${bel(S, E1, { h: 18, t0: 0.15, t1: 0.9, off: 10, fibers: 3 })}
+    ${bel(E1, W1, { h: 22, t0: 0.08, t1: 0.8, off: 4, fibers: 3 })}
+    <path d="M268,196 C292,184 318,192 326,214 C318,228 300,236 282,232 C270,226 266,210 268,196 Z" fill="${fill}" stroke="${lo}" stroke-opacity="0.45" stroke-width="1.5"/>
+    <path d="M280,206 C290,200 304,200 314,208" fill="none" stroke="${C.fiber}" stroke-opacity="0.35" stroke-width="2"/>
+    <ellipse cx="${W1[0] - 8}" cy="${W1[1] - 10}" rx="11" ry="15" fill="url(#gSkin)" stroke="${C.skinLo}" stroke-opacity="0.7" stroke-width="1.2" transform="rotate(30 ${W1[0]} ${W1[1]})"/>
+  </g>`;
+  return `<g>${far}${nearArm}${torso}${neck}${head}${nearLeg}</g>`;
 }
 
 // Estilo: "flat" (padrão, chapado, mais vetorial) ou "shaded" (degradês e sombras).

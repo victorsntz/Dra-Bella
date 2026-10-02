@@ -43,15 +43,16 @@ export default {
     ${g(438, 70, fatCluster({ s: 0.34 }))}
     ${g(254, 190, muscle({ w: 250, h: 94, cut: true }))}`),
 
-  // texto: miolo 718 x 370 (faixa de 70 no topo, coluna de 170 à direita)
+  // texto: miolo 718 x 370 (faixa de 70 no topo, coluna de 170 à direita).
+  // Três linhas: cada fluxo sai do músculo e chega num órgão, na mesma altura da etiqueta.
   "05-inflamacao": () => svg(718, 370, `
-    ${stream({ from: [290, 160], to: [560, 70], ctrl: [420, 70], n: 10, tone: 1, seed: 13, spread: 10 })}
-    ${stream({ from: [300, 195], to: [540, 190], ctrl: [420, 190], n: 9, tone: 2, seed: 14, spread: 10 })}
-    ${stream({ from: [290, 230], to: [560, 320], ctrl: [420, 320], n: 10, tone: 3, seed: 15, spread: 10 })}
-    ${g(620, 70, fatCluster({ s: 0.5 }))}
-    ${g(540, 142, liver(), { s: 0.62 })}
-    ${g(630, 322, vessel({ w: 170, h: 54, rbcs: 4 }), { r: -8 })}
-    ${g(160, 200, muscle({ w: 240, h: 90 }), { r: -22 })}`),
+    ${stream({ from: [270, 150], to: [600, 62], ctrl: [430, 80], n: 9, tone: 1, seed: 13, spread: 7 })}
+    ${stream({ from: [280, 185], to: [580, 185], ctrl: [430, 192], n: 9, tone: 2, seed: 14, spread: 7 })}
+    ${stream({ from: [270, 220], to: [600, 308], ctrl: [430, 290], n: 9, tone: 3, seed: 15, spread: 7 })}
+    ${g(650, 62, fatCluster({ s: 0.42 }))}
+    ${g(590, 150, liver(), { s: 0.5 })}
+    ${g(652, 312, vessel({ w: 140, h: 46, rbcs: 3 }), { r: -6 })}
+    ${g(150, 185, muscle({ w: 250, h: 92 }))}`),
 
   // texto: miolo 888 x 380 (faixa de 70 no topo)
   "06-figado-vaso": () => svg(888, 380, `
