@@ -55,7 +55,7 @@
         },
         "labels": [
           {
-            "x": 14,
+            "x": 12,
             "y": 6,
             "text": "Estômago cheio",
             "tone": "cream",
@@ -64,7 +64,7 @@
             ]
           },
           {
-            "x": 62,
+            "x": 58,
             "y": 6,
             "text": "Sinal de fome ligado",
             "tone": "coffee",
@@ -204,7 +204,7 @@
         },
         "labels": [
           {
-            "x": 16,
+            "x": 14,
             "y": 6,
             "text": "Dopamina",
             "tone": "coffee",
@@ -213,7 +213,7 @@
             ]
           },
           {
-            "x": 72,
+            "x": 76,
             "y": 6,
             "text": "Recompensa",
             "tone": "cream",
@@ -222,7 +222,7 @@
             ]
           },
           {
-            "x": 72,
+            "x": 76,
             "y": 56,
             "text": "Pede de novo",
             "tone": "outline"

@@ -9,11 +9,11 @@ export default {
     ${stream({ from: [400, 800], to: [300, 570], ctrl: [400, 660], n: 9, rmin: 5, rmax: 11, tone: 3, seed: 22, spread: 14, fade: true })}
     ${g(40, 210, brain({ hypothalamus: true }), { s: 2.1 })}`),
 
-  // texto (café): miolo 888 x 310. Estômago cheio à esquerda, cérebro à direita ainda emitindo.
-  "02-estomago-cheio": () => svg(888, 310, `
-    ${g(120, 60, stomach({ full: true }), { s: 1.0 })}
-    ${g(770, 150, ripples({ n: 4, r0: 40, gap: 26, color: "#ABA597", sweep: 80 }))}
-    ${g(440, 48, brain({ hypothalamus: true }), { s: 1.3 })}`),
+  // texto (café) com pouco texto: a cena cresce pra ocupar o espaço (miolo 888 x 520).
+  "02-estomago-cheio": () => svg(888, 520, `
+    ${g(70, 90, stomach({ full: true }), { s: 1.75 })}
+    ${g(742, 250, ripples({ n: 4, r0: 50, gap: 30, color: "#ABA597", sweep: 80 }))}
+    ${g(330, 70, brain({ hypothalamus: true }), { s: 2.0 })}`),
 
   // diagrama: miolo 488 x 370. Cérebro com hipotálamo no centro; pâncreas e gordura embaixo,
   // mandando sinal que esmaece antes de chegar.
@@ -35,11 +35,11 @@ export default {
     ${g(38, 232, adrenalKidney(), { s: 0.55 })}
     ${g(300, 100, brain({ hypothalamus: true }), { s: 1.0 })}`),
 
-  // texto (café): miolo 888 x 310. Cérebro à esquerda, o ciclo da recompensa à direita.
-  "05-ciclo-dopamina": () => svg(888, 310, `
-    ${stream({ from: [330, 150], to: [520, 155], ctrl: [425, 130], n: 7, tone: 2, seed: 28, spread: 6 })}
-    ${g(640, 155, loop({ r: 100, n: 20, tone: "mix", seed: 6 }))}
-    ${g(60, 30, brain({ hypothalamus: true }), { s: 1.35 })}`),
+  // texto (café) com pouco texto: cena alta (888 x 520). Cérebro à esquerda, o ciclo da recompensa à direita.
+  "05-ciclo-dopamina": () => svg(888, 520, `
+    ${stream({ from: [400, 260], to: [520, 262], ctrl: [460, 240], n: 6, tone: 2, seed: 28, spread: 6 })}
+    ${g(680, 262, loop({ r: 150, n: 24, tone: "mix", seed: 6 }))}
+    ${g(20, 90, brain({ hypothalamus: true }), { s: 1.9 })}`),
 
   // texto: miolo 888 x 250 (faixa no topo e na base). A Árvore: frutos em cima, quatro raízes embaixo.
   "06-arvore": () => svg(420, 250, `

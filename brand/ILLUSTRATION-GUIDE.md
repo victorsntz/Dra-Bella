@@ -59,7 +59,11 @@ em volta. Nada de desenho cruza faixa e nada de etiqueta cruza o miolo.
 |---|---|---|---|
 | Capa | 520 × 900 | 520 × 900 | etiquetas sobre a figura, só pílula, sem legenda |
 | Diagrama | 888 × 370 | 488 × 370 (ou 508) | colunas de 200 px (ou 190) à esquerda e à direita; topo e base centrais livres |
-| Texto com figura | 888 × 380 | 888 × 310 | faixa de 70 px no topo; se precisar, coluna de 170 px à direita |
+| Texto com figura | 888 × o que o texto deixar | caixa menos a faixa | faixa de 70 px no topo; se precisar, coluna de 170 px à direita |
+
+**Regra do vazio:** em slide de texto com pouco texto (um ou dois parágrafos curtos), a cena é
+composta numa caixa mais alta (888 × 520) com as peças maiores, pra preencher o espaço. O slide
+nunca fica com um terço vazio. Com três parágrafos, a caixa é 888 × 380.
 
 Dentro do miolo: a peça principal no centro, as secundárias nos cantos, cada uma inteira
 (nunca cortada pela borda). Deixe vazio o canto que vai receber etiqueta na faixa ao lado.

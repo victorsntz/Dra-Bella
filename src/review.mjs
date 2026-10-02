@@ -173,7 +173,7 @@ ${slides}
       <div class="rule"><h4>Margens 96 px</h4><p>Laterais de 96. Topo de 108 (o @ fica a 96 do topo). Logo e seta a 120 da base. Embaixo, 268 reservados pro conteúdo nunca encostar na assinatura.</p></div>
       <div class="rule"><h4>Capa</h4><p>Título ocupa a metade esquerda, até 510 px de largura. Ilustração ocupa a direita, 520 × 900, e pode invadir um pouco o título, como na referência.</p></div>
       <div class="rule"><h4>Diagrama</h4><p>Figura com altura fixa de 390 px. Até quatro bullets de uma linha. Nota opcional no canto inferior esquerdo, ao lado da assinatura.</p></div>
-      <div class="rule"><h4>Texto com figura</h4><p>Até três parágrafos curtos. A figura ocupa o que sobrar, nunca menos que 340 px.</p></div>
+      <div class="rule"><h4>Texto com figura</h4><p>Até três parágrafos curtos. A figura ocupa tudo o que o texto deixar. Com pouco texto, a cena é composta mais alta e as peças maiores: nunca sobra um vazio no slide.</p></div>
       <div class="rule"><h4>Fechamento e pergunta</h4><p>Só texto, centralizado na vertical. Sem seta. A pergunta leva a dica "comenta aqui" em caixa alta.</p></div>
       <div class="rule"><h4>Negrito</h4><p>Nos títulos, a palavra em negrito vira Cherston Regular. No corpo, Montserrat Semibold. Nunca uma frase inteira.</p></div>
       <div class="rule"><h4>Etiquetas</h4><p>Posição em porcentagem dentro da figura. Pílula em cima, legenda com ↑ ou ↓ embaixo. Alinhadas à direita quando ficam na borda direita.</p></div>
