@@ -145,7 +145,7 @@ ${slides}
   <section id="comp">
     <div class="eyebrow">04 · Componentes</div>
     <h2>Peças repetidas</h2>
-    <p class="sub">O que aparece em todo slide, sempre no mesmo lugar: @ no canto superior esquerdo, logo ou monograma no canto inferior esquerdo alinhado com o texto, seta no canto inferior direito. As pílulas marcam moléculas e órgãos em cima da ilustração.</p>
+    <p class="sub">O que aparece em todo slide, sempre no mesmo lugar: @ no canto superior esquerdo, card de perfil no canto inferior esquerdo da capa e do último slide, seta no canto inferior direito. Slides do meio não levam marca. As pílulas marcam moléculas e órgãos em cima da ilustração.</p>
     <div class="bench">
       <span class="lbl">Pílulas · cinco tons</span>
       <div class="label tone-cream"><span class="pill">Irisina</span><div class="sub">↑ Gordura ativa</div></div>
@@ -159,9 +159,9 @@ ${slides}
       <ul class="bullets"><li><span class="k">Irisina</span><span class="arr">→</span>gordura branca vira gordura que gasta energia.</li><li><span class="k">IL-6</span><span class="arr">→</span>o sinal mestre: acalma a inflamação, libera combustível.</li></ul>
     </div>
     <div class="bench" style="margin-top:16px; justify-content: space-between">
-      <span class="lbl">Cabeçalho, card de perfil (capa e último), monograma (meio) e seta</span>
+      <span class="lbl">Cabeçalho, card de perfil (capa e último) e seta. Slides do meio: só a seta.</span>
       <div class="hdr">@bellabrasao</div>
-      <div class="ftr-left"><div class="profile"><div class="avatar"><img src="brand/profile.jpg" alt=""></div><div class="who"><div class="pname">Dra. Izabella Brasão <svg class="badge" viewBox="0 0 24 24" width="26" height="26"><path d="M12 1.5l2.6 2 3.2-.5 1.2 3 3 1.2-.5 3.2 2 2.6-2 2.6.5 3.2-3 1.2-1.2 3-3.2-.5-2.6 2-2.6-2-3.2.5-1.2-3-3-1.2.5-3.2-2-2.6 2-2.6-.5-3.2 3-1.2 1.2-3 3.2.5z" fill="#1D9BF0"/><path d="M7.5 12.4l3 3 6-6.4" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="phandle">@bellabrasao</div></div></div></div><div class="ftr-left"><img class="monogram" src="brand/monogram.png" alt="IB"></div><div class="ftr-right"><svg class="arrow" viewBox="0 0 120 16" width="120" height="16"><circle cx="5" cy="8" r="4" fill="currentColor" opacity="0.55"/><path d="M12,8 H112 M103,2 L112,8 L103,14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="ftr-left"><div class="profile"><div class="avatar"><img src="brand/profile.jpg" alt=""></div><div class="who"><div class="pname">Dra. Izabella Brasão <svg class="badge" viewBox="0 0 24 24" width="26" height="26"><path d="M12 1.5l2.6 2 3.2-.5 1.2 3 3 1.2-.5 3.2 2 2.6-2 2.6.5 3.2-3 1.2-1.2 3-3.2-.5-2.6 2-2.6-2-3.2.5-1.2-3-3-1.2.5-3.2-2-2.6 2-2.6-.5-3.2 3-1.2 1.2-3 3.2.5z" fill="#1D9BF0"/><path d="M7.5 12.4l3 3 6-6.4" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="phandle">@bellabrasao</div></div></div></div><div class="ftr-right"><svg class="arrow" viewBox="0 0 120 16" width="120" height="16"><circle cx="5" cy="8" r="4" fill="currentColor" opacity="0.55"/><path d="M12,8 H112 M103,2 L112,8 L103,14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
     </div>
   </section>
 
@@ -170,7 +170,7 @@ ${slides}
     <h2>Regras de espaço</h2>
     <div class="rules">
       <div class="rule"><h4>Formato 1080 × 1350</h4><p>Retrato 4:5 do Instagram. Tudo é desenhado nesse tamanho e exportado em JPG qualidade 92.</p></div>
-      <div class="rule"><h4>Margens 96 px</h4><p>Laterais de 96. O @ fica a 96 do topo e o título começa 144 abaixo dele. Card de perfil, monograma e seta a 144 da base: o card é pesado, precisa de mais ar que o @ do topo pra parecer igual. Embaixo, 268 reservados pro conteúdo nunca encostar na assinatura.</p></div>
+      <div class="rule"><h4>Margens 96 px</h4><p>Laterais de 96. O @ fica a 96 do topo e o título começa 144 abaixo dele. Card de perfil e seta a 144 da base: o card é pesado, precisa de mais ar que o @ do topo pra parecer igual. Embaixo, 268 reservados pro conteúdo nunca encostar na assinatura.</p></div>
       <div class="rule"><h4>Capa</h4><p>Título ocupa a metade esquerda, até 510 px de largura. Ilustração ocupa a direita, 520 × 900, e pode invadir um pouco o título, como na referência.</p></div>
       <div class="rule"><h4>Diagrama</h4><p>Figura com altura fixa de 390 px. Até quatro bullets de uma linha. Nota opcional no canto inferior esquerdo, ao lado da assinatura.</p></div>
       <div class="rule"><h4>Texto com figura</h4><p>Até três parágrafos curtos. A figura ocupa tudo o que o texto deixar. Com pouco texto, a cena é composta mais alta e as peças maiores: nunca sobra um vazio no slide.</p></div>
@@ -187,7 +187,7 @@ ${slides}
     <div class="q">
       <div><strong>Fundo. Decidido:</strong> alterna creme e café escuro. Neste carrossel, os slides 3, 5 e 7 vão no café. No JSON é <code>"theme": "coffee"</code> no slide.</div>
       <div><strong>Caixa alta. Decidido:</strong> fica. Cherston em todo título, sempre em maiúsculas.</div>
-      <div><strong>Assinatura. Decidido:</strong> card de perfil (foto com anel, nome com selo, @) na capa e no último slide, monograma IB nos do meio.</div>
+      <div><strong>Assinatura. Decidido:</strong> card de perfil (foto com anel, nome com selo, @) na capa e no último slide. Slides do meio sem marca, só a seta.</div>
       <div><strong>Cabeçalho. Decidido:</strong> só o @bellabrasao.</div>
       <div><strong>Pílulas. Decidido:</strong> três tons da paleta (café, areia, creme). Sem cor extra.</div>
       <div><strong>Tagline. Decidido:</strong> "Obesidade &amp; Emagrecimento", como está no logo.</div>

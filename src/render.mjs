@@ -71,10 +71,12 @@ function footer(brand, slide, i, total) {
   if (edge && brand.profile) mark = `<div class="profile"><div class="avatar"><img src="${relFromBuild(brand.profile)}" alt=""></div>
     <div class="who"><div class="pname">${esc(brand.displayName || brand.name)} ${BADGE}</div><div class="phandle">${esc(brand.handle)}</div></div></div>`;
   else if (edge && logo) mark = `<img class="logo" src="${relFromBuild(logo)}" alt="${esc(brand.name)}">`;
-  else if (!edge && mono) mark = `<img class="monogram" src="${relFromBuild(mono)}" alt="${esc(brand.name)}">`;
-  else mark = `<div class="lockup"><div><div class="name">${esc(brand.name)}</div>
+  else if (edge) mark = `<div class="lockup"><div><div class="name">${esc(brand.name)}</div>
     <div class="sub"><span></span>${esc(brand.tagline)}<span></span></div></div></div>`;
-  return `<div class="ftr-left">${mark}</div>${arrow}`;
+  // slides do meio: sem marca (pedido da Bella). Só a seta. brand.monogramOnMiddle = true reativa o IB.
+  else if (brand.monogramOnMiddle && mono) mark = `<img class="monogram" src="${relFromBuild(mono)}" alt="${esc(brand.name)}">`;
+  else mark = "";
+  return `${mark ? `<div class="ftr-left">${mark}</div>` : ""}${arrow}`;
 }
 
 function figure(fig) {
