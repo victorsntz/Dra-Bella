@@ -82,7 +82,7 @@ const html = `<title>Design System Dra. Bella</title>
   .bench .lbl { width: 100%; font: 500 11px/1 var(--font-ui); letter-spacing: .16em; text-transform: uppercase; color: #6F6356; }
   .bench .label { position: static; transform: none; }
   .bench .bullets li { font-size: 24px; }
-  .bench .ftr { position: static; }
+  .bench .ftr-left, .bench .ftr-right { position: static; }
   .bench .hdr { position: static; }
   .bench .pager { position: static; }
 
