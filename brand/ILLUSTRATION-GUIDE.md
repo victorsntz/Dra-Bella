@@ -69,6 +69,9 @@ nunca fica com um terço vazio. Com três parágrafos, a caixa é 888 × 380.
 dela, como na capa e na referência. Em figura de largura cheia, posicione em pixels da própria
 cena (`sx`, `sy` no JSON). Faixas e colunas só quando a ilustração não tem onde receber a pílula.
 
+**Legenda com caixa:** o texto pequeno que acompanha a pílula (↑ efeito, de onde vem) também
+tem fundo, creme a 92% no slide claro e café a 90% no escuro, pra ler em cima de qualquer peça.
+
 **Etiquetas coladas:** uma etiqueta que vive numa faixa é ancorada na borda do miolo (`edge: top`,
 `bottom`, `left` ou `right` no JSON) e invade a ilustração em 14 px, sempre por cima dela, nunca solta no meio da faixa.
 A peça que ela nomeia encosta nessa mesma borda, do lado de dentro.

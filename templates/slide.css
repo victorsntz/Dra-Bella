@@ -99,7 +99,7 @@ em { font-style: normal; font-weight: 500; color: var(--cozy-brown); }
 }
 .label {
   position: absolute; transform: translate(-50%, -50%);
-  display: flex; flex-direction: column; align-items: flex-start; gap: 6px;
+  display: flex; flex-direction: column; align-items: flex-start; gap: 4px;
   z-index: 3;
 }
 .label.align-right { align-items: flex-end; }
@@ -109,7 +109,9 @@ em { font-style: normal; font-weight: 500; color: var(--cozy-brown); }
   font: 600 19px/1 var(--font-body); letter-spacing: 0.01em;
   border: 1.5px solid transparent;
 }
-.label .sub { font: 500 17px/1.35 var(--font-body); color: var(--cozy-brown); white-space: nowrap; }
+/* a legenda da pílula também tem caixa: lê em cima de qualquer cor de ilustração */
+.label .sub { font: 500 17px/1.3 var(--font-body); color: var(--cozy-brown); white-space: nowrap;
+  background: rgba(246, 244, 240, 0.92); padding: 4px 9px; border-radius: 7px; }
 .label .sub b { font-weight: 600; color: var(--deep-coffee); }
 .tone-cream .pill  { background: var(--soft-cream); color: var(--deep-coffee); border-color: var(--sand-line); }
 .tone-sand .pill   { background: var(--serene-sand); color: var(--paper); }
@@ -171,7 +173,7 @@ em { font-style: normal; font-weight: 500; color: var(--cozy-brown); }
 .slide.coffee .bullets li .arr { color: var(--serene-sand); }
 .slide.coffee .ftr-right { color: var(--serene-sand); }
 .slide.coffee .lockup .name { color: var(--soft-cream); } .slide.coffee .lockup .sub { color: var(--serene-sand); }
-.slide.coffee .label .sub { color: var(--serene-sand); } .slide.coffee .label .sub b { color: var(--soft-cream); }
+.slide.coffee .label .sub { color: var(--serene-sand); background: rgba(54, 45, 40, 0.9); } .slide.coffee .label .sub b { color: var(--soft-cream); }
 .slide.coffee .tone-coffee .pill { background: var(--soft-cream); color: var(--deep-coffee); }
 .slide.coffee .tone-cream .pill { background: var(--soft-cream); border-color: transparent; }
 .slide.coffee .tone-outline .pill { border-color: var(--soft-cream); color: var(--soft-cream); }
