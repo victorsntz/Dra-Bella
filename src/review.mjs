@@ -176,7 +176,7 @@ ${slides}
       <div class="rule"><h4>Texto com figura</h4><p>Até três parágrafos curtos. A figura ocupa tudo o que o texto deixar. Com pouco texto, a cena é composta mais alta e as peças maiores: nunca sobra um vazio no slide.</p></div>
       <div class="rule"><h4>Fechamento e pergunta</h4><p>Só texto, centralizado na vertical. Sem seta. A pergunta leva a dica "comenta aqui" em caixa alta.</p></div>
       <div class="rule"><h4>Negrito</h4><p>Nos títulos, a palavra em negrito vira Cherston Regular. No corpo, Montserrat Semibold. Nunca uma frase inteira.</p></div>
-      <div class="rule"><h4>Etiquetas</h4><p>Posição em porcentagem dentro da figura. Pílula em cima, legenda com ↑ ou ↓ embaixo. Alinhadas à direita quando ficam na borda direita.</p></div>
+      <div class="rule"><h4>Etiquetas</h4><p>Ancoradas na borda do miolo e sempre por cima da ilustração, invadindo 14 px, nunca soltas no meio da faixa. Pílula em cima, legenda com ↑ ou ↓ embaixo. Alinhadas pra dentro, em direção à peça que nomeiam.</p></div>
     </div>
   </section>
 

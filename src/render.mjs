@@ -78,11 +78,20 @@ function figure(fig) {
   const img = fig.src
     ? `<img src="${relFromBuild(fig.src)}" alt="">`
     : `<div class="placeholder"><span>${rich(fig.prompt || fig.placeholder || "ilustração")}</span></div>`;
+  const ins = fig.inset || {};
+  const GAP = -14; // negativo: a pílula invade a borda do miolo e fica por cima da ilustração
   const labels = (fig.labels || [])
     .map((l) => {
       const sub = (l.sub || []).map((t) => `<div class="sub">${rich(t)}</div>`).join("");
-      return `<div class="label tone-${l.tone || "cream"}${l.align === "right" ? " align-right" : ""}"
-        style="left:${l.x}%;top:${l.y}%"><span class="pill">${rich(l.text)}</span>${sub}</div>`;
+      let pos, align = l.align;
+      switch (l.edge) {
+        case "top":    pos = `left:${l.x}%;top:${(ins.top || 0) - GAP}px;transform:translate(-50%,-100%)`; break;
+        case "bottom": pos = `left:${l.x}%;bottom:${(ins.bottom || 0) - GAP}px;transform:translate(-50%,100%)`; break;
+        case "left":   pos = `top:${l.y}%;left:${(ins.left || 0) - GAP}px;transform:translate(-100%,-50%)`; align = align || "right"; break;
+        case "right":  pos = `top:${l.y}%;right:${(ins.right || 0) - GAP}px;transform:translate(100%,-50%)`; align = align || "left"; break;
+        default:       pos = `left:${l.x}%;top:${l.y}%`;
+      }
+      return `<div class="label tone-${l.tone || "cream"}${align === "right" ? " align-right" : ""}" style="${pos}"><span class="pill">${rich(l.text)}</span>${sub}</div>`;
     })
     .join("");
   const style = fig.style ? ` style="${esc(fig.style)}"` : "";

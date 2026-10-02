@@ -65,6 +65,10 @@ em volta. Nada de desenho cruza faixa e nada de etiqueta cruza o miolo.
 composta numa caixa mais alta (888 × 520) com as peças maiores, pra preencher o espaço. O slide
 nunca fica com um terço vazio. Com três parágrafos, a caixa é 888 × 380.
 
+**Etiquetas coladas:** uma etiqueta que vive numa faixa é ancorada na borda do miolo (`edge: top`,
+`bottom`, `left` ou `right` no JSON) e invade a ilustração em 14 px, sempre por cima dela, nunca solta no meio da faixa.
+A peça que ela nomeia encosta nessa mesma borda, do lado de dentro.
+
 Dentro do miolo: a peça principal no centro, as secundárias nos cantos, cada uma inteira
 (nunca cortada pela borda). Deixe vazio o canto que vai receber etiqueta na faixa ao lado.
 

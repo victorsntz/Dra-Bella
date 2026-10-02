@@ -71,7 +71,8 @@
             "sub": [
               "↑ Gordura ativa",
               "↑ Metabolismo"
-            ]
+            ],
+            "edge": "left"
           },
           {
             "x": 11,
@@ -80,7 +81,8 @@
             "tone": "outline",
             "sub": [
               "↓ Perda de massa"
-            ]
+            ],
+            "edge": "left"
           },
           {
             "x": 11,
@@ -89,7 +91,8 @@
             "tone": "cream",
             "sub": [
               "↑ Sensibilidade à insulina"
-            ]
+            ],
+            "edge": "left"
           },
           {
             "x": 89,
@@ -99,7 +102,8 @@
             "sub": [
               "↑ Memória e humor"
             ],
-            "align": "right"
+            "align": "right",
+            "edge": "right"
           },
           {
             "x": 89,
@@ -109,7 +113,8 @@
             "sub": [
               "↑ Massa muscular"
             ],
-            "align": "right"
+            "align": "right",
+            "edge": "right"
           },
           {
             "x": 89,
@@ -119,7 +124,8 @@
             "sub": [
               "↑ Mitocôndrias"
             ],
-            "align": "right"
+            "align": "right",
+            "edge": "right"
           },
           {
             "x": 50,
@@ -171,7 +177,8 @@
             "tone": "cream",
             "sub": [
               "O sinal sobe pelo sangue"
-            ]
+            ],
+            "edge": "top"
           },
           {
             "x": 64,
@@ -180,7 +187,8 @@
             "tone": "coffee",
             "sub": [
               "Fábrica de conexões"
-            ]
+            ],
+            "edge": "top"
           }
         ],
         "prompt": "ilustração: cérebro humano em corte, neurônios se conectando, uma silhueta pequena correndo à esquerda com setas chegando ao cérebro",
@@ -203,7 +211,8 @@
             "tone": "cream",
             "sub": [
               "Gordura branca → ativa"
-            ]
+            ],
+            "edge": "left"
           },
           {
             "x": 11,
@@ -212,7 +221,8 @@
             "tone": "coffee",
             "sub": [
               "Constroem mitocôndrias"
-            ]
+            ],
+            "edge": "left"
           },
           {
             "x": 89,
@@ -222,7 +232,8 @@
             "sub": [
               "Libera o músculo pra crescer"
             ],
-            "align": "right"
+            "align": "right",
+            "edge": "right"
           },
           {
             "x": 89,
@@ -232,7 +243,8 @@
             "sub": [
               "Reparo e reconstrução"
             ],
-            "align": "right"
+            "align": "right",
+            "edge": "right"
           }
         ],
         "prompt": "ilustração: feixe muscular em corte no centro, células de gordura amarelas à esquerda em cima, mitocôndria em corte embaixo à esquerda, célula satélite à direita",
@@ -266,7 +278,8 @@
             "tone": "cream",
             "sub": [
               "Libera IL-6"
-            ]
+            ],
+            "edge": "top"
           },
           {
             "x": 27,
@@ -351,7 +364,8 @@
             "x": 20,
             "y": 6,
             "text": "Músculo em contração",
-            "tone": "cream"
+            "tone": "cream",
+            "edge": "top"
           },
           {
             "x": 56,
@@ -360,7 +374,8 @@
             "tone": "sand",
             "sub": [
               "→ Fígado"
-            ]
+            ],
+            "edge": "top"
           },
           {
             "x": 46,
