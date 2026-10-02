@@ -43,8 +43,8 @@ body.preview .slide-wrap::after {
 }
 
 /* rodapé: logo ou monograma à esquerda (margem do texto), seta à direita */
-.ftr-left { position: absolute; left: 96px; bottom: 96px; z-index: 5; display: flex; align-items: flex-end; }
-.ftr-right { position: absolute; right: 96px; bottom: 96px; z-index: 5; color: var(--cozy-brown); display: flex; align-items: center; height: 40px; }
+.ftr-left { position: absolute; left: 96px; bottom: 144px; z-index: 5; display: flex; align-items: flex-end; }
+.ftr-right { position: absolute; right: 96px; bottom: 144px; z-index: 5; color: var(--cozy-brown); display: flex; align-items: center; height: 40px; }
 .ftr-right .arrow { display: block; }
 .ftr-left img.logo { height: 88px; width: auto; display: block; }
 .ftr-left img.monogram { height: 52px; width: auto; display: block; }
