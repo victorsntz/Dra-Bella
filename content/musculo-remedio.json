@@ -260,8 +260,8 @@
         "src": "assets/illustrations/musculo-remedio/05-inflamacao.svg",
         "labels": [
           {
-            "x": 16,
-            "y": 6,
+            "x": 12,
+            "y": 5,
             "text": "Músculo em contração",
             "tone": "cream",
             "sub": [
@@ -269,26 +269,26 @@
             ]
           },
           {
-            "x": 44,
-            "y": 16,
+            "x": 27,
+            "y": 31,
             "text": "IL-10",
             "tone": "sand",
             "sub": [
-              "Acalma a inflamação"
+              "Freia a inflamação"
             ]
           },
           {
-            "x": 44,
-            "y": 44,
+            "x": 27,
+            "y": 57,
             "text": "IL-1ra",
             "tone": "sand",
             "sub": [
-              "Bloqueia o sinal inflamatório"
+              "Bloqueia o sinal"
             ]
           },
           {
-            "x": 44,
-            "y": 72,
+            "x": 27,
+            "y": 83,
             "text": "sTNF-R",
             "tone": "sand",
             "sub": [
@@ -297,7 +297,7 @@
           },
           {
             "x": 90,
-            "y": 30,
+            "y": 31,
             "text": "Gordura",
             "tone": "cream",
             "sub": [
@@ -307,7 +307,7 @@
           },
           {
             "x": 90,
-            "y": 58,
+            "y": 57,
             "text": "Fígado",
             "tone": "cream",
             "sub": [
@@ -317,7 +317,7 @@
           },
           {
             "x": 90,
-            "y": 86,
+            "y": 83,
             "text": "Vasos",
             "tone": "cream",
             "sub": [
@@ -328,8 +328,7 @@
         ],
         "prompt": "ilustração: músculo à esquerda liberando esferas, que chegam em tecido adiposo, fígado e vaso sanguíneo à direita",
         "inset": {
-          "top": 70,
-          "right": 170
+          "top": 60
         }
       },
       "theme": "coffee"

@@ -43,16 +43,17 @@ export default {
     ${g(438, 70, fatCluster({ s: 0.34 }))}
     ${g(254, 190, muscle({ w: 250, h: 94, cut: true }))}`),
 
-  // texto: miolo 718 x 370 (faixa de 70 no topo, coluna de 170 à direita).
-  // Três linhas: cada fluxo sai do músculo e chega num órgão, na mesma altura da etiqueta.
-  "05-inflamacao": () => svg(718, 370, `
-    ${stream({ from: [270, 150], to: [600, 62], ctrl: [430, 80], n: 9, tone: 1, seed: 13, spread: 7 })}
-    ${stream({ from: [280, 185], to: [580, 185], ctrl: [430, 192], n: 9, tone: 2, seed: 14, spread: 7 })}
-    ${stream({ from: [270, 220], to: [600, 308], ctrl: [430, 290], n: 9, tone: 3, seed: 15, spread: 7 })}
-    ${g(650, 62, fatCluster({ s: 0.42 }))}
-    ${g(590, 150, liver(), { s: 0.5 })}
-    ${g(652, 312, vessel({ w: 140, h: 46, rbcs: 3 }), { r: -6 })}
-    ${g(150, 185, muscle({ w: 250, h: 92 }))}`),
+  // texto: miolo 888 x 380 (faixa de 60 no topo). Tabela de três linhas:
+  // músculo (vertical, à esquerda) · pílula da molécula · fluxo · órgão · pílula do órgão.
+  // Linhas em y = 76, 190, 304. Pílulas entram no HTML em x = 27% (molécula) e 90% (órgão).
+  "05-inflamacao": () => svg(888, 380, `
+    ${stream({ from: [330, 76], to: [590, 76], ctrl: [460, 66], n: 9, tone: 1, seed: 13, spread: 6 })}
+    ${stream({ from: [330, 190], to: [590, 190], ctrl: [460, 198], n: 9, tone: 2, seed: 14, spread: 6 })}
+    ${stream({ from: [330, 304], to: [590, 304], ctrl: [460, 294], n: 9, tone: 3, seed: 15, spread: 6 })}
+    ${g(650, 76, fatCluster({ s: 0.42 }))}
+    ${g(600, 155, liver(), { s: 0.48 })}
+    ${g(652, 304, vessel({ w: 130, h: 42, rbcs: 3 }), { r: -6 })}
+    ${g(90, 190, muscle({ w: 300, h: 88 }), { r: -90 })}`),
 
   // texto: miolo 888 x 380 (faixa de 70 no topo)
   "06-figado-vaso": () => svg(888, 380, `
