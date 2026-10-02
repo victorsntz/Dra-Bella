@@ -67,6 +67,7 @@ investigar antes de prescrever · mecanismo conhecido · tratamento com evidênc
 
 ## Legenda (padrão dos roteiros aprovados)
 
+0. Primeira linha, sempre: "Primeiro siga @bellabrasao 🤍". Linha em branco depois.
 1. Uma frase que reenquadra o tema (a sacada).
 2. Um parágrafo curto de mecanismo ou contexto. Um emoji discreto no fim do parágrafo, no máximo dois na legenda inteira.
 3. Fecho com CTA: pergunta pra comentar, ou "clique no link da bio e agende a sua consulta".
