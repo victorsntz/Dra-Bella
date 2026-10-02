@@ -2,10 +2,11 @@ import { C, g, svg, brain, liver, fatCluster, fatClusterFibrotic, vessel, muscle
 
 export default {
   // capa 520x900: pernas com lipedema, adipócito fibrótico em destaque
-  "01-pernas-lipedema": () => svg(520, 900, `
-    ${g(60, 40, legs({ lipedema: true }), { s: 1.5 })}
-    ${stream({ from: [230, 620], to: [160, 660], ctrl: [200, 620], n: 5, rmin: 3, rmax: 6, tone: 1, seed: 31, spread: 5 })}
-    ${g(100, 740, fatClusterFibrotic({ s: 1.1 }))}`),
+  // capa, caixa de largura cheia 888x960: pernas na coluna direita, zoom do adipócito embaixo à esquerda
+  "01-pernas-lipedema": () => svg(888, 960, `
+    ${g(440, 30, legs({ lipedema: true }), { s: 1.65 })}
+    ${stream({ from: [560, 640], to: [300, 730], ctrl: [420, 640], n: 7, rmin: 3, rmax: 7, tone: 1, seed: 31, spread: 6 })}
+    ${g(190, 770, fatClusterFibrotic({ s: 1.45 }))}`),
 
   // texto café, cena alta 888x440: adipócito saudável x adipócito do lipedema
   "02-tecido": () => svg(888, 440, `
