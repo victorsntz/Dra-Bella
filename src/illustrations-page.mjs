@@ -95,6 +95,7 @@ const html = `<title>Ilustrações Dra. Bella</title>
   </section>`).join("")}
 </div>
 `;
-await fs.mkdir(path.join(ROOT, "build", "illustrations"), { recursive: true });
-await fs.writeFile(path.join(ROOT, "build", "illustrations", "index.html"), html);
-console.log(`✓ build/illustrations/index.html (${items.length} ilustrações)`);
+const outDir = name === "musculo-remedio" ? "illustrations" : `illustrations-${name}`;
+await fs.mkdir(path.join(ROOT, "build", outDir), { recursive: true });
+await fs.writeFile(path.join(ROOT, "build", outDir, "index.html"), html);
+console.log(`✓ build/${outDir}/index.html (${items.length} ilustrações)`);

@@ -138,6 +138,7 @@ em { font-style: normal; font-weight: 500; color: var(--cozy-brown); }
 .slide.text .title { margin-top: 30px; }
 .slide.text .body { margin-top: 44px; }
 .slide.text .fig { flex: 1; margin-top: 32px; min-height: 320px; }
+.slide.text .fig img { object-position: center top; }
 
 /* ---------- FECHAMENTO (só texto) ---------- */
 .slide.closing { justify-content: center; }

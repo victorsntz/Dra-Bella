@@ -1,0 +1,293 @@
+{
+  "title": "Não é falta de força de vontade. É food noise.",
+  "format": "carrossel · educativo",
+  "slides": [
+    {
+      "type": "cover",
+      "title": "Não é falta de força de vontade. É **food noise.**",
+      "lead": "O que acontece no seu cérebro quando a comida não sai da cabeça.",
+      "figure": {
+        "src": "assets/illustrations/food-noise/01-cerebro-ruido.svg",
+        "prompt": "cérebro grande visto de lado com o hipotálamo aceso no centro, ondas sonoras saindo pra frente, insulina e leptina subindo de baixo e sumindo antes de chegar",
+        "labels": [
+          {
+            "x": 46,
+            "y": 40,
+            "text": "Hipotálamo",
+            "tone": "coffee"
+          },
+          {
+            "x": 84,
+            "y": 30,
+            "text": "Sinal de fome",
+            "tone": "sand",
+            "align": "right"
+          },
+          {
+            "x": 20,
+            "y": 90,
+            "text": "Insulina",
+            "tone": "cream"
+          },
+          {
+            "x": 78,
+            "y": 90,
+            "text": "Leptina",
+            "tone": "cream",
+            "align": "right"
+          }
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "theme": "coffee",
+      "title": "Food noise é o pensamento **constante** sobre comida.",
+      "paragraphs": [
+        "Você acabou de almoçar e já está pensando no lanche.",
+        "Não é fome. É **sinal**. E ele continua ligado mesmo com o estômago cheio."
+      ],
+      "figure": {
+        "src": "assets/illustrations/food-noise/02-estomago-cheio.svg",
+        "prompt": "estômago cheio à esquerda, cérebro à direita ainda emitindo ondas de sinal",
+        "inset": {
+          "top": 70
+        },
+        "labels": [
+          {
+            "x": 14,
+            "y": 6,
+            "text": "Estômago cheio",
+            "tone": "cream",
+            "sub": [
+              "A fome física passou"
+            ]
+          },
+          {
+            "x": 62,
+            "y": 6,
+            "text": "Sinal de fome ligado",
+            "tone": "coffee",
+            "sub": [
+              "O barulho continua"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "diagram",
+      "title": "O sinal nasce no **hipotálamo.**",
+      "lead": "A central que regula fome e saciedade. Ela decide se falta energia ou não.",
+      "figure": {
+        "src": "assets/illustrations/food-noise/03-hipotalamo.svg",
+        "prompt": "cérebro com o hipotálamo aceso no centro; pâncreas e gordura embaixo mandando insulina e leptina, que esmaecem antes de chegar",
+        "inset": {
+          "left": 200,
+          "right": 200
+        },
+        "labels": [
+          {
+            "x": 50,
+            "y": 7,
+            "text": "Hipotálamo",
+            "tone": "coffee",
+            "sub": [
+              "Central da fome e da saciedade"
+            ]
+          },
+          {
+            "x": 11,
+            "y": 80,
+            "text": "Insulina",
+            "tone": "sand",
+            "sub": [
+              "Vem do pâncreas",
+              "Avisa que chegou energia"
+            ]
+          },
+          {
+            "x": 89,
+            "y": 80,
+            "text": "Leptina",
+            "tone": "sand",
+            "sub": [
+              "Vem da gordura",
+              "Avisa que há reserva"
+            ],
+            "align": "right"
+          },
+          {
+            "x": 50,
+            "y": 94,
+            "text": "O sinal não chega",
+            "tone": "outline"
+          }
+        ]
+      },
+      "bullets": [
+        "Insulina → avisa que a energia chegou.",
+        "Leptina → avisa que existe reserva.",
+        "Quando o hipotálamo para de ouvir as duas, entende que falta. E manda procurar comida."
+      ]
+    },
+    {
+      "type": "diagram",
+      "title": "Três coisas deixam esse sinal **alto.**",
+      "lead": "Cada uma delas sobe o volume. Juntas, viram o barulho que não para.",
+      "figure": {
+        "src": "assets/illustrations/food-noise/04-tres-fontes.svg",
+        "prompt": "três fontes à esquerda (citocinas, vaso com picos de açúcar, rim com adrenal) e o cérebro à direita recebendo os três fluxos no hipotálamo",
+        "inset": {
+          "left": 210,
+          "right": 190
+        },
+        "labels": [
+          {
+            "x": 12,
+            "y": 17,
+            "text": "Inflamação crônica",
+            "tone": "sand",
+            "sub": [
+              "Citocinas no sangue"
+            ]
+          },
+          {
+            "x": 12,
+            "y": 50,
+            "text": "Picos de açúcar",
+            "tone": "sand",
+            "sub": [
+              "Insulina em onda"
+            ]
+          },
+          {
+            "x": 12,
+            "y": 83,
+            "text": "Sono ruim",
+            "tone": "sand",
+            "sub": [
+              "Cortisol alto"
+            ]
+          },
+          {
+            "x": 89,
+            "y": 50,
+            "text": "Hipotálamo",
+            "tone": "coffee",
+            "sub": [
+              "Volume no máximo"
+            ],
+            "align": "right"
+          }
+        ]
+      },
+      "bullets": [
+        "Inflamação crônica → o hipotálamo ouve pior a leptina.",
+        "Picos de açúcar → insulina sobe e desce, e a fome volta antes da hora.",
+        "Sono ruim → cortisol alto, grelina alta, mais vontade de comer."
+      ]
+    },
+    {
+      "type": "text",
+      "theme": "coffee",
+      "title": "O que parece compulsão é um cérebro respondendo ao que **aprendeu.**",
+      "paragraphs": [
+        "Cada pico de açúcar libera **dopamina**. O cérebro registra a recompensa. E pede de novo.",
+        "A paciente não é fraca. Ela está com o **sistema desregulado**."
+      ],
+      "figure": {
+        "src": "assets/illustrations/food-noise/05-ciclo-dopamina.svg",
+        "prompt": "cérebro à esquerda e, à direita, um círculo de moléculas girando: o ciclo da recompensa",
+        "inset": {
+          "top": 70
+        },
+        "labels": [
+          {
+            "x": 16,
+            "y": 6,
+            "text": "Dopamina",
+            "tone": "coffee",
+            "sub": [
+              "Pico a cada doce"
+            ]
+          },
+          {
+            "x": 72,
+            "y": 6,
+            "text": "Recompensa",
+            "tone": "cream",
+            "sub": [
+              "O cérebro aprende"
+            ]
+          },
+          {
+            "x": 72,
+            "y": 56,
+            "text": "Pede de novo",
+            "tone": "outline"
+          }
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "title": "O tratamento começa na **raiz.**",
+      "paragraphs": [
+        "Food noise é fruto. As raízes são quatro: inflamação crônica, disfunção hormonal, intestino comprometido e sistema nervoso sobrecarregado.",
+        "Quando a inflamação cai e a insulina volta a funcionar, o volume abaixa sozinho. Às vezes com ajuda de medicação. Sempre com entendimento."
+      ],
+      "figure": {
+        "src": "assets/illustrations/food-noise/06-arvore.svg",
+        "prompt": "a Árvore: copa com frutos em cima, tronco, quatro raízes embaixo",
+        "inset": {
+          "top": 60,
+          "bottom": 60
+        },
+        "labels": [
+          {
+            "x": 66,
+            "y": 5,
+            "text": "Food noise",
+            "tone": "coffee",
+            "sub": [
+              "O fruto"
+            ]
+          },
+          {
+            "x": 23,
+            "y": 95,
+            "text": "Inflamação",
+            "tone": "outline"
+          },
+          {
+            "x": 41,
+            "y": 95,
+            "text": "Hormônios",
+            "tone": "outline"
+          },
+          {
+            "x": 59,
+            "y": 95,
+            "text": "Intestino",
+            "tone": "outline"
+          },
+          {
+            "x": 78,
+            "y": 95,
+            "text": "Sistema nervoso",
+            "tone": "outline"
+          }
+        ]
+      }
+    },
+    {
+      "type": "cta",
+      "theme": "coffee",
+      "title": "Você sente que pensa em comida o dia inteiro?",
+      "lead": "Me conta aqui embaixo. E se alguém já te chamou de fraca por isso, manda esse carrossel pra ela.",
+      "hint": "Comenta aqui"
+    }
+  ],
+  "caption": "Fomos ensinadas a chamar de fraqueza o que é fisiologia. Food noise tem nome, tem mecanismo e tem tratamento. 🧠\n\nSe você vive com esse barulho na cabeça, não é um problema de disciplina. É um sistema pedindo investigação.\n\nClique no link da bio e agende a sua consulta. A gente vai olhar a raiz, não o fruto. 🤍"
+}

@@ -25,7 +25,7 @@ const palette = [
   ["Sand Line (derivada)", "#CFCABF", "contorno da pílula clara, moldura do placeholder"],
 ];
 
-const html = `<title>Design System Dra. Bella</title>
+const html = `<title>${name === "musculo-remedio" ? "Design System Dra. Bella" : "Carrossel " + doc.title.replace(/\*\*/g, "")}</title>
 <link rel="stylesheet" href="brand/brand.css">
 <link rel="stylesheet" href="templates/slide.css">
 <style>
@@ -208,6 +208,7 @@ ${slides}
 </script>
 `;
 
-await fs.mkdir(path.join(ROOT, "build", "review"), { recursive: true });
-await fs.writeFile(path.join(ROOT, "build", "review", "index.html"), html);
-console.log("✓ build/review/index.html");
+const outDir = name === "musculo-remedio" ? "review" : `review-${name}`;
+await fs.mkdir(path.join(ROOT, "build", outDir), { recursive: true });
+await fs.writeFile(path.join(ROOT, "build", outDir, "index.html"), html);
+console.log(`✓ build/${outDir}/index.html`);

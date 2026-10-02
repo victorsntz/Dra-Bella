@@ -12,6 +12,9 @@ export const C = {
   mol1: "#A9B3BC", mol1Lo: "#7F8B95", mol2: "#ABA597", mol2Lo: "#827C70", mol3: "#CFBEA8", mol3Lo: "#A28F77", molHi: "#F4F1EB",
   satellite: "#9C8FA8", satelliteLo: "#6F6380",
   skin: "#EBDFD2", skinLo: "#CDB9A6", muted: "#CBAE9F", mutedLo: "#A98B7D", hair: "#4A3A32", ink: "#362D28",
+  stomach: "#D0A094", stomachLo: "#9E6459", pancreas: "#E2C9A8", pancreasLo: "#B9956F",
+  kidney: "#B86F65", kidneyLo: "#834A42", adrenal: "#DCC08E", adrenalLo: "#A98A52",
+  trunk: "#6F6356", trunkLo: "#4E453B", canopy: "#ABA597", canopyLo: "#8E8779", canopyHi: "#C9C3B5", fruit: "#B9776A",
 };
 
 export function defs() {
@@ -76,7 +79,7 @@ export function muscle({ w = 300, h = 110, cut = false, fill = "url(#gMuscle)", 
 }
 
 // ---------- cérebro (caixa 220x170, canto em 0,0) ----------
-export function brain({ neurons = false } = {}) {
+export function brain({ neurons = false, hypothalamus = false } = {}) {
   const outline = "M18,100 C6,62 36,26 84,16 C124,6 172,18 194,56 C208,82 200,114 176,124 C166,140 136,146 114,136 C104,150 76,156 58,142 C40,146 24,132 26,116 C14,112 10,104 18,100 Z";
   const cereb = "M118,132 C132,124 158,124 170,134 C162,154 130,158 116,146 Z";
   const stem = "M104,138 C108,150 112,162 110,176 L124,178 C124,164 120,150 118,142 Z";
@@ -87,8 +90,11 @@ export function brain({ neurons = false } = {}) {
     `<g stroke="${C.neuron}" stroke-width="2" fill="none" stroke-linecap="round">
       <path d="M${x},${y} l-14,-18 m14,18 l16,-14 m-16,14 l-18,10 m18,-10 l14,16 m-14,-16 l6,-22"/>
       <circle cx="${x}" cy="${y}" r="7" fill="${C.neuron}" stroke="none"/></g>`).join("") : "";
+  const hypo = hypothalamus ? `<path d="M104,112 C110,124 108,136 104,140" fill="none" stroke="${C.muscleLo}" stroke-width="3" stroke-linecap="round" opacity="0.8"/>
+    <ellipse cx="104" cy="108" rx="17" ry="12" fill="${C.muscle}" stroke="${C.muscleLo}" stroke-width="1.5"/>
+    <ellipse cx="100" cy="105" rx="7" ry="4" fill="#fff" opacity="0.25"/>` : "";
   return `<g filter="url(#shadow)"><path d="${stem}" fill="${C.brainLo}"/><path d="${cereb}" fill="${C.brain}" stroke="${C.brainLo}" stroke-width="1.5"/>
-    <path d="${outline}" fill="url(#gBrain)" stroke="${C.brainLo}" stroke-opacity="0.7" stroke-width="1.5"/>${gyri}${neur}</g>`;
+    <path d="${outline}" fill="url(#gBrain)" stroke="${C.brainLo}" stroke-opacity="0.7" stroke-width="1.5"/>${gyri}${neur}${hypo}</g>`;
 }
 
 // ---------- fígado (caixa 220x140) ----------
@@ -144,7 +150,7 @@ export function sphere(x, y, r, tone = 1) {
   return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${r.toFixed(1)}" fill="url(#gMol${tone})"/>` +
     `<circle cx="${(x - r * 0.3).toFixed(1)}" cy="${(y - r * 0.3).toFixed(1)}" r="${(r * 0.28).toFixed(1)}" fill="#fff" opacity="0.55"/>`;
 }
-export function stream({ from, to, ctrl, n = 12, rmin = 4, rmax = 10, tone = 1, seed = 1, spread = 14 }) {
+export function stream({ from, to, ctrl, n = 12, rmin = 4, rmax = 10, tone = 1, seed = 1, spread = 14, fade = false }) {
   let s = seed * 9301 + 49297;
   const rnd = () => { s = (s * 9301 + 49297) % 233280; return s / 233280; };
   const [x1, y1] = from, [x2, y2] = to, [cx, cy] = ctrl || [(x1 + x2) / 2, (y1 + y2) / 2];
@@ -155,7 +161,8 @@ export function stream({ from, to, ctrl, n = 12, rmin = 4, rmax = 10, tone = 1, 
     const jx = (rnd() - 0.5) * spread * 2, jy = (rnd() - 0.5) * spread * 2;
     const r = rmin + rnd() * (rmax - rmin);
     const tn = tone === "mix" ? 1 + Math.floor(rnd() * 3) : tone;
-    out += sphere(x + jx, y + jy, r, tn);
+    const dot = sphere(x + jx, y + jy, r, tn);
+    out += fade ? `<g opacity="${(1 - t * 0.85).toFixed(2)}">${dot}</g>` : dot;
   }
   return `<g filter="url(#soft)">${out}</g>`;
 }
@@ -249,6 +256,71 @@ export function runner({ muted = false } = {}) {
     <ellipse cx="${W1[0] - 8}" cy="${W1[1] - 10}" rx="11" ry="15" fill="url(#gSkin)" stroke="${C.skinLo}" stroke-opacity="0.7" stroke-width="1.2" transform="rotate(30 ${W1[0]} ${W1[1]})"/>
   </g>`;
   return `<g>${far}${nearArm}${torso}${neck}${head}${nearLeg}</g>`;
+}
+
+// ---------- ondas (o "barulho" do food noise): arcos concêntricos abrindo pra direita ----------
+export function ripples({ n = 4, r0 = 40, gap = 26, color = C.cozyBrown || "#6F6356", sweep = 70 } = {}) {
+  const a = (sweep * Math.PI) / 360;
+  return Array.from({ length: n }, (_, i) => {
+    const r = r0 + i * gap, x1 = Math.cos(-a) * r, y1 = Math.sin(-a) * r, x2 = Math.cos(a) * r, y2 = Math.sin(a) * r;
+    return `<path d="M${x1.toFixed(1)},${y1.toFixed(1)} A${r},${r} 0 0 1 ${x2.toFixed(1)},${y2.toFixed(1)}" fill="none" stroke="${color}" stroke-width="2.5" stroke-linecap="round" opacity="${(0.75 - i * 0.16).toFixed(2)}"/>`;
+  }).join("");
+}
+
+// ---------- estômago (caixa 170x190, canto em 0,0) ----------
+export function stomach({ full = false } = {}) {
+  const d = "M58,8 C30,22 14,60 22,96 C30,136 64,174 110,176 C148,178 166,150 156,122 C148,100 122,96 104,86 C84,76 78,52 82,30 C84,16 72,6 58,8 Z";
+  const rugae = ["M48,60 C60,80 56,110 68,134", "M70,70 C80,92 78,120 92,146", "M96,110 C110,124 118,142 128,158"]
+    .map((r) => `<path d="${r}" fill="none" stroke="${C.stomachLo}" stroke-opacity="0.45" stroke-width="2.5" stroke-linecap="round"/>`).join("");
+  const fill = full ? [[70, 120, 9], [92, 140, 8], [112, 128, 7], [84, 100, 7], [120, 150, 6], [60, 96, 6]].map(([x, y, r]) => sphere(x, y, r, 3)).join("") : "";
+  return `<g filter="url(#shadow)"><path d="${d}" fill="${C.stomach}" stroke="${C.stomachLo}" stroke-opacity="0.6" stroke-width="1.5"/>${rugae}${fill}
+    <ellipse cx="56" cy="40" rx="14" ry="22" fill="#fff" opacity="0.18" transform="rotate(20 56 40)"/></g>`;
+}
+
+// ---------- pâncreas (caixa 200x70) ----------
+export function pancreas() {
+  const d = "M6,40 C10,20 36,10 60,16 C84,22 104,10 130,12 C160,14 190,26 194,42 C190,56 160,62 130,58 C104,54 84,64 60,58 C36,52 10,56 6,40 Z";
+  const lob = [40, 70, 100, 130, 160].map((x) => `<path d="M${x},18 C${x + 4},30 ${x - 4},44 ${x},56" fill="none" stroke="${C.pancreasLo}" stroke-opacity="0.4" stroke-width="2"/>`).join("");
+  return `<g filter="url(#shadow)"><path d="${d}" fill="${C.pancreas}" stroke="${C.pancreasLo}" stroke-opacity="0.6" stroke-width="1.5"/>${lob}</g>`;
+}
+
+// ---------- rim com adrenal (caixa 110x170) ----------
+export function adrenalKidney() {
+  const kid = "M56,30 C84,26 104,56 102,96 C100,136 76,164 50,160 C22,156 8,128 12,96 C16,66 30,34 56,30 Z";
+  const adr = "M30,38 C34,20 56,8 78,14 C86,18 84,30 72,34 C58,38 44,40 30,38 Z";
+  return `<g filter="url(#shadow)"><path d="${kid}" fill="${C.kidney}" stroke="${C.kidneyLo}" stroke-opacity="0.6" stroke-width="1.5"/>
+    <path d="M26,70 C34,86 34,110 28,126" fill="none" stroke="${C.kidneyLo}" stroke-opacity="0.5" stroke-width="3" stroke-linecap="round"/>
+    <path d="${adr}" fill="${C.adrenal}" stroke="${C.adrenalLo}" stroke-opacity="0.7" stroke-width="1.5"/>
+    <ellipse cx="70" cy="60" rx="10" ry="18" fill="#fff" opacity="0.18" transform="rotate(-10 70 60)"/></g>`;
+}
+
+// ---------- aglomerado de citocinas (centro em 0,0) ----------
+export function cytokines({ n = 9, tone = 1, seed = 2 } = {}) {
+  let s = seed * 7919; const rnd = () => { s = (s * 9301 + 49297) % 233280; return s / 233280; };
+  return `<g filter="url(#soft)">${Array.from({ length: n }, () => sphere((rnd() - 0.5) * 70, (rnd() - 0.5) * 60, 5 + rnd() * 7, tone)).join("")}</g>`;
+}
+
+// ---------- fluxo circular (o ciclo da recompensa) ----------
+export function loop({ r = 100, n = 18, tone = 2, seed = 4 }) {
+  let s = seed * 131; const rnd = () => { s = (s * 9301 + 49297) % 233280; return s / 233280; };
+  return `<g filter="url(#soft)">${Array.from({ length: n }, (_, i) => {
+    const a = (i / n) * Math.PI * 2, rr = r + (rnd() - 0.5) * 12;
+    return sphere(Math.cos(a) * rr, Math.sin(a) * rr, 5 + rnd() * 6, tone === "mix" ? 1 + Math.floor(rnd() * 3) : tone);
+  }).join("")}</g>`;
+}
+
+// ---------- a Árvore (fruto, galhos, raízes): caixa 420x400, origem no topo-esquerdo ----------
+export function tree({ fruits = true } = {}) {
+  const roots = ["M210,290 C200,320 150,330 120,370", "M210,290 C206,322 176,344 168,384", "M210,290 C214,322 244,344 252,384", "M210,290 C220,320 270,330 300,370"]
+    .map((d) => `<path d="${d}" fill="none" stroke="${C.trunk}" stroke-width="7" stroke-linecap="round"/>`).join("");
+  const branches = ["M210,230 C200,200 170,190 150,170", "M210,230 C220,200 250,190 270,172", "M210,210 C206,180 200,160 190,140", "M210,210 C216,180 226,160 236,142"]
+    .map((d) => `<path d="${d}" fill="none" stroke="${C.trunk}" stroke-width="5" stroke-linecap="round"/>`).join("");
+  const canopy = [[210, 110, 74], [140, 140, 52], [280, 140, 54], [170, 90, 44], [252, 86, 46], [210, 160, 40]]
+    .map(([x, y, r]) => `<circle cx="${x}" cy="${y}" r="${r}" fill="${C.canopy}" stroke="${C.canopyLo}" stroke-opacity="0.6" stroke-width="1.5"/>`).join("");
+  const hi = `<circle cx="190" cy="96" r="34" fill="${C.canopyHi}" opacity="0.5"/>`;
+  const fr = fruits ? [[150, 150, 10], [268, 150, 10], [232, 110, 9], [178, 118, 9], [214, 172, 8]].map(([x, y, r]) => `<circle cx="${x}" cy="${y}" r="${r}" fill="${C.fruit}" stroke="${C.muscleLo}" stroke-opacity="0.6" stroke-width="1.2"/>`).join("") : "";
+  return `<g filter="url(#shadow)">${roots}<path d="M198,292 C196,250 198,230 204,200 L216,200 C222,230 224,250 222,292 Z" fill="${C.trunk}" stroke="${C.trunkLo}" stroke-opacity="0.5" stroke-width="1.5"/>${branches}${canopy}${hi}${fr}
+    <path d="M100,292 L320,292" stroke="${C.canopyLo}" stroke-opacity="0.5" stroke-width="1.5" stroke-dasharray="4 6"/></g>`;
 }
 
 // Estilo: "flat" (padrão, chapado, mais vetorial) ou "shaded" (degradês e sombras).
