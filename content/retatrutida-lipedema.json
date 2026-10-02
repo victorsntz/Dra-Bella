@@ -4,15 +4,15 @@
   "slides": [
     {
       "type": "cover",
-      "title": "Retatrutida e lipedema: **por que eu não aposto.**",
-      "lead": "O Mounjaro tem lugar no lipedema. A retatrutida, na minha leitura, não vai ter. Eu explico.",
+      "title": "Retatrutida\ne lipedema:\n**por que eu\nnão aposto.**",
+      "lead": "O Mounjaro tem lugar no lipedema. A retatrutida, eu aposto que não.",
       "figure": {
         "src": "assets/illustrations/retatrutida-lipedema/01-pernas-lipedema.svg",
         "prompt": "pernas femininas com lipedema, de frente, e um adipócito fibrótico ampliado ao lado",
         "labels": [
           {
-            "x": 38,
-            "y": 14,
+            "x": 42,
+            "y": 10,
             "text": "Lipedema",
             "tone": "coffee"
           },
@@ -24,8 +24,8 @@
             "align": "right"
           },
           {
-            "x": 30,
-            "y": 50,
+            "x": 28,
+            "y": 46,
             "text": "Dor e inchaço",
             "tone": "sand"
           },
@@ -37,7 +37,9 @@
             "align": "right"
           }
         ]
-      }
+      },
+      "titleSize": 96,
+      "titleWidth": 620
     },
     {
       "type": "text",
@@ -286,7 +288,7 @@
       "theme": "coffee",
       "paragraphs": [
         "Retatrutida vai ser uma ferramenta enorme pra obesidade. Pro lipedema, eu aposto que o Mounjaro segue sendo a escolha: age no tecido, sem a agressividade do glucagon.",
-        "**Posso mudar de ideia com dados.** É assim que ciência funciona."
+        "**Posso mudar de ideia com dados.**\nÉ assim que ciência funciona."
       ]
     },
     {

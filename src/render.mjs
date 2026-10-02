@@ -31,7 +31,7 @@ const esc = (s = "") =>
 // **negrito**, *destaque*, quebra de linha
 const rich = (s = "") =>
   esc(s)
-    .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
+    .replace(/\*\*([\s\S]+?)\*\*/g, "<strong>$1</strong>")
     .replace(/\*(.+?)\*/g, "<em>$1</em>")
     .replace(/\n/g, "<br>");
 
@@ -104,7 +104,7 @@ function figure(fig) {
 
 const renderers = {
   cover: (s) => `
-    <h1 class="title">${rich(s.title)}</h1>
+    <h1 class="title"${s.titleSize || s.titleWidth ? ` style="${s.titleSize ? `font-size:${s.titleSize}px;` : ""}${s.titleWidth ? `max-width:${s.titleWidth}px;` : ""}"` : ""}>${rich(s.title)}</h1>
     ${s.lead ? `<p class="lead">${rich(s.lead)}</p>` : ""}
     ${figure(s.figure)}`,
 

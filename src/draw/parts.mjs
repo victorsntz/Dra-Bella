@@ -341,7 +341,11 @@ export function legs({ lipedema = true } = {}) {
     : "M80,0 L180,0 C190,40 196,80 198,130 C200,190 194,250 190,300 C188,330 186,360 186,380 C186,400 180,412 172,412 C162,412 158,402 158,384 C158,350 160,310 158,270 C156,230 150,190 146,160 C142,190 136,230 134,270 C132,310 134,350 134,384 C134,402 130,412 120,412 C112,412 106,400 106,380 C106,360 104,330 102,300 C98,250 92,190 94,130 C96,80 102,40 80,0 Z";
   const feet = `<path d="M110,384 C100,392 92,404 96,414 L140,414 C146,402 148,392 150,384 Z" fill="${C.skinLo}"/><path d="M176,384 C178,392 180,402 186,414 L230,414 C234,404 226,392 216,384 Z" fill="${C.skinLo}"/>`;
   const marks = lipedema ? `<path d="M100,230 C110,250 112,280 108,300" fill="none" stroke="${C.skinLo}" stroke-width="2" stroke-linecap="round" opacity="0.9"/><path d="M226,230 C218,250 216,280 220,300" fill="none" stroke="${C.skinLo}" stroke-width="2" stroke-linecap="round" opacity="0.9"/>` : "";
-  return `<g>${feet}<path d="${d}" fill="url(#gSkin)" stroke="${C.skinLo}" stroke-opacity="0.8" stroke-width="1.5"/>${marks}</g>`;
+  // quadril e cintura por cima, pra figura terminar na cintura e não parecer cortada
+  const hips = lipedema
+    ? `<path d="M84,-90 C86,-40 56,0 50,60 C48,90 60,110 80,116 L220,116 C240,110 252,90 250,60 C244,0 214,-40 216,-90 Z" fill="url(#gSkin)" stroke="${C.skinLo}" stroke-opacity="0.8" stroke-width="1.5"/>`
+    : `<path d="M92,-90 C92,-40 76,0 74,60 C74,90 84,110 100,116 L200,116 C216,110 226,90 226,60 C224,0 208,-40 208,-90 Z" fill="url(#gSkin)" stroke="${C.skinLo}" stroke-opacity="0.8" stroke-width="1.5"/>`;
+  return `<g>${feet}<path d="${d}" fill="url(#gSkin)" stroke="${C.skinLo}" stroke-opacity="0.8" stroke-width="1.5"/>${hips}${marks}</g>`;
 }
 
 // ---------- célula com três receptores (caixa 420x220, origem canto superior esquerdo) ----------
@@ -349,8 +353,10 @@ export function legs({ lipedema = true } = {}) {
 export function cellReceptors({ keys = [1, 2, 3] } = {}) {
   const tones = { 1: "gMol1", 2: "gMol2", 3: "gMol3" };
   const slots = [[90, 1], [210, 2], [330, 3]];
-  const membrane = `<path d="M0,150 C60,130 120,170 180,150 C240,130 300,170 360,150 C390,140 410,150 420,150 L420,220 L0,220 Z" fill="${C.muscleHi}" opacity="0.45"/>
-    <path d="M0,150 C60,130 120,170 180,150 C240,130 300,170 360,150 C390,140 410,150 420,150" fill="none" stroke="${C.muscleLo}" stroke-width="3" stroke-linecap="round"/>`;
+  const top = "M0,150 C60,130 120,170 180,150 C240,130 300,170 360,150 C390,140 410,150 420,150";
+  const membrane = `<path d="${top} C424,196 380,222 210,222 C40,222 -4,196 0,150 Z" fill="${C.muscleHi}" opacity="0.45" stroke="${C.muscleLo}" stroke-opacity="0.5" stroke-width="1.5"/>
+    <path d="${top}" fill="none" stroke="${C.muscleLo}" stroke-width="3" stroke-linecap="round"/>
+    <ellipse cx="210" cy="196" rx="34" ry="12" fill="${C.muscleLo}" opacity="0.25"/>`;
   const rec = slots.map(([x, k]) => {
     const on = keys.includes(k);
     const col = on ? C.deep || "#362D28" : C.sandLine || "#CFCABF";
@@ -381,11 +387,18 @@ export function pen({ w = 260, h = 36, label = 1 } = {}) {
   </g>`;
 }
 
-// ---------- estômago com sleeve: linha de corte e parte retirada apagada ----------
+// ---------- estômago com sleeve: o que fica (tubo) em cor cheia, o que sai apagado, grampos no corte ----------
 export function stomachSleeve() {
-  const cut = `<path d="M60,30 C46,80 60,130 110,168" fill="none" stroke="${C.ink}" stroke-width="2.5" stroke-dasharray="6 6" stroke-linecap="round"/>`;
-  const removed = `<path d="M58,8 C30,22 14,60 22,96 C30,136 64,174 110,176 C100,150 70,120 60,30 Z" fill="${C.stomachLo}" opacity="0.25"/>`;
-  return `<g>${stomach()}${removed}${cut}</g>`;
+  const whole = "M58,8 C30,22 14,60 22,96 C30,136 64,174 110,176 C148,178 166,150 156,122 C148,100 122,96 104,86 C84,76 78,52 82,30 C84,16 72,6 58,8 Z";
+  const sleeve = "M58,8 C50,30 48,60 54,90 C60,120 78,150 110,176 C148,178 166,150 156,122 C148,100 122,96 104,86 C84,76 78,52 82,30 C84,16 72,6 58,8 Z";
+  const cut = "M58,8 C50,30 48,60 54,90 C60,120 78,150 110,176";
+  const esoph = `<path d="M60,-30 C60,-14 62,0 66,10 L90,10 C86,0 84,-14 84,-30 Z" fill="${C.stomach}" stroke="${C.stomachLo}" stroke-opacity="0.6" stroke-width="1.5"/>`;
+  const duod = `<path d="M110,176 C122,184 134,192 150,194 C160,195 168,190 170,182" fill="none" stroke="${C.stomach}" stroke-width="14" stroke-linecap="round"/><path d="M110,176 C122,184 134,192 150,194 C160,195 168,190 170,182" fill="none" stroke="${C.stomachLo}" stroke-opacity="0.5" stroke-width="1.5"/>`;
+  const staples = Array.from({ length: 9 }, (_, i) => { const t = (i + 0.5) / 9; const x = 58 - 10 * Math.sin(t * Math.PI) + 52 * t * t, y = 8 + 168 * t; return `<rect x="${(x - 5).toFixed(1)}" y="${(y - 1.5).toFixed(1)}" width="10" height="3" rx="1.5" fill="${C.ink}" transform="rotate(${(-20 + 60 * t).toFixed(0)} ${x.toFixed(1)} ${y.toFixed(1)})"/>`; }).join("");
+  return `<g>${esoph}<path d="${whole}" fill="${C.stomach}" opacity="0.28" stroke="${C.stomachLo}" stroke-opacity="0.35" stroke-width="1.5" stroke-dasharray="5 5"/>
+    ${duod}<path d="${sleeve}" fill="${C.stomach}" stroke="${C.stomachLo}" stroke-opacity="0.6" stroke-width="1.5"/>
+    <path d="M70,40 C76,70 86,110 108,150" fill="none" stroke="${C.stomachLo}" stroke-opacity="0.4" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="${cut}" fill="none" stroke="${C.ink}" stroke-width="2" stroke-dasharray="6 5"/>${staples}</g>`;
 }
 
 // Estilo: "flat" (padrão, chapado, mais vetorial) ou "shaded" (degradês e sombras).
