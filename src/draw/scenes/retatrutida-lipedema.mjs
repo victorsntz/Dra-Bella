@@ -4,7 +4,7 @@ export default {
   // capa 520x900: pernas com lipedema, adipócito fibrótico em destaque
   // capa, caixa de largura cheia 888x960: pernas na coluna direita, zoom do adipócito embaixo à esquerda
   "01-pernas-lipedema": () => svg(888, 960, `
-    ${g(440, 30, legs({ lipedema: true }), { s: 1.65 })}
+    ${g(400, 30, legs({ lipedema: true }), { s: 1.55 })}
     ${stream({ from: [560, 640], to: [300, 730], ctrl: [420, 640], n: 7, rmin: 3, rmax: 7, tone: 1, seed: 31, spread: 6 })}
     ${g(190, 770, fatClusterFibrotic({ s: 1.45 }))}`),
 
