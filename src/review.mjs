@@ -170,7 +170,7 @@ ${slides}
     <h2>Regras de espaço</h2>
     <div class="rules">
       <div class="rule"><h4>Formato 1080 × 1350</h4><p>Retrato 4:5 do Instagram. Tudo é desenhado nesse tamanho e exportado em JPG qualidade 92.</p></div>
-      <div class="rule"><h4>Margens 96 px</h4><p>Laterais de 96. Topo de 108 (o @ fica a 96 do topo). Card de perfil, monograma e seta a 120 da base. Embaixo, 268 reservados pro conteúdo nunca encostar na assinatura.</p></div>
+      <div class="rule"><h4>Margens 96 px</h4><p>Laterais de 96. Topo de 108 (o @ fica a 96 do topo). Card de perfil, monograma e seta a 96 da base, a mesma margem do @ no topo. Embaixo, 268 reservados pro conteúdo nunca encostar na assinatura.</p></div>
       <div class="rule"><h4>Capa</h4><p>Título ocupa a metade esquerda, até 510 px de largura. Ilustração ocupa a direita, 520 × 900, e pode invadir um pouco o título, como na referência.</p></div>
       <div class="rule"><h4>Diagrama</h4><p>Figura com altura fixa de 390 px. Até quatro bullets de uma linha. Nota opcional no canto inferior esquerdo, ao lado da assinatura.</p></div>
       <div class="rule"><h4>Texto com figura</h4><p>Até três parágrafos curtos. A figura ocupa tudo o que o texto deixar. Com pouco texto, a cena é composta mais alta e as peças maiores: nunca sobra um vazio no slide.</p></div>
