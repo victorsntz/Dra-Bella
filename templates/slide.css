@@ -55,8 +55,8 @@ body.preview .slide-wrap::after {
   transform: rotate(45deg);
 }
 .lockup { display: flex; align-items: center; gap: 22px; }
-.ftr img.logo { height: 96px; width: auto; }
-.ftr img.monogram { height: 84px; width: auto; }
+.ftr img.logo { height: 92px; width: auto; }
+.ftr img.monogram { height: 110px; width: auto; }
 .lockup .name {
   font: 400 40px/1 var(--font-display);
   letter-spacing: -0.03em; color: var(--deep-coffee); text-align: right;
