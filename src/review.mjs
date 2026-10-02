@@ -181,17 +181,17 @@ ${slides}
   </section>
 
   <section id="perguntas">
-    <div class="eyebrow">06 · Pra você decidir</div>
-    <h2>Perguntas abertas</h2>
-    <p class="sub">Responde comentando aqui em cima de cada uma.</p>
+    <div class="eyebrow">06 · Decisões</div>
+    <h2>Fechado</h2>
+    <p class="sub">As sete perguntas da primeira rodada, com o que foi decidido. Tudo já está aplicado no gerador.</p>
     <div class="q">
-      <div><strong>Fundo.</strong> Mantenho o creme claro (Paper) ou vamos de branco puro, como a referência? Creme é mais ela. Branco deixa a ilustração mais limpa.</div>
-      <div><strong>Caixa alta.</strong> A Cherston força maiúsculas em todo título. Está ok ou prefere títulos em Montserrat e a Cherston só na capa?</div>
-      <div><strong>Assinatura.</strong> Nome em Cherston + tagline, ou o monograma IB ao lado? Se tiver o SVG do monograma, me manda que eu encaixo.</div>
-      <div><strong>Cabeçalho.</strong> @bellabrasao no canto, ou o site, ou os dois?</div>
-      <div><strong>Pílulas.</strong> Três tons na paleta (café, areia, creme) ou abro uma cor de apoio pra moléculas, tipo um azul-acinzentado, como a referência faz com cores?</div>
-      <div><strong>Tagline.</strong> "Obesidade &amp; Emagrecimento" ou "Obesidade e Emagrecimento · CRM 106624"?</div>
-      <div><strong>Numeração.</strong> Quer "3 / 8" discreto no canto inferior esquerdo? Hoje está desligado.</div>
+      <div><strong>Fundo. Decidido:</strong> alterna creme e café escuro. Neste carrossel, os slides 3, 5 e 7 vão no café. No JSON é <code>"theme": "coffee"</code> no slide.</div>
+      <div><strong>Caixa alta. Decidido:</strong> fica. Cherston em todo título, sempre em maiúsculas.</div>
+      <div><strong>Assinatura. Decidido:</strong> logo completo na capa e no último slide, monograma IB nos do meio. Versão clara nos slides café.</div>
+      <div><strong>Cabeçalho. Decidido:</strong> só o @bellabrasao.</div>
+      <div><strong>Pílulas. Decidido:</strong> três tons da paleta (café, areia, creme). Sem cor extra.</div>
+      <div><strong>Tagline. Decidido:</strong> "Obesidade &amp; Emagrecimento", como está no logo.</div>
+      <div><strong>Numeração. Decidido:</strong> sem numeração de slide.</div>
     </div>
   </section>
 </div>

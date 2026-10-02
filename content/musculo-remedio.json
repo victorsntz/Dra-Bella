@@ -187,7 +187,8 @@
         "inset": {
           "top": 70
         }
-      }
+      },
+      "theme": "coffee"
     },
     {
       "type": "diagram",
@@ -330,7 +331,8 @@
           "top": 70,
           "right": 170
         }
-      }
+      },
+      "theme": "coffee"
     },
     {
       "type": "text",
@@ -383,7 +385,8 @@
         "Seu treino é uma liberação coordenada de moléculas anti-inflamatórias, reguladores metabólicos, fatores neurotróficos e sinais mitocondriais que protegem o seu cérebro, reparam as suas células e desaceleram o envelhecimento biológico.",
         "**Músculo é remédio.** E você fabrica ele.",
         "Conhecimento gera comportamento. Agora que você sabe o que o treino faz por dentro, fica mais difícil pular."
-      ]
+      ],
+      "theme": "coffee"
     },
     {
       "type": "cta",

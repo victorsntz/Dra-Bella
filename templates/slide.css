@@ -175,3 +175,17 @@ em { font-style: normal; font-weight: 500; color: var(--cozy-brown); }
   position: absolute; left: 100px; bottom: 100px;
   font: 500 16px/1 var(--font-body); letter-spacing: 0.18em; color: var(--serene-sand);
 }
+
+/* ---------- tema café (fundo escuro), alternado com o creme ---------- */
+.slide.coffee { background: var(--deep-coffee); color: var(--soft-cream); }
+.slide.coffee .hdr, .slide.coffee .pager, .slide.coffee .cta .hint, .slide.coffee em { color: var(--serene-sand); }
+.slide.coffee .title, .slide.coffee .lead, .slide.coffee .body, .slide.coffee .bullets li { color: var(--soft-cream); }
+.slide.coffee .bullets li .arr { color: var(--serene-sand); }
+.slide.coffee .ftr .arrow, .slide.coffee .ftr .arrow::after { background-color: var(--soft-cream); border-color: var(--soft-cream); }
+.slide.coffee .lockup .name { color: var(--soft-cream); } .slide.coffee .lockup .sub { color: var(--serene-sand); }
+.slide.coffee .label .sub { color: var(--serene-sand); } .slide.coffee .label .sub b { color: var(--soft-cream); }
+.slide.coffee .tone-coffee .pill { background: var(--soft-cream); color: var(--deep-coffee); }
+.slide.coffee .tone-cream .pill { background: var(--soft-cream); border-color: transparent; }
+.slide.coffee .tone-outline .pill { border-color: var(--soft-cream); color: var(--soft-cream); }
+.slide.coffee .fig .placeholder { border-color: var(--cozy-brown); color: var(--serene-sand); }
+.slide.coffee .hint::before { background: var(--cozy-brown); }

@@ -56,8 +56,11 @@ function header(brand) {
 function footer(brand, slide, i, total) {
   const arrow = slide.type === "closing" || slide.type === "cta" ? "" : `<div class="arrow"></div>`;
   const edge = i === 0 || i === total - 1;
-  if (edge && brand.logo) return `<div class="ftr">${arrow}<img class="logo" src="${relFromBuild(brand.logo)}" alt="${esc(brand.name)}"></div>`;
-  if (!edge && brand.monogram) return `<div class="ftr">${arrow}<img class="monogram" src="${relFromBuild(brand.monogram)}" alt="${esc(brand.name)}"></div>`;
+  const dark = slide.theme === "coffee";
+  const logo = dark && brand.logoLight ? brand.logoLight : brand.logo;
+  const mono = dark && brand.monogramLight ? brand.monogramLight : brand.monogram;
+  if (edge && logo) return `<div class="ftr">${arrow}<img class="logo" src="${relFromBuild(logo)}" alt="${esc(brand.name)}"></div>`;
+  if (!edge && mono) return `<div class="ftr">${arrow}<img class="monogram" src="${relFromBuild(mono)}" alt="${esc(brand.name)}"></div>`;
   return `<div class="ftr">${arrow}<div class="lockup"><div>
     <div class="name">${esc(brand.name)}</div>
     <div class="sub"><span></span>${esc(brand.tagline)}<span></span></div>
@@ -114,7 +117,7 @@ export function slideHTML(brand, slide, i, total) {
   const r = renderers[slide.type];
   if (!r) throw new Error(`Slide ${i + 1}: tipo desconhecido "${slide.type}"`);
   return `<div class="slide-wrap" data-n="${String(i + 1).padStart(2, "0")} · ${slide.type}">
-  <section class="slide ${slide.type}" id="s${i + 1}">
+  <section class="slide ${slide.type}${slide.theme === "coffee" ? " coffee" : ""}" id="s${i + 1}">
     ${header(brand)}
     ${r(slide)}
     ${footer(brand, slide, i, total)}
@@ -141,7 +144,7 @@ ${slides}
 // ---------- pipeline ----------
 export async function loadBrand() {
   const brand = JSON.parse(await fs.readFile(path.join(ROOT, "brand", "brand.json"), "utf8"));
-  for (const k of ["logo", "monogram"]) {
+  for (const k of ["logo", "monogram", "logoLight", "monogramLight"]) {
     if (!brand[k]) continue;
     try { await fs.access(path.join(ROOT, brand[k])); } catch { brand[k] = null; }
   }

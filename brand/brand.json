@@ -4,5 +4,7 @@
   "handle": "@bellabrasao",
   "logo": "brand/logo.png",
   "pager": false,
-  "monogram": "brand/monogram.png"
+  "monogram": "brand/monogram.png",
+  "logoLight": "brand/logo-light.png",
+  "monogramLight": "brand/monogram-sand.png"
 }
