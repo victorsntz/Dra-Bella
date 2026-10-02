@@ -323,6 +323,71 @@ export function tree({ fruits = true } = {}) {
     <path d="M100,292 L320,292" stroke="${C.canopyLo}" stroke-opacity="0.5" stroke-width="1.5" stroke-dasharray="4 6"/></g>`;
 }
 
+
+// ---------- adipócitos com fibrose (centro em 0,0): colágeno entre as células e macrófagos ----------
+export function fatClusterFibrotic({ s = 1 } = {}) {
+  const strands = ["M-70,-30 C-40,-10 -10,-40 30,-10", "M-50,40 C-20,20 10,60 50,30", "M-20,-60 C0,-30 20,-50 60,-20", "M-60,0 C-30,20 0,0 40,30", "M-10,70 C10,50 30,70 60,50"]
+    .map((d) => `<path d="${d}" fill="none" stroke="${C.muscleLo}" stroke-opacity="0.55" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="3 5"/>`).join("");
+  const macro = [[-44, -46, 7], [52, -2, 6], [-62, 28, 6], [26, 60, 7], [8, -14, 5]].map(([x, y, r]) =>
+    `<circle cx="${x}" cy="${y}" r="${r}" fill="${C.satellite}" stroke="${C.satelliteLo}" stroke-width="1.2"/>`).join("");
+  return `<g transform="scale(${s})">${fatCluster({ s: 1 })}${strands}${macro}</g>`;
+}
+
+// ---------- pernas com lipedema (vista de frente, caixa 260x420, origem no canto superior esquerdo) ----------
+export function legs({ lipedema = true } = {}) {
+  const w = lipedema ? 1 : 0.78;
+  const d = lipedema
+    ? "M70,0 L190,0 C206,40 222,80 232,130 C244,190 236,250 226,300 C220,330 216,360 214,380 C214,400 206,412 196,412 C184,412 178,402 176,384 C174,350 178,310 178,270 C178,230 170,190 162,160 C156,180 150,230 150,270 C150,310 154,350 152,384 C150,402 144,412 132,412 C122,412 114,400 114,380 C112,360 108,330 102,300 C92,250 84,190 96,130 C106,80 122,40 70,0 Z".replace("122,40 70,0", "60,40 70,0")
+    : "M80,0 L180,0 C190,40 196,80 198,130 C200,190 194,250 190,300 C188,330 186,360 186,380 C186,400 180,412 172,412 C162,412 158,402 158,384 C158,350 160,310 158,270 C156,230 150,190 146,160 C142,190 136,230 134,270 C132,310 134,350 134,384 C134,402 130,412 120,412 C112,412 106,400 106,380 C106,360 104,330 102,300 C98,250 92,190 94,130 C96,80 102,40 80,0 Z";
+  const feet = `<path d="M110,384 C100,392 92,404 96,414 L140,414 C146,402 148,392 150,384 Z" fill="${C.skinLo}"/><path d="M176,384 C178,392 180,402 186,414 L230,414 C234,404 226,392 216,384 Z" fill="${C.skinLo}"/>`;
+  const marks = lipedema ? `<path d="M100,230 C110,250 112,280 108,300" fill="none" stroke="${C.skinLo}" stroke-width="2" stroke-linecap="round" opacity="0.9"/><path d="M226,230 C218,250 216,280 220,300" fill="none" stroke="${C.skinLo}" stroke-width="2" stroke-linecap="round" opacity="0.9"/>` : "";
+  return `<g>${feet}<path d="${d}" fill="url(#gSkin)" stroke="${C.skinLo}" stroke-opacity="0.8" stroke-width="1.5"/>${marks}</g>`;
+}
+
+// ---------- célula com três receptores (caixa 420x220, origem canto superior esquerdo) ----------
+// keys: quais hormônios estão presentes (1 = GLP-1, 2 = GIP, 3 = glucagon). Receptor sem chave fica apagado.
+export function cellReceptors({ keys = [1, 2, 3] } = {}) {
+  const tones = { 1: "gMol1", 2: "gMol2", 3: "gMol3" };
+  const slots = [[90, 1], [210, 2], [330, 3]];
+  const membrane = `<path d="M0,150 C60,130 120,170 180,150 C240,130 300,170 360,150 C390,140 410,150 420,150 L420,220 L0,220 Z" fill="${C.muscleHi}" opacity="0.45"/>
+    <path d="M0,150 C60,130 120,170 180,150 C240,130 300,170 360,150 C390,140 410,150 420,150" fill="none" stroke="${C.muscleLo}" stroke-width="3" stroke-linecap="round"/>`;
+  const rec = slots.map(([x, k]) => {
+    const on = keys.includes(k);
+    const col = on ? C.deep || "#362D28" : C.sandLine || "#CFCABF";
+    const pocket = `<path d="M${x - 22},150 L${x - 22},118 C${x - 22},104 ${x + 22},104 ${x + 22},118 L${x + 22},150" fill="${on ? C.paper || "#F6F4F0" : "none"}" stroke="${col}" stroke-width="3" stroke-linecap="round"/>`;
+    const key = on ? `<g>${sphere(x, 112, 16, k)}<path d="M${x},128 L${x},144" stroke="${C.ink}" stroke-width="3" stroke-linecap="round"/></g>` : "";
+    const signal = on ? `<path d="M${x},160 C${x - 6},176 ${x + 6},192 ${x},208" fill="none" stroke="${C.ink}" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/>` : "";
+    return pocket + key + signal;
+  }).join("");
+  return `<g>${membrane}${rec}</g>`;
+}
+
+// ---------- intestino (serpentina, caixa 240x200, origem canto superior esquerdo) ----------
+export function intestine() {
+  const d = "M20,30 C80,10 120,10 160,30 C210,55 210,85 160,100 C110,115 60,110 40,130 C10,160 40,190 90,180 C140,170 180,160 220,180";
+  return `<g><path d="${d}" fill="none" stroke="${C.stomachLo}" stroke-opacity="0.5" stroke-width="30" stroke-linecap="round"/><path d="${d}" fill="none" stroke="${C.stomach}" stroke-width="24" stroke-linecap="round"/>
+    <path d="${d}" fill="none" stroke="#fff" stroke-opacity="0.22" stroke-width="7" stroke-linecap="round" transform="translate(0 -5)"/></g>`;
+}
+
+// ---------- caneta injetora (horizontal, centro em 0,0, comprimento w) ----------
+export function pen({ w = 260, h = 36, label = 1 } = {}) {
+  const a = w / 2, b = h / 2;
+  return `<g><rect x="${-a}" y="${-b}" width="${w}" height="${h}" rx="${b}" fill="${C.tendon}" stroke="${C.tendonLo}" stroke-width="1.5"/>
+    <rect x="${-a}" y="${-b}" width="${w * 0.3}" height="${h}" rx="${b}" fill="${C.ink}"/>
+    <rect x="${-a + w * 0.22}" y="${-b}" width="${w * 0.1}" height="${h}" fill="${C.ink}"/>
+    <rect x="${a - w * 0.42}" y="${-b * 0.5}" width="${w * 0.2}" height="${h * 0.5}" rx="3" fill="${C.paper || "#F6F4F0"}" stroke="${C.tendonLo}" stroke-width="1"/>
+    <rect x="${a - w * 0.12}" y="${-b * 0.6}" width="${w * 0.1}" height="${h * 1.2}" rx="4" fill="${C.serene || "#ABA597"}"/>
+    ${Array.from({ length: label }, (_, i) => `<circle cx="${a - w * 0.5 + i * 14}" cy="${b * 0.75 - 2}" r="4" fill="url(#gMol${i + 1})"/>`).join("")}
+  </g>`;
+}
+
+// ---------- estômago com sleeve: linha de corte e parte retirada apagada ----------
+export function stomachSleeve() {
+  const cut = `<path d="M60,30 C46,80 60,130 110,168" fill="none" stroke="${C.ink}" stroke-width="2.5" stroke-dasharray="6 6" stroke-linecap="round"/>`;
+  const removed = `<path d="M58,8 C30,22 14,60 22,96 C30,136 64,174 110,176 C100,150 70,120 60,30 Z" fill="${C.stomachLo}" opacity="0.25"/>`;
+  return `<g>${stomach()}${removed}${cut}</g>`;
+}
+
 // Estilo: "flat" (padrão, chapado, mais vetorial) ou "shaded" (degradês e sombras).
 export const STYLE = process.env.ILLUS_STYLE || "flat";
 const FLAT_MAP = { gMuscle: C.muscle, gMuted: C.muted, gTendon: C.tendon, gVessel: C.vessel, gSkin: C.skin, gFat: C.fat, gLiver: C.liver,

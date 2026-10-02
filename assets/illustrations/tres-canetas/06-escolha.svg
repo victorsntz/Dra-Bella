@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 888 380" width="888" height="380"><defs>
+    <linearGradient id="gMuscle" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E0AE9F"/><stop offset="0.5" stop-color="#B9776A"/><stop offset="1" stop-color="#8A4F43"/></linearGradient>
+    <linearGradient id="gMuted" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#DCC5B9"/><stop offset="0.5" stop-color="#CBAE9F"/><stop offset="1" stop-color="#A98B7D"/></linearGradient>
+    <linearGradient id="gTendon" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#EFE9DE"/><stop offset="0.5" stop-color="#EFE9DE"/><stop offset="1" stop-color="#CFC5B4"/></linearGradient>
+    <linearGradient id="gVessel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#DEA69E"/><stop offset="0.5" stop-color="#C4807A"/><stop offset="1" stop-color="#95574F"/></linearGradient>
+    <linearGradient id="gSkin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F3EAE0"/><stop offset="0.5" stop-color="#EBDFD2"/><stop offset="1" stop-color="#CDB9A6"/></linearGradient>
+    <radialGradient id="gFat" cx="0.35" cy="0.3" r="0.8"><stop offset="0" stop-color="#F7EEDA"/><stop offset="0.55" stop-color="#EBDCBB"/><stop offset="1" stop-color="#CDB48A"/></radialGradient>
+    <radialGradient id="gLiver" cx="0.3" cy="0.25" r="0.8"><stop offset="0" stop-color="#BC8575"/><stop offset="0.55" stop-color="#9B6557"/><stop offset="1" stop-color="#6E4036"/></radialGradient>
+    <radialGradient id="gBrain" cx="0.35" cy="0.25" r="0.8"><stop offset="0" stop-color="#EDD9D0"/><stop offset="0.55" stop-color="#D9BBB0"/><stop offset="1" stop-color="#B38E85"/></radialGradient>
+    <radialGradient id="gLumen" cx="0.5" cy="0.5" r="0.8"><stop offset="0" stop-color="#E9C8C0"/><stop offset="0.55" stop-color="#95574F"/><stop offset="1" stop-color="#95574F"/></radialGradient>
+    <radialGradient id="gRbc" cx="0.4" cy="0.4" r="0.8"><stop offset="0" stop-color="#D27B72"/><stop offset="0.55" stop-color="#B2534B"/><stop offset="1" stop-color="#B2534B"/></radialGradient>
+    <radialGradient id="gMito" cx="0.35" cy="0.3" r="0.8"><stop offset="0" stop-color="#E8CFBF"/><stop offset="0.55" stop-color="#CDA893"/><stop offset="1" stop-color="#8E5A4C"/></radialGradient>
+    <radialGradient id="gMol1" cx="0.35" cy="0.3" r="0.8"><stop offset="0" stop-color="#F4F1EB"/><stop offset="0.55" stop-color="#A9B3BC"/><stop offset="1" stop-color="#7F8B95"/></radialGradient>
+    <radialGradient id="gMol2" cx="0.35" cy="0.3" r="0.8"><stop offset="0" stop-color="#F4F1EB"/><stop offset="0.55" stop-color="#ABA597"/><stop offset="1" stop-color="#827C70"/></radialGradient>
+    <radialGradient id="gMol3" cx="0.35" cy="0.3" r="0.8"><stop offset="0" stop-color="#F4F1EB"/><stop offset="0.55" stop-color="#CFBEA8"/><stop offset="1" stop-color="#A28F77"/></radialGradient>
+    <radialGradient id="gSat" cx="0.35" cy="0.3" r="0.8"><stop offset="0" stop-color="#D8CFE0"/><stop offset="0.55" stop-color="#9C8FA8"/><stop offset="1" stop-color="#6F6380"/></radialGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="160%"><feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#362D28" flood-opacity="0.14"/></filter>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="160%"><feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#362D28" flood-opacity="0.10"/></filter>
+  </defs>
+    <g transform="translate(444 90) rotate(0) scale(1)" ><g><rect x="-130" y="-16" width="260" height="32" rx="16" fill="#EFE9DE" stroke="#CFC5B4" stroke-width="1.5"/>
+    <rect x="-130" y="-16" width="78" height="32" rx="16" fill="#362D28"/>
+    <rect x="-72.8" y="-16" width="26" height="32" fill="#362D28"/>
+    <rect x="20.799999999999997" y="-8" width="52" height="16" rx="3" fill="#F6F4F0" stroke="#CFC5B4" stroke-width="1"/>
+    <rect x="98.8" y="-9.6" width="26" height="38.4" rx="4" fill="#ABA597"/>
+    <circle cx="0" cy="10" r="4" fill="#A9B3BC"/>
+  </g></g>
+    <g transform="translate(444 190) rotate(0) scale(1)" ><g><rect x="-170" y="-18" width="340" height="36" rx="18" fill="#EFE9DE" stroke="#CFC5B4" stroke-width="1.5"/>
+    <rect x="-170" y="-18" width="102" height="36" rx="18" fill="#362D28"/>
+    <rect x="-95.2" y="-18" width="34" height="36" fill="#362D28"/>
+    <rect x="27.200000000000017" y="-9" width="68" height="18" rx="3" fill="#F6F4F0" stroke="#CFC5B4" stroke-width="1"/>
+    <rect x="129.2" y="-10.799999999999999" width="34" height="43.199999999999996" rx="4" fill="#ABA597"/>
+    <circle cx="0" cy="11.5" r="4" fill="#A9B3BC"/><circle cx="14" cy="11.5" r="4" fill="#ABA597"/>
+  </g></g>
+    <g transform="translate(444 300) rotate(0) scale(1)" ><g><rect x="-210" y="-20" width="420" height="40" rx="20" fill="#EFE9DE" stroke="#CFC5B4" stroke-width="1.5"/>
+    <rect x="-210" y="-20" width="126" height="40" rx="20" fill="#362D28"/>
+    <rect x="-117.6" y="-20" width="42" height="40" fill="#362D28"/>
+    <rect x="33.599999999999994" y="-10" width="84" height="20" rx="3" fill="#F6F4F0" stroke="#CFC5B4" stroke-width="1"/>
+    <rect x="159.6" y="-12" width="42" height="48" rx="4" fill="#ABA597"/>
+    <circle cx="0" cy="13" r="4" fill="#A9B3BC"/><circle cx="14" cy="13" r="4" fill="#ABA597"/><circle cx="28" cy="13" r="4" fill="#CFBEA8"/>
+  </g></g></svg>

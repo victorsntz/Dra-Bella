@@ -1,0 +1,274 @@
+{
+  "title": "Ozempic, Mounjaro e a tal da retatrutida: qual a diferença?",
+  "format": "carrossel · educativo",
+  "slides": [
+    {
+      "type": "cover",
+      "title": "Ozempic, Mounjaro e a tal da retatrutida. **Qual a diferença?**",
+      "lead": "Explicado como eu explico na consulta. Sem decoreba.",
+      "figure": {
+        "src": "assets/illustrations/tres-canetas/01-tres-canetas.svg",
+        "prompt": "três canetas em escada e uma célula com três receptores embaixo",
+        "labels": [
+          {
+            "x": 22,
+            "y": 22,
+            "text": "1 chave",
+            "tone": "cream"
+          },
+          {
+            "x": 18,
+            "y": 37,
+            "text": "2 chaves",
+            "tone": "sand"
+          },
+          {
+            "x": 14,
+            "y": 52,
+            "text": "3 chaves",
+            "tone": "coffee"
+          },
+          {
+            "x": 50,
+            "y": 90,
+            "text": "Seus receptores",
+            "tone": "outline"
+          }
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "theme": "coffee",
+      "title": "Primeiro: as três são **hormônios imitados**.",
+      "paragraphs": [
+        "Quando você come, o intestino solta hormônios que avisam o cérebro, o pâncreas e a gordura: chegou comida.",
+        "As canetas copiam esses hormônios. A diferença é que o original dura minutos e a cópia dura a semana inteira."
+      ],
+      "figure": {
+        "src": "assets/illustrations/tres-canetas/02-hormonios.svg",
+        "prompt": "intestino à esquerda mandando três fluxos: cérebro, pâncreas e gordura",
+        "inset": {
+          "top": 40
+        },
+        "labels": [
+          {
+            "sx": 170,
+            "sy": 90,
+            "text": "Intestino",
+            "tone": "cream",
+            "sub": [
+              "Solta os hormônios"
+            ]
+          },
+          {
+            "sx": 700,
+            "sy": 30,
+            "text": "Cérebro",
+            "tone": "coffee"
+          },
+          {
+            "sx": 640,
+            "sy": 190,
+            "text": "Pâncreas",
+            "tone": "sand"
+          },
+          {
+            "sx": 760,
+            "sy": 330,
+            "text": "Gordura",
+            "tone": "cream"
+          }
+        ]
+      }
+    },
+    {
+      "type": "diagram",
+      "title": "Semaglutida: **uma chave**.",
+      "lead": "Ozempic, Wegovy. Imita só o GLP-1.",
+      "figure": {
+        "src": "assets/illustrations/tres-canetas/03-uma-chave.svg",
+        "prompt": "célula com três receptores, só o primeiro com a chave encaixada",
+        "inset": {
+          "left": 200,
+          "right": 200
+        },
+        "labels": [
+          {
+            "x": 11,
+            "y": 30,
+            "text": "GLP-1",
+            "tone": "coffee",
+            "sub": [
+              "Chave encaixada"
+            ],
+            "edge": "left"
+          },
+          {
+            "x": 89,
+            "y": 30,
+            "text": "GIP · Glucagon",
+            "tone": "outline",
+            "sub": [
+              "Fechaduras vazias"
+            ],
+            "edge": "right"
+          }
+        ]
+      },
+      "bullets": [
+        "Freia o apetite no cérebro.",
+        "Esvazia o estômago mais devagar.",
+        "Ajuda o pâncreas a soltar insulina na hora certa.",
+        "Perda de peso média: cerca de 15%."
+      ]
+    },
+    {
+      "type": "diagram",
+      "title": "Tirzepatida: **duas chaves**.",
+      "lead": "Mounjaro. GLP-1 mais GIP.",
+      "figure": {
+        "src": "assets/illustrations/tres-canetas/04-duas-chaves.svg",
+        "prompt": "célula com dois receptores ocupados; cérebro e gordura ao redor",
+        "inset": {
+          "left": 200,
+          "right": 200
+        },
+        "labels": [
+          {
+            "x": 11,
+            "y": 30,
+            "text": "GLP-1",
+            "tone": "coffee",
+            "sub": [
+              "Tudo que a semaglutida faz"
+            ],
+            "edge": "left"
+          },
+          {
+            "x": 89,
+            "y": 30,
+            "text": "GIP",
+            "tone": "sand",
+            "sub": [
+              "Conversa com a gordura"
+            ],
+            "edge": "right"
+          },
+          {
+            "x": 89,
+            "y": 80,
+            "text": "Glucagon",
+            "tone": "outline",
+            "sub": [
+              "Ainda vazio"
+            ],
+            "edge": "right"
+          }
+        ]
+      },
+      "bullets": [
+        "Tudo que a semaglutida faz.",
+        "GIP → fala com o tecido adiposo e deixa a náusea mais leve.",
+        "Perda média: cerca de 21%."
+      ]
+    },
+    {
+      "type": "diagram",
+      "title": "Retatrutida: **três chaves**.",
+      "lead": "GLP-1, GIP e glucagon. Ainda não aprovada.",
+      "figure": {
+        "src": "assets/illustrations/tres-canetas/05-tres-chaves.svg",
+        "prompt": "célula com os três receptores ocupados; cérebro, gordura e fígado ao redor",
+        "inset": {
+          "left": 200,
+          "right": 200
+        },
+        "labels": [
+          {
+            "x": 11,
+            "y": 30,
+            "text": "GLP-1",
+            "tone": "coffee",
+            "edge": "left"
+          },
+          {
+            "x": 89,
+            "y": 30,
+            "text": "GIP",
+            "tone": "sand",
+            "edge": "right"
+          },
+          {
+            "x": 89,
+            "y": 80,
+            "text": "Glucagon",
+            "tone": "coffee",
+            "sub": [
+              "Acelera o gasto de energia"
+            ],
+            "edge": "right"
+          },
+          {
+            "x": 11,
+            "y": 80,
+            "text": "Fígado",
+            "tone": "cream",
+            "sub": [
+              "Queima mais gordura"
+            ],
+            "edge": "left"
+          }
+        ]
+      },
+      "bullets": [
+        "Glucagon → acelera o gasto de energia e a queima no fígado.",
+        "Perda média nos estudos: 28% em 80 semanas.",
+        "Registro previsto pra 2027. No Brasil, depois disso."
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Mais chaves é sempre **melhor**?",
+      "paragraphs": [
+        "Não. Mais chave é mais efeito. E mais efeito é mais coisa pra acompanhar: massa magra, estômago, coração, humor.",
+        "A pergunta certa não é qual é a mais forte. É qual é a certa pro seu caso, com alguém olhando."
+      ],
+      "figure": {
+        "src": "assets/illustrations/tres-canetas/06-escolha.svg",
+        "prompt": "as três canetas lado a lado, na mesma escala",
+        "inset": {
+          "top": 30
+        },
+        "labels": [
+          {
+            "sx": 444,
+            "sy": 60,
+            "text": "Semaglutida",
+            "tone": "cream"
+          },
+          {
+            "sx": 444,
+            "sy": 160,
+            "text": "Tirzepatida",
+            "tone": "sand"
+          },
+          {
+            "sx": 444,
+            "sy": 270,
+            "text": "Retatrutida",
+            "tone": "coffee"
+          }
+        ]
+      }
+    },
+    {
+      "type": "cta",
+      "theme": "coffee",
+      "title": "Qual dessas você já ouviu falar e não entendia?",
+      "lead": "Me conta aqui embaixo. Se ficou dúvida, eu respondo nos comentários.",
+      "hint": "Comenta aqui"
+    }
+  ],
+  "caption": "Primeiro siga @bellabrasao 🤍\n\nOzempic, Mounjaro e retatrutida não são três versões do mesmo remédio. São uma, duas e três chaves.\n\nTodas imitam hormônios que o seu intestino já produz quando você come. A semaglutida copia o GLP-1 e freia o apetite. A tirzepatida soma o GIP, que conversa com a gordura. A retatrutida acrescenta o glucagon, que acelera o gasto de energia. Na balança: cerca de 15%, 21% e 28% de perda de peso nos estudos. 🔑\n\nMais chave é mais efeito. E mais efeito é mais coisa pra acompanhar. A pergunta certa não é qual é a mais forte, é qual é a certa pro seu caso.\n\nQuer entender qual faz sentido pra você? Clique no link da bio e agende a sua consulta. 🤍"
+}

@@ -1,0 +1,247 @@
+{
+  "title": "A bariátrica está caindo. E a retatrutida ainda nem chegou.",
+  "format": "carrossel · análise",
+  "slides": [
+    {
+      "type": "cover",
+      "title": "A bariátrica **está caindo.**",
+      "lead": "E a retatrutida ainda nem chegou. O que os números dizem e o que eu espero pros próximos anos.",
+      "figure": {
+        "src": "assets/illustrations/bariatrica-retatrutida/01-sleeve-caneta.svg",
+        "prompt": "estômago com a linha de corte do sleeve e uma caneta injetora ao lado",
+        "labels": [
+          {
+            "x": 50,
+            "y": 12,
+            "text": "Sleeve",
+            "tone": "coffee"
+          },
+          {
+            "x": 76,
+            "y": 74,
+            "text": "Caneta",
+            "tone": "sand",
+            "align": "right"
+          }
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "title": "Nos Estados Unidos, a queda já é de **um terço**.",
+      "paragraphs": [
+        "De 2022 pra 2024, as cirurgias caíram de 230 mil pra 178 mil. Queda de 23%.",
+        "Até 2025, a queda chegou a 34%. No mesmo período, as receitas de GLP-1 subiram 140%."
+      ],
+      "figure": {
+        "src": "assets/illustrations/bariatrica-retatrutida/02-queda-eua.svg",
+        "prompt": "três estômagos com sleeve em tamanho decrescente, da esquerda pra direita",
+        "inset": {
+          "top": 70
+        },
+        "labels": [
+          {
+            "sx": 170,
+            "sy": 40,
+            "text": "2022",
+            "tone": "coffee",
+            "sub": [
+              "230 mil cirurgias"
+            ]
+          },
+          {
+            "sx": 500,
+            "sy": 100,
+            "text": "2024",
+            "tone": "sand",
+            "sub": [
+              "178 mil · −23%"
+            ]
+          },
+          {
+            "sx": 760,
+            "sy": 150,
+            "text": "2025",
+            "tone": "cream",
+            "sub": [
+              "−34% · GLP-1 +140%"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "theme": "coffee",
+      "title": "No Brasil ainda cresce. Mas **freou**.",
+      "paragraphs": [
+        "2024: 75 mil cirurgias. 2025: 76 mil. Crescimento de 1,4%, contra 34% ao ano logo depois da pandemia.",
+        "Nos planos de saúde caiu 2,8%. No SUS subiu 25%. Quem tem acesso à caneta está adiando a cirurgia. Quem não tem, segue na fila."
+      ],
+      "figure": {
+        "src": "assets/illustrations/bariatrica-retatrutida/03-brasil.svg",
+        "prompt": "estômago inteiro à esquerda, caneta à direita",
+        "inset": {
+          "top": 70
+        },
+        "labels": [
+          {
+            "sx": 250,
+            "sy": 60,
+            "text": "Planos de saúde",
+            "tone": "cream",
+            "sub": [
+              "−2,8% em 2025"
+            ]
+          },
+          {
+            "sx": 640,
+            "sy": 100,
+            "text": "SUS",
+            "tone": "coffee",
+            "sub": [
+              "+25% em 2025"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "diagram",
+      "title": "Por que a caneta tira paciente da **cirurgia**.",
+      "lead": "Cada geração chega mais perto do que a bariátrica entrega.",
+      "figure": {
+        "src": "assets/illustrations/bariatrica-retatrutida/04-tres-canetas.svg",
+        "prompt": "três canetas injetoras, uma por linha, cada uma maior que a anterior",
+        "inset": {
+          "left": 200,
+          "right": 200
+        },
+        "labels": [
+          {
+            "x": 11,
+            "y": 19,
+            "text": "Semaglutida",
+            "tone": "cream",
+            "edge": "left"
+          },
+          {
+            "x": 89,
+            "y": 19,
+            "text": "~15%",
+            "tone": "sand",
+            "edge": "right"
+          },
+          {
+            "x": 11,
+            "y": 50,
+            "text": "Tirzepatida",
+            "tone": "cream",
+            "edge": "left"
+          },
+          {
+            "x": 89,
+            "y": 50,
+            "text": "~21%",
+            "tone": "sand",
+            "edge": "right"
+          },
+          {
+            "x": 11,
+            "y": 81,
+            "text": "Retatrutida",
+            "tone": "coffee",
+            "edge": "left"
+          },
+          {
+            "x": 89,
+            "y": 81,
+            "text": "28%",
+            "tone": "coffee",
+            "edge": "right"
+          }
+        ]
+      },
+      "bullets": [
+        "Semaglutida → cerca de 15% de perda de peso.",
+        "Tirzepatida → cerca de 21%.",
+        "Retatrutida (fase 3) → 28% em 80 semanas, 30% em dois anos. É a faixa da bariátrica."
+      ]
+    },
+    {
+      "type": "text",
+      "title": "O que eu espero quando a retatrutida **chegar**.",
+      "paragraphs": [
+        "A Lilly prevê pedir o registro no início de 2027. No Brasil, vem depois disso.",
+        "Minha aposta: a bariátrica vira exceção, pra quem não responde ou não tolera medicação. A cirurgia que ficar vai ser mais bem indicada, não mais frequente."
+      ],
+      "figure": {
+        "src": "assets/illustrations/bariatrica-retatrutida/05-previsao.svg",
+        "prompt": "estômago inteiro e a caneta de três chaves em destaque",
+        "inset": {
+          "top": 70
+        },
+        "labels": [
+          {
+            "sx": 220,
+            "sy": 60,
+            "text": "Cirurgia",
+            "tone": "outline",
+            "sub": [
+              "Pra quem não responde"
+            ]
+          },
+          {
+            "sx": 620,
+            "sy": 110,
+            "text": "Retatrutida",
+            "tone": "coffee",
+            "sub": [
+              "Registro previsto: 2027"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "theme": "coffee",
+      "title": "O que não muda: obesidade é **crônica**.",
+      "paragraphs": [
+        "Caneta não é cura. Parou, o peso volta. Cirurgia também não é: uma parte relevante reganha com os anos.",
+        "O que sustenta resultado é continuidade do cuidado. Com ou sem bisturi, com ou sem caneta."
+      ],
+      "figure": {
+        "src": "assets/illustrations/bariatrica-retatrutida/06-cronica.svg",
+        "prompt": "a Árvore: o tratamento que continua",
+        "inset": {
+          "top": 60,
+          "bottom": 60
+        },
+        "labels": [
+          {
+            "x": 50,
+            "y": 5,
+            "text": "Resultado que fica",
+            "tone": "cream",
+            "edge": "top"
+          },
+          {
+            "x": 50,
+            "y": 95,
+            "text": "Cuidado que continua",
+            "tone": "outline",
+            "edge": "bottom"
+          }
+        ]
+      }
+    },
+    {
+      "type": "cta",
+      "title": "Você adiou a bariátrica por causa da caneta?",
+      "lead": "Ou operou e hoje usa caneta? Me conta. Os dois caminhos existem e os dois merecem acompanhamento.",
+      "hint": "Comenta aqui"
+    }
+  ],
+  "caption": "Primeiro siga @bellabrasao 🤍\n\nA bariátrica está caindo antes mesmo da retatrutida chegar.\n\nNos Estados Unidos, as cirurgias caíram 34% entre 2022 e 2025 enquanto as receitas de GLP-1 subiram 140%. No Brasil o número ainda cresce, mas freou: 1,4% em 2025, contra 34% ao ano no pós-pandemia. E a retatrutida, com 28% de perda de peso na fase 3, entra na faixa que era só da cirurgia. 📉\n\nMinha aposta: a bariátrica vira exceção, bem indicada, pra quem não responde à medicação. O que não muda é que obesidade é crônica. Caneta ou bisturi, sem continuidade do cuidado o peso volta.\n\nQuer entender qual caminho faz sentido pro seu caso? Clique no link da bio e agende a sua consulta. 🤍"
+}

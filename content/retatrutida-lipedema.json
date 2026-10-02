@@ -1,0 +1,300 @@
+{
+  "title": "Retatrutida não vai ser pro lipedema o que o Mounjaro é",
+  "format": "carrossel · posicionamento",
+  "slides": [
+    {
+      "type": "cover",
+      "title": "Retatrutida e lipedema: **por que eu não aposto.**",
+      "lead": "O Mounjaro tem lugar no lipedema. A retatrutida, na minha leitura, não vai ter. Eu explico.",
+      "figure": {
+        "src": "assets/illustrations/retatrutida-lipedema/01-pernas-lipedema.svg",
+        "prompt": "pernas femininas com lipedema, de frente, e um adipócito fibrótico ampliado ao lado",
+        "labels": [
+          {
+            "x": 38,
+            "y": 14,
+            "text": "Lipedema",
+            "tone": "coffee"
+          },
+          {
+            "x": 84,
+            "y": 58,
+            "text": "Gordura fibrosada",
+            "tone": "cream",
+            "align": "right"
+          },
+          {
+            "x": 30,
+            "y": 50,
+            "text": "Dor e inchaço",
+            "tone": "sand"
+          },
+          {
+            "x": 84,
+            "y": 78,
+            "text": "Inflamação",
+            "tone": "sand",
+            "align": "right"
+          }
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "theme": "coffee",
+      "title": "Lipedema não é problema de **massa**. É problema de **tecido**.",
+      "paragraphs": [
+        "A gordura das pernas e dos braços no lipedema é fibrosa, inflamada, dolorida e resistente a dieta. Emagrecer o corpo inteiro não resolve ela.",
+        "O que esse tecido precisa: menos inflamação, menos fibrose e circulação melhor ali, no local."
+      ],
+      "figure": {
+        "src": "assets/illustrations/retatrutida-lipedema/02-tecido.svg",
+        "prompt": "adipócitos saudáveis à esquerda, adipócitos do lipedema à direita com colágeno entre as células e macrófagos",
+        "inset": {
+          "top": 30
+        },
+        "labels": [
+          {
+            "sx": 230,
+            "sy": 60,
+            "text": "Adipócito saudável",
+            "tone": "cream",
+            "sub": [
+              "Responde à dieta e à lipólise"
+            ]
+          },
+          {
+            "sx": 650,
+            "sy": 60,
+            "text": "Adipócito do lipedema",
+            "tone": "coffee",
+            "sub": [
+              "Colágeno em excesso, macrófagos, dor"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "diagram",
+      "title": "Três hormônios, três **chaves**.",
+      "lead": "Cada caneta abre um conjunto diferente de fechaduras no corpo.",
+      "figure": {
+        "src": "assets/illustrations/retatrutida-lipedema/03-tres-chaves.svg",
+        "prompt": "membrana de célula com três receptores e três hormônios encaixando como chaves; cérebro, gordura e fígado ao redor",
+        "inset": {
+          "left": 200,
+          "right": 200
+        },
+        "labels": [
+          {
+            "x": 11,
+            "y": 24,
+            "text": "GLP-1",
+            "tone": "coffee",
+            "sub": [
+              "Cérebro e pâncreas"
+            ],
+            "edge": "left"
+          },
+          {
+            "x": 89,
+            "y": 24,
+            "text": "GIP",
+            "tone": "sand",
+            "sub": [
+              "Tecido adiposo"
+            ],
+            "edge": "right"
+          },
+          {
+            "x": 89,
+            "y": 80,
+            "text": "Glucagon",
+            "tone": "outline",
+            "sub": [
+              "Fígado e gasto de energia"
+            ],
+            "edge": "right"
+          },
+          {
+            "x": 11,
+            "y": 80,
+            "text": "A gordura branca",
+            "tone": "cream",
+            "sub": [
+              "não tem receptor de GLP-1"
+            ],
+            "edge": "left"
+          }
+        ]
+      },
+      "bullets": [
+        "GLP-1 → freia o apetite no cérebro e ajusta o pâncreas. A gordura nem o escuta.",
+        "GIP → fala direto com o tecido adiposo: organiza o uso de nutrientes e acalma a inflamação.",
+        "Glucagon → acelera o gasto de energia e a queima no fígado. É o lado agressivo."
+      ]
+    },
+    {
+      "type": "text",
+      "title": "O que o Mounjaro faz pelo **lipedema**.",
+      "paragraphs": [
+        "Tirzepatida é GLP-1 mais **GIP**. E o GIP conversa com a gordura: menos citocina inflamatória, macrófago mudando pro perfil que repara, menos fibrose.",
+        "Ainda não existe ensaio clínico em lipedema. O que existe é mecanismo e prática. Nas minhas pacientes, o que eu vejo vem antes da balança: menos dor, menos inchaço."
+      ],
+      "figure": {
+        "src": "assets/illustrations/retatrutida-lipedema/04-mounjaro.svg",
+        "prompt": "caneta de duas chaves manda GIP até o adipócito, que se acalma",
+        "inset": {
+          "top": 70
+        },
+        "labels": [
+          {
+            "sx": 160,
+            "sy": 80,
+            "text": "Tirzepatida",
+            "tone": "coffee",
+            "sub": [
+              "GLP-1 + GIP"
+            ]
+          },
+          {
+            "sx": 430,
+            "sy": 70,
+            "text": "GIP",
+            "tone": "sand",
+            "sub": [
+              "Chega no tecido"
+            ]
+          },
+          {
+            "sx": 660,
+            "sy": 70,
+            "text": "Gordura acalmando",
+            "tone": "cream",
+            "sub": [
+              "↓ Citocinas · ↓ Fibrose"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "diagram",
+      "title": "O que a retatrutida acrescenta: **glucagon**.",
+      "lead": "E é aqui que, pro lipedema, eu desconfio.",
+      "figure": {
+        "src": "assets/illustrations/retatrutida-lipedema/05-glucagon.svg",
+        "prompt": "caneta de três chaves no centro puxando gordura do fígado, da gordura visceral, do músculo e dos vasos",
+        "inset": {
+          "left": 200,
+          "right": 200
+        },
+        "labels": [
+          {
+            "x": 11,
+            "y": 20,
+            "text": "Fígado",
+            "tone": "cream",
+            "sub": [
+              "Queima acelerada"
+            ],
+            "edge": "left"
+          },
+          {
+            "x": 89,
+            "y": 20,
+            "text": "Gordura visceral",
+            "tone": "cream",
+            "sub": [
+              "Responde rápido"
+            ],
+            "edge": "right"
+          },
+          {
+            "x": 11,
+            "y": 82,
+            "text": "Músculo",
+            "tone": "cream",
+            "sub": [
+              "Massa magra em jogo"
+            ],
+            "edge": "left"
+          },
+          {
+            "x": 89,
+            "y": 82,
+            "text": "Vasos",
+            "tone": "cream",
+            "sub": [
+              "Mais lipídio circulando"
+            ],
+            "edge": "right"
+          },
+          {
+            "x": 50,
+            "y": 50,
+            "text": "Glucagon",
+            "tone": "coffee"
+          }
+        ]
+      },
+      "bullets": [
+        "Glucagon puxa gordura de onde ela responde: fígado, tronco, visceral.",
+        "A gordura do lipedema é justamente a que não responde à lipólise.",
+        "Resultado provável: emagrece em cima, as pernas ficam. A desproporção piora."
+      ]
+    },
+    {
+      "type": "text",
+      "theme": "coffee",
+      "title": "O que o estudo mostra. E o que ele **não** mostra.",
+      "paragraphs": [
+        "Um estudo de abril de 2026, em camundongos, viu a retatrutida reduzir inflamação e fibrose na gordura **visceral**, agindo pelos receptores de GIP e glucagon.",
+        "Não olhou a gordura subcutânea, não mediu colágeno no tecido, não foi em humanos. Lipedema é subcutâneo, fibrótico e humano."
+      ],
+      "figure": {
+        "src": "assets/illustrations/retatrutida-lipedema/06-estudo.svg",
+        "prompt": "adipócitos viscerais (estudados) à esquerda e pernas com lipedema (não estudadas) à direita",
+        "inset": {
+          "top": 70
+        },
+        "labels": [
+          {
+            "sx": 230,
+            "sy": 60,
+            "text": "Gordura visceral",
+            "tone": "cream",
+            "sub": [
+              "Estudada, em camundongo"
+            ]
+          },
+          {
+            "sx": 660,
+            "sy": 40,
+            "text": "Gordura das pernas",
+            "tone": "coffee",
+            "sub": [
+              "Não estudada. Ainda."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "closing",
+      "theme": "coffee",
+      "paragraphs": [
+        "Retatrutida vai ser uma ferramenta enorme pra obesidade. Pro lipedema, eu aposto que o Mounjaro segue sendo a escolha: age no tecido, sem a agressividade do glucagon.",
+        "**Posso mudar de ideia com dados.** É assim que ciência funciona."
+      ]
+    },
+    {
+      "type": "cta",
+      "title": "Você tem lipedema e já usou alguma caneta?",
+      "lead": "Me conta como foi. Pra mim, cada relato é dado clínico.",
+      "hint": "Comenta aqui"
+    }
+  ],
+  "caption": "Primeiro siga @bellabrasao 🤍\n\nRetatrutida vai mudar o tratamento da obesidade. Mas lipedema não é obesidade. É doença do tecido.\n\nA tirzepatida (Mounjaro) age pelo GIP, que conversa com a gordura: menos inflamação, menos fibrose. A retatrutida acrescenta o glucagon, que acelera a queima onde a gordura responde: fígado, tronco, visceral. A gordura do lipedema é justamente a que não responde. Minha leitura: a paciente emagrece em cima e as pernas ficam. 🧠\n\nÉ uma hipótese, com base em mecanismo e na minha prática. Ainda não existe ensaio clínico em lipedema, nem com uma nem com outra.\n\nSe você tem lipedema, clique no link da bio e agende a sua consulta. A gente olha o tecido, não o número. 🤍"
+}
