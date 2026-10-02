@@ -62,7 +62,7 @@ function figure(fig) {
   if (!fig) return "";
   const img = fig.src
     ? `<img src="${relFromBuild(fig.src)}" alt="">`
-    : `<div class="placeholder"><span>${rich(fig.placeholder || "ilustração")}</span></div>`;
+    : `<div class="placeholder"><span>${rich(fig.prompt || fig.placeholder || "ilustração")}</span></div>`;
   const labels = (fig.labels || [])
     .map((l) => {
       const sub = (l.sub || []).map((t) => `<div class="sub">${rich(t)}</div>`).join("");

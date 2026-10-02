@@ -25,9 +25,12 @@ Chromium: o Playwright baixa sozinho na primeira vez (`npx playwright install ch
 
 1. Copie `content/musculo-remedio.json` pra `content/<novo-nome>.json`.
 2. Escreva os slides seguindo `brand/VOICE.md` (como ela fala, o que ela nunca diz).
-3. Gere as ilustrações com os prompts em `assets/illustrations/PROMPTS.md` e salve em
-   `assets/illustrations/<novo-nome>/`. Enquanto a imagem não existe, o slide mostra um placeholder
-   com a descrição.
+3. Descreva cada ilustração no campo `figure.prompt` do slide e rode `npm run illustrate <novo-nome>`.
+   O script monta o prompt final (estilo da marca em `brand/illustration-style.txt` + cena) e salva o PNG
+   em `assets/illustrations/<novo-nome>/`. Precisa de uma chave de API no ambiente:
+   `IMAGE_PROVIDER=gemini` + `GEMINI_API_KEY`, ou `IMAGE_PROVIDER=openai` + `OPENAI_API_KEY`.
+   Enquanto a imagem não existe, o slide mostra um placeholder com a descrição.
+   `--dry` só imprime os prompts, `--force` refaz, `--only 03` faz uma.
 4. `npm run render <novo-nome>`.
 
 ### Tipos de slide

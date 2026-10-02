@@ -8,7 +8,6 @@
       "lead": "O que acontece no seu corpo, célula por célula, toda vez que você treina.",
       "figure": {
         "src": "assets/illustrations/musculo-remedio/01-corpo-correndo.png",
-        "placeholder": "ilustração: mulher correndo de perfil, musculatura visível em corte anatômico, fundo claro",
         "labels": [
           {
             "x": 18,
@@ -73,7 +72,8 @@
               "Reparo e reconstrução"
             ]
           }
-        ]
+        ],
+        "prompt": "ilustração: mulher correndo de perfil, musculatura visível em corte anatômico, fundo claro"
       }
     },
     {
@@ -82,7 +82,6 @@
       "lead": "Ele libera centenas de moléculas sinalizadoras chamadas **miocinas**.",
       "figure": {
         "src": "assets/illustrations/musculo-remedio/02-musculo-central.png",
-        "placeholder": "ilustração: um músculo esquelético no centro, pequenas esferas saindo dele em direção a cérebro, fígado, gordura e vaso sanguíneo ao redor",
         "labels": [
           {
             "x": 22,
@@ -158,7 +157,8 @@
               "↑ Mitocôndrias"
             ]
           }
-        ]
+        ],
+        "prompt": "ilustração: um músculo esquelético no centro, pequenas esferas saindo dele em direção a cérebro, fígado, gordura e vaso sanguíneo ao redor"
       },
       "bullets": [
         "Irisina → gordura branca vira gordura que gasta energia.",
@@ -178,7 +178,6 @@
       ],
       "figure": {
         "src": "assets/illustrations/musculo-remedio/03-cerebro.png",
-        "placeholder": "ilustração: cérebro humano em corte, neurônios se conectando, uma silhueta pequena correndo à esquerda com setas chegando ao cérebro",
         "labels": [
           {
             "x": 72,
@@ -198,7 +197,8 @@
               "Sinal sobe pelo sangue"
             ]
           }
-        ]
+        ],
+        "prompt": "ilustração: cérebro humano em corte, neurônios se conectando, uma silhueta pequena correndo à esquerda com setas chegando ao cérebro"
       }
     },
     {
@@ -206,7 +206,6 @@
       "title": "Gordura, **regeneração** e upgrade celular.",
       "figure": {
         "src": "assets/illustrations/musculo-remedio/04-gordura-mitocondria.png",
-        "placeholder": "ilustração: feixe muscular em corte no centro, células de gordura amarelas à esquerda em cima, mitocôndria em corte embaixo à esquerda, célula satélite à direita",
         "labels": [
           {
             "x": 26,
@@ -244,7 +243,8 @@
               "Reparo e reconstrução"
             ]
           }
-        ]
+        ],
+        "prompt": "ilustração: feixe muscular em corte no centro, células de gordura amarelas à esquerda em cima, mitocôndria em corte embaixo à esquerda, célula satélite à direita"
       },
       "bullets": [
         "Gordura, mitocôndria e músculo se adaptam **juntos**.",
@@ -263,7 +263,6 @@
       ],
       "figure": {
         "src": "assets/illustrations/musculo-remedio/05-inflamacao.png",
-        "placeholder": "ilustração: músculo à esquerda liberando esferas, que chegam em tecido adiposo, fígado e vaso sanguíneo à direita",
         "labels": [
           {
             "x": 16,
@@ -328,7 +327,8 @@
               "↓ Inflamação sistêmica"
             ]
           }
-        ]
+        ],
+        "prompt": "ilustração: músculo à esquerda liberando esferas, que chegam em tecido adiposo, fígado e vaso sanguíneo à direita"
       }
     },
     {
@@ -344,7 +344,6 @@
       ],
       "figure": {
         "src": "assets/illustrations/musculo-remedio/06-figado-vaso.png",
-        "placeholder": "ilustração: músculo em corte à esquerda, fígado à direita em cima, vaso sanguíneo em corte com hemácias à direita embaixo",
         "labels": [
           {
             "x": 18,
@@ -370,7 +369,8 @@
               "→ Vasos"
             ]
           }
-        ]
+        ],
+        "prompt": "ilustração: músculo em corte à esquerda, fígado à direita em cima, vaso sanguíneo em corte com hemácias à direita embaixo"
       }
     },
     {
