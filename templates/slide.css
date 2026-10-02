@@ -30,7 +30,7 @@ body.preview .slide-wrap::after {
   width: 1080px; height: 1350px;
   background: var(--paper);
   overflow: hidden;
-  padding: 108px 96px 236px 96px;
+  padding: 108px 96px 268px 96px;
   display: flex; flex-direction: column;
 }
 
@@ -48,7 +48,7 @@ body.preview .slide-wrap::after {
   display: flex; flex-direction: column; align-items: flex-end; gap: 22px;
   z-index: 5;
 }
-.ftr .arrow { width: 160px; height: 2px; background: var(--deep-coffee); position: relative; }
+.ftr .arrow { width: 96px; height: 2px; background: var(--deep-coffee); position: relative; }
 .ftr .arrow::after {
   content: ""; position: absolute; right: -1px; top: -6px;
   width: 10px; height: 10px; border-top: 2px solid var(--deep-coffee); border-right: 2px solid var(--deep-coffee);
@@ -89,7 +89,7 @@ em { font-style: normal; font-weight: 500; color: var(--cozy-brown); }
 .bullets { list-style: none; display: flex; flex-direction: column; gap: 14px; }
 .bullets li {
   position: relative; padding-left: 38px;
-  font: 300 29px/1.38 var(--font-body);
+  font: 300 28px/1.38 var(--font-body);
 }
 .bullets li::before {
   content: ""; position: absolute; left: 6px; top: 16px;
@@ -138,7 +138,7 @@ em { font-style: normal; font-weight: 500; color: var(--cozy-brown); }
 
 /* ---------- DIAGRAMA ---------- */
 .slide.diagram .title { margin-top: 30px; }
-.slide.diagram .fig { flex: none; height: 390px; margin: 32px 0 30px; }
+.slide.diagram .fig { flex: none; height: 370px; margin: 30px 0 28px; }
 .slide.diagram .bullets { margin-bottom: 0; }
 .slide.diagram .note {
   position: absolute; left: 100px; bottom: 104px; max-width: 420px;
@@ -148,7 +148,7 @@ em { font-style: normal; font-weight: 500; color: var(--cozy-brown); }
 /* ---------- TEXTO + FIGURA ---------- */
 .slide.text .title { margin-top: 30px; }
 .slide.text .body { margin-top: 44px; }
-.slide.text .fig { flex: 1; margin-top: 36px; min-height: 340px; }
+.slide.text .fig { flex: 1; margin-top: 32px; min-height: 320px; }
 
 /* ---------- FECHAMENTO (só texto) ---------- */
 .slide.closing { justify-content: center; }
