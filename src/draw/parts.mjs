@@ -398,6 +398,60 @@ export function stomachSleeve() {
     <path d="${cut}" fill="none" stroke="${C.ink}" stroke-width="2" stroke-dasharray="6 5"/>${staples}</g>`;
 }
 
+// ---------- balança de chão (caixa 220x150, origem canto superior esquerdo). Ponteiro: 0 (esq) a 1 (dir) ----------
+export function scale({ needle = 0.5 } = {}) {
+  const ang = -60 + needle * 120, rad = (ang - 90) * Math.PI / 180;
+  const nx = 110 + Math.cos(rad) * 34, ny = 58 + Math.sin(rad) * 34;
+  const ticks = [-60, -30, 0, 30, 60].map((a) => { const r = (a - 90) * Math.PI / 180; return `<path d="M${(110 + Math.cos(r) * 40).toFixed(1)},${(58 + Math.sin(r) * 40).toFixed(1)} L${(110 + Math.cos(r) * 46).toFixed(1)},${(58 + Math.sin(r) * 46).toFixed(1)}" stroke="${C.ink}" stroke-opacity="0.6" stroke-width="2" stroke-linecap="round"/>`; }).join("");
+  return `<g><rect x="10" y="20" width="200" height="120" rx="26" fill="${C.tendon}" stroke="${C.tendonLo}" stroke-width="1.5"/>
+    <rect x="22" y="30" width="176" height="100" rx="18" fill="none" stroke="${C.tendonLo}" stroke-opacity="0.6" stroke-width="1.5"/>
+    <path d="M62,76 A52,52 0 0 1 158,76" fill="${C.paper || "#F6F4F0"}" stroke="${C.tendonLo}" stroke-width="1.5"/>
+    <path d="M62,76 L158,76" stroke="${C.tendonLo}" stroke-width="1.5"/>${ticks}
+    <path d="M110,74 L${nx.toFixed(1)},${ny.toFixed(1)}" stroke="${C.rbc}" stroke-width="3" stroke-linecap="round"/><circle cx="110" cy="74" r="4" fill="${C.ink}"/>
+    <path d="M40,40 C60,34 90,34 110,36" fill="none" stroke="#fff" stroke-opacity="0.35" stroke-width="6" stroke-linecap="round"/></g>`;
+}
+
+// ---------- lua com estrelas (centro em 0,0, raio r) ----------
+export function moon({ r = 60, stars = true } = {}) {
+  // crescente = círculo A (raio r) menos círculo B (raio 0.85r, deslocado 0.55r pra direita)
+  const d = 0.55 * r, rb = 0.85 * r, x = (r * r - rb * rb + d * d) / (2 * d), y = Math.sqrt(r * r - x * x);
+  const st = stars ? [[-r * 1.4, -r * 0.9, 5], [r * 1.5, -r * 0.6, 4], [r * 1.2, r * 1.1, 4.5], [-r * 1.1, r * 1.3, 3.5]].map(([x, y, s]) =>
+    `<path d="M${x},${y - s} L${x + s * 0.3},${y - s * 0.3} L${x + s},${y} L${x + s * 0.3},${y + s * 0.3} L${x},${y + s} L${x - s * 0.3},${y + s * 0.3} L${x - s},${y} L${x - s * 0.3},${y - s * 0.3} Z" fill="${C.mol2}"/>`).join("") : "";
+  return `<g><path d="M${x.toFixed(1)},${(-y).toFixed(1)} A${r},${r} 0 1 0 ${x.toFixed(1)},${y.toFixed(1)} A${rb},${rb} 0 0 1 ${x.toFixed(1)},${(-y).toFixed(1)} Z" fill="${C.pancreas}" stroke="${C.pancreasLo}" stroke-opacity="0.6" stroke-width="1.5" stroke-linejoin="round"/>
+    <circle cx="${-r * 0.45}" cy="${-r * 0.4}" r="${r * 0.13}" fill="#fff" opacity="0.3"/>${st}</g>`;
+}
+
+// ---------- prato visto de cima (centro em 0,0, raio r). portion: 0 a 1 do prato ocupado ----------
+export function plate({ r = 80, portion = 0.6 } = {}) {
+  const pr = r * 0.68;
+  const food = portion >= 0.99
+    ? `<circle r="${pr}" fill="${C.fat}" stroke="${C.fatLo}" stroke-opacity="0.6" stroke-width="1.5"/>`
+    : portion <= 0.01 ? "" : (() => { const a = portion * Math.PI * 2, x = Math.cos(a - Math.PI / 2) * pr, y = Math.sin(a - Math.PI / 2) * pr;
+        return `<path d="M0,0 L0,${-pr} A${pr},${pr} 0 ${portion > 0.5 ? 1 : 0} 1 ${x.toFixed(1)},${y.toFixed(1)} Z" fill="${C.fat}" stroke="${C.fatLo}" stroke-opacity="0.6" stroke-width="1.5"/>`; })();
+  return `<g><circle r="${r}" fill="${C.tendon}" stroke="${C.tendonLo}" stroke-width="1.5"/><circle r="${r * 0.8}" fill="none" stroke="${C.tendonLo}" stroke-opacity="0.6" stroke-width="1.5"/>${food}
+    <path d="M${-r * 0.6},${-r * 0.55} A${r * 0.85},${r * 0.85} 0 0 1 ${r * 0.1},${-r * 0.9}" fill="none" stroke="#fff" stroke-opacity="0.35" stroke-width="5" stroke-linecap="round"/></g>`;
+}
+
+// ---------- relógio (centro em 0,0, raio r). h: hora apontada ----------
+export function clock({ r = 60, h = 3 } = {}) {
+  const a = (h / 12) * Math.PI * 2 - Math.PI / 2;
+  const marks = Array.from({ length: 12 }, (_, i) => { const t = (i / 12) * Math.PI * 2; const r1 = i % 3 === 0 ? r * 0.78 : r * 0.86; return `<path d="M${(Math.cos(t) * r1).toFixed(1)},${(Math.sin(t) * r1).toFixed(1)} L${(Math.cos(t) * r * 0.9).toFixed(1)},${(Math.sin(t) * r * 0.9).toFixed(1)}" stroke="${C.ink}" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round"/>`; }).join("");
+  return `<g><circle r="${r}" fill="${C.tendon}" stroke="${C.tendonLo}" stroke-width="1.5"/>${marks}
+    <path d="M0,0 L${(Math.cos(a) * r * 0.55).toFixed(1)},${(Math.sin(a) * r * 0.55).toFixed(1)}" stroke="${C.ink}" stroke-width="3.5" stroke-linecap="round"/>
+    <path d="M0,0 L0,${-r * 0.75}" stroke="${C.ink}" stroke-width="2.5" stroke-linecap="round"/><circle r="4" fill="${C.ink}"/>
+    <circle cx="${-r * 0.35}" cy="${-r * 0.45}" r="${r * 0.14}" fill="#fff" opacity="0.3"/></g>`;
+}
+
+// ---------- ciclo em quatro fases (centro em 0,0, raio r). Arcos com espessura variável e um marcador na fase ativa ----------
+export function cycle({ r = 110, active = 2 } = {}) {
+  const tones = [C.mol1, C.mol2, C.mol3, C.vessel];
+  const arcs = tones.map((col, i) => { const a0 = (i / 4) * Math.PI * 2 - Math.PI / 2 + 0.08, a1 = ((i + 1) / 4) * Math.PI * 2 - Math.PI / 2 - 0.08;
+    const x0 = Math.cos(a0) * r, y0 = Math.sin(a0) * r, x1 = Math.cos(a1) * r, y1 = Math.sin(a1) * r;
+    return `<path d="M${x0.toFixed(1)},${y0.toFixed(1)} A${r},${r} 0 0 1 ${x1.toFixed(1)},${y1.toFixed(1)}" fill="none" stroke="${col}" stroke-width="${i === active ? 22 : 14}" stroke-linecap="round" opacity="${i === active ? 1 : 0.7}"/>`; }).join("");
+  const am = ((active + 0.5) / 4) * Math.PI * 2 - Math.PI / 2;
+  return `<g>${arcs}${sphere(Math.cos(am) * r, Math.sin(am) * r, 13, 1)}</g>`;
+}
+
 // Estilo: "flat" (padrão, chapado, mais vetorial) ou "shaded" (degradês e sombras).
 export const STYLE = process.env.ILLUS_STYLE || "flat";
 const FLAT_MAP = { gMuscle: C.muscle, gMuted: C.muted, gTendon: C.tendon, gVessel: C.vessel, gSkin: C.skin, gFat: C.fat, gLiver: C.liver,

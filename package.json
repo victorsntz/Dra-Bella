@@ -11,7 +11,8 @@
     "illustrate": "node src/illustrate.mjs",
     "review": "node src/review.mjs",
     "draw": "node src/draw.mjs",
-    "illustrations": "node src/illustrations-page.mjs"
+    "illustrations": "node src/illustrations-page.mjs",
+    "check": "node src/check.mjs"
   },
   "devDependencies": {
     "playwright": "1.56.1"
