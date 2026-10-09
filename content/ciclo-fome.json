@@ -1,0 +1,289 @@
+{
+  "title": "Fome e ciclo menstrual",
+  "format": "carrossel · educativo",
+  "slides": [
+    {
+      "type": "cover",
+      "title": "A fome antes\nda menstruação\n**não é frescura.\nÉ hormônio.**",
+      "lead": "O que muda no seu corpo na segunda metade do ciclo.",
+      "titleSize": 88,
+      "titleWidth": 740,
+      "figure": {
+        "src": "assets/illustrations/ciclo-fome/01-ciclo.svg",
+        "prompt": "o ciclo em quatro fases, grande, com a fase lútea em destaque; lua pequena no alto; esferas soltas",
+        "labels": [
+          {
+            "x": 16,
+            "y": 80,
+            "text": "Fase lútea",
+            "tone": "coffee"
+          },
+          {
+            "x": 80,
+            "y": 60,
+            "text": "Progesterona ↑",
+            "tone": "sand"
+          },
+          {
+            "x": 48,
+            "y": 94,
+            "text": "Fome ↑",
+            "tone": "cream"
+          }
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "theme": "coffee",
+      "title": "O ciclo tem fases. E a **fome** acompanha.",
+      "paragraphs": [
+        "Na primeira metade, o estrogênio comanda. Na segunda, a fase lútea, a **progesterona** sobe.",
+        "Com ela, o gasto de energia pode subir um pouco. O corpo pede mais. A fome acompanha."
+      ],
+      "figure": {
+        "src": "assets/illustrations/ciclo-fome/02-fases.svg",
+        "prompt": "o ciclo à esquerda, progesterona subindo em arco pra direita",
+        "inset": {
+          "top": 30
+        },
+        "labels": [
+          {
+            "sx": 90,
+            "sy": 330,
+            "text": "Fase lútea",
+            "tone": "coffee",
+            "sub": [
+              "Segunda metade do ciclo"
+            ]
+          },
+          {
+            "sx": 500,
+            "sy": 30,
+            "text": "Progesterona ↑",
+            "tone": "sand",
+            "sub": [
+              "Gasto de energia ↑"
+            ]
+          },
+          {
+            "sx": 700,
+            "sy": 240,
+            "text": "Fome ↑",
+            "tone": "cream",
+            "sub": [
+              "O corpo pede mais"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "diagram",
+      "title": "Duas fases, dois **apetites.**",
+      "lead": "O mesmo corpo, com hormônios diferentes, pede coisas diferentes.",
+      "figure": {
+        "src": "assets/illustrations/ciclo-fome/03-duas-fases.svg",
+        "prompt": "o ciclo em quatro fases no centro, com a fase lútea em destaque à direita",
+        "inset": {
+          "left": 200,
+          "right": 200
+        },
+        "labels": [
+          {
+            "x": 11,
+            "y": 18,
+            "text": "Folicular",
+            "tone": "coffee",
+            "edge": "left"
+          },
+          {
+            "x": 11,
+            "y": 46,
+            "text": "Estrogênio ↑",
+            "tone": "sand",
+            "edge": "left"
+          },
+          {
+            "x": 11,
+            "y": 74,
+            "text": "Saciedade ↑",
+            "tone": "cream",
+            "edge": "left"
+          },
+          {
+            "x": 89,
+            "y": 14,
+            "text": "Lútea",
+            "tone": "coffee",
+            "edge": "right"
+          },
+          {
+            "x": 89,
+            "y": 38,
+            "text": "Progesterona ↑",
+            "tone": "sand",
+            "edge": "right"
+          },
+          {
+            "x": 89,
+            "y": 62,
+            "text": "Fome ↑",
+            "tone": "cream",
+            "edge": "right"
+          },
+          {
+            "x": 89,
+            "y": 86,
+            "text": "Retenção",
+            "tone": "cream",
+            "edge": "right"
+          }
+        ]
+      },
+      "bullets": [
+        "Folicular → estrogênio alto: mais saciedade, mais sensibilidade à insulina.",
+        "Lútea → progesterona em alta: menos saciedade, mais vontade de doce.",
+        "Retenção → o corpo segura líquido. A balança sobe sem gordura nova."
+      ]
+    },
+    {
+      "type": "diagram",
+      "theme": "coffee",
+      "title": "Por que o corpo pede **doce.**",
+      "lead": "No pré-menstrual a serotonina cai. E carboidrato sobe serotonina rápido.",
+      "figure": {
+        "src": "assets/illustrations/ciclo-fome/04-doce.svg",
+        "prompt": "cérebro à esquerda, prato à direita, carboidrato subindo em arco até o cérebro",
+        "inset": {
+          "left": 200,
+          "right": 200
+        },
+        "labels": [
+          {
+            "x": 11,
+            "y": 26,
+            "text": "Serotonina ↓",
+            "tone": "coffee",
+            "sub": [
+              "Cai no pré-menstrual"
+            ],
+            "edge": "left"
+          },
+          {
+            "x": 11,
+            "y": 72,
+            "text": "Humor",
+            "tone": "sand",
+            "sub": [
+              "Cai junto"
+            ],
+            "edge": "left"
+          },
+          {
+            "x": 89,
+            "y": 68,
+            "text": "Carboidrato",
+            "tone": "sand",
+            "sub": [
+              "Sobe serotonina rápido"
+            ],
+            "edge": "right"
+          }
+        ]
+      },
+      "bullets": [
+        "Serotonina ↓ → o humor cai junto, dias antes de menstruar.",
+        "Carboidrato → sobe a serotonina rápido. O cérebro aprende o atalho.",
+        "Doce → não é falta de controle. É o corpo buscando alívio."
+      ]
+    },
+    {
+      "type": "text",
+      "title": "**Retenção** de líquido não é gordura.",
+      "paragraphs": [
+        "A balança sobe e desce ao longo do mês. Parte disso é água que o corpo segura na fase lútea.",
+        "O peso real se vê na tendência, não no dia. Comparar a segunda-feira de hoje com a de três semanas atrás engana."
+      ],
+      "figure": {
+        "src": "assets/illustrations/ciclo-fome/05-retencao.svg",
+        "prompt": "balança grande à esquerda com o ponteiro mais alto, o ciclo pequeno à direita",
+        "inset": {
+          "top": 30
+        },
+        "labels": [
+          {
+            "sx": 180,
+            "sy": 40,
+            "text": "Retenção",
+            "tone": "sand",
+            "sub": [
+              "Água, não gordura"
+            ]
+          },
+          {
+            "sx": 640,
+            "sy": 70,
+            "text": "Fase lútea",
+            "tone": "coffee",
+            "sub": [
+              "A balança sobe"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "theme": "coffee",
+      "title": "Planejar a semana, em vez de **lutar** contra.",
+      "paragraphs": [
+        "Proteína e fibra nas refeições, sono em dia, e o doce planejado, não proibido.",
+        "Quando é demais, investigar: TPM severa, SOP, tireoide. A mulher inteira, não só a fome."
+      ],
+      "figure": {
+        "src": "assets/illustrations/ciclo-fome/06-semana.svg",
+        "prompt": "o ciclo, a lua e o prato lado a lado",
+        "inset": {
+          "top": 30
+        },
+        "labels": [
+          {
+            "sx": 100,
+            "sy": 60,
+            "text": "Ciclo",
+            "tone": "cream",
+            "sub": [
+              "Planejar, não lutar"
+            ]
+          },
+          {
+            "sx": 400,
+            "sy": 90,
+            "text": "Sono",
+            "tone": "sand",
+            "sub": [
+              "Em dia"
+            ]
+          },
+          {
+            "sx": 630,
+            "sy": 60,
+            "text": "Proteína e fibra",
+            "tone": "coffee",
+            "sub": [
+              "Em toda refeição"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "cta",
+      "title": "Em que fase do ciclo a sua fome muda?",
+      "lead": "Antes, durante, depois? Me conta o que você percebe.",
+      "hint": "Comenta aqui"
+    }
+  ],
+  "caption": "Primeiro siga @bellabrasao 🤍\n\nA fome que chega antes da menstruação não é frescura. É hormônio com mecanismo conhecido.\n\nNa segunda metade do ciclo, a fase lútea, a progesterona sobe. O gasto de energia pode aumentar um pouco, a saciedade cai e a vontade de doce aparece: a serotonina cai no pré-menstrual, e o carboidrato é o jeito mais rápido de subir ela de novo. O corpo também segura líquido. A balança sobe sem gordura nova. 🌙\n\nPor isso, em vez de lutar contra, a gente planeja a semana: proteína e fibra, sono em dia, doce planejado. E quando é demais, investiga: TPM severa, SOP, tireoide. A mulher inteira, não só a fome.\n\nEm que fase do ciclo a sua fome muda? Me conta aqui embaixo. 🤍"
+}

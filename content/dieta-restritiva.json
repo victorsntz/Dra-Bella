@@ -1,0 +1,271 @@
+{
+  "title": "Quanto mais você restringe, mais a compulsão cresce",
+  "format": "carrossel · educativo",
+  "slides": [
+    {
+      "type": "cover",
+      "title": "Quanto mais\nrestringe,\n**mais cresce\na compulsão.**",
+      "lead": "O que a dieta radical ensina ao seu cérebro.",
+      "titleSize": 96,
+      "titleWidth": 680,
+      "figure": {
+        "src": "assets/illustrations/dieta-restritiva/01-prato-cerebro.svg",
+        "prompt": "prato quase vazio grande no alto; cérebro com o hipotálamo aceso embaixo, soltando ondas fortes",
+        "labels": [
+          {
+            "x": 46,
+            "y": 6,
+            "text": "Restrição",
+            "tone": "coffee"
+          },
+          {
+            "x": 22,
+            "y": 62,
+            "text": "Hipotálamo",
+            "tone": "sand"
+          },
+          {
+            "x": 84,
+            "y": 84,
+            "text": "Fome",
+            "tone": "cream"
+          }
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "theme": "coffee",
+      "title": "Restrição severa é lida pelo corpo como **escassez.**",
+      "paragraphs": [
+        "O corpo não sabe que é dieta. Ele entende que a comida acabou.",
+        "A **grelina** sobe, a saciedade cai e o pensamento em comida aumenta. É o food noise."
+      ],
+      "figure": {
+        "src": "assets/illustrations/dieta-restritiva/02-escassez.svg",
+        "prompt": "prato vazio à esquerda, estômago no meio, fluxo de grelina subindo pro cérebro à direita",
+        "inset": {
+          "top": 30
+        },
+        "labels": [
+          {
+            "sx": 90,
+            "sy": 60,
+            "text": "Prato vazio",
+            "tone": "cream",
+            "sub": [
+              "O corpo lê escassez"
+            ]
+          },
+          {
+            "sx": 350,
+            "sy": 40,
+            "text": "Grelina ↑",
+            "tone": "sand",
+            "sub": [
+              "Hormônio da fome"
+            ]
+          },
+          {
+            "sx": 620,
+            "sy": 20,
+            "text": "Food noise",
+            "tone": "coffee",
+            "sub": [
+              "Pensamento em comida ↑"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "diagram",
+      "title": "O ciclo que a restrição **alimenta.**",
+      "lead": "Cada volta começa com uma dieta e termina com outra.",
+      "figure": {
+        "src": "assets/illustrations/dieta-restritiva/03-ciclo.svg",
+        "prompt": "anel de esferas girando com um prato quase vazio no centro",
+        "inset": {
+          "left": 200,
+          "right": 200
+        },
+        "labels": [
+          {
+            "x": 11,
+            "y": 22,
+            "text": "Restrição",
+            "tone": "coffee",
+            "sub": [
+              "A dieta radical"
+            ],
+            "edge": "left"
+          },
+          {
+            "x": 89,
+            "y": 22,
+            "text": "Fome biológica",
+            "tone": "sand",
+            "sub": [
+              "Grelina ↑ · Saciedade ↓"
+            ],
+            "edge": "right"
+          },
+          {
+            "x": 89,
+            "y": 78,
+            "text": "Perda de controle",
+            "tone": "sand",
+            "sub": [
+              "E a culpa logo depois"
+            ],
+            "edge": "right"
+          },
+          {
+            "x": 11,
+            "y": 78,
+            "text": "Mais restrição",
+            "tone": "outline",
+            "sub": [
+              "A próxima dieta"
+            ],
+            "edge": "left"
+          }
+        ]
+      },
+      "bullets": [
+        "Restrição → o corpo lê escassez e sobe a fome.",
+        "Fome biológica → a vontade vence. Parece perda de controle.",
+        "Culpa → vem a promessa de restringir mais. E a volta recomeça."
+      ]
+    },
+    {
+      "type": "diagram",
+      "theme": "coffee",
+      "title": "O proibido vira **recompensa.**",
+      "lead": "Quanto mais a comida é proibida, mais valor o cérebro dá a ela.",
+      "figure": {
+        "src": "assets/illustrations/dieta-restritiva/04-recompensa.svg",
+        "prompt": "cérebro à esquerda manda dopamina pro ciclo de recompensa à direita, com o prato proibido no centro",
+        "inset": {
+          "left": 200,
+          "right": 200
+        },
+        "labels": [
+          {
+            "x": 11,
+            "y": 30,
+            "text": "Dopamina",
+            "tone": "coffee",
+            "sub": [
+              "Pico maior a cada escape"
+            ],
+            "edge": "left"
+          },
+          {
+            "x": 89,
+            "y": 24,
+            "text": "Recompensa",
+            "tone": "sand",
+            "sub": [
+              "Sistema mais sensível"
+            ],
+            "edge": "right"
+          },
+          {
+            "x": 89,
+            "y": 78,
+            "text": "Proibido",
+            "tone": "cream",
+            "sub": [
+              "Vira o mais desejado"
+            ],
+            "edge": "right"
+          }
+        ]
+      },
+      "bullets": [
+        "Proibido → ganha valor. O cérebro passa a prestar mais atenção nele.",
+        "Dopamina → a recompensa do escape fica maior do que era antes.",
+        "Sistema de recompensa → cada vez mais sensível à comida que você tirou."
+      ]
+    },
+    {
+      "type": "text",
+      "title": "O que parece fraqueza moral é **fisiologia** respondendo à escassez.",
+      "paragraphs": [
+        "Não é falta de disciplina. É um corpo que aprendeu que a comida some e reage pra garantir que não falte.",
+        "A paciente não é fraca. Ela está com o **sistema desregulado**."
+      ],
+      "figure": {
+        "src": "assets/illustrations/dieta-restritiva/05-fisiologia.svg",
+        "prompt": "cérebro grande no centro com ondas saindo pra direita",
+        "inset": {
+          "top": 30
+        },
+        "labels": [
+          {
+            "sx": 300,
+            "sy": 20,
+            "text": "Sistema desregulado",
+            "tone": "coffee",
+            "sub": [
+              "Não é fraqueza. É resposta."
+            ]
+          },
+          {
+            "sx": 690,
+            "sy": 80,
+            "text": "Fome",
+            "tone": "sand",
+            "sub": [
+              "Sinal no máximo"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "theme": "coffee",
+      "title": "Sair do ciclo não é **fechar a boca.**",
+      "paragraphs": [
+        "É comer o suficiente, com proteína e fibra, em horários regulares. O corpo precisa confiar que a comida vai chegar.",
+        "Depois, tratar as raízes: inflamação, hormônios, intestino, sistema nervoso. Às vezes com medicação. Sempre com entendimento."
+      ],
+      "figure": {
+        "src": "assets/illustrations/dieta-restritiva/06-saida.svg",
+        "prompt": "prato cheio grande à esquerda, a Árvore pequena à direita",
+        "inset": {
+          "top": 30
+        },
+        "labels": [
+          {
+            "sx": 150,
+            "sy": 30,
+            "text": "Prato cheio",
+            "tone": "cream",
+            "sub": [
+              "Proteína, fibra, regularidade"
+            ]
+          },
+          {
+            "sx": 640,
+            "sy": 20,
+            "text": "As raízes",
+            "tone": "coffee",
+            "sub": [
+              "Onde o tratamento começa"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "cta",
+      "title": "Qual foi a dieta mais radical que você já fez?",
+      "lead": "E o que aconteceu depois? Me conta.",
+      "hint": "Comenta aqui"
+    }
+  ],
+  "caption": "Primeiro siga @bellabrasao 🤍\n\nA compulsão que vem depois da dieta não é fraqueza. É o corpo respondendo à escassez que a dieta criou.\n\nQuando a restrição é severa, o corpo não entende que é escolha. Ele entende que a comida acabou. A grelina, o hormônio da fome, sobe. A saciedade cai. O pensamento em comida aumenta. E a comida proibida ganha valor no sistema de recompensa: cada escape libera mais dopamina. Vem a culpa, vem a promessa de restringir mais, e o ciclo recomeça. 🧠\n\nSair dele não é fechar a boca. É comer o suficiente, com proteína e fibra, em horários regulares, e tratar as raízes que mantêm a fome alta. Às vezes com medicação. Sempre com entendimento.\n\nQual foi a dieta mais radical que você já fez? Me conta aqui embaixo. 🤍"
+}
