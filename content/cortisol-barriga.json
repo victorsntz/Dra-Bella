@@ -1,0 +1,284 @@
+{
+  "title": "Dormir mal engorda. E a barriga é o primeiro lugar.",
+  "format": "carrossel · educativo",
+  "slides": [
+    {
+      "type": "cover",
+      "title": "Dormir mal\nengorda.\n**E a barriga é\no primeiro lugar.**",
+      "lead": "O que o sono curto faz com o cortisol. E o que o cortisol faz com a gordura da barriga.",
+      "titleSize": 96,
+      "titleWidth": 620,
+      "figure": {
+        "src": "assets/illustrations/cortisol-barriga/01-lua-adrenal.svg",
+        "prompt": "lua grande no alto, rim com adrenal embaixo, fluxo de esferas de cortisol subindo da adrenal até a noite",
+        "labels": [
+          {
+            "x": 58,
+            "y": 4,
+            "text": "Sono curto",
+            "tone": "sand"
+          },
+          {
+            "x": 64,
+            "y": 46,
+            "text": "Cortisol ↑",
+            "tone": "coffee"
+          },
+          {
+            "x": 28,
+            "y": 64,
+            "text": "Adrenal",
+            "tone": "cream"
+          }
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "theme": "coffee",
+      "title": "Sono curto, **cortisol** alto.",
+      "paragraphs": [
+        "O **cortisol** é o hormônio do alerta. De manhã ele sobe pra te acordar e te dar energia. Isso é saúde.",
+        "O problema é quando a noite não derruba ele. Com pouco sono, o cortisol fica alto o dia inteiro, e o corpo entende que está em perigo."
+      ],
+      "figure": {
+        "src": "assets/illustrations/cortisol-barriga/02-relogio-adrenal.svg",
+        "prompt": "relógio marcando três da manhã à esquerda, rim com adrenal à direita soltando cortisol o dia inteiro",
+        "inset": {
+          "top": 30
+        },
+        "labels": [
+          {
+            "sx": 150,
+            "sy": 30,
+            "text": "Três da manhã",
+            "tone": "cream",
+            "sub": [
+              "Noite curta"
+            ]
+          },
+          {
+            "sx": 600,
+            "sy": 20,
+            "text": "Cortisol alto",
+            "tone": "coffee",
+            "sub": [
+              "O dia inteiro"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "diagram",
+      "title": "O que o **cortisol** alto faz.",
+      "lead": "Ele mexe em quatro sinais ao mesmo tempo. Todos empurram pra comer mais e guardar na barriga.",
+      "figure": {
+        "src": "assets/illustrations/cortisol-barriga/03-quatro-sinais.svg",
+        "prompt": "rim com adrenal no centro mandando cortisol pro estômago, pro pâncreas e pra gordura visceral em volta",
+        "inset": {
+          "left": 200,
+          "right": 200
+        },
+        "labels": [
+          {
+            "x": 11,
+            "y": 22,
+            "text": "Grelina ↑",
+            "tone": "sand",
+            "sub": [
+              "Mais fome"
+            ],
+            "edge": "left"
+          },
+          {
+            "x": 89,
+            "y": 22,
+            "text": "Leptina ↓",
+            "tone": "sand",
+            "sub": [
+              "Menos saciedade"
+            ],
+            "edge": "right"
+          },
+          {
+            "x": 11,
+            "y": 80,
+            "text": "Insulina",
+            "tone": "sand",
+            "sub": [
+              "Pior ouvida"
+            ],
+            "edge": "left"
+          },
+          {
+            "x": 89,
+            "y": 80,
+            "text": "Gordura visceral",
+            "tone": "coffee",
+            "sub": [
+              "Estoque preferido"
+            ],
+            "edge": "right"
+          }
+        ]
+      },
+      "bullets": [
+        "Grelina ↑ → o estômago avisa fome, mesmo sem precisar.",
+        "Leptina ↓ → o sinal de saciedade chega fraco.",
+        "Insulina → o corpo ouve pior, e o açúcar sobe.",
+        "Gordura visceral → vira o lugar preferido pra guardar."
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Por que a **barriga** vem primeiro.",
+      "paragraphs": [
+        "A gordura de dentro da barriga, a **visceral**, é a que mais responde ao cortisol. Quando ele sobe, é ela que cresce primeiro.",
+        "E ela não é só estoque. Ela solta **citocinas**, sinais de inflamação que chegam ao fígado e ao corpo inteiro."
+      ],
+      "figure": {
+        "src": "assets/illustrations/cortisol-barriga/04-visceral.svg",
+        "prompt": "aglomerado grande de gordura visceral com citocinas saindo dele e chegando ao fígado ao lado",
+        "inset": {
+          "top": 30
+        },
+        "labels": [
+          {
+            "sx": 190,
+            "sy": 20,
+            "text": "Gordura visceral",
+            "tone": "coffee",
+            "sub": [
+              "A que mais responde ao cortisol"
+            ]
+          },
+          {
+            "sx": 470,
+            "sy": 300,
+            "text": "Citocinas",
+            "tone": "sand",
+            "sub": [
+              "↑ Inflamação"
+            ]
+          },
+          {
+            "sx": 650,
+            "sy": 40,
+            "text": "Fígado",
+            "tone": "cream",
+            "sub": [
+              "Recebe a inflamação"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "diagram",
+      "theme": "coffee",
+      "title": "O **ciclo** que se fecha sozinho.",
+      "lead": "Cada volta deixa a próxima noite pior. E a barriga maior.",
+      "figure": {
+        "src": "assets/illustrations/cortisol-barriga/05-ciclo.svg",
+        "prompt": "lua no centro de um anel de esferas girando: o ciclo do sono ruim",
+        "inset": {
+          "left": 200,
+          "right": 200
+        },
+        "labels": [
+          {
+            "x": 11,
+            "y": 16,
+            "text": "Sono ruim",
+            "tone": "coffee",
+            "edge": "left"
+          },
+          {
+            "x": 89,
+            "y": 16,
+            "text": "Cortisol ↑",
+            "tone": "sand",
+            "edge": "right"
+          },
+          {
+            "x": 89,
+            "y": 50,
+            "text": "Fome e açúcar",
+            "tone": "sand",
+            "edge": "right"
+          },
+          {
+            "x": 89,
+            "y": 84,
+            "text": "Insulina ↑",
+            "tone": "sand",
+            "edge": "right"
+          },
+          {
+            "x": 11,
+            "y": 84,
+            "text": "Inflamação",
+            "tone": "sand",
+            "edge": "left"
+          },
+          {
+            "x": 11,
+            "y": 50,
+            "text": "Sono pior",
+            "tone": "outline",
+            "edge": "left"
+          }
+        ]
+      },
+      "bullets": [
+        "Cortisol ↑ → mais fome, mais vontade de açúcar.",
+        "Açúcar → pico de insulina, e a gordura visceral guarda.",
+        "Inflamação → atrapalha o sono. E amanhã o cortisol sobe de novo."
+      ]
+    },
+    {
+      "type": "text",
+      "title": "“Dorme mais” não é tratamento. **Investigar** é.",
+      "paragraphs": [
+        "Se a noite não vem, tem motivo: apneia, ansiedade, cafeína tarde, luz na cama, horário desregulado. Mandar dormir não resolve nenhum deles.",
+        "O sono ruim é sinal de um **sistema nervoso** sobrecarregado, uma das quatro raízes. A gente trata a raiz, e a noite volta."
+      ],
+      "figure": {
+        "src": "assets/illustrations/cortisol-barriga/06-lua-ondas.svg",
+        "prompt": "lua grande à esquerda e ondas se espalhando pra direita: o sistema nervoso que não desliga",
+        "inset": {
+          "top": 30
+        },
+        "labels": [
+          {
+            "sx": 240,
+            "sy": 30,
+            "text": "Sono",
+            "tone": "cream",
+            "sub": [
+              "Investigar, não ordenar"
+            ]
+          },
+          {
+            "sx": 600,
+            "sy": 70,
+            "text": "Sistema nervoso",
+            "tone": "coffee",
+            "sub": [
+              "Uma das quatro raízes"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "cta",
+      "theme": "coffee",
+      "title": "Quantas horas você dormiu ontem?",
+      "lead": "Responde sincera. Sem julgamento, é só pra você perceber.",
+      "hint": "Comenta aqui"
+    }
+  ],
+  "caption": "Primeiro siga @bellabrasao 🤍\n\nDormir mal não engorda por falta de disciplina. Engorda por cortisol.\n\nCom pouco sono, o cortisol, o hormônio do alerta, não cai depois da manhã. Fica alto o dia inteiro. Ele sobe a grelina, derruba a leptina e atrapalha a insulina: mais fome, menos saciedade, mais açúcar no sangue. E a gordura visceral, a de dentro da barriga, é a que mais responde a ele. Cresce primeiro e inflama o corpo inteiro. 🌙\n\nPor isso “dorme mais” não é tratamento. É investigar o que está roubando a sua noite: apneia, ansiedade, cafeína, luz, horário. Sono ruim é sinal de um sistema nervoso sobrecarregado, uma das quatro raízes.\n\nSe a barriga cresce e a noite não vem, clique no link da bio e agende a sua consulta. A gente trata a raiz. 🤍"
+}

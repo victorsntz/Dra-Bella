@@ -1,0 +1,316 @@
+{
+  "title": "A fome que não passa pode estar nascendo no intestino.",
+  "format": "carrossel · educativo",
+  "slides": [
+    {
+      "type": "cover",
+      "title": "A fome que\nnão passa\n**pode nascer\nno intestino.**",
+      "lead": "O intestino não só digere. Ele avisa o cérebro quando a comida chegou. Quando ele inflama, o aviso falha.",
+      "titleSize": 96,
+      "titleWidth": 620,
+      "figure": {
+        "src": "assets/illustrations/intestino-fome/01-intestino-cerebro.svg",
+        "prompt": "intestino grande embaixo, cérebro no alto, fluxo de esferas subindo do intestino pro cérebro em arco",
+        "labels": [
+          {
+            "x": 56,
+            "y": 3,
+            "text": "Cérebro",
+            "tone": "cream"
+          },
+          {
+            "x": 72,
+            "y": 44,
+            "text": "GLP-1 · PYY",
+            "tone": "sand"
+          },
+          {
+            "x": 14,
+            "y": 60,
+            "text": "Intestino",
+            "tone": "coffee"
+          }
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "theme": "coffee",
+      "title": "O intestino não só digere. Ele **conversa** com o cérebro.",
+      "paragraphs": [
+        "Quando a comida chega, ele produz hormônios de saciedade: **GLP-1** e **PYY**. São eles que avisam o cérebro que já deu.",
+        "Essa conversa acontece o dia inteiro, nos dois sentidos. É o eixo intestino-cérebro."
+      ],
+      "figure": {
+        "src": "assets/illustrations/intestino-fome/02-eixo.svg",
+        "prompt": "intestino à esquerda, cérebro à direita, fluxo de esferas em arco ligando os dois",
+        "inset": {
+          "top": 30
+        },
+        "labels": [
+          {
+            "sx": 130,
+            "sy": 30,
+            "text": "Intestino",
+            "tone": "cream",
+            "sub": [
+              "Produz GLP-1 e PYY"
+            ]
+          },
+          {
+            "sx": 400,
+            "sy": 20,
+            "text": "GLP-1 · PYY",
+            "tone": "sand",
+            "sub": [
+              "“Chegou comida”"
+            ]
+          },
+          {
+            "sx": 660,
+            "sy": 10,
+            "text": "Cérebro",
+            "tone": "coffee",
+            "sub": [
+              "Recebe o aviso"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "diagram",
+      "title": "O intestino **saudável** avisa.",
+      "lead": "Barreira íntegra, microbiota diversa, e os hormônios chegam inteiros ao cérebro.",
+      "figure": {
+        "src": "assets/illustrations/intestino-fome/03-saudavel.svg",
+        "prompt": "intestino no centro com microbiota diversa dentro, cérebro pequeno no alto recebendo dois fluxos inteiros",
+        "inset": {
+          "left": 200,
+          "right": 200
+        },
+        "labels": [
+          {
+            "x": 11,
+            "y": 24,
+            "text": "GLP-1",
+            "tone": "coffee",
+            "sub": [
+              "Avisa: chegou comida"
+            ],
+            "edge": "left"
+          },
+          {
+            "x": 89,
+            "y": 24,
+            "text": "PYY",
+            "tone": "coffee",
+            "sub": [
+              "Avisa: pode parar"
+            ],
+            "edge": "right"
+          },
+          {
+            "x": 11,
+            "y": 80,
+            "text": "Microbiota",
+            "tone": "sand",
+            "sub": [
+              "Diversa"
+            ],
+            "edge": "left"
+          },
+          {
+            "x": 89,
+            "y": 80,
+            "text": "Barreira",
+            "tone": "sand",
+            "sub": [
+              "Íntegra"
+            ],
+            "edge": "right"
+          }
+        ]
+      },
+      "bullets": [
+        "GLP-1 → avisa que chegou comida, e a fome cai.",
+        "PYY → segura a saciedade depois da refeição.",
+        "Microbiota diversa → fabrica os sinais que o intestino usa pra conversar.",
+        "Barreira íntegra → o que é do intestino fica no intestino."
+      ]
+    },
+    {
+      "type": "diagram",
+      "theme": "coffee",
+      "title": "Quando o intestino **inflama**, o aviso chega fraco.",
+      "lead": "Barreira aberta, endotoxina no sangue, e o sinal de saciedade chega fraco.",
+      "figure": {
+        "src": "assets/illustrations/intestino-fome/04-inflamado.svg",
+        "prompt": "intestino no centro com citocinas escapando pela parede, fluxo pro cérebro que esmaece antes de chegar",
+        "inset": {
+          "left": 200,
+          "right": 200
+        },
+        "labels": [
+          {
+            "x": 11,
+            "y": 24,
+            "text": "Barreira permeável",
+            "tone": "sand",
+            "sub": [
+              "Endotoxinas passam"
+            ],
+            "edge": "left"
+          },
+          {
+            "x": 89,
+            "y": 24,
+            "text": "Saciedade ↓",
+            "tone": "coffee",
+            "sub": [
+              "O aviso chega fraco"
+            ],
+            "edge": "right"
+          },
+          {
+            "x": 11,
+            "y": 80,
+            "text": "Inflamação",
+            "tone": "sand",
+            "sub": [
+              "De baixo grau"
+            ],
+            "edge": "left"
+          },
+          {
+            "x": 89,
+            "y": 80,
+            "text": "Insulina",
+            "tone": "sand",
+            "sub": [
+              "Pior ouvida"
+            ],
+            "edge": "right"
+          }
+        ]
+      },
+      "bullets": [
+        "Barreira permeável → endotoxinas da microbiota passam pro sangue.",
+        "Inflamação de baixo grau → o corpo inteiro ouve pior os hormônios.",
+        "GLP-1 e PYY → o aviso chega fraco, e a fome volta cedo.",
+        "Insulina → pior ouvida, e o açúcar sobe."
+      ]
+    },
+    {
+      "type": "text",
+      "title": "O que **inflama** o intestino.",
+      "paragraphs": [
+        "Quase sempre não é uma coisa só. É o acúmulo."
+      ],
+      "bullets": [
+        "Ultraprocessado → muito aditivo, pouca fibra.",
+        "Álcool e estresse → abrem a barreira.",
+        "Sono ruim → o intestino também precisa da noite.",
+        "Antibiótico repetido → empobrece a microbiota."
+      ],
+      "figure": {
+        "src": "assets/illustrations/intestino-fome/05-gatilhos.svg",
+        "prompt": "prato com pouca comida (pouca fibra) e lua ao lado (sono ruim)",
+        "inset": {
+          "top": 60,
+          "bottom": 60
+        },
+        "labels": [
+          {
+            "x": 36,
+            "y": 5,
+            "text": "Pouca fibra",
+            "tone": "sand",
+            "sub": [
+              "Ultraprocessado"
+            ],
+            "edge": "top"
+          },
+          {
+            "x": 66,
+            "y": 5,
+            "text": "Sono ruim",
+            "tone": "coffee",
+            "edge": "top"
+          },
+          {
+            "x": 50,
+            "y": 95,
+            "text": "Álcool · Estresse · Antibiótico",
+            "tone": "outline",
+            "edge": "bottom"
+          }
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "theme": "coffee",
+      "title": "Por isso **comer menos** não resolve a fome.",
+      "paragraphs": [
+        "Se a barreira está aberta e o aviso não chega, a fome é **sinal**, não falta de disciplina. Cortar comida em cima disso só aumenta o barulho.",
+        "Intestino comprometido é uma das quatro raízes. A gente trata a raiz, e a saciedade volta a funcionar."
+      ],
+      "figure": {
+        "src": "assets/illustrations/intestino-fome/06-arvore.svg",
+        "prompt": "a Árvore: fome como fruto em cima, quatro raízes embaixo, com o intestino em destaque",
+        "inset": {
+          "top": 60,
+          "bottom": 60
+        },
+        "labels": [
+          {
+            "x": 66,
+            "y": 5,
+            "text": "Fome",
+            "tone": "cream",
+            "sub": [
+              "O fruto"
+            ],
+            "edge": "top"
+          },
+          {
+            "x": 23,
+            "y": 95,
+            "text": "Inflamação",
+            "tone": "outline",
+            "edge": "bottom"
+          },
+          {
+            "x": 41,
+            "y": 95,
+            "text": "Hormônios",
+            "tone": "outline",
+            "edge": "bottom"
+          },
+          {
+            "x": 59,
+            "y": 95,
+            "text": "Intestino",
+            "tone": "cream",
+            "edge": "bottom"
+          },
+          {
+            "x": 78,
+            "y": 95,
+            "text": "Sistema nervoso",
+            "tone": "outline",
+            "edge": "bottom"
+          }
+        ]
+      }
+    },
+    {
+      "type": "cta",
+      "title": "Você sente fome logo depois de comer?",
+      "lead": "Me conta aqui embaixo. Esse detalhe diz muito sobre a sua raiz.",
+      "hint": "Comenta aqui"
+    }
+  ],
+  "caption": "Primeiro siga @bellabrasao 🤍\n\nA fome que não passa nem sempre nasce na cabeça. Muitas vezes nasce no intestino.\n\nO intestino produz GLP-1 e PYY, os hormônios que avisam o cérebro que a comida chegou. Com a barreira íntegra e a microbiota diversa, esse aviso chega inteiro. Quando ele inflama, endotoxinas passam pro sangue, a inflamação de baixo grau se instala e o sinal de saciedade chega fraco. A insulina também passa a ser pior ouvida. 🧠\n\nPor isso comer menos não resolve. Se a barreira está aberta, a fome é sinal, não falta de disciplina. Intestino comprometido é uma das quatro raízes que eu investigo antes de prescrever.\n\nVocê sente fome logo depois de comer? Me conta aqui embaixo. 🤍"
+}
