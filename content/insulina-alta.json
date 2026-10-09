@@ -1,0 +1,319 @@
+{
+  "title": "Insulina alta não é só diabetes",
+  "format": "carrossel · educativo",
+  "slides": [
+    {
+      "type": "cover",
+      "title": "Insulina\nalta **não\né só\ndiabetes.**",
+      "lead": "É um dos motivos de você não emagrecer.",
+      "figure": {
+        "src": "assets/illustrations/insulina-alta/01-pancreas-insulina.svg",
+        "prompt": "pâncreas grande embaixo, vaso sanguíneo acima cheio de esferas de insulina, aglomerado de gordura ao lado",
+        "labels": [
+          {
+            "x": 50,
+            "y": 20,
+            "text": "Insulina ↑",
+            "tone": "sand"
+          },
+          {
+            "x": 78,
+            "y": 43,
+            "text": "Gordura guardada",
+            "tone": "cream",
+            "align": "right"
+          },
+          {
+            "x": 50,
+            "y": 70,
+            "text": "Pâncreas",
+            "tone": "coffee"
+          }
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "theme": "coffee",
+      "title": "A insulina **guarda** energia.",
+      "paragraphs": [
+        "Depois que você come, o pâncreas libera insulina. Ela avisa o corpo: chegou energia, é hora de estocar.",
+        "Enquanto ela está alta, a queima de gordura espera. Isso é normal depois de uma refeição, não o dia inteiro."
+      ],
+      "figure": {
+        "src": "assets/illustrations/insulina-alta/02-guarda-energia.svg",
+        "prompt": "pâncreas à esquerda liberando insulina em arco até um aglomerado de gordura à direita",
+        "inset": {
+          "top": 30
+        },
+        "labels": [
+          {
+            "sx": 270,
+            "sy": 118,
+            "text": "Pâncreas",
+            "tone": "cream",
+            "sub": [
+              "Libera insulina ao comer"
+            ]
+          },
+          {
+            "sx": 545,
+            "sy": 92,
+            "text": "Insulina",
+            "tone": "coffee",
+            "sub": [
+              "Hora de estocar"
+            ]
+          },
+          {
+            "sx": 790,
+            "sy": 112,
+            "text": "Gordura",
+            "tone": "sand",
+            "sub": [
+              "Queima em pausa"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "diagram",
+      "title": "O nome disso é **resistência** à insulina.",
+      "lead": "A célula para de ouvir e o pâncreas passa a gritar.",
+      "figure": {
+        "src": "assets/illustrations/insulina-alta/03-resistencia.svg",
+        "prompt": "célula com receptores apagados embaixo, insulina se acumulando em cima sem entrar, pâncreas no canto superior esquerdo, vaso com pouca glicose no canto superior direito",
+        "inset": {
+          "left": 200,
+          "right": 200
+        },
+        "labels": [
+          {
+            "x": 11,
+            "y": 16,
+            "text": "Pâncreas",
+            "tone": "cream",
+            "sub": [
+              "Produz mais"
+            ],
+            "edge": "left"
+          },
+          {
+            "x": 11,
+            "y": 82,
+            "text": "Célula",
+            "tone": "coffee",
+            "sub": [
+              "Para de responder"
+            ],
+            "edge": "left"
+          },
+          {
+            "x": 89,
+            "y": 16,
+            "text": "Glicose \"normal\"",
+            "tone": "outline",
+            "sub": [
+              "No exame, por enquanto"
+            ],
+            "align": "right",
+            "edge": "right"
+          },
+          {
+            "x": 89,
+            "y": 56,
+            "text": "Insulina ↑",
+            "tone": "sand",
+            "sub": [
+              "Alta de forma crônica"
+            ],
+            "align": "right",
+            "edge": "right"
+          }
+        ]
+      },
+      "bullets": [
+        "Célula → para de responder ao sinal da insulina.",
+        "Pâncreas → produz mais pra compensar.",
+        "Insulina → fica alta de forma crônica.",
+        "Glicose → ainda sai normal no exame de jejum."
+      ]
+    },
+    {
+      "type": "diagram",
+      "theme": "coffee",
+      "title": "O que a insulina alta faz quando **não desce.**",
+      "lead": "Não é só açúcar. O corpo inteiro escuta esse sinal.",
+      "figure": {
+        "src": "assets/illustrations/insulina-alta/04-dia-inteiro.svg",
+        "prompt": "vaso com insulina no centro mandando sinal pra gordura, estômago, pele, ovário e gordura abdominal",
+        "inset": {
+          "left": 200,
+          "right": 200
+        },
+        "labels": [
+          {
+            "x": 11,
+            "y": 20,
+            "text": "Gordura",
+            "tone": "sand",
+            "sub": [
+              "Lipólise travada"
+            ],
+            "edge": "left"
+          },
+          {
+            "x": 11,
+            "y": 80,
+            "text": "Fome",
+            "tone": "sand",
+            "sub": [
+              "Volta logo depois de comer"
+            ],
+            "edge": "left"
+          },
+          {
+            "x": 89,
+            "y": 20,
+            "text": "Pele",
+            "tone": "sand",
+            "sub": [
+              "Manchas escuras nas dobras"
+            ],
+            "align": "right",
+            "edge": "right"
+          },
+          {
+            "x": 89,
+            "y": 80,
+            "text": "Ovário",
+            "tone": "sand",
+            "sub": [
+              "SOP"
+            ],
+            "align": "right",
+            "edge": "right"
+          },
+          {
+            "x": 50,
+            "y": 8,
+            "text": "Insulina ↑",
+            "tone": "coffee",
+            "sub": [
+              "O dia inteiro"
+            ]
+          },
+          {
+            "x": 50,
+            "y": 94,
+            "text": "Gordura abdominal ↑",
+            "tone": "outline"
+          }
+        ]
+      },
+      "bullets": [
+        "Lipólise travada → a gordura não sai do estoque.",
+        "Fome → volta pouco depois de comer.",
+        "Barriga → a gordura se acumula no abdômen.",
+        "Pele e ovário → manchas escuras nas dobras, SOP."
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Por que o exame **normal** engana.",
+      "paragraphs": [
+        "A glicemia de jejum é a última a subir. O pâncreas segura ela no lugar por anos, à custa de muita insulina.",
+        "Por isso eu investigo antes de prescrever: insulina de jejum, curva e os sinais que você já sente no corpo."
+      ],
+      "figure": {
+        "src": "assets/illustrations/insulina-alta/05-exame-normal.svg",
+        "prompt": "vaso sanguíneo grande cheio de insulina e com pouca glicose à esquerda, relógio à direita",
+        "inset": {
+          "top": 30
+        },
+        "labels": [
+          {
+            "sx": 200,
+            "sy": 125,
+            "text": "Insulina ↑",
+            "tone": "sand",
+            "sub": [
+              "Sobe primeiro. Por anos."
+            ]
+          },
+          {
+            "sx": 430,
+            "sy": 125,
+            "text": "Glicose",
+            "tone": "outline",
+            "sub": [
+              "Sobe por último"
+            ]
+          },
+          {
+            "sx": 720,
+            "sy": 95,
+            "text": "Tempo",
+            "tone": "coffee",
+            "sub": [
+              "Anos até o exame mudar"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "theme": "coffee",
+      "title": "Tratar a **raiz** hormonal, não o número.",
+      "paragraphs": [
+        "Sono, músculo, menos pico de açúcar, mais fibra. Às vezes, medicação.",
+        "Não é cortar carboidrato por castigo. É devolver à célula a capacidade de ouvir a insulina."
+      ],
+      "figure": {
+        "src": "assets/illustrations/insulina-alta/06-raiz-hormonal.svg",
+        "prompt": "músculo à esquerda, lua com estrelas no centro, prato meio cheio à direita",
+        "inset": {
+          "top": 30
+        },
+        "labels": [
+          {
+            "sx": 220,
+            "sy": 165,
+            "text": "Músculo",
+            "tone": "cream",
+            "sub": [
+              "Onde a glicose entra"
+            ]
+          },
+          {
+            "sx": 470,
+            "sy": 62,
+            "text": "Sono",
+            "tone": "coffee",
+            "sub": [
+              "Regula fome e insulina"
+            ]
+          },
+          {
+            "sx": 720,
+            "sy": 112,
+            "text": "Fibra e proteína",
+            "tone": "sand",
+            "sub": [
+              "Menos pico de açúcar"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "cta",
+      "title": "Você sente fome e sono depois do almoço?",
+      "lead": "Me conta aqui embaixo. Esses dois sinais juntos dizem muito sobre a sua insulina.",
+      "hint": "Comenta aqui"
+    }
+  ],
+  "caption": "Primeiro siga @bellabrasao 🤍\n\nInsulina alta não é só diabetes. Muitas vezes é o motivo de você fazer tudo certo e não emagrecer.\n\nA insulina é o hormônio que guarda energia. Quando ela sobe, o corpo estoca e a queima de gordura espera. Isso é normal depois de comer. O problema é quando a célula para de ouvir, o pâncreas compensa produzindo mais e ela fica alta o dia inteiro. A glicemia de jejum é a última a subir, por isso o exame pode sair normal por anos. 🧠\n\nFome pouco depois de comer, sono depois do almoço, gordura abdominal, manchas escuras nas dobras: esses sinais aparecem antes do número.\n\nTratar a raiz hormonal não é cortar carboidrato por castigo. É investigar antes de prescrever. Clique no link da bio e agende a sua consulta. 🤍"
+}

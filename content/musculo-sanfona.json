@@ -1,0 +1,294 @@
+{
+  "title": "Músculo é o seguro contra o efeito sanfona",
+  "format": "carrossel · educativo",
+  "slides": [
+    {
+      "type": "cover",
+      "title": "Músculo é\no seguro\n**contra o\nefeito\nsanfona.**",
+      "lead": "Peso que sai sem músculo volta. E volta mais fácil.",
+      "figure": {
+        "src": "assets/illustrations/musculo-sanfona/01-corredora-musculo.svg",
+        "prompt": "mulher correndo de perfil com musculatura visível, um músculo ampliado em destaque no alto à esquerda, balança de chão pequena no canto inferior",
+        "labels": [
+          {
+            "x": 28,
+            "y": 11,
+            "text": "Músculo",
+            "tone": "coffee"
+          },
+          {
+            "x": 76,
+            "y": 53,
+            "text": "Reserva metabólica",
+            "tone": "sand",
+            "align": "right"
+          },
+          {
+            "x": 12,
+            "y": 86,
+            "text": "Peso",
+            "tone": "cream"
+          }
+        ]
+      },
+      "titleSize": 96
+    },
+    {
+      "type": "text",
+      "theme": "coffee",
+      "title": "Dieta só de restrição leva **músculo** junto.",
+      "paragraphs": [
+        "Quando a dieta é só cortar, parte importante do que sai da balança é músculo, não gordura.",
+        "Menos músculo, menos gasto em repouso. E o reganho fica mais fácil, não por fraqueza, por fisiologia."
+      ],
+      "figure": {
+        "src": "assets/illustrations/musculo-sanfona/02-restricao.svg",
+        "prompt": "músculo grande à esquerda perdendo massa em arco até uma balança à direita",
+        "inset": {
+          "top": 30
+        },
+        "labels": [
+          {
+            "sx": 290,
+            "sy": 128,
+            "text": "Músculo",
+            "tone": "cream",
+            "sub": [
+              "Parte do que se perde"
+            ]
+          },
+          {
+            "sx": 742,
+            "sy": 128,
+            "text": "Balança",
+            "tone": "coffee",
+            "sub": [
+              "Desce. Mas o que saiu?"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "diagram",
+      "title": "O músculo trabalha até **parado.**",
+      "lead": "Ele gasta, ele recebe glicose e ele manda sinal.",
+      "figure": {
+        "src": "assets/illustrations/musculo-sanfona/03-parado.svg",
+        "prompt": "músculo no centro; glicose entrando de um vaso no alto à esquerda, energia saindo embaixo à esquerda, miocinas saindo no alto à direita, mitocôndria embaixo à direita",
+        "inset": {
+          "left": 200,
+          "right": 200
+        },
+        "labels": [
+          {
+            "x": 11,
+            "y": 22,
+            "text": "Glicose",
+            "tone": "cream",
+            "sub": [
+              "Entra sem tanta insulina"
+            ],
+            "edge": "left"
+          },
+          {
+            "x": 11,
+            "y": 80,
+            "text": "Gasto de repouso",
+            "tone": "sand",
+            "sub": [
+              "Energia gasta mesmo parado"
+            ],
+            "edge": "left"
+          },
+          {
+            "x": 89,
+            "y": 22,
+            "text": "Miocinas",
+            "tone": "coffee",
+            "sub": [
+              "Sinais pro corpo todo"
+            ],
+            "align": "right",
+            "edge": "right"
+          },
+          {
+            "x": 89,
+            "y": 80,
+            "text": "Mitocôndria",
+            "tone": "cream",
+            "sub": [
+              "Usina da célula"
+            ],
+            "align": "right",
+            "edge": "right"
+          }
+        ]
+      },
+      "bullets": [
+        "Gasto de repouso → consome energia mesmo sem treino.",
+        "Glicose → entra no músculo sem precisar de tanta insulina.",
+        "Miocinas → sinais que acalmam a inflamação no corpo todo."
+      ]
+    },
+    {
+      "type": "diagram",
+      "theme": "coffee",
+      "title": "Dois caminhos pra perder peso. Só um **protege** o músculo.",
+      "lead": "A balança não vê a diferença. O corpo vê.",
+      "figure": {
+        "src": "assets/illustrations/musculo-sanfona/04-dois-caminhos.svg",
+        "prompt": "dois lados separados por linha tracejada: à esquerda músculo cheio e gordura saindo; à direita músculo apagado e menor, gordura e músculo saindo",
+        "inset": {
+          "left": 200,
+          "right": 200
+        },
+        "labels": [
+          {
+            "x": 11,
+            "y": 50,
+            "text": "Com força",
+            "tone": "coffee",
+            "sub": [
+              "Treino + proteína"
+            ],
+            "edge": "left"
+          },
+          {
+            "x": 89,
+            "y": 50,
+            "text": "Sem força",
+            "tone": "outline",
+            "sub": [
+              "Só restrição"
+            ],
+            "align": "right",
+            "edge": "right"
+          },
+          {
+            "x": 30,
+            "y": 7,
+            "text": "Músculo fica",
+            "tone": "sand",
+            "sub": [
+              "Reserva preservada"
+            ]
+          },
+          {
+            "x": 70,
+            "y": 7,
+            "text": "Músculo sai ↓",
+            "tone": "sand",
+            "sub": [
+              "Reserva perdida"
+            ]
+          },
+          {
+            "x": 30,
+            "y": 93,
+            "text": "Gordura sai ↓",
+            "tone": "outline"
+          },
+          {
+            "x": 70,
+            "y": 93,
+            "text": "Metabolismo cai ↓",
+            "tone": "outline"
+          }
+        ]
+      },
+      "bullets": [
+        "Com força → a gordura sai, o músculo fica, o gasto se mantém.",
+        "Sem força → gordura e músculo saem juntos. O gasto cai.",
+        "Resultado → o mesmo peso perdido, dois corpos diferentes."
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Com a **caneta**, o cuidado dobra.",
+      "paragraphs": [
+        "A perda de peso com GLP-1 é rápida. E perda rápida, sem proteína e sem força, pode levar músculo junto.",
+        "Por isso a caneta nunca anda sozinha. Ela anda com prato, treino e acompanhamento."
+      ],
+      "figure": {
+        "src": "assets/illustrations/musculo-sanfona/05-caneta.svg",
+        "prompt": "caneta injetora à esquerda, músculo à direita perdendo massa pra baixo",
+        "inset": {
+          "top": 30
+        },
+        "labels": [
+          {
+            "sx": 230,
+            "sy": 105,
+            "text": "GLP-1",
+            "tone": "coffee",
+            "sub": [
+              "Perda rápida de peso"
+            ]
+          },
+          {
+            "sx": 650,
+            "sy": 135,
+            "text": "Músculo",
+            "tone": "cream",
+            "sub": [
+              "Precisa de proteína e força"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "theme": "coffee",
+      "title": "O que **protege** o músculo enquanto o peso sai.",
+      "paragraphs": [
+        "Treino de força algumas vezes por semana. Proteína em toda refeição. Sono de verdade.",
+        "E acompanhamento, porque emagrecer é tratamento, não prova de resistência."
+      ],
+      "figure": {
+        "src": "assets/illustrations/musculo-sanfona/06-o-que-fazer.svg",
+        "prompt": "músculo à esquerda, prato quase cheio no centro, lua com estrelas à direita",
+        "inset": {
+          "top": 30
+        },
+        "labels": [
+          {
+            "sx": 220,
+            "sy": 168,
+            "text": "Força",
+            "tone": "coffee",
+            "sub": [
+              "Algumas vezes por semana"
+            ]
+          },
+          {
+            "sx": 500,
+            "sy": 112,
+            "text": "Proteína",
+            "tone": "sand",
+            "sub": [
+              "Em toda refeição"
+            ]
+          },
+          {
+            "sx": 760,
+            "sy": 66,
+            "text": "Sono",
+            "tone": "cream",
+            "sub": [
+              "Onde o músculo se repara"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "cta",
+      "title": "Você treina força ou só faz cardio?",
+      "lead": "Me conta aqui embaixo. Se a resposta for só cardio, esse carrossel é o seu ponto de partida.",
+      "hint": "Comenta aqui"
+    }
+  ],
+  "caption": "Primeiro siga @bellabrasao 🤍\n\nPeso que sai sem músculo volta. E volta mais fácil.\n\nQuando a dieta é só restrição, parte importante do que a balança perde é músculo. E músculo é o tecido que gasta energia em repouso, que recebe glicose sem precisar de tanta insulina e que produz miocinas, os sinais que acalmam a inflamação. Menos músculo, menos gasto, mais reganho. Esse é o efeito sanfona por dentro. 💪\n\nCom a caneta a atenção tem que ser ainda maior: a perda rápida precisa de proteína e treino de força pra não levar músculo junto.\n\nTreino de força algumas vezes por semana, proteína em toda refeição, sono e acompanhamento. Você treina força ou só faz cardio? Me conta aqui embaixo."
+}
