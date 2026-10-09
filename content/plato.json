@@ -1,0 +1,301 @@
+{
+  "title": "A balança parou. E não tem nada errado com você.",
+  "format": "carrossel · educativo",
+  "slides": [
+    {
+      "type": "cover",
+      "title": "A balança\nparou. **E não\ntem nada errado\ncom você.**",
+      "lead": "O platô tem mecanismo. Entender ele é o que tira a culpa de cima de você.",
+      "titleSize": 84,
+      "titleWidth": 700,
+      "figure": {
+        "src": "assets/illustrations/plato/01-balanca-parou.svg",
+        "prompt": "balança de chão grande com o ponteiro parado no meio, relógio pequeno em cima, esferas paradas em linha embaixo",
+        "labels": [
+          {
+            "x": 90,
+            "y": 8,
+            "text": "Semanas",
+            "tone": "sand",
+            "align": "right"
+          },
+          {
+            "x": 30,
+            "y": 40,
+            "text": "Mesmo número",
+            "tone": "coffee"
+          },
+          {
+            "x": 62,
+            "y": 76,
+            "text": "Sinal parado",
+            "tone": "cream"
+          }
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "theme": "coffee",
+      "title": "O platô é **esperado**.",
+      "paragraphs": [
+        "Um corpo menor gasta menos energia pra existir. E ele se adapta: economiza mais do que o tamanho explica. Isso tem nome: **adaptação metabólica**.",
+        "O déficit que funcionava virou manutenção. Não é que você parou de fazer. É que o corpo mudou de lugar."
+      ],
+      "figure": {
+        "src": "assets/illustrations/plato/02-esperado.svg",
+        "prompt": "balança à esquerda e relógio grande à direita, poucas esferas paradas entre os dois",
+        "inset": {
+          "top": 30
+        },
+        "labels": [
+          {
+            "sx": 130,
+            "sy": 40,
+            "text": "Corpo menor",
+            "tone": "cream",
+            "sub": [
+              "Gasta menos"
+            ]
+          },
+          {
+            "sx": 600,
+            "sy": 60,
+            "text": "Tempo",
+            "tone": "coffee",
+            "sub": [
+              "O corpo se adapta"
+            ]
+          },
+          {
+            "sx": 300,
+            "sy": 372,
+            "text": "Déficit virou manutenção",
+            "tone": "cream"
+          }
+        ]
+      }
+    },
+    {
+      "type": "diagram",
+      "title": "O que acontece no **platô**.",
+      "lead": "Quatro coisas mudam ao mesmo tempo. Nenhuma delas é culpa sua.",
+      "figure": {
+        "src": "assets/illustrations/plato/03-o-que-acontece.svg",
+        "prompt": "cérebro no centro; gordura à esquerda mandando menos leptina; estômago embaixo à esquerda; vaso embaixo à direita",
+        "inset": {
+          "left": 200,
+          "right": 200
+        },
+        "labels": [
+          {
+            "x": 50,
+            "y": 6,
+            "text": "Gasto ↓",
+            "tone": "coffee",
+            "sub": [
+              "O hipotálamo economiza"
+            ]
+          },
+          {
+            "x": 11,
+            "y": 28,
+            "text": "Leptina ↓",
+            "tone": "sand",
+            "sub": [
+              "Menos gordura, menos sinal"
+            ],
+            "edge": "left"
+          },
+          {
+            "x": 11,
+            "y": 78,
+            "text": "Fome ↑",
+            "tone": "sand",
+            "sub": [
+              "Grelina sobe"
+            ],
+            "edge": "left"
+          },
+          {
+            "x": 89,
+            "y": 78,
+            "text": "Água",
+            "tone": "cream",
+            "sub": [
+              "Retenção esconde a perda"
+            ],
+            "edge": "right"
+          }
+        ]
+      },
+      "bullets": [
+        "Gasto ↓ → corpo menor e hipotálamo em modo economia.",
+        "Leptina ↓ → menos gordura, menos sinal de reserva chegando no cérebro.",
+        "Fome ↑ → grelina sobe e a saciedade demora mais pra chegar.",
+        "Água → a retenção pode esconder gordura que está saindo."
+      ]
+    },
+    {
+      "type": "diagram",
+      "theme": "coffee",
+      "title": "Balança x **corpo**.",
+      "lead": "Perder gordura e ganhar músculo pode dar o mesmo número na balança.",
+      "figure": {
+        "src": "assets/illustrations/plato/04-balanca-x-corpo.svg",
+        "prompt": "balança no centro; músculo à esquerda e aglomerado de gordura à direita",
+        "inset": {
+          "left": 200,
+          "right": 200
+        },
+        "labels": [
+          {
+            "x": 11,
+            "y": 24,
+            "text": "Músculo ↑",
+            "tone": "cream",
+            "sub": [
+              "Mais denso, pesa mais"
+            ],
+            "edge": "left"
+          },
+          {
+            "x": 89,
+            "y": 24,
+            "text": "Gordura ↓",
+            "tone": "cream",
+            "sub": [
+              "Está saindo"
+            ],
+            "edge": "right"
+          },
+          {
+            "x": 11,
+            "y": 76,
+            "text": "Roupa · Medidas",
+            "tone": "outline",
+            "sub": [
+              "O que medir"
+            ],
+            "edge": "left"
+          },
+          {
+            "x": 89,
+            "y": 76,
+            "text": "Força · Sono · Energia",
+            "tone": "outline",
+            "sub": [
+              "O que medir"
+            ],
+            "edge": "right"
+          },
+          {
+            "x": 50,
+            "y": 94,
+            "text": "Mesmo número",
+            "tone": "coffee"
+          }
+        ]
+      },
+      "bullets": [
+        "Roupa e medidas → a calça fala antes da balança.",
+        "Força → carga subindo no treino é músculo chegando.",
+        "Sono e energia → sinal de que o corpo está se reorganizando.",
+        "Balança → só um dos frutos. Nunca o único."
+      ]
+    },
+    {
+      "type": "text",
+      "title": "O erro clássico:\n**cortar** ainda mais.",
+      "paragraphs": [
+        "Comer menos ainda parece lógico. Mas o corpo lê como escassez: acelera a adaptação, segura mais energia e começa a gastar **músculo**.",
+        "Menos músculo, menos gasto. O platô fica mais fundo. Não é fraqueza, é fisiologia."
+      ],
+      "figure": {
+        "src": "assets/illustrations/plato/05-cortar-mais.svg",
+        "prompt": "prato com porção pequena à esquerda; músculo apagado e menor à direita",
+        "inset": {
+          "top": 30
+        },
+        "labels": [
+          {
+            "sx": 140,
+            "sy": 20,
+            "text": "Prato menor",
+            "tone": "cream",
+            "sub": [
+              "O corpo lê escassez"
+            ]
+          },
+          {
+            "sx": 600,
+            "sy": 130,
+            "text": "Músculo",
+            "tone": "coffee",
+            "sub": [
+              "Vira combustível"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "theme": "coffee",
+      "title": "O que fazer quando\na balança **para**.",
+      "paragraphs": [
+        "Revisar proteína e força pra segurar o músculo. Dormir. Olhar o estresse. Ajustar o plano com quem acompanha, não cortar no escuro.",
+        "Paciência com método. A balança é só um dos **frutos**. A árvore inteira é que está mudando."
+      ],
+      "figure": {
+        "src": "assets/illustrations/plato/06-o-que-fazer.svg",
+        "prompt": "a Árvore inteira: frutos em cima, quatro raízes embaixo",
+        "inset": {
+          "top": 0
+        },
+        "labels": [
+          {
+            "sx": 220,
+            "sy": 30,
+            "text": "Balança",
+            "tone": "coffee",
+            "sub": [
+              "Só um dos frutos"
+            ]
+          },
+          {
+            "sx": 700,
+            "sy": 170,
+            "text": "Proteína e força",
+            "tone": "cream",
+            "sub": [
+              "Seguram o músculo"
+            ]
+          },
+          {
+            "sx": 700,
+            "sy": 290,
+            "text": "Sono e estresse",
+            "tone": "cream",
+            "sub": [
+              "Mexem na fome e no gasto"
+            ]
+          },
+          {
+            "sx": 250,
+            "sy": 395,
+            "text": "Raízes",
+            "tone": "outline"
+          }
+        ]
+      }
+    },
+    {
+      "type": "cta",
+      "title": "Há quanto tempo sua balança não mexe?",
+      "lead": "Me conta aqui embaixo. E me diz o que você já tentou nesse tempo.",
+      "hint": "Comenta aqui"
+    }
+  ],
+  "caption": "Primeiro siga @bellabrasao 🤍\n\nA balança parou e você fez tudo certo. As duas coisas são verdade ao mesmo tempo.\n\nUm corpo menor gasta menos. E ele se adapta: o gasto cai, a leptina cai, a fome sobe e a retenção de água pode esconder a gordura que está saindo. O déficit que funcionava virou manutenção. Isso tem nome, adaptação metabólica, e não é falha sua. ⚖️\n\nO erro clássico é cortar ainda mais. O corpo lê escassez, acelera a adaptação e começa a gastar músculo. O platô fica mais fundo.\n\nO que funciona: proteína e força, sono, estresse e ajuste com acompanhamento. A balança é só um dos frutos. Há quanto tempo a sua não mexe? Me conta aqui embaixo. 🤍"
+}

@@ -1,0 +1,284 @@
+{
+  "title": "Caneta sem acompanhamento é caneta com reganho",
+  "format": "carrossel · educativo",
+  "slides": [
+    {
+      "type": "cover",
+      "title": "Caneta sem\nacompanhamento\n**é caneta\ncom reganho.**",
+      "lead": "O remédio funciona. O que falha é usar ele sem tratar o que estava por baixo.",
+      "figure": {
+        "src": "assets/illustrations/caneta-acompanhamento/01-caneta-balanca.svg",
+        "prompt": "caneta injetora grande inclinada, esferas saindo da ponta, balança de chão embaixo",
+        "labels": [
+          {
+            "x": 90,
+            "y": 7,
+            "text": "Fome ↓",
+            "tone": "sand",
+            "align": "right"
+          },
+          {
+            "x": 30,
+            "y": 52,
+            "text": "GLP-1 · Tirzepatida",
+            "tone": "coffee"
+          },
+          {
+            "x": 64,
+            "y": 62,
+            "text": "Reganho",
+            "tone": "cream"
+          }
+        ]
+      },
+      "titleSize": 84,
+      "titleWidth": 760
+    },
+    {
+      "type": "text",
+      "theme": "coffee",
+      "title": "A caneta abaixa\no **volume** da fome.",
+      "paragraphs": [
+        "GLP-1, tirzepatida: a caneta imita um hormônio do intestino e o **hipotálamo** entende que chegou comida. O sinal de fome baixa. Funciona.",
+        "O problema não é o remédio. É usar ele sem tratar o que estava por baixo."
+      ],
+      "figure": {
+        "src": "assets/illustrations/caneta-acompanhamento/02-caneta-cerebro.svg",
+        "prompt": "caneta à esquerda mandando sinal pro cérebro à direita, hipotálamo aceso, ondas menores saindo da frente",
+        "inset": {
+          "top": 30
+        },
+        "labels": [
+          {
+            "sx": 60,
+            "sy": 110,
+            "text": "Caneta",
+            "tone": "coffee",
+            "sub": [
+              "Imita o hormônio do intestino"
+            ]
+          },
+          {
+            "sx": 560,
+            "sy": 10,
+            "text": "Hipotálamo",
+            "tone": "cream",
+            "sub": [
+              "Entende que chegou comida"
+            ]
+          },
+          {
+            "sx": 700,
+            "sy": 345,
+            "text": "Sinal mais baixo",
+            "tone": "outline"
+          }
+        ]
+      }
+    },
+    {
+      "type": "diagram",
+      "title": "O que a caneta **faz**.",
+      "lead": "Três efeitos, dois lugares: o estômago e o cérebro.",
+      "figure": {
+        "src": "assets/illustrations/caneta-acompanhamento/03-o-que-faz.svg",
+        "prompt": "caneta no topo mandando sinal pro estômago à esquerda e pro cérebro à direita",
+        "inset": {
+          "left": 200,
+          "right": 200
+        },
+        "labels": [
+          {
+            "x": 50,
+            "y": 6,
+            "text": "Caneta",
+            "tone": "coffee"
+          },
+          {
+            "x": 11,
+            "y": 62,
+            "text": "Estômago",
+            "tone": "sand",
+            "sub": [
+              "Esvazia mais devagar"
+            ],
+            "edge": "left"
+          },
+          {
+            "x": 89,
+            "y": 56,
+            "text": "Hipotálamo",
+            "tone": "sand",
+            "sub": [
+              "Saciedade ↑"
+            ],
+            "edge": "right"
+          },
+          {
+            "x": 50,
+            "y": 94,
+            "text": "Food noise ↓",
+            "tone": "cream"
+          }
+        ]
+      },
+      "bullets": [
+        "Estômago → esvazia mais devagar. Você fica cheia por mais tempo.",
+        "Hipotálamo → recebe o sinal de que chegou comida e abaixa a fome.",
+        "Food noise → o pensamento constante sobre comida fica mais quieto."
+      ]
+    },
+    {
+      "type": "diagram",
+      "theme": "coffee",
+      "title": "O que ela **não** faz sozinha.",
+      "lead": "A caneta abaixa a fome. O resto do tratamento continua precisando de alguém olhando.",
+      "figure": {
+        "src": "assets/illustrations/caneta-acompanhamento/04-o-que-nao-faz.svg",
+        "prompt": "músculo apagado, prato, lua e intestino pequeno, um em cada canto",
+        "inset": {
+          "left": 200,
+          "right": 200
+        },
+        "labels": [
+          {
+            "x": 11,
+            "y": 26,
+            "text": "Músculo",
+            "tone": "cream",
+            "sub": [
+              "Não constrói"
+            ],
+            "edge": "left"
+          },
+          {
+            "x": 11,
+            "y": 76,
+            "text": "Prato",
+            "tone": "cream",
+            "sub": [
+              "Não ensina a comer"
+            ],
+            "edge": "left"
+          },
+          {
+            "x": 89,
+            "y": 24,
+            "text": "Sono",
+            "tone": "cream",
+            "sub": [
+              "Não trata"
+            ],
+            "edge": "right"
+          },
+          {
+            "x": 89,
+            "y": 78,
+            "text": "Intestino",
+            "tone": "cream",
+            "sub": [
+              "Não trata"
+            ],
+            "edge": "right"
+          }
+        ]
+      },
+      "bullets": [
+        "Músculo → ela não constrói. Proteína e força constroem.",
+        "Prato → ela abaixa a fome. Não ensina o que colocar nele.",
+        "Sono → ela não trata. E sono ruim sobe a fome de volta.",
+        "Inflamação, intestino, sistema nervoso → continuam sendo raiz."
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Quando a caneta para,\no **sinal** volta.",
+      "paragraphs": [
+        "Sem acompanhamento, o hipotálamo volta a pedir comida com a força de antes. E o peso tende a voltar. Parte do que se perdeu, às vezes boa parte.",
+        "Obesidade é **doença crônica**. Não se cura, trata-se. Quem para o remédio sem plano, para o tratamento. A doença continua lá."
+      ],
+      "figure": {
+        "src": "assets/illustrations/caneta-acompanhamento/05-quando-para.svg",
+        "prompt": "caneta pequena esmaecida embaixo à esquerda, sinal subindo em arco, balança com o ponteiro alto à direita",
+        "inset": {
+          "top": 30
+        },
+        "labels": [
+          {
+            "sx": 40,
+            "sy": 250,
+            "text": "Caneta parou",
+            "tone": "outline"
+          },
+          {
+            "sx": 300,
+            "sy": 0,
+            "text": "Sinal de fome ↑",
+            "tone": "coffee",
+            "sub": [
+              "O hipotálamo pede de novo"
+            ]
+          },
+          {
+            "sx": 560,
+            "sy": 50,
+            "text": "Reganho",
+            "tone": "sand",
+            "sub": [
+              "Parte do que se perdeu"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "theme": "coffee",
+      "title": "Caneta com **método**\né outra conversa.",
+      "paragraphs": [
+        "Primeiro a gente investiga as raízes: inflamação, hormônios, intestino, sistema nervoso. Depois, proteína e força pra proteger o músculo. Dose com critério.",
+        "E um plano de continuidade pra quando a dose cair. **Conhecimento gera comportamento.** É isso que segura o resultado."
+      ],
+      "figure": {
+        "src": "assets/illustrations/caneta-acompanhamento/06-metodo.svg",
+        "prompt": "a Árvore inteira e, pequena ao lado, a caneta como ferramenta",
+        "inset": {
+          "top": 0
+        },
+        "labels": [
+          {
+            "sx": 230,
+            "sy": 30,
+            "text": "Peso",
+            "tone": "coffee",
+            "sub": [
+              "O fruto"
+            ]
+          },
+          {
+            "sx": 250,
+            "sy": 395,
+            "text": "Quatro raízes",
+            "tone": "outline"
+          },
+          {
+            "sx": 690,
+            "sy": 230,
+            "text": "Caneta",
+            "tone": "cream",
+            "sub": [
+              "Uma ferramenta, não o plano"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "cta",
+      "title": "Você já usou ou pensa em usar?",
+      "lead": "O que mais te preocupa? Me conta aqui embaixo.",
+      "hint": "Comenta aqui"
+    }
+  ],
+  "caption": "Primeiro siga @bellabrasao 🤍\n\nA caneta não é o problema. O problema é usar a caneta como se ela fosse o tratamento inteiro.\n\nGLP-1 e tirzepatida imitam um hormônio do intestino: o estômago esvazia mais devagar e o hipotálamo entende que chegou comida. A fome baixa, o food noise fica mais quieto. Funciona. Mas a caneta não constrói músculo, não ensina a comer, não trata sono, inflamação, intestino nem sistema nervoso. 🧠\n\nObesidade é doença crônica. Quando a caneta para sem plano, o sinal de fome volta e o peso tende a voltar. Não é fraqueza, é fisiologia.\n\nCaneta com método é outra conversa: investigar as raízes, proteger o músculo, dose com critério e continuidade do cuidado. Clique no link da bio e agende a sua consulta. 🤍"
+}
