@@ -1,0 +1,295 @@
+{
+  "title": "Por que o reganho acontece",
+  "format": "carrossel · educativo",
+  "slides": [
+    {
+      "type": "cover",
+      "title": "Você não voltou\na engordar por\nfraqueza. **Seu\ncorpo defendeu\no peso antigo.**",
+      "lead": "O que acontece no corpo depois de emagrecer, e por que o peso volta.",
+      "titleSize": 88,
+      "titleWidth": 720,
+      "figure": {
+        "src": "assets/illustrations/reganho/01-balanca-cerebro.svg",
+        "prompt": "balança grande embaixo à direita, cérebro com o hipotálamo aceso em cima à direita, dois fluxos em arco ligando os dois num circuito de defesa",
+        "style": "left:0;right:0;width:auto;top:170px;height:930px",
+        "labels": [
+          {
+            "x": 86,
+            "y": 8,
+            "text": "Hipotálamo",
+            "tone": "coffee"
+          },
+          {
+            "x": 81,
+            "y": 51,
+            "text": "Set point",
+            "tone": "sand",
+            "sub": [
+              "O peso que o corpo defende"
+            ]
+          },
+          {
+            "x": 76,
+            "y": 62,
+            "text": "Peso antigo",
+            "tone": "cream"
+          },
+          {
+            "x": 76,
+            "y": 90,
+            "text": "Fome ↑ · Gasto ↓",
+            "tone": "cream"
+          }
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "theme": "coffee",
+      "title": "Seu corpo tem um **set point**.",
+      "paragraphs": [
+        "É o ponto de ajuste: o peso que o corpo aprendeu a defender.",
+        "Emagrecer rápido é lido pelo **hipotálamo** como ameaça. Ele reage pra trazer o peso de volta."
+      ],
+      "figure": {
+        "src": "assets/illustrations/reganho/02-set-point.svg",
+        "prompt": "cérebro à esquerda com o hipotálamo aceso, balança à direita, dois fluxos em arco de ida e volta entre eles",
+        "inset": {
+          "top": 30
+        },
+        "labels": [
+          {
+            "sx": 192,
+            "sy": 100,
+            "text": "Hipotálamo",
+            "tone": "coffee",
+            "sub": [
+              "Lê o peso que cai como ameaça"
+            ]
+          },
+          {
+            "sx": 680,
+            "sy": 150,
+            "text": "Set point",
+            "tone": "cream",
+            "sub": [
+              "O peso que o corpo defende"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "diagram",
+      "title": "Emagreceu. O **sinal** mudou.",
+      "lead": "Três coisas mudam ao mesmo tempo. Nenhuma depende da sua vontade.",
+      "figure": {
+        "src": "assets/illustrations/reganho/03-sinais.svg",
+        "prompt": "cérebro no centro; gordura embaixo à esquerda mandando pouco sinal que esmaece; estômago embaixo à direita mandando fluxo forte",
+        "inset": {
+          "left": 200,
+          "right": 200
+        },
+        "labels": [
+          {
+            "x": 50,
+            "y": 6,
+            "text": "Hipotálamo",
+            "tone": "coffee"
+          },
+          {
+            "x": 11,
+            "y": 72,
+            "text": "Leptina",
+            "tone": "sand",
+            "sub": [
+              "↓ Cai com a gordura",
+              "Menos saciedade"
+            ],
+            "edge": "left"
+          },
+          {
+            "x": 89,
+            "y": 72,
+            "text": "Grelina",
+            "tone": "sand",
+            "sub": [
+              "↑ Sobe com o estômago vazio",
+              "Mais fome"
+            ],
+            "edge": "right"
+          },
+          {
+            "x": 50,
+            "y": 84,
+            "text": "Gasto ↓",
+            "tone": "outline",
+            "sub": [
+              "Adaptação metabólica"
+            ]
+          }
+        ]
+      },
+      "bullets": [
+        "Leptina ↓ → menos gordura, menos sinal de saciedade.",
+        "Grelina ↑ → o estômago avisa fome com mais força.",
+        "Gasto ↓ → o corpo gasta menos energia pra fazer o mesmo. É a adaptação metabólica."
+      ]
+    },
+    {
+      "type": "text",
+      "theme": "coffee",
+      "title": "Isso não dura semanas. A adaptação **persiste**.",
+      "paragraphs": [
+        "O corpo não esquece o peso antigo em um mês. A fome maior e o gasto menor podem persistir por muito tempo depois da dieta.",
+        "Por isso dieta de 30 dias não resolve doença crônica. Ela só acorda a defesa."
+      ],
+      "figure": {
+        "src": "assets/illustrations/reganho/04-tempo.svg",
+        "prompt": "relógio grande à esquerda, balança à direita, um fluxo curto ligando os dois",
+        "inset": {
+          "top": 30
+        },
+        "labels": [
+          {
+            "sx": 230,
+            "sy": 90,
+            "text": "Adaptação metabólica",
+            "tone": "coffee",
+            "sub": [
+              "Pode persistir por muito tempo"
+            ]
+          },
+          {
+            "sx": 674,
+            "sy": 150,
+            "text": "Peso defendido",
+            "tone": "cream",
+            "sub": [
+              "O corpo quer voltar"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "diagram",
+      "title": "O que **protege** do reganho.",
+      "lead": "Não é força de vontade. É estrutura.",
+      "figure": {
+        "src": "assets/illustrations/reganho/05-protecao.svg",
+        "prompt": "balança equilibrada embaixo à esquerda recebendo fluxos do músculo (cima, esquerda), da lua (cima, direita) e de uma árvore pequena (baixo, direita)",
+        "inset": {
+          "left": 200,
+          "right": 200
+        },
+        "labels": [
+          {
+            "x": 11,
+            "y": 22,
+            "text": "Músculo",
+            "tone": "sand",
+            "sub": [
+              "Gasto de repouso ↑"
+            ],
+            "edge": "left"
+          },
+          {
+            "x": 89,
+            "y": 22,
+            "text": "Sono",
+            "tone": "sand",
+            "sub": [
+              "Grelina sob controle"
+            ],
+            "edge": "right"
+          },
+          {
+            "x": 89,
+            "y": 80,
+            "text": "Quatro raízes",
+            "tone": "coffee",
+            "sub": [
+              "Tratadas, não só o fruto"
+            ],
+            "edge": "right"
+          },
+          {
+            "x": 11,
+            "y": 80,
+            "text": "Continuidade",
+            "tone": "coffee",
+            "sub": [
+              "Cuidado que não termina"
+            ],
+            "edge": "left"
+          }
+        ]
+      },
+      "bullets": [
+        "Músculo → sustenta o gasto de repouso.",
+        "Sono → grelina e cortisol sob controle.",
+        "Quatro raízes → inflamação, hormônios, intestino e sistema nervoso tratados.",
+        "Continuidade → acompanhamento que não termina quando a balança muda."
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Obesidade é doença **crônica**.",
+      "paragraphs": [
+        "Não se cura, trata-se. Como pressão alta, como diabetes.",
+        "Reganho não é falha moral. É **fisiologia** sem acompanhamento."
+      ],
+      "figure": {
+        "src": "assets/illustrations/reganho/06-arvore.svg",
+        "prompt": "a Árvore: copa com frutos em cima, tronco, quatro raízes embaixo",
+        "inset": {
+          "top": 30
+        },
+        "labels": [
+          {
+            "sx": 444,
+            "sy": 40,
+            "text": "Peso",
+            "tone": "coffee",
+            "sub": [
+              "O fruto"
+            ]
+          },
+          {
+            "sx": 250,
+            "sy": 418,
+            "text": "Inflamação",
+            "tone": "outline"
+          },
+          {
+            "sx": 385,
+            "sy": 418,
+            "text": "Hormônios",
+            "tone": "outline"
+          },
+          {
+            "sx": 510,
+            "sy": 418,
+            "text": "Intestino",
+            "tone": "outline"
+          },
+          {
+            "sx": 655,
+            "sy": 418,
+            "text": "Sistema nervoso",
+            "tone": "outline"
+          }
+        ]
+      }
+    },
+    {
+      "type": "cta",
+      "theme": "coffee",
+      "title": "Você já emagreceu e viu tudo voltar?",
+      "lead": "Me conta como foi. E se alguém te chamou de fraca por isso, manda esse carrossel pra ela.",
+      "hint": "Comenta aqui"
+    }
+  ],
+  "caption": "Primeiro siga @bellabrasao 🤍\n\nVocê não voltou a engordar por fraqueza. Seu corpo defendeu o peso que ele conhecia.\n\nO corpo tem um ponto de ajuste, o set point. Quando o peso cai rápido, o hipotálamo lê como ameaça: a leptina cai, a grelina sobe e o gasto de energia diminui. Mais fome, menos gasto. E essa adaptação pode persistir por muito tempo depois que a dieta acabou. 🧠\n\nPor isso obesidade é doença crônica. Não se cura, trata-se. Músculo, sono, as quatro raízes tratadas e continuidade do cuidado são o que protege do reganho.\n\nSe você já emagreceu e viu tudo voltar, não foi falha sua. Clique no link da bio e agende a sua consulta. 🤍"
+}

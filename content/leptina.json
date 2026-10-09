@@ -1,0 +1,300 @@
+{
+  "title": "O cérebro parou de ouvir",
+  "format": "carrossel · educativo",
+  "slides": [
+    {
+      "type": "cover",
+      "title": "Seu corpo avisa\nque já chega.\n**O cérebro\nparou de ouvir.**",
+      "lead": "Leptina: o hormônio que avisa a saciedade. E por que ele deixa de ser ouvido.",
+      "titleSize": 96,
+      "titleWidth": 740,
+      "figure": {
+        "src": "assets/illustrations/leptina/01-sinal-esmaece.svg",
+        "prompt": "gordura embaixo à esquerda mandando um fluxo de esferas que esmaece antes de chegar no cérebro com o hipotálamo aceso, em cima à direita",
+        "labels": [
+          {
+            "x": 74,
+            "y": 14,
+            "text": "Hipotálamo",
+            "tone": "coffee"
+          },
+          {
+            "x": 64,
+            "y": 47,
+            "text": "O sinal não chega",
+            "tone": "outline"
+          },
+          {
+            "x": 70,
+            "y": 60,
+            "text": "Leptina",
+            "tone": "sand",
+            "sub": [
+              "O aviso de saciedade"
+            ]
+          },
+          {
+            "x": 29,
+            "y": 65,
+            "text": "Gordura",
+            "tone": "cream"
+          }
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "theme": "coffee",
+      "title": "A **leptina** nasce na gordura.",
+      "paragraphs": [
+        "Quanto mais gordura, mais leptina circulando.",
+        "A função dela é avisar o **hipotálamo**: tem reserva, pode parar de comer."
+      ],
+      "figure": {
+        "src": "assets/illustrations/leptina/02-leptina-nasce.svg",
+        "prompt": "aglomerado de gordura à esquerda mandando um fluxo em arco até o cérebro à direita, com o hipotálamo aceso",
+        "inset": {
+          "top": 30
+        },
+        "labels": [
+          {
+            "sx": 170,
+            "sy": 110,
+            "text": "Gordura",
+            "tone": "cream",
+            "sub": [
+              "Produz leptina"
+            ]
+          },
+          {
+            "sx": 447,
+            "sy": 165,
+            "text": "Leptina",
+            "tone": "sand"
+          },
+          {
+            "sx": 612,
+            "sy": 70,
+            "text": "Hipotálamo",
+            "tone": "coffee",
+            "sub": [
+              "Recebe o aviso: tem reserva"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "diagram",
+      "title": "O paradoxo da **leptina**.",
+      "lead": "Na obesidade, a leptina está alta. E a fome continua.",
+      "figure": {
+        "src": "assets/illustrations/leptina/03-paradoxo.svg",
+        "prompt": "gordura grande embaixo à esquerda mandando um fluxo denso até o cérebro à direita; o sinal chega, o hipotálamo não responde",
+        "inset": {
+          "left": 200,
+          "right": 200
+        },
+        "labels": [
+          {
+            "x": 11,
+            "y": 78,
+            "text": "Gordura",
+            "tone": "cream",
+            "sub": [
+              "Muita reserva"
+            ],
+            "edge": "left"
+          },
+          {
+            "x": 41,
+            "y": 58,
+            "text": "Leptina",
+            "tone": "sand",
+            "sub": [
+              "↑ Alta o tempo todo"
+            ]
+          },
+          {
+            "x": 89,
+            "y": 45,
+            "text": "Hipotálamo",
+            "tone": "coffee",
+            "sub": [
+              "Surdo: o sinal chega",
+              "e ele não responde"
+            ],
+            "edge": "right"
+          }
+        ]
+      },
+      "bullets": [
+        "Gordura → produz leptina o tempo todo.",
+        "Leptina ↑ → o aviso chega alto e constante.",
+        "Hipotálamo → não responde. É a resistência à leptina."
+      ]
+    },
+    {
+      "type": "diagram",
+      "theme": "coffee",
+      "title": "O que **ensurdece** o hipotálamo.",
+      "lead": "Quatro ruídos que abafam o aviso da leptina.",
+      "figure": {
+        "src": "assets/illustrations/leptina/04-ruidos.svg",
+        "prompt": "cérebro no centro; citocinas (cima esq.), vaso (baixo esq.), pâncreas (cima dir.) e lua (baixo dir.) mandando fluxo pro hipotálamo",
+        "inset": {
+          "left": 200,
+          "right": 200
+        },
+        "labels": [
+          {
+            "x": 11,
+            "y": 20,
+            "text": "Inflamação",
+            "tone": "sand",
+            "sub": [
+              "Citocinas no sangue"
+            ],
+            "edge": "left"
+          },
+          {
+            "x": 11,
+            "y": 80,
+            "text": "Triglicerídeos",
+            "tone": "sand",
+            "sub": [
+              "Barram a leptina na entrada"
+            ],
+            "edge": "left"
+          },
+          {
+            "x": 89,
+            "y": 16,
+            "text": "Picos de insulina",
+            "tone": "sand",
+            "sub": [
+              "Sobe e desce o dia todo"
+            ],
+            "edge": "right"
+          },
+          {
+            "x": 89,
+            "y": 80,
+            "text": "Sono ruim",
+            "tone": "sand",
+            "sub": [
+              "Grelina alta"
+            ],
+            "edge": "right"
+          },
+          {
+            "x": 49,
+            "y": 28,
+            "text": "Hipotálamo",
+            "tone": "coffee"
+          }
+        ]
+      },
+      "bullets": [
+        "Inflamação → citocinas atrapalham a resposta à leptina.",
+        "Triglicerídeos altos → dificultam a entrada da leptina no cérebro.",
+        "Picos de insulina → sobem e descem, e o hipotálamo perde a referência.",
+        "Sono ruim → mais grelina, menos escuta."
+      ]
+    },
+    {
+      "type": "text",
+      "title": "A leptina **despenca** na dieta.",
+      "paragraphs": [
+        "Emagrecer rápido é menos gordura, menos leptina. O **hipotálamo** entende fome e manda gastar menos.",
+        "É o freio do reganho. Não é falha sua. É o sistema fazendo o que aprendeu."
+      ],
+      "figure": {
+        "src": "assets/illustrations/leptina/05-despenca.svg",
+        "prompt": "balança à esquerda com o ponteiro baixo mandando um fluxo fraco, que esmaece, até o cérebro à direita",
+        "inset": {
+          "top": 30
+        },
+        "labels": [
+          {
+            "sx": 244,
+            "sy": 135,
+            "text": "Peso caindo",
+            "tone": "cream",
+            "sub": [
+              "Menos gordura"
+            ]
+          },
+          {
+            "sx": 440,
+            "sy": 150,
+            "text": "Leptina",
+            "tone": "sand",
+            "sub": [
+              "↓ O sinal some"
+            ]
+          },
+          {
+            "sx": 662,
+            "sy": 70,
+            "text": "Hipotálamo",
+            "tone": "coffee",
+            "sub": [
+              "Entende fome",
+              "Gasto cai"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "theme": "coffee",
+      "title": "Não é força de vontade. É **ruído** na linha.",
+      "paragraphs": [
+        "O aviso existe. O que falta é a escuta.",
+        "Trata-se reduzindo a **inflamação** e devolvendo o sinal. Com investigação antes da prescrição."
+      ],
+      "figure": {
+        "src": "assets/illustrations/leptina/06-ruido.svg",
+        "prompt": "ondas de ruído à esquerda, cérebro grande no centro, fluxo de sinal limpo chegando pela direita",
+        "inset": {
+          "top": 30
+        },
+        "labels": [
+          {
+            "sx": 150,
+            "sy": 80,
+            "text": "Ruído",
+            "tone": "sand",
+            "sub": [
+              "Inflamação, insulina, sono"
+            ]
+          },
+          {
+            "sx": 508,
+            "sy": 65,
+            "text": "Hipotálamo",
+            "tone": "coffee"
+          },
+          {
+            "sx": 760,
+            "sy": 260,
+            "text": "Sinal de volta",
+            "tone": "cream",
+            "sub": [
+              "Quando a inflamação cai"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "cta",
+      "title": "Você come e continua com fome?",
+      "lead": "Me conta aqui embaixo. Isso tem mecanismo. E tem tratamento.",
+      "hint": "Comenta aqui"
+    }
+  ],
+  "caption": "Primeiro siga @bellabrasao 🤍\n\nO problema não é o aviso que o corpo manda. É a escuta do cérebro.\n\nA leptina é produzida pela gordura. Quanto mais reserva, mais leptina circulando, avisando o hipotálamo que já chega. Na obesidade, esse sinal está alto e a fome continua. É a resistência à leptina: o recado chega, o cérebro não responde. 🧠\n\nInflamação crônica, triglicerídeos altos, picos de insulina e sono ruim deixam o hipotálamo surdo. Por isso tratar não é comer menos à força. É investigar antes de prescrever, reduzir o ruído e devolver o sinal.\n\nVocê come e continua com fome? Me conta aqui embaixo. 🤍"
+}
