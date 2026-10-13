@@ -10,11 +10,26 @@
       "lead": "Acorda normal, termina inchada. Isso tem mecanismo. E quase nunca é \"só gás\".",
       "figure": {
         "src": "assets/illustrations/barriga-estufa/01-intestino-inchaco.svg",
-        "prompt": "intestino grande com ondas de inchaço saindo e citocinas chegando por cima",
+        "prompt": "mulher em pé, de perfil, com a barriga estufada e a mão apoiada nela; ondas de inchaço saindo da barriga e citocinas descendo do alto",
         "labels": [
-          { "x": 40, "y": 12, "text": "Inflamação", "tone": "coffee" },
-          { "x": 80, "y": 48, "text": "Inchaço", "tone": "sand", "align": "right" },
-          { "x": 24, "y": 78, "text": "Intestino", "tone": "cream" }
+          {
+            "x": 47,
+            "y": 3,
+            "text": "Inflamação",
+            "tone": "coffee"
+          },
+          {
+            "x": 78,
+            "y": 46,
+            "text": "Inchaço",
+            "tone": "sand"
+          },
+          {
+            "x": 44,
+            "y": 90,
+            "text": "Fim do dia",
+            "tone": "cream"
+          }
         ]
       }
     },
@@ -29,10 +44,28 @@
       "figure": {
         "src": "assets/illustrations/barriga-estufa/02-manha-noite.svg",
         "prompt": "relógio à esquerda marcando a manhã, intestino à direita com ondas crescendo",
-        "inset": { "top": 30 },
+        "inset": {
+          "top": 30
+        },
         "labels": [
-          { "sx": 170, "sy": 30, "text": "Manhã", "tone": "cream", "sub": ["Barriga normal"] },
-          { "sx": 600, "sy": 30, "text": "Noite", "tone": "coffee", "sub": ["Gás, água, inflamação"] }
+          {
+            "sx": 170,
+            "sy": 30,
+            "text": "Manhã",
+            "tone": "cream",
+            "sub": [
+              "Barriga normal"
+            ]
+          },
+          {
+            "sx": 600,
+            "sy": 30,
+            "text": "Noite",
+            "tone": "coffee",
+            "sub": [
+              "Gás, água, inflamação"
+            ]
+          }
         ]
       }
     },
@@ -43,12 +76,52 @@
       "figure": {
         "src": "assets/illustrations/barriga-estufa/03-origens.svg",
         "prompt": "três origens à esquerda (gordura visceral, útero/ciclo, pâncreas) mandando citocinas em arco pro intestino à direita",
-        "inset": { "left": 200, "right": 200 },
+        "inset": {
+          "left": 200,
+          "right": 200
+        },
         "labels": [
-          { "x": 12, "y": 16, "text": "Gordura visceral", "tone": "sand", "sub": ["Citocinas no sangue"], "edge": "left" },
-          { "x": 12, "y": 50, "text": "Endometriose", "tone": "sand", "sub": ["Inflamação pélvica"], "edge": "left" },
-          { "x": 12, "y": 84, "text": "Insulina alta", "tone": "sand", "sub": ["Inflamação de baixo grau"], "edge": "left" },
-          { "x": 89, "y": 50, "text": "Intestino", "tone": "coffee", "sub": ["Recebe tudo"], "align": "right", "edge": "right" }
+          {
+            "x": 12,
+            "y": 16,
+            "text": "Gordura visceral",
+            "tone": "sand",
+            "sub": [
+              "Citocinas no sangue"
+            ],
+            "edge": "left"
+          },
+          {
+            "x": 12,
+            "y": 50,
+            "text": "Endometriose",
+            "tone": "sand",
+            "sub": [
+              "Inflamação pélvica"
+            ],
+            "edge": "left"
+          },
+          {
+            "x": 12,
+            "y": 84,
+            "text": "Insulina alta",
+            "tone": "sand",
+            "sub": [
+              "Inflamação de baixo grau"
+            ],
+            "edge": "left"
+          },
+          {
+            "x": 89,
+            "y": 50,
+            "text": "Intestino",
+            "tone": "coffee",
+            "sub": [
+              "Recebe tudo"
+            ],
+            "align": "right",
+            "edge": "right"
+          }
         ]
       },
       "bullets": [
@@ -65,12 +138,53 @@
       "figure": {
         "src": "assets/illustrations/barriga-estufa/04-barreira.svg",
         "prompt": "intestino com citocinas escapando pela parede e nuvem de bactérias crescendo dentro",
-        "inset": { "left": 200, "right": 200 },
+        "inset": {
+          "left": 200,
+          "right": 200
+        },
         "labels": [
-          { "x": 12, "y": 30, "text": "Barreira aberta", "tone": "sand", "sub": ["Junções afrouxam"], "edge": "left" },
-          { "x": 12, "y": 72, "text": "Má absorção", "tone": "sand", "sub": ["O que sobra fermenta"], "edge": "left" },
-          { "x": 89, "y": 30, "text": "Bactérias ↑", "tone": "cream", "sub": ["Festa no delgado"], "align": "right", "edge": "right" },
-          { "x": 89, "y": 72, "text": "Gás e água", "tone": "coffee", "sub": ["A barriga cresce"], "align": "right", "edge": "right" }
+          {
+            "x": 12,
+            "y": 30,
+            "text": "Barreira aberta",
+            "tone": "sand",
+            "sub": [
+              "Junções afrouxam"
+            ],
+            "edge": "left"
+          },
+          {
+            "x": 12,
+            "y": 72,
+            "text": "Má absorção",
+            "tone": "sand",
+            "sub": [
+              "O que sobra fermenta"
+            ],
+            "edge": "left"
+          },
+          {
+            "x": 89,
+            "y": 30,
+            "text": "Bactérias ↑",
+            "tone": "cream",
+            "sub": [
+              "Festa no delgado"
+            ],
+            "align": "right",
+            "edge": "right"
+          },
+          {
+            "x": 89,
+            "y": 72,
+            "text": "Gás e água",
+            "tone": "coffee",
+            "sub": [
+              "A barriga cresce"
+            ],
+            "align": "right",
+            "edge": "right"
+          }
         ]
       },
       "bullets": [
@@ -89,12 +203,42 @@
       "figure": {
         "src": "assets/illustrations/barriga-estufa/05-sibo-fruto.svg",
         "prompt": "a árvore com um fruto em destaque no alto e as raízes embaixo",
-        "inset": { "top": 60, "bottom": 60 },
+        "inset": {
+          "top": 60,
+          "bottom": 60
+        },
         "labels": [
-          { "x": 66, "y": 5, "text": "SIBO", "tone": "coffee", "sub": ["O fruto"], "edge": "top" },
-          { "x": 30, "y": 95, "text": "Inflamação", "tone": "cream", "edge": "bottom" },
-          { "x": 50, "y": 95, "text": "Hormônios", "tone": "outline", "edge": "bottom" },
-          { "x": 70, "y": 95, "text": "Intestino", "tone": "outline", "edge": "bottom" }
+          {
+            "x": 66,
+            "y": 5,
+            "text": "SIBO",
+            "tone": "coffee",
+            "sub": [
+              "O fruto"
+            ],
+            "edge": "top"
+          },
+          {
+            "x": 30,
+            "y": 95,
+            "text": "Inflamação",
+            "tone": "cream",
+            "edge": "bottom"
+          },
+          {
+            "x": 50,
+            "y": 95,
+            "text": "Hormônios",
+            "tone": "outline",
+            "edge": "bottom"
+          },
+          {
+            "x": 70,
+            "y": 95,
+            "text": "Intestino",
+            "tone": "outline",
+            "edge": "bottom"
+          }
         ]
       }
     },
@@ -109,10 +253,28 @@
       "figure": {
         "src": "assets/illustrations/barriga-estufa/06-pesquisa.svg",
         "prompt": "vaso sanguíneo com citocinas chegando a um intestino",
-        "inset": { "top": 30 },
+        "inset": {
+          "top": 30
+        },
         "labels": [
-          { "sx": 200, "sy": 30, "text": "Estudo piloto", "tone": "cream", "sub": ["Mohling e colegas, 2023"] },
-          { "sx": 620, "sy": 30, "text": "Permeabilidade", "tone": "coffee", "sub": ["Alterada em quase metade"] }
+          {
+            "sx": 200,
+            "sy": 30,
+            "text": "Estudo piloto",
+            "tone": "cream",
+            "sub": [
+              "Mohling e colegas, 2023"
+            ]
+          },
+          {
+            "sx": 620,
+            "sy": 30,
+            "text": "Permeabilidade",
+            "tone": "coffee",
+            "sub": [
+              "Alterada em quase metade"
+            ]
+          }
         ]
       }
     },
@@ -126,12 +288,34 @@
       "figure": {
         "src": "assets/illustrations/barriga-estufa/07-mulher-inteira.svg",
         "prompt": "quatro peças em linha: intestino, ciclo, citocinas, cérebro, ligadas por um fluxo",
-        "inset": { "top": 40 },
+        "inset": {
+          "top": 40
+        },
         "labels": [
-          { "sx": 120, "sy": 30, "text": "Intestino", "tone": "cream" },
-          { "sx": 340, "sy": 30, "text": "Hormônio", "tone": "sand" },
-          { "sx": 560, "sy": 30, "text": "Inflamação", "tone": "sand" },
-          { "sx": 770, "sy": 30, "text": "Sistema nervoso", "tone": "coffee" }
+          {
+            "sx": 120,
+            "sy": 30,
+            "text": "Intestino",
+            "tone": "cream"
+          },
+          {
+            "sx": 340,
+            "sy": 30,
+            "text": "Hormônio",
+            "tone": "sand"
+          },
+          {
+            "sx": 560,
+            "sy": 30,
+            "text": "Inflamação",
+            "tone": "sand"
+          },
+          {
+            "sx": 770,
+            "sy": 30,
+            "text": "Sistema nervoso",
+            "tone": "coffee"
+          }
         ]
       }
     },

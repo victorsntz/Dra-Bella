@@ -452,15 +452,53 @@ export function cycle({ r = 110, active = 2 } = {}) {
   return `<g>${arcs}${sphere(Math.cos(am) * r, Math.sin(am) * r, 13, 1)}</g>`;
 }
 
-// ---------- lata de refrigerante (centro em 0,0, largura w, altura h). band: faixa escura no topo ----------
-export function can({ w = 150, h = 300, label = true } = {}) {
-  const a = w / 2, b = h / 2, r = w * 0.18;
-  const body = `<rect x="${-a}" y="${-b}" width="${w}" height="${h}" rx="${r}" fill="${C.tendon}" stroke="${C.tendonLo}" stroke-width="1.5"/>`;
-  const top = `<rect x="${-a}" y="${-b}" width="${w}" height="${h * 0.16}" rx="${r}" fill="${C.ink}"/><rect x="${-a}" y="${-b + h * 0.1}" width="${w}" height="${h * 0.06}" fill="${C.ink}"/>`;
-  const rim = `<ellipse cx="0" cy="${-b}" rx="${a * 0.92}" ry="${w * 0.08}" fill="${C.mutedLo}" opacity="0.5"/><ellipse cx="0" cy="${-b}" rx="${a * 0.7}" ry="${w * 0.05}" fill="none" stroke="${C.tendon}" stroke-width="2"/>`;
-  const lab = label ? `<rect x="${-a * 0.62}" y="${-h * 0.08}" width="${w * 0.62}" height="${h * 0.3}" rx="8" fill="${C.serene || "#ABA597"}" opacity="0.9"/><circle cx="0" cy="${h * 0.07}" r="${w * 0.14}" fill="${C.paper || "#F6F4F0"}"/>` : "";
-  const hi = `<rect x="${-a * 0.78}" y="${-b * 0.6}" width="${w * 0.1}" height="${h * 0.7}" rx="5" fill="#fff" opacity="0.22"/>`;
-  return `<g>${body}${top}${rim}${lab}${hi}</g>`;
+// ---------- lata de cola (centro em 0,0, largura w, altura h). Vermelho terroso da paleta, tampa escura,
+// a onda clara atravessando o corpo (a "fita" da cola) e um selo redondo embaixo. Sem texto: etiquetas são HTML.
+export function can({ w = 150, h = 300, badge = true } = {}) {
+  const a = w / 2, b = h / 2, r = w * 0.16, lid = h * 0.11;
+  const body = `<rect x="${-a}" y="${-b}" width="${w}" height="${h}" rx="${r}" fill="${C.rbc}" stroke="${C.vesselLo}" stroke-opacity="0.7" stroke-width="1.5"/>`;
+  const top = `<path d="M${-a},${-b + r} A${r},${r} 0 0 1 ${-a + r},${-b} L${a - r},${-b} A${r},${r} 0 0 1 ${a},${-b + r} L${a},${-b + lid} L${-a},${-b + lid} Z" fill="${C.ink}"/>
+    <ellipse cx="0" cy="${-b + 2}" rx="${a * 0.86}" ry="${w * 0.07}" fill="${C.mutedLo}"/><ellipse cx="0" cy="${-b + 2}" rx="${a * 0.62}" ry="${w * 0.045}" fill="none" stroke="${C.tendon}" stroke-opacity="0.8" stroke-width="2"/>`;
+  // a onda: entra pela esquerda no meio, desce e sobe de novo até a direita
+  const y0 = -b * 0.05;
+  const wave = `<path d="M${-a},${y0 - h * 0.06} C${-a * 0.3},${y0 - h * 0.12} ${a * 0.2},${y0 + h * 0.16} ${a},${y0 + h * 0.08} L${a},${y0 + h * 0.15} C${a * 0.2},${y0 + h * 0.23} ${-a * 0.3},${y0 - h * 0.05} ${-a},${y0 + h * 0.01} Z" fill="${C.paper || "#F6F4F0"}" opacity="0.92"/>`;
+  const bdg = badge ? `<circle cx="${a * 0.38}" cy="${b * 0.56}" r="${w * 0.16}" fill="${C.ink}"/><circle cx="${a * 0.38}" cy="${b * 0.56}" r="${w * 0.105}" fill="none" stroke="${C.paper || "#F6F4F0"}" stroke-width="2"/>` : "";
+  const hi = `<rect x="${-a * 0.8}" y="${-b + lid + h * 0.04}" width="${w * 0.09}" height="${h * 0.76}" rx="5" fill="#fff" opacity="0.22"/>`;
+  const bottom = `<path d="M${-a},${b - r} A${r},${r} 0 0 0 ${-a + r},${b} L${a - r},${b} A${r},${r} 0 0 0 ${a},${b - r} L${a},${b - h * 0.03} L${-a},${b - h * 0.03} Z" fill="${C.vesselLo}" opacity="0.6"/>`;
+  return `<g>${body}${wave}${bdg}${top}${bottom}${hi}</g>`;
+}
+
+// ---------- mulher em pé, de perfil (virada pra direita), caixa 300x720, origem canto superior esquerdo ----------
+// bloated: barriga estufada pra frente, com a mão apoiada nela e bolhas de gás dentro. Sem rosto.
+export function woman({ bloated = true } = {}) {
+  const skin = "url(#gSkin)", lo = C.skinLo;
+  const dress = C.tendon, dressLo = C.tendonLo;
+  // cabeça e cabelo (coque atrás)
+  const head = `<ellipse cx="152" cy="62" rx="38" ry="43" fill="${skin}" stroke="${lo}" stroke-opacity="0.6" stroke-width="1.5"/>
+    <path d="M116,52 C114,24 138,10 160,16 C180,20 192,36 190,56 C176,46 158,48 144,58 C132,66 124,78 122,92 C116,84 116,68 116,52 Z" fill="${C.hair}"/>
+    <circle cx="108" cy="66" r="19" fill="${C.hair}"/>
+    <path d="M124,54 C134,48 146,46 158,48" fill="none" stroke="#6B5A50" stroke-width="2" stroke-linecap="round" opacity="0.8"/>`;
+  const neck = limb([150, 102], [148, 136], 24, 28, skin, lo);
+  // vestido: ombros, peito, barriga (estufada ou não), quadril
+  const front = bloated
+    ? "C226,240 266,300 258,372 C252,412 232,440 214,456"
+    : "C206,240 212,300 210,360 C208,400 206,430 206,450";
+  const torso = `<path d="M110,146 C130,138 170,136 188,146 C196,172 200,196 202,220 ${front} L212,478 L100,478 C92,420 90,350 96,280 C98,230 102,180 110,146 Z" fill="${dress}" stroke="${dressLo}" stroke-width="1.5"/>
+    <path d="M118,160 C122,200 118,240 112,280" fill="none" stroke="${dressLo}" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round"/>`;
+  const gas = bloated ? [[196, 330, 11], [214, 372, 8], [184, 390, 7], [206, 410, 6]].map(([x, y, r]) =>
+    `<circle cx="${x}" cy="${y}" r="${r}" fill="${C.mol2}" opacity="0.55"/><circle cx="${x - r * 0.3}" cy="${y - r * 0.3}" r="${r * 0.28}" fill="#fff" opacity="0.5"/>`).join("") : "";
+  // braço perto: ombro → cotovelo → mão apoiada na barriga (ou solto ao lado)
+  const S = [150, 166], E = bloated ? [142, 300] : [138, 300], W = bloated ? [222, 346] : [146, 420];
+  const joint = (P, r, f = skin) => `<circle cx="${P[0]}" cy="${P[1]}" r="${r}" fill="${f}"/>`;
+  const arm = `${limb(S, E, 34, 26, skin, lo)}${limb(E, W, 26, 18, skin, lo)}${joint(E, 14)}
+    <ellipse cx="${W[0] + (bloated ? 10 : 2)}" cy="${W[1] + (bloated ? 4 : 14)}" rx="13" ry="18" fill="${skin}" stroke="${lo}" stroke-opacity="0.7" stroke-width="1.2" transform="rotate(${bloated ? -60 : 0} ${W[0]} ${W[1]})"/>`;
+  // pernas: a de trás apagada, a da frente inteira; pés pra frente
+  const legFar = `${limb([126, 470], [122, 590], 52, 34, C.muted, C.mutedLo)}${limb([122, 590], [120, 700], 34, 22, C.muted, C.mutedLo)}${joint([122, 590], 18, C.muted)}
+    <path d="M106,694 L150,700 C158,702 158,712 150,714 L104,714 C96,712 96,698 106,694 Z" fill="${C.muted}" stroke="${C.mutedLo}" stroke-opacity="0.7" stroke-width="1.2"/>`;
+  const legNear = `${limb([168, 470], [170, 590], 54, 36, skin, lo)}${limb([170, 590], [172, 700], 36, 22, skin, lo)}${joint([170, 590], 19)}
+    <path d="M156,694 L214,700 C224,702 224,714 214,716 L154,716 C144,714 144,698 156,694 Z" fill="${skin}" stroke="${lo}" stroke-opacity="0.7" stroke-width="1.5"/>
+    <path d="M162,590 C170,586 178,588 184,592" fill="none" stroke="${lo}" stroke-width="2" stroke-linecap="round" opacity="0.8"/>`;
+  return `<g>${legFar}${neck}${torso}${gas}${legNear}${arm}${head}</g>`;
 }
 
 // Estilo: "flat" (padrão, chapado, mais vetorial) ou "shaded" (degradês e sombras).

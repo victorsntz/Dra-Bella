@@ -1,12 +1,13 @@
-import { g, svg, intestine, stream, cytokines, ripples, clock, fatCluster, cycle, pancreas, vessel, brain, tree } from "../parts.mjs";
+import { g, svg, intestine, stream, cytokines, ripples, clock, fatCluster, cycle, pancreas, vessel, brain, tree, woman } from "../parts.mjs";
 
 export default {
-  // capa: 520 x 900. Intestino grande no meio, ondas de inchaço à direita, citocinas chegando por cima.
+  // capa: 520 x 900. Mulher em pé, de perfil, com a barriga estufada e a mão apoiada; ondas de inchaço
+  // saindo da barriga pra frente e citocinas descendo do alto até ela.
   "01-intestino-inchaco": () => svg(520, 900, `
-    ${stream({ from: [200, 60], to: [230, 330], ctrl: [120, 200], n: 10, rmin: 5, rmax: 11, tone: 1, seed: 51, spread: 14 })}
-    ${g(385, 440, ripples({ n: 4, r0: 50, gap: 26, color: "#6F6356", sweep: 90 }))}
-    ${g(40, 320, intestine(), { s: 1.6 })}
-    ${g(150, 140, cytokines({ n: 9, tone: 1, seed: 14 }), { s: 1.2 })}`),
+    ${stream({ from: [235, 60], to: [300, 410], ctrl: [110, 260], n: 10, rmin: 5, rmax: 11, tone: 1, seed: 51, spread: 14 })}
+    ${g(430, 470, ripples({ n: 4, r0: 40, gap: 24, color: "#6F6356", sweep: 90 }))}
+    ${g(255, 24, cytokines({ n: 8, tone: 1, seed: 14 }), { s: 1.0 })}
+    ${g(40, 60, woman({ bloated: true }), { s: 1.15 })}`),
 
   // texto café, cena alta 888 x 440: relógio de manhã à esquerda, intestino com ondas à direita.
   "02-manha-noite": () => svg(888, 440, `
