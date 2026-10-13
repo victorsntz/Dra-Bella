@@ -1,0 +1,126 @@
+{
+  "title": "Refrigerante com fibra não é saúde intestinal.",
+  "format": "carrossel · notícia comentada",
+  "slides": [
+    {
+      "type": "cover",
+      "title": "Refrigerante\ncom fibra\n**não é saúde\nintestinal.**",
+      "titleSize": 84,
+      "titleWidth": 760,
+      "lead": "O que a Coca prebiótica diz sobre a era das canetas. E o que ela não faz pelo seu intestino.",
+      "figure": {
+        "src": "assets/illustrations/coca-prebiotica/01-lata-intestino.svg",
+        "prompt": "lata grande no alto soltando esferas de fibra que caem em arco sobre um intestino pequeno embaixo",
+        "labels": [
+          { "x": 62, "y": 10, "text": "Fibra na lata", "tone": "coffee" },
+          { "x": 20, "y": 55, "text": "Função", "tone": "outline" },
+          { "x": 60, "y": 72, "text": "Intestino", "tone": "sand" }
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "theme": "coffee",
+      "title": "A notícia: Coca-Cola **prebiótica.**",
+      "paragraphs": [
+        "Coca Zero, Sprite Zero e Fresca ganham versão com fibra prebiótica e zero açúcar, em teste nos Estados Unidos.",
+        "A PepsiCo já tinha comprado uma marca de refrigerante prebiótico por quase dois bilhões de dólares. Não é moda. É **mercado**."
+      ],
+      "figure": {
+        "src": "assets/illustrations/coca-prebiotica/02-duas-latas.svg",
+        "prompt": "duas latas lado a lado com esferas de fibra entre elas",
+        "inset": { "top": 30 },
+        "labels": [
+          { "sx": 250, "sy": 40, "text": "Zero açúcar", "tone": "cream", "sub": ["Com fibra prebiótica"] },
+          { "sx": 640, "sy": 40, "text": "Quase 2 bilhões", "tone": "coffee", "sub": ["O que a concorrente pagou"] }
+        ]
+      }
+    },
+    {
+      "type": "diagram",
+      "title": "Por que a indústria mudou de **assunto.**",
+      "lead": "O refrigerante parou de vender sabor e passou a vender função.",
+      "figure": {
+        "src": "assets/illustrations/coca-prebiotica/03-era-das-canetas.svg",
+        "prompt": "caneta à esquerda, açúcar esmaecendo no meio, lata à direita recebendo o fluxo",
+        "inset": { "left": 200, "right": 200 },
+        "labels": [
+          { "x": 12, "y": 24, "text": "Canetas", "tone": "sand", "sub": ["Um em cinco lares nos EUA"], "edge": "left" },
+          { "x": 12, "y": 72, "text": "Açúcar ↓", "tone": "sand", "sub": ["Consumo caindo"], "edge": "left" },
+          { "x": 89, "y": 50, "text": "Função", "tone": "coffee", "sub": ["A palavra que vende"], "align": "right", "edge": "right" }
+        ]
+      },
+      "bullets": [
+        "Canetas → com menos fome, o açúcar perde espaço na mesa.",
+        "Açúcar → o consumo vem caindo há anos nos Estados Unidos.",
+        "Função → fibra, proteína, intestino. A nova embalagem da mesma lata."
+      ]
+    },
+    {
+      "type": "diagram",
+      "theme": "coffee",
+      "title": "O que a fibra faz. E o que uma lata **não faz.**",
+      "lead": "Fibra prebiótica alimenta bactérias boas. Isso é real. Intestino saudável é mais do que um ingrediente.",
+      "figure": {
+        "src": "assets/illustrations/coca-prebiotica/04-microbiota.svg",
+        "prompt": "intestino grande com nuvens de bactérias boas coloridas e um fluxo fraco vindo de uma lata pequena",
+        "inset": { "left": 200, "right": 200 },
+        "labels": [
+          { "x": 12, "y": 30, "text": "Microbiota", "tone": "sand", "sub": ["Diversidade vem da comida"], "edge": "left" },
+          { "x": 12, "y": 72, "text": "Barreira", "tone": "sand", "sub": ["Quem repara é o conjunto"], "edge": "left" },
+          { "x": 89, "y": 50, "text": "Uma fibra", "tone": "cream", "sub": ["Ajuda. Não resolve."], "align": "right", "edge": "right" }
+        ]
+      },
+      "bullets": [
+        "Fibra → alimenta a microbiota e ajuda a barreira.",
+        "Diversidade → vem de comida variada, não de um ingrediente isolado.",
+        "Barreira → repara com sono, inflamação baixa e alimento de verdade."
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Fibra na lata não desfaz **o resto da lata.**",
+      "paragraphs": [
+        "Adoçante, acidez, gás e o hábito de beber doce no lugar de água. A fibra entra. O resto continua.",
+        "Não é veneno. Também não é **tratamento**."
+      ],
+      "figure": {
+        "src": "assets/illustrations/coca-prebiotica/05-resto-da-lata.svg",
+        "prompt": "lata grande com ondas de sinal saindo dela e um prato pequeno quase vazio ao lado",
+        "inset": { "top": 30 },
+        "labels": [
+          { "sx": 230, "sy": 30, "text": "A lata inteira", "tone": "coffee", "sub": ["Adoçante, acidez, gás, hábito"] },
+          { "sx": 640, "sy": 60, "text": "Comida de verdade", "tone": "cream", "sub": ["Onde a fibra mora"] }
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "theme": "coffee",
+      "title": "Intestino comprometido é raiz. **Lata é fruto.**",
+      "paragraphs": [
+        "Inchaço, fome que não passa, inflamação baixa: isso se investiga, não se adoça.",
+        "Se a indústria entendeu que intestino importa, ótimo. Quem cuida do seu ainda é você, com quem te acompanha."
+      ],
+      "figure": {
+        "src": "assets/illustrations/coca-prebiotica/06-arvore.svg",
+        "prompt": "a árvore: copa com frutos em cima, quatro raízes embaixo",
+        "inset": { "top": 60, "bottom": 60 },
+        "labels": [
+          { "x": 66, "y": 5, "text": "Lata prebiótica", "tone": "coffee", "sub": ["Um fruto. Da indústria."], "edge": "top" },
+          { "x": 23, "y": 95, "text": "Inflamação", "tone": "outline", "edge": "bottom" },
+          { "x": 41, "y": 95, "text": "Hormônios", "tone": "outline", "edge": "bottom" },
+          { "x": 59, "y": 95, "text": "Intestino", "tone": "cream", "edge": "bottom" },
+          { "x": 78, "y": 95, "text": "Sistema nervoso", "tone": "outline", "edge": "bottom" }
+        ]
+      }
+    },
+    {
+      "type": "cta",
+      "title": "Você compraria uma Coca com fibra?",
+      "lead": "Me conta, sem julgamento. Eu só quero entender o que te faria beber.",
+      "hint": "Comenta aqui"
+    }
+  ],
+  "caption": "Primeiro siga @bellabrasao 🤍\n\nA Coca-Cola vai testar refrigerante prebiótico nos Estados Unidos: Coca Zero, Sprite Zero e Fresca com fibra e zero açúcar. A PepsiCo já tinha comprado uma marca do tipo por quase dois bilhões de dólares.\n\nO motivo é simples. Na era das canetas, açúcar vende menos e função vende mais. Fibra prebiótica alimenta bactérias boas, e isso é real. Mas intestino saudável vem de diversidade, barreira íntegra e inflamação baixa. Nenhuma lata entrega isso sozinha. 🥤\n\nIntestino comprometido é uma das quatro raízes. Se a sua barriga incha, a fome não passa ou o exame mostra inflamação, isso se investiga.\n\nVocê compraria uma Coca com fibra? Me conta aqui."
+}

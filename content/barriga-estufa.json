@@ -1,0 +1,147 @@
+{
+  "title": "Sua barriga \"estufa\" no fim do dia?",
+  "format": "carrossel · educativo",
+  "slides": [
+    {
+      "type": "cover",
+      "title": "Sua barriga\n**\"estufa\"\nno fim\ndo dia?**",
+      "titleSize": 96,
+      "titleWidth": 620,
+      "lead": "Acorda normal, termina inchada. Isso tem mecanismo. E quase nunca é \"só gás\".",
+      "figure": {
+        "src": "assets/illustrations/barriga-estufa/01-intestino-inchaco.svg",
+        "prompt": "intestino grande com ondas de inchaço saindo e citocinas chegando por cima",
+        "labels": [
+          { "x": 40, "y": 12, "text": "Inflamação", "tone": "coffee" },
+          { "x": 80, "y": 48, "text": "Inchaço", "tone": "sand", "align": "right" },
+          { "x": 24, "y": 78, "text": "Intestino", "tone": "cream" }
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "theme": "coffee",
+      "title": "De manhã normal. À noite, **estufada.**",
+      "paragraphs": [
+        "Não é gordura que aparece à tarde. É **gás, água e inflamação** no intestino.",
+        "E o intestino não inflama sozinho. Ele responde ao resto do corpo."
+      ],
+      "figure": {
+        "src": "assets/illustrations/barriga-estufa/02-manha-noite.svg",
+        "prompt": "relógio à esquerda marcando a manhã, intestino à direita com ondas crescendo",
+        "inset": { "top": 30 },
+        "labels": [
+          { "sx": 170, "sy": 30, "text": "Manhã", "tone": "cream", "sub": ["Barriga normal"] },
+          { "sx": 600, "sy": 30, "text": "Noite", "tone": "coffee", "sub": ["Gás, água, inflamação"] }
+        ]
+      }
+    },
+    {
+      "type": "diagram",
+      "title": "De onde vem a **inflamação.**",
+      "lead": "Em mulher, ela costuma ter mais de uma origem. E todas chegam no mesmo intestino.",
+      "figure": {
+        "src": "assets/illustrations/barriga-estufa/03-origens.svg",
+        "prompt": "três origens à esquerda (gordura visceral, útero/ciclo, pâncreas) mandando citocinas em arco pro intestino à direita",
+        "inset": { "left": 200, "right": 200 },
+        "labels": [
+          { "x": 12, "y": 16, "text": "Gordura visceral", "tone": "sand", "sub": ["Citocinas no sangue"], "edge": "left" },
+          { "x": 12, "y": 50, "text": "Endometriose", "tone": "sand", "sub": ["Inflamação pélvica"], "edge": "left" },
+          { "x": 12, "y": 84, "text": "Insulina alta", "tone": "sand", "sub": ["Inflamação de baixo grau"], "edge": "left" },
+          { "x": 89, "y": 50, "text": "Intestino", "tone": "coffee", "sub": ["Recebe tudo"], "align": "right", "edge": "right" }
+        ]
+      },
+      "bullets": [
+        "Gordura visceral → solta citocinas que viajam pelo sangue.",
+        "Endometriose → inflamação pélvica crônica, com citocinas e anticorpos.",
+        "Insulina alta → mantém a inflamação de baixo grau ligada."
+      ]
+    },
+    {
+      "type": "diagram",
+      "theme": "coffee",
+      "title": "A barreira abre. As bactérias **festejam.**",
+      "lead": "Citocinas alteram a permeabilidade do intestino. O que não é absorvido vira comida pra bactéria.",
+      "figure": {
+        "src": "assets/illustrations/barriga-estufa/04-barreira.svg",
+        "prompt": "intestino com citocinas escapando pela parede e nuvem de bactérias crescendo dentro",
+        "inset": { "left": 200, "right": 200 },
+        "labels": [
+          { "x": 12, "y": 30, "text": "Barreira aberta", "tone": "sand", "sub": ["Junções afrouxam"], "edge": "left" },
+          { "x": 12, "y": 72, "text": "Má absorção", "tone": "sand", "sub": ["O que sobra fermenta"], "edge": "left" },
+          { "x": 89, "y": 30, "text": "Bactérias ↑", "tone": "cream", "sub": ["Festa no delgado"], "align": "right", "edge": "right" },
+          { "x": 89, "y": 72, "text": "Gás e água", "tone": "coffee", "sub": ["A barriga cresce"], "align": "right", "edge": "right" }
+        ]
+      },
+      "bullets": [
+        "Barreira → as junções entre as células afrouxam.",
+        "Absorção → o alimento que não é absorvido fermenta.",
+        "Gás e água → a barriga cresce ao longo do dia."
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Aí você ouve que tem **SIBO.**",
+      "paragraphs": [
+        "SIBO é o supercrescimento de bactérias no intestino delgado. Pode existir mesmo. Mas quase sempre é **fruto**, não raiz.",
+        "Tratar só a bactéria, sem tratar a inflamação que abriu a porta, é enxugar gelo."
+      ],
+      "figure": {
+        "src": "assets/illustrations/barriga-estufa/05-sibo-fruto.svg",
+        "prompt": "a árvore com um fruto em destaque no alto e as raízes embaixo",
+        "inset": { "top": 60, "bottom": 60 },
+        "labels": [
+          { "x": 66, "y": 5, "text": "SIBO", "tone": "coffee", "sub": ["O fruto"], "edge": "top" },
+          { "x": 30, "y": 95, "text": "Inflamação", "tone": "cream", "edge": "bottom" },
+          { "x": 50, "y": 95, "text": "Hormônios", "tone": "outline", "edge": "bottom" },
+          { "x": 70, "y": 95, "text": "Intestino", "tone": "outline", "edge": "bottom" }
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "theme": "coffee",
+      "title": "O que diz a **pesquisa.**",
+      "paragraphs": [
+        "Um estudo piloto pequeno encontrou permeabilidade intestinal alterada em quase metade das mulheres com endometriose avaliadas.",
+        "É pista, não prova. Mas combina com o que a clínica mostra todo dia: barriga, hormônio e inflamação conversando."
+      ],
+      "figure": {
+        "src": "assets/illustrations/barriga-estufa/06-pesquisa.svg",
+        "prompt": "vaso sanguíneo com citocinas chegando a um intestino",
+        "inset": { "top": 30 },
+        "labels": [
+          { "sx": 200, "sy": 30, "text": "Estudo piloto", "tone": "cream", "sub": ["Mohling e colegas, 2023"] },
+          { "sx": 620, "sy": 30, "text": "Permeabilidade", "tone": "coffee", "sub": ["Alterada em quase metade"] }
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "title": "Investigar antes de **prescrever.**",
+      "paragraphs": [
+        "Inchaço que piora ao longo do dia, fome que não passa, intestino preso ou solto. Isso se investiga junto, não em consultas separadas.",
+        "A mulher inteira: intestino, hormônio, inflamação e sistema nervoso no mesmo plano."
+      ],
+      "figure": {
+        "src": "assets/illustrations/barriga-estufa/07-mulher-inteira.svg",
+        "prompt": "quatro peças em linha: intestino, ciclo, citocinas, cérebro, ligadas por um fluxo",
+        "inset": { "top": 40 },
+        "labels": [
+          { "sx": 120, "sy": 30, "text": "Intestino", "tone": "cream" },
+          { "sx": 340, "sy": 30, "text": "Hormônio", "tone": "sand" },
+          { "sx": 560, "sy": 30, "text": "Inflamação", "tone": "sand" },
+          { "sx": 770, "sy": 30, "text": "Sistema nervoso", "tone": "coffee" }
+        ]
+      }
+    },
+    {
+      "type": "cta",
+      "theme": "coffee",
+      "title": "Sua barriga muda ao longo do dia?",
+      "lead": "Me conta como é a sua: de manhã, depois do almoço, à noite.",
+      "hint": "Comenta aqui"
+    }
+  ],
+  "caption": "Primeiro siga @bellabrasao 🤍\n\nVocê acorda com a barriga normal e termina o dia \"estufada\"? Não é gordura que aparece à tarde. É gás, água e inflamação no intestino.\n\nE o intestino não inflama sozinho. Gordura visceral, endometriose e insulina alta mandam citocinas pelo sangue. A barreira intestinal afrouxa, o que não é absorvido fermenta, e a barriga cresce ao longo do dia. Aí vem o diagnóstico de SIBO. Pode ser real, mas quase sempre é fruto, não raiz. 🌱\n\nUm estudo piloto pequeno encontrou permeabilidade alterada em quase metade das mulheres com endometriose avaliadas. É pista, não prova. Mas combina com o que a clínica mostra.\n\nSua barriga muda ao longo do dia? Me conta aqui."
+}

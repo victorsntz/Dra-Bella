@@ -6,8 +6,10 @@ import { fileURLToPath } from "node:url";
 import { loadBrand, loadDoc, slideHTML, setAssetBase } from "./render.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const names = process.argv.slice(2);
-if (!names.length) { console.error("uso: node src/capas.mjs <slug> <slug> ..."); process.exit(1); }
+const argv = process.argv.slice(2);
+const outName = argv.includes("--out") ? argv[argv.indexOf("--out") + 1] : "capas";
+const names = argv.filter((a, i) => !a.startsWith("--") && argv[i - 1] !== "--out");
+if (!names.length) { console.error("uso: node src/capas.mjs <slug> <slug> ... [--out pasta]"); process.exit(1); }
 const brand = await loadBrand();
 setAssetBase("");
 const esc = (s = "") => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;");
@@ -27,7 +29,7 @@ const full = docs.map(({ name, doc }, k) => `<section id="c-${name}">
 
 const html = `<!doctype html>
 <html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Lote de carrosséis</title>
+<title>${outName === "capas" ? "Lote de carrosséis" : "Carrosséis · " + esc(outName)}</title>
 <link rel="stylesheet" href="brand/brand.css">
 <link rel="stylesheet" href="templates/slide.css">
 <style>
@@ -63,7 +65,7 @@ const html = `<!doctype html>
     fit(); if (window.ResizeObserver) { const ro = new ResizeObserver(fit); boxes.forEach((b) => ro.observe(b)); } else window.addEventListener("resize", fit); })();
 </script></body></html>`;
 
-const outDir = path.join(ROOT, "build", "capas");
+const outDir = path.join(ROOT, "build", outName);
 await fs.rm(outDir, { recursive: true, force: true });
 await fs.mkdir(outDir, { recursive: true });
 await fs.writeFile(path.join(outDir, "index.html"), html);
@@ -72,4 +74,4 @@ for (const it of ["brand.css", "fonts", "profile.jpg", "logo.png", "logo-light.p
 }
 await fs.cp(path.join(ROOT, "templates", "slide.css"), path.join(outDir, "templates", "slide.css"));
 for (const n of names) { try { await fs.cp(path.join(ROOT, "assets", "illustrations", n), path.join(outDir, "assets", "illustrations", n), { recursive: true }); } catch {} }
-console.log(`✓ build/capas/index.html (${docs.length} carrosséis, pasta completa)`);
+console.log(`✓ build/${outName}/index.html (${docs.length} carrosséis, pasta completa)`);

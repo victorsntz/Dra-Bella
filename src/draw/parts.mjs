@@ -452,6 +452,17 @@ export function cycle({ r = 110, active = 2 } = {}) {
   return `<g>${arcs}${sphere(Math.cos(am) * r, Math.sin(am) * r, 13, 1)}</g>`;
 }
 
+// ---------- lata de refrigerante (centro em 0,0, largura w, altura h). band: faixa escura no topo ----------
+export function can({ w = 150, h = 300, label = true } = {}) {
+  const a = w / 2, b = h / 2, r = w * 0.18;
+  const body = `<rect x="${-a}" y="${-b}" width="${w}" height="${h}" rx="${r}" fill="${C.tendon}" stroke="${C.tendonLo}" stroke-width="1.5"/>`;
+  const top = `<rect x="${-a}" y="${-b}" width="${w}" height="${h * 0.16}" rx="${r}" fill="${C.ink}"/><rect x="${-a}" y="${-b + h * 0.1}" width="${w}" height="${h * 0.06}" fill="${C.ink}"/>`;
+  const rim = `<ellipse cx="0" cy="${-b}" rx="${a * 0.92}" ry="${w * 0.08}" fill="${C.mutedLo}" opacity="0.5"/><ellipse cx="0" cy="${-b}" rx="${a * 0.7}" ry="${w * 0.05}" fill="none" stroke="${C.tendon}" stroke-width="2"/>`;
+  const lab = label ? `<rect x="${-a * 0.62}" y="${-h * 0.08}" width="${w * 0.62}" height="${h * 0.3}" rx="8" fill="${C.serene || "#ABA597"}" opacity="0.9"/><circle cx="0" cy="${h * 0.07}" r="${w * 0.14}" fill="${C.paper || "#F6F4F0"}"/>` : "";
+  const hi = `<rect x="${-a * 0.78}" y="${-b * 0.6}" width="${w * 0.1}" height="${h * 0.7}" rx="5" fill="#fff" opacity="0.22"/>`;
+  return `<g>${body}${top}${rim}${lab}${hi}</g>`;
+}
+
 // Estilo: "flat" (padrão, chapado, mais vetorial) ou "shaded" (degradês e sombras).
 export const STYLE = process.env.ILLUS_STYLE || "flat";
 const FLAT_MAP = { gMuscle: C.muscle, gMuted: C.muted, gTendon: C.tendon, gVessel: C.vessel, gSkin: C.skin, gFat: C.fat, gLiver: C.liver,
