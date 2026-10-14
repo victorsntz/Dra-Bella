@@ -1,0 +1,339 @@
+{
+  "title": "O melhor skincare começa no intestino.",
+  "format": "carrossel · educativo",
+  "slides": [
+    {
+      "type": "cover",
+      "title": "O melhor\nskincare\n**começa no\nintestino.**",
+      "titleSize": 88,
+      "titleWidth": 700,
+      "lead": "Colágeno, inflamação e microbiota decidem mais sobre a sua pele do que o creme.",
+      "figure": {
+        "src": "assets/illustrations/pele-intestino/01-intestino-pele.svg",
+        "prompt": "intestino comprido serpenteando de cima a baixo, com um corte de pele pequeno no alto recebendo um fluxo que sobe do intestino",
+        "labels": [
+          {
+            "x": 66,
+            "y": 7,
+            "text": "Pele",
+            "tone": "cream"
+          },
+          {
+            "x": 30,
+            "y": 38,
+            "text": "Intestino",
+            "tone": "coffee"
+          },
+          {
+            "x": 78,
+            "y": 70,
+            "text": "Inflamação",
+            "tone": "sand",
+            "align": "right"
+          }
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "theme": "coffee",
+      "title": "Pele saudável não depende só do que você **passa nela.**",
+      "paragraphs": [
+        "Nutrição, metabolismo, inflamação e microbiota alimentam os processos que mantêm a **estrutura** da pele.",
+        "O creme age na superfície. O resto acontece por dentro."
+      ],
+      "figure": {
+        "src": "assets/illustrations/pele-intestino/02-por-dentro.svg",
+        "prompt": "corte de pele grande com fibras de colágeno e, embaixo, intestino e vaso mandando fluxo pra ela",
+        "inset": {
+          "top": 30
+        },
+        "labels": [
+          {
+            "sx": 230,
+            "sy": 30,
+            "text": "Superfície",
+            "tone": "cream",
+            "sub": [
+              "Onde o creme chega"
+            ]
+          },
+          {
+            "sx": 640,
+            "sy": 30,
+            "text": "Por dentro",
+            "tone": "coffee",
+            "sub": [
+              "Onde a pele é feita"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "diagram",
+      "title": "Colágeno é feito e desfeito **todo dia.**",
+      "lead": "Oxidação crônica e sinal inflamatório aceleram a quebra. Açúcar endurece o que sobra.",
+      "figure": {
+        "src": "assets/illustrations/pele-intestino/03-colageno.svg",
+        "prompt": "corte de pele com fibras de colágeno interrompidas, citocinas por cima e esferas de açúcar grudadas nas fibras",
+        "inset": {
+          "left": 200,
+          "right": 200
+        },
+        "labels": [
+          {
+            "x": 12,
+            "y": 26,
+            "text": "Inflamação",
+            "tone": "sand",
+            "sub": [
+              "Sobe as enzimas de quebra"
+            ],
+            "edge": "left"
+          },
+          {
+            "x": 12,
+            "y": 72,
+            "text": "MMPs",
+            "tone": "sand",
+            "sub": [
+              "Enzimas que cortam colágeno"
+            ],
+            "edge": "left"
+          },
+          {
+            "x": 89,
+            "y": 26,
+            "text": "Glicação",
+            "tone": "coffee",
+            "sub": [
+              "Açúcar grudado na fibra"
+            ],
+            "align": "right",
+            "edge": "right"
+          },
+          {
+            "x": 89,
+            "y": 72,
+            "text": "Elasticidade ↓",
+            "tone": "cream",
+            "sub": [
+              "Tecido rígido"
+            ],
+            "align": "right",
+            "edge": "right"
+          }
+        ]
+      },
+      "bullets": [
+        "MMPs → enzimas que degradam o colágeno. A inflamação sobe a atividade delas.",
+        "Glicação → açúcar grudado na fibra. Ela fica rígida e perde elasticidade.",
+        "Oxidação → o estresse crônico acelera tudo isso."
+      ]
+    },
+    {
+      "type": "diagram",
+      "theme": "coffee",
+      "title": "O eixo **intestino-pele.**",
+      "lead": "A microbiota conversa com o sistema imune e muda o sinal inflamatório no corpo inteiro.",
+      "figure": {
+        "src": "assets/illustrations/pele-intestino/04-eixo.svg",
+        "prompt": "intestino à esquerda com bactérias, fluxo de citocinas subindo em arco até um corte de pele à direita",
+        "inset": {
+          "left": 200,
+          "right": 200
+        },
+        "labels": [
+          {
+            "x": 12,
+            "y": 30,
+            "text": "Microbiota",
+            "tone": "sand",
+            "sub": [
+              "Regula o sistema imune"
+            ],
+            "edge": "left"
+          },
+          {
+            "x": 12,
+            "y": 72,
+            "text": "Inflamação",
+            "tone": "sand",
+            "sub": [
+              "Sobe ou desce com o intestino"
+            ],
+            "edge": "left"
+          },
+          {
+            "x": 89,
+            "y": 50,
+            "text": "Pele",
+            "tone": "cream",
+            "sub": [
+              "Acne, eczema, psoríase"
+            ],
+            "align": "right",
+            "edge": "right"
+          }
+        ]
+      },
+      "bullets": [
+        "Microbiota → regula o sistema imune.",
+        "Inflamação → sobe ou desce conforme o intestino.",
+        "Pele → acne, eczema e psoríase aparecem associados a mudanças na microbiota."
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Açúcar alto, **pele pior.**",
+      "paragraphs": [
+        "Dieta com carga glicêmica alta sobe **insulina** e IGF-1. Em quem tem tendência, isso piora a acne.",
+        "É o mesmo mecanismo que atrapalha a fome e a gordura. A pele só é onde aparece."
+      ],
+      "figure": {
+        "src": "assets/illustrations/pele-intestino/05-acucar.svg",
+        "prompt": "prato com açúcar à esquerda, vaso com esferas de insulina no meio, corte de pele à direita",
+        "inset": {
+          "top": 30
+        },
+        "labels": [
+          {
+            "sx": 150,
+            "sy": 30,
+            "text": "Açúcar",
+            "tone": "cream",
+            "sub": [
+              "Carga glicêmica alta"
+            ]
+          },
+          {
+            "sx": 440,
+            "sy": 30,
+            "text": "Insulina ↑",
+            "tone": "coffee",
+            "sub": [
+              "E IGF-1 junto"
+            ]
+          },
+          {
+            "sx": 740,
+            "sy": 30,
+            "text": "Acne",
+            "tone": "sand",
+            "sub": [
+              "Em quem tem tendência"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "diagram",
+      "theme": "coffee",
+      "title": "O que alimenta a pele **por dentro.**",
+      "lead": "Nutrição não substitui protetor solar. Ela sustenta o sistema que mantém a pele.",
+      "figure": {
+        "src": "assets/illustrations/pele-intestino/06-nutrientes.svg",
+        "prompt": "prato cheio no centro com quatro fluxos de esferas saindo pra um corte de pele e pra um intestino",
+        "inset": {
+          "left": 200,
+          "right": 200
+        },
+        "labels": [
+          {
+            "x": 12,
+            "y": 26,
+            "text": "Vitamina C",
+            "tone": "sand",
+            "sub": [
+              "Sem ela não há colágeno"
+            ],
+            "edge": "left"
+          },
+          {
+            "x": 12,
+            "y": 72,
+            "text": "Proteína",
+            "tone": "sand",
+            "sub": [
+              "Os tijolos do tecido"
+            ],
+            "align": "left",
+            "edge": "left"
+          },
+          {
+            "x": 89,
+            "y": 26,
+            "text": "Gorduras boas",
+            "tone": "cream",
+            "sub": [
+              "Barreira da pele"
+            ],
+            "align": "right",
+            "edge": "right"
+          },
+          {
+            "x": 89,
+            "y": 72,
+            "text": "Fibra",
+            "tone": "coffee",
+            "sub": [
+              "Alimenta a microbiota"
+            ],
+            "align": "right",
+            "edge": "right"
+          }
+        ]
+      },
+      "bullets": [
+        "Vitamina C → sem ela a síntese de colágeno não acontece.",
+        "Proteína → os aminoácidos que refazem o tecido.",
+        "Gorduras essenciais → barreira da pele. Fibra → microbiota."
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Padrão mediterrâneo. **E protetor solar.**",
+      "paragraphs": [
+        "Vegetais, leguminosas, grãos integrais, frutas, castanhas, azeite e peixe. O mesmo prato que protege o metabolismo protege a pele.",
+        "Protetor solar todo dia continua sendo a estratégia com mais evidência contra o envelhecimento precoce. A nutrição **complementa**, não substitui."
+      ],
+      "figure": {
+        "src": "assets/illustrations/pele-intestino/07-prato-sol.svg",
+        "prompt": "prato cheio à esquerda, sol à direita, corte de pele pequeno entre os dois",
+        "inset": {
+          "top": 30
+        },
+        "labels": [
+          {
+            "sx": 180,
+            "sy": 30,
+            "text": "O prato",
+            "tone": "cream",
+            "sub": [
+              "Sustenta por dentro"
+            ]
+          },
+          {
+            "sx": 700,
+            "sy": 30,
+            "text": "O sol",
+            "tone": "coffee",
+            "sub": [
+              "Protetor todo dia"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "cta",
+      "theme": "coffee",
+      "title": "O que você passa na pele e o que você come conversam?",
+      "lead": "A saúde da pele é a saúde do corpo. Me conta o que mais te incomoda na sua pele hoje.",
+      "hint": "Comenta aqui"
+    }
+  ],
+  "caption": "Primeiro siga @bellabrasao 🤍\n\nO melhor skincare não está na prateleira. Está no que acontece por dentro: nutrição, metabolismo, inflamação e microbiota alimentam os processos que mantêm a estrutura da pele.\n\nColágeno é feito e desfeito todo dia. Inflamação crônica sobe a atividade das enzimas que quebram essa fibra, e o açúcar em excesso gruda nela e a deixa rígida. O intestino entra nessa conversa pelo sistema imune: mudanças na microbiota aparecem associadas a acne, eczema e psoríase. 🌱\n\nO que sustenta a pele por dentro é o mesmo prato que protege o metabolismo: vitamina C, proteína, gorduras boas e fibra. E protetor solar todo dia, que segue sendo a estratégia com mais evidência.\n\nA pele é fruto. Me conta: o que mais te incomoda na sua hoje?"
+}

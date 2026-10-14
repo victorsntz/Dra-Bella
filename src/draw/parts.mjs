@@ -501,6 +501,39 @@ export function woman({ bloated = true } = {}) {
   return `<g>${legFar}${neck}${torso}${gas}${legNear}${arm}${head}</g>`;
 }
 
+// ---------- corte de pele (caixa w x h, origem canto superior esquerdo): epiderme em cima, derme com fibras de colágeno ----------
+// broken: fibras interrompidas (colágeno degradado). glycated: esferas de açúcar grudadas nas fibras.
+export function skinPatch({ w = 300, h = 180, fibers = 5, broken = false, glycated = false } = {}) {
+  const epi = h * 0.22;
+  const top = `<path d="M0,${epi} C${w * 0.2},${epi - 10} ${w * 0.4},${epi + 8} ${w * 0.6},${epi - 4} C${w * 0.8},${epi - 12} ${w * 0.9},${epi + 4} ${w},${epi} L${w},0 L0,0 Z" fill="${C.skin}" stroke="${C.skinLo}" stroke-opacity="0.7" stroke-width="1.5"/>`;
+  const derm = `<rect x="0" y="${epi}" width="${w}" height="${h - epi}" fill="${C.muscleHi}" opacity="0.55"/><rect x="0" y="0" width="${w}" height="${h}" rx="10" fill="none" stroke="${C.skinLo}" stroke-opacity="0.8" stroke-width="1.5"/>`;
+  let s = 7; const rnd = () => { s = (s * 9301 + 49297) % 233280; return s / 233280; };
+  const lines = Array.from({ length: fibers }, (_, i) => {
+    const y = epi + 18 + ((h - epi - 30) / (fibers - 1)) * i, amp = 7;
+    if (!broken) return `<path d="M8,${y} C${w * 0.25},${y - amp} ${w * 0.5},${y + amp} ${w * 0.75},${y - amp} S${w - 8},${y + amp} ${w - 8},${y}" fill="none" stroke="${C.muscleLo}" stroke-opacity="0.55" stroke-width="3" stroke-linecap="round"/>`;
+    const cut = w * (0.3 + rnd() * 0.4);
+    return `<path d="M8,${y} C${w * 0.2},${y - amp} ${cut - 30},${y + amp} ${cut - 12},${y}" fill="none" stroke="${C.muscleLo}" stroke-opacity="0.55" stroke-width="3" stroke-linecap="round"/>
+      <path d="M${cut + 14},${y + 3} C${cut + 40},${y + amp} ${w * 0.8},${y - amp} ${w - 8},${y}" fill="none" stroke="${C.muscleLo}" stroke-opacity="0.55" stroke-width="3" stroke-linecap="round"/>`;
+  }).join("");
+  const sugar = glycated ? Array.from({ length: 7 }, () => sphere(20 + rnd() * (w - 40), epi + 14 + rnd() * (h - epi - 28), 5 + rnd() * 4, 3)).join("") : "";
+  const hi = `<path d="M12,8 C${w * 0.3},4 ${w * 0.6},10 ${w - 12},6" fill="none" stroke="#fff" stroke-opacity="0.35" stroke-width="5" stroke-linecap="round"/>`;
+  return `<g>${derm}${lines}${sugar}${top}${hi}</g>`;
+}
+
+// ---------- sol (centro em 0,0, raio r) ----------
+export function sun({ r = 50, rays = 10 } = {}) {
+  const ry = Array.from({ length: rays }, (_, i) => { const a = (i / rays) * Math.PI * 2; const x1 = Math.cos(a) * r * 1.3, y1 = Math.sin(a) * r * 1.3, x2 = Math.cos(a) * r * 1.65, y2 = Math.sin(a) * r * 1.65;
+    return `<path d="M${x1.toFixed(1)},${y1.toFixed(1)} L${x2.toFixed(1)},${y2.toFixed(1)}" stroke="${C.adrenal}" stroke-width="3.5" stroke-linecap="round" opacity="0.9"/>`; }).join("");
+  return `<g>${ry}<circle r="${r}" fill="${C.adrenal}" stroke="${C.adrenalLo}" stroke-opacity="0.6" stroke-width="1.5"/><circle cx="${-r * 0.3}" cy="${-r * 0.35}" r="${r * 0.18}" fill="#fff" opacity="0.3"/></g>`;
+}
+
+// ---------- intestino comprido (caixa 360 x 820, origem canto superior esquerdo): serpentina alta pra capa ----------
+export function gutLong() {
+  const d = "M300,20 C240,40 200,90 230,150 C260,200 330,230 310,290 C290,350 150,330 90,380 C30,430 60,520 140,520 C230,520 320,500 320,580 C320,660 180,650 100,690 C40,720 50,790 130,800";
+  return `<g><path d="${d}" fill="none" stroke="${C.stomachLo}" stroke-opacity="0.5" stroke-width="46" stroke-linecap="round"/><path d="${d}" fill="none" stroke="${C.stomach}" stroke-width="38" stroke-linecap="round"/>
+    <path d="${d}" fill="none" stroke="#fff" stroke-opacity="0.22" stroke-width="10" stroke-linecap="round" transform="translate(0 -8)"/></g>`;
+}
+
 // Estilo: "flat" (padrão, chapado, mais vetorial) ou "shaded" (degradês e sombras).
 export const STYLE = process.env.ILLUS_STYLE || "flat";
 const FLAT_MAP = { gMuscle: C.muscle, gMuted: C.muted, gTendon: C.tendon, gVessel: C.vessel, gSkin: C.skin, gFat: C.fat, gLiver: C.liver,
