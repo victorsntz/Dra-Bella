@@ -534,6 +534,65 @@ export function gutLong() {
     <path d="${d}" fill="none" stroke="#fff" stroke-opacity="0.22" stroke-width="10" stroke-linecap="round" transform="translate(0 -8)"/></g>`;
 }
 
+// ---------- gráficos hormonais (curvas esquemáticas, não dosagens) ----------
+// Sem texto: dias, horas e nomes vão como etiquetas HTML (tone "plain" pros eixos).
+const gauss = (x, m, sd) => Math.exp(-((x - m) ** 2) / (2 * sd * sd));
+export const CYCLE_CURVES = {
+  estrogen: (d) => 0.12 + 0.75 * gauss(d, 12.5, 2.6) + 0.35 * gauss(d, 21, 3.2),
+  lh: (d) => 0.06 + 0.9 * gauss(d, 13.8, 0.75),
+  fsh: (d) => 0.12 + 0.18 * gauss(d, 3.5, 2.4) + 0.28 * gauss(d, 13.8, 0.9),
+  prog: (d) => 0.06 + 0.72 * gauss(d, 21, 3.4),
+};
+const CURVE_COLORS = {
+  light: { estrogen: "#B2534B", prog: "#B98E45", lh: "#7F8B95", fsh: "#A98B7D", testo: "#6F6356" },
+  dark: { estrogen: "#D27B72", prog: "#DCC08E", lh: "#A9B3BC", fsh: "#CBAE9F", testo: "#ABA597" },
+};
+// geometria compartilhada: x de um dia, y de um valor (0 a 1)
+export function chartGeo({ w, h, pad = 24, top = 20, bottom = 36, from = 1, to = 28 }) {
+  const base = h - bottom;
+  return { base, top, x: (d) => pad + ((d - from) / (to - from)) * (w - 2 * pad), y: (v) => base - v * (base - top) };
+}
+function curvePath(fn, G, from, to, step = 0.1) {
+  let d = `M${G.x(from).toFixed(1)},${G.y(fn(from)).toFixed(1)}`;
+  for (let t = from + step; t <= to + 1e-9; t += step) d += ` L${G.x(t).toFixed(1)},${G.y(fn(t)).toFixed(1)}`;
+  return d;
+}
+// bands: [{ from, to, tone }] faixas de fase. focus: [from, to] destaca um trecho e apaga o resto.
+export function hormoneChart({ w = 888, h = 310, curves = ["fsh", "estrogen", "prog", "lh"], bands = [], focus = null,
+  ovulation = true, dark = false, ticks = [1, 7, 14, 21, 28], areas = true } = {}) {
+  const G = chartGeo({ w, h }), col = CURVE_COLORS[dark ? "dark" : "light"];
+  const ink = dark ? "#E6E3DC" : "#362D28";
+  const bandFill = { 1: C.rbc, 2: C.mol1, 3: C.adrenal, 4: C.muted };
+  const bd = bands.map((b) => `<rect x="${G.x(b.from).toFixed(1)}" y="${G.top - 8}" width="${(G.x(b.to) - G.x(b.from)).toFixed(1)}" height="${G.base - G.top + 8}" rx="6" fill="${bandFill[b.tone || 1]}" opacity="${dark ? 0.12 : 0.16}"/>`).join("");
+  const area = (k) => `<path d="${curvePath(CYCLE_CURVES[k], G, 1, 28)} L${G.x(28)},${G.base} L${G.x(1)},${G.base} Z" fill="${col[k]}" opacity="${dark ? 0.12 : 0.1}"/>`;
+  const line = (k) => `<path d="${curvePath(CYCLE_CURVES[k], G, 1, 28)}" fill="none" stroke="${col[k]}" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>`;
+  let body = (areas ? curves.map(area).join("") : "") + curves.map(line).join("");
+  if (focus) {
+    const [a, b] = focus, bg = dark ? "#362D28" : "#F6F4F0";
+    body += `<rect x="0" y="0" width="${G.x(a).toFixed(1)}" height="${G.base}" fill="${bg}" opacity="0.72"/>
+      <rect x="${G.x(b).toFixed(1)}" y="0" width="${(w - G.x(b)).toFixed(1)}" height="${G.base}" fill="${bg}" opacity="0.72"/>
+      <rect x="${G.x(a).toFixed(1)}" y="${G.top - 8}" width="${(G.x(b) - G.x(a)).toFixed(1)}" height="${G.base - G.top + 8}" rx="8" fill="none" stroke="${ink}" stroke-opacity="0.35" stroke-width="1.5" stroke-dasharray="5 5"/>`;
+  }
+  const ov = ovulation ? `<path d="M${G.x(14)},${G.top - 10} L${G.x(14)},${G.base}" stroke="${ink}" stroke-opacity="0.45" stroke-width="1.5" stroke-dasharray="4 6"/>` : "";
+  const axis = `<path d="M${G.x(1) - 4},${G.base} L${G.x(28) + 4},${G.base}" stroke="${ink}" stroke-opacity="0.45" stroke-width="1.5"/>` +
+    ticks.map((d) => `<path d="M${G.x(d)},${G.base} L${G.x(d)},${G.base + 8}" stroke="${ink}" stroke-opacity="0.45" stroke-width="1.5"/>`).join("");
+  return `<g>${bd}${body}${ov}${axis}</g>`;
+}
+// testosterona: mode "day" mostra 24 h (pico de manhã, vale à noite); mode "month" repete a onda 28 vezes
+export function testoChart({ w = 888, h = 170, mode = "month", dark = false } = {}) {
+  const col = CURVE_COLORS[dark ? "dark" : "light"].testo, ink = dark ? "#E6E3DC" : "#362D28";
+  const from = mode === "day" ? 0 : 1, to = mode === "day" ? 24 : 28;
+  const G = chartGeo({ w, h, from, to });
+  const fn = mode === "day" ? (t) => 0.5 + 0.34 * Math.cos((2 * Math.PI * (t - 8)) / 24) : (d) => 0.5 + 0.28 * Math.cos(2 * Math.PI * (d - 1));
+  const step = mode === "day" ? 0.1 : 0.02;
+  const p = curvePath(fn, G, from, to, step);
+  const ticks = mode === "day" ? [0, 6, 12, 18, 24] : [1, 7, 14, 21, 28];
+  return `<g><path d="${p} L${G.x(to)},${G.base} L${G.x(from)},${G.base} Z" fill="${col}" opacity="${dark ? 0.14 : 0.1}"/>
+    <path d="${p}" fill="none" stroke="${col}" stroke-width="${mode === "day" ? 4 : 3}" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M${G.x(from) - 4},${G.base} L${G.x(to) + 4},${G.base}" stroke="${ink}" stroke-opacity="0.45" stroke-width="1.5"/>
+    ${ticks.map((t) => `<path d="M${G.x(t)},${G.base} L${G.x(t)},${G.base + 8}" stroke="${ink}" stroke-opacity="0.45" stroke-width="1.5"/>`).join("")}</g>`;
+}
+
 // Estilo: "flat" (padrão, chapado, mais vetorial) ou "shaded" (degradês e sombras).
 export const STYLE = process.env.ILLUS_STYLE || "flat";
 const FLAT_MAP = { gMuscle: C.muscle, gMuted: C.muted, gTendon: C.tendon, gVessel: C.vessel, gSkin: C.skin, gFat: C.fat, gLiver: C.liver,

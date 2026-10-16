@@ -1,0 +1,452 @@
+{
+  "title": "Ciclo menstrual para maridos.",
+  "format": "carrossel · educativo",
+  "slides": [
+    {
+      "type": "cover",
+      "title": "Ciclo\nmenstrual\n**para\nmaridos.**",
+      "titleSize": 96,
+      "titleWidth": 620,
+      "lead": "4 fases, 28 dias em média.",
+      "figure": {
+        "src": "assets/illustrations/ciclo-maridos/01-mapa.svg",
+        "prompt": "o mapa do ciclo com menstruação, período fértil e ovulação",
+        "style": "left:96px;right:96px;width:auto;top:690px;height:400px",
+        "labels": [
+          {
+            "sx": 211,
+            "sy": 16,
+            "text": "Antes",
+            "tone": "cream",
+            "sub": [
+              "Hormônios sobem"
+            ]
+          },
+          {
+            "sx": 428,
+            "sy": 16,
+            "text": "Ovulação",
+            "tone": "coffee"
+          },
+          {
+            "sx": 662,
+            "sy": 16,
+            "text": "Depois",
+            "tone": "cream",
+            "sub": [
+              "Progesterona domina"
+            ]
+          },
+          {
+            "sx": 86,
+            "sy": 336,
+            "text": "Menstruação",
+            "tone": "cream"
+          },
+          {
+            "sx": 413,
+            "sy": 336,
+            "text": "Período fértil",
+            "tone": "sand"
+          },
+          {
+            "sx": 24,
+            "sy": 386,
+            "text": "Dia 1",
+            "tone": "plain"
+          },
+          {
+            "sx": 211,
+            "sy": 386,
+            "text": "Dia 7",
+            "tone": "plain"
+          },
+          {
+            "sx": 428,
+            "sy": 386,
+            "text": "Dia 14",
+            "tone": "plain"
+          },
+          {
+            "sx": 646,
+            "sy": 386,
+            "text": "Dia 21",
+            "tone": "plain"
+          },
+          {
+            "sx": 864,
+            "sy": 386,
+            "text": "Dia 28",
+            "tone": "plain"
+          }
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "theme": "coffee",
+      "title": "Fase 1 · Menstruação. **Dia 1 ao 5.**",
+      "paragraphs": [
+        "Hormônios no chão. Cólica, cansaço, às vezes dor de cabeça.",
+        "Ela não está brava à toa. O corpo está trabalhando muito. O que ajuda: bolsa quente, comida quentinha e **menos cobrança**."
+      ],
+      "figure": {
+        "src": "assets/illustrations/ciclo-maridos/02-menstruacao.svg",
+        "prompt": "o ciclo com a menstruação em destaque",
+        "labels": [
+          {
+            "sx": 130,
+            "sy": 290,
+            "text": "Hormônios no chão",
+            "tone": "cream",
+            "sub": [
+              "Estrogênio e progesterona baixos"
+            ]
+          },
+          {
+            "sx": 24,
+            "sy": 406,
+            "text": "Dia 1",
+            "tone": "plain"
+          },
+          {
+            "sx": 211,
+            "sy": 406,
+            "text": "Dia 7",
+            "tone": "plain"
+          },
+          {
+            "sx": 428,
+            "sy": 406,
+            "text": "Dia 14",
+            "tone": "plain"
+          },
+          {
+            "sx": 646,
+            "sy": 406,
+            "text": "Dia 21",
+            "tone": "plain"
+          },
+          {
+            "sx": 864,
+            "sy": 406,
+            "text": "Dia 28",
+            "tone": "plain"
+          }
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "title": "Fase 2 · Folicular. **Dia 6 ao 13.**",
+      "paragraphs": [
+        "O **estrogênio** sobe. Volta a energia, o humor melhora, dá vontade de sair e de treinar.",
+        "É a melhor semana pra planos novos. Aproveita."
+      ],
+      "figure": {
+        "src": "assets/illustrations/ciclo-maridos/03-folicular.svg",
+        "prompt": "o ciclo com a fase folicular em destaque",
+        "labels": [
+          {
+            "sx": 230,
+            "sy": 205,
+            "text": "Estrogênio ↑",
+            "tone": "coffee",
+            "sub": [
+              "Energia e disposição"
+            ]
+          },
+          {
+            "sx": 24,
+            "sy": 406,
+            "text": "Dia 1",
+            "tone": "plain"
+          },
+          {
+            "sx": 211,
+            "sy": 406,
+            "text": "Dia 7",
+            "tone": "plain"
+          },
+          {
+            "sx": 428,
+            "sy": 406,
+            "text": "Dia 14",
+            "tone": "plain"
+          },
+          {
+            "sx": 646,
+            "sy": 406,
+            "text": "Dia 21",
+            "tone": "plain"
+          },
+          {
+            "sx": 864,
+            "sy": 406,
+            "text": "Dia 28",
+            "tone": "plain"
+          }
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "theme": "coffee",
+      "title": "Fase 3 · Ovulação. **Por volta do dia 14.**",
+      "paragraphs": [
+        "Pico de **LH** e estrogênio no alto. Mais libido, mais confiança, mais vontade de conversar.",
+        "É também o período fértil. Anota."
+      ],
+      "figure": {
+        "src": "assets/illustrations/ciclo-maridos/04-ovulacao.svg",
+        "prompt": "o ciclo com a ovulação em destaque",
+        "labels": [
+          {
+            "sx": 300,
+            "sy": 32,
+            "text": "Estrogênio no alto",
+            "tone": "cream"
+          },
+          {
+            "sx": 520,
+            "sy": 32,
+            "text": "LH no pico",
+            "tone": "sand"
+          },
+          {
+            "sx": 24,
+            "sy": 406,
+            "text": "Dia 1",
+            "tone": "plain"
+          },
+          {
+            "sx": 211,
+            "sy": 406,
+            "text": "Dia 7",
+            "tone": "plain"
+          },
+          {
+            "sx": 428,
+            "sy": 406,
+            "text": "Dia 14",
+            "tone": "plain"
+          },
+          {
+            "sx": 646,
+            "sy": 406,
+            "text": "Dia 21",
+            "tone": "plain"
+          },
+          {
+            "sx": 864,
+            "sy": 406,
+            "text": "Dia 28",
+            "tone": "plain"
+          }
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "title": "Fase 4 · Lútea. **Dia 15 ao 28.**",
+      "paragraphs": [
+        "A **progesterona** domina. Mais sono, mais fome, mais retenção de líquido.",
+        "No fim, tudo cai e chega a TPM: irritação, choro fácil, vontade de doce. Não é frescura. É hormônio."
+      ],
+      "figure": {
+        "src": "assets/illustrations/ciclo-maridos/05-lutea.svg",
+        "prompt": "o ciclo com a fase lútea em destaque",
+        "labels": [
+          {
+            "sx": 646,
+            "sy": 70,
+            "text": "Progesterona",
+            "tone": "coffee",
+            "sub": [
+              "Mais sono, mais fome"
+            ]
+          },
+          {
+            "sx": 790,
+            "sy": 240,
+            "text": "TPM",
+            "tone": "sand",
+            "sub": [
+              "Quando tudo cai"
+            ]
+          },
+          {
+            "sx": 24,
+            "sy": 406,
+            "text": "Dia 1",
+            "tone": "plain"
+          },
+          {
+            "sx": 211,
+            "sy": 406,
+            "text": "Dia 7",
+            "tone": "plain"
+          },
+          {
+            "sx": 428,
+            "sy": 406,
+            "text": "Dia 14",
+            "tone": "plain"
+          },
+          {
+            "sx": 646,
+            "sy": 406,
+            "text": "Dia 21",
+            "tone": "plain"
+          },
+          {
+            "sx": 864,
+            "sy": 406,
+            "text": "Dia 28",
+            "tone": "plain"
+          }
+        ]
+      }
+    },
+    {
+      "type": "diagram",
+      "theme": "coffee",
+      "title": "As **regras.**",
+      "lead": "O manual que não veio junto com o casamento.",
+      "figure": {
+        "src": "assets/illustrations/ciclo-maridos/06-regras.svg",
+        "prompt": "o ciclo como uma roda de quatro fases",
+        "inset": {
+          "left": 200,
+          "right": 200
+        },
+        "labels": [
+          {
+            "x": 12,
+            "y": 26,
+            "text": "Menstruação",
+            "tone": "sand",
+            "sub": [
+              "Acolhe"
+            ],
+            "edge": "left"
+          },
+          {
+            "x": 12,
+            "y": 74,
+            "text": "Folicular",
+            "tone": "sand",
+            "sub": [
+              "Convida"
+            ],
+            "edge": "left"
+          },
+          {
+            "x": 89,
+            "y": 26,
+            "text": "Ovulação",
+            "tone": "cream",
+            "sub": [
+              "Elogia"
+            ],
+            "align": "right",
+            "edge": "right"
+          },
+          {
+            "x": 89,
+            "y": 74,
+            "text": "Lútea",
+            "tone": "cream",
+            "sub": [
+              "Desacelera"
+            ],
+            "align": "right",
+            "edge": "right"
+          }
+        ]
+      },
+      "bullets": [
+        "Menstruação → bolsa quente, paciência e o chocolate sem comentário.",
+        "Folicular → hora do programa novo, da viagem, do treino junto.",
+        "Ovulação → elogio, conversa e companhia.",
+        "Lútea → não comente o peso nem a fome. Ofereça descanso."
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Entender o corpo dela é **cuidar da relação.**",
+      "paragraphs": [
+        "Nada disso é drama nem desculpa. É fisiologia com data marcada, e muda um pouco de mulher pra mulher.",
+        "Quando ele entende, a casa inteira fica mais leve."
+      ],
+      "figure": {
+        "src": "assets/illustrations/ciclo-maridos/07-mapa-completo.svg",
+        "prompt": "o mapa completo, as quatro fases em faixa",
+        "labels": [
+          {
+            "sx": 86,
+            "sy": 20,
+            "text": "Acolhe",
+            "tone": "cream"
+          },
+          {
+            "sx": 288,
+            "sy": 20,
+            "text": "Convida",
+            "tone": "sand"
+          },
+          {
+            "sx": 428,
+            "sy": 20,
+            "text": "Elogia",
+            "tone": "coffee"
+          },
+          {
+            "sx": 662,
+            "sy": 20,
+            "text": "Desacelera",
+            "tone": "sand"
+          },
+          {
+            "sx": 24,
+            "sy": 366,
+            "text": "Dia 1",
+            "tone": "plain"
+          },
+          {
+            "sx": 211,
+            "sy": 366,
+            "text": "Dia 7",
+            "tone": "plain"
+          },
+          {
+            "sx": 428,
+            "sy": 366,
+            "text": "Dia 14",
+            "tone": "plain"
+          },
+          {
+            "sx": 646,
+            "sy": 366,
+            "text": "Dia 21",
+            "tone": "plain"
+          },
+          {
+            "sx": 864,
+            "sy": 366,
+            "text": "Dia 28",
+            "tone": "plain"
+          }
+        ]
+      }
+    },
+    {
+      "type": "cta",
+      "theme": "coffee",
+      "title": "Marca o seu marido aqui.",
+      "lead": "Ou manda pra ele no direct, sem comentário. Ele vai entender.",
+      "hint": "Comenta aqui"
+    }
+  ],
+  "caption": "Primeiro siga @bellabrasao 🤍\n\nManda esse pro seu marido. Ele vai agradecer depois.\n\nO ciclo tem quatro fases e dura 28 dias, em média. Na menstruação, os hormônios estão no chão. Na folicular, o estrogênio sobe e a energia volta. Na ovulação, o LH dá o pico e a disposição vai lá em cima. Na lútea, a progesterona domina: mais sono, mais fome e, no fim, a TPM. 🌸\n\nNada disso é drama ou desculpa. É fisiologia com data marcada, e muda um pouco de mulher pra mulher.\n\nEntender o corpo dela é cuidar da relação. Marca ele aqui nos comentários."
+}

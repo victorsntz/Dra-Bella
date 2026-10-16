@@ -130,6 +130,10 @@ em { font-style: normal; font-weight: 500; color: var(--cozy-brown); }
 .tone-coffee .pill { background: var(--deep-coffee); color: var(--soft-cream); }
 .tone-brown .pill  { background: var(--cozy-brown); color: var(--soft-cream); }
 .tone-outline .pill{ background: transparent; color: var(--deep-coffee); border-color: var(--deep-coffee); }
+/* eixo de gráfico: texto solto, sem caixa */
+.tone-plain .pill { background: transparent; border-color: transparent; padding: 0; color: var(--cozy-brown);
+  font: 500 15px/1 var(--font-body); letter-spacing: 0.12em; text-transform: uppercase; }
+.slide.coffee .tone-plain .pill { color: var(--serene-sand); }
 
 /* ---------- CAPA ---------- */
 .slide.cover .title { font-size: 112px; line-height: 0.98; margin-top: 86px; max-width: 510px; }

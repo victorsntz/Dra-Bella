@@ -1,0 +1,389 @@
+{
+  "title": "Ele tem um ciclo de 24 horas. Você tem um de 28 dias.",
+  "format": "carrossel · educativo",
+  "slides": [
+    {
+      "type": "cover",
+      "title": "Ele tem um\nciclo de 24h.\n**Você tem um\nde 28 dias.**",
+      "titleSize": 88,
+      "titleWidth": 760,
+      "figure": {
+        "src": "assets/illustrations/ciclo-ele-ela/01-ele-ela.svg",
+        "prompt": "em cima a onda de testosterona dele repetindo todo dia; embaixo as quatro curvas hormonais dela em 28 dias",
+        "style": "left:96px;right:96px;width:auto;top:590px;height:470px",
+        "labels": [
+          {
+            "sx": 110,
+            "sy": 14,
+            "text": "Ele",
+            "tone": "coffee",
+            "sub": [
+              "A mesma onda a cada 24 horas"
+            ]
+          },
+          {
+            "sx": 120,
+            "sy": 330,
+            "text": "Você",
+            "tone": "sand",
+            "sub": [
+              "Quatro hormônios em 28 dias"
+            ]
+          },
+          {
+            "sx": 24,
+            "sy": 456,
+            "text": "Dia 1",
+            "tone": "plain"
+          },
+          {
+            "sx": 211,
+            "sy": 456,
+            "text": "Dia 7",
+            "tone": "plain"
+          },
+          {
+            "sx": 428,
+            "sy": 456,
+            "text": "Dia 14",
+            "tone": "plain"
+          },
+          {
+            "sx": 646,
+            "sy": 456,
+            "text": "Dia 21",
+            "tone": "plain"
+          },
+          {
+            "sx": 864,
+            "sy": 456,
+            "text": "Dia 28",
+            "tone": "plain"
+          }
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "theme": "coffee",
+      "title": "O hormônio dele sobe e desce **todo dia.**",
+      "paragraphs": [
+        "A **testosterona** tem pico de manhã e cai ao longo do dia. Amanhã, repete.",
+        "O corpo dele funciona parecido do dia 1 ao dia 30 do mês."
+      ],
+      "figure": {
+        "src": "assets/illustrations/ciclo-ele-ela/02-um-dia.svg",
+        "prompt": "um dia de testosterona: pico de manhã, vale à noite",
+        "labels": [
+          {
+            "sx": 304,
+            "sy": 50,
+            "text": "Pico de manhã",
+            "tone": "cream"
+          },
+          {
+            "sx": 724,
+            "sy": 298,
+            "text": "Cai à noite",
+            "tone": "sand"
+          },
+          {
+            "sx": 24,
+            "sy": 406,
+            "text": "0h",
+            "tone": "plain"
+          },
+          {
+            "sx": 234,
+            "sy": 406,
+            "text": "6h",
+            "tone": "plain"
+          },
+          {
+            "sx": 444,
+            "sy": 406,
+            "text": "12h",
+            "tone": "plain"
+          },
+          {
+            "sx": 654,
+            "sy": 406,
+            "text": "18h",
+            "tone": "plain"
+          },
+          {
+            "sx": 864,
+            "sy": 406,
+            "text": "24h",
+            "tone": "plain"
+          }
+        ]
+      }
+    },
+    {
+      "type": "diagram",
+      "title": "O seu muda **a cada semana.**",
+      "lead": "Quatro hormônios conversando ao longo de 28 dias, em média.",
+      "figure": {
+        "src": "assets/illustrations/ciclo-ele-ela/03-quatro-hormonios.svg",
+        "prompt": "as quatro curvas do ciclo com a linha da ovulação",
+        "labels": [
+          {
+            "sx": 262,
+            "sy": 100,
+            "text": "Estrogênio",
+            "tone": "coffee"
+          },
+          {
+            "sx": 470,
+            "sy": 30,
+            "text": "LH",
+            "tone": "sand"
+          },
+          {
+            "sx": 646,
+            "sy": 52,
+            "text": "Progesterona",
+            "tone": "sand"
+          },
+          {
+            "sx": 104,
+            "sy": 172,
+            "text": "FSH",
+            "tone": "cream"
+          },
+          {
+            "sx": 24,
+            "sy": 296,
+            "text": "Dia 1",
+            "tone": "plain"
+          },
+          {
+            "sx": 211,
+            "sy": 296,
+            "text": "Dia 7",
+            "tone": "plain"
+          },
+          {
+            "sx": 428,
+            "sy": 296,
+            "text": "Dia 14",
+            "tone": "plain"
+          },
+          {
+            "sx": 646,
+            "sy": 296,
+            "text": "Dia 21",
+            "tone": "plain"
+          },
+          {
+            "sx": 864,
+            "sy": 296,
+            "text": "Dia 28",
+            "tone": "plain"
+          }
+        ]
+      },
+      "bullets": [
+        "Estrogênio → sobe na primeira metade: energia e disposição.",
+        "LH → o pico que dispara a ovulação.",
+        "Progesterona → domina a segunda metade: calma, sono e fome.",
+        "FSH → amadurece o folículo no começo do ciclo."
+      ]
+    },
+    {
+      "type": "text",
+      "theme": "coffee",
+      "title": "Por isso você não é a mesma **todo dia.**",
+      "paragraphs": [
+        "Energia, fome, humor, sono, força no treino e até a pele mudam com o ciclo.",
+        "Não é instabilidade. É **fisiologia** com calendário."
+      ],
+      "figure": {
+        "src": "assets/illustrations/ciclo-ele-ela/04-fases.svg",
+        "prompt": "o ciclo com as quatro fases em faixa",
+        "labels": [
+          {
+            "sx": 86,
+            "sy": 20,
+            "text": "Menstruação",
+            "tone": "cream",
+            "sub": [
+              "Dia 1 a 5"
+            ]
+          },
+          {
+            "sx": 288,
+            "sy": 20,
+            "text": "Folicular",
+            "tone": "sand",
+            "sub": [
+              "Dia 6 a 13"
+            ]
+          },
+          {
+            "sx": 428,
+            "sy": 20,
+            "text": "Ovulação",
+            "tone": "coffee",
+            "sub": [
+              "Dia 14"
+            ]
+          },
+          {
+            "sx": 662,
+            "sy": 20,
+            "text": "Lútea",
+            "tone": "sand",
+            "sub": [
+              "Dia 15 a 28"
+            ]
+          },
+          {
+            "sx": 24,
+            "sy": 366,
+            "text": "Dia 1",
+            "tone": "plain"
+          },
+          {
+            "sx": 211,
+            "sy": 366,
+            "text": "Dia 7",
+            "tone": "plain"
+          },
+          {
+            "sx": 428,
+            "sy": 366,
+            "text": "Dia 14",
+            "tone": "plain"
+          },
+          {
+            "sx": 646,
+            "sy": 366,
+            "text": "Dia 21",
+            "tone": "plain"
+          },
+          {
+            "sx": 864,
+            "sy": 366,
+            "text": "Dia 28",
+            "tone": "plain"
+          }
+        ]
+      }
+    },
+    {
+      "type": "diagram",
+      "title": "Boa parte da pesquisa foi feita **no corpo dele.**",
+      "lead": "Por décadas, dieta, treino e remédio foram testados principalmente em homens.",
+      "figure": {
+        "src": "assets/illustrations/ciclo-ele-ela/05-pesquisa.svg",
+        "prompt": "a onda dele em cima, as curvas dela embaixo",
+        "labels": [
+          {
+            "sx": 760,
+            "sy": 12,
+            "text": "O corpo dele",
+            "tone": "coffee",
+            "sub": [
+              "Onde a regra foi testada"
+            ]
+          },
+          {
+            "sx": 120,
+            "sy": 222,
+            "text": "O corpo dela",
+            "tone": "sand",
+            "sub": [
+              "Onde a regra é aplicada"
+            ]
+          },
+          {
+            "sx": 24,
+            "sy": 296,
+            "text": "Dia 1",
+            "tone": "plain"
+          },
+          {
+            "sx": 211,
+            "sy": 296,
+            "text": "Dia 7",
+            "tone": "plain"
+          },
+          {
+            "sx": 428,
+            "sy": 296,
+            "text": "Dia 14",
+            "tone": "plain"
+          },
+          {
+            "sx": 646,
+            "sy": 296,
+            "text": "Dia 21",
+            "tone": "plain"
+          },
+          {
+            "sx": 864,
+            "sy": 296,
+            "text": "Dia 28",
+            "tone": "plain"
+          }
+        ]
+      },
+      "bullets": [
+        "Dieta → a mesma o mês inteiro, num corpo que muda.",
+        "Treino → a mesma carga na semana em que a energia cai.",
+        "Fome → chamada de falta de disciplina na fase lútea."
+      ]
+    },
+    {
+      "type": "text",
+      "theme": "coffee",
+      "title": "Seu plano precisa conhecer **o seu ciclo.**",
+      "paragraphs": [
+        "Na folicular, a energia sobe: é a semana do treino mais pesado.",
+        "Na lútea, mais proteína, fibra, sono e paciência com a balança. A **mulher inteira** no plano."
+      ],
+      "figure": {
+        "src": "assets/illustrations/ciclo-ele-ela/06-plano.svg",
+        "prompt": "o ciclo no meio, músculo de um lado, prato do outro",
+        "inset": {
+          "top": 20
+        },
+        "labels": [
+          {
+            "sx": 150,
+            "sy": 150,
+            "text": "Folicular",
+            "tone": "cream",
+            "sub": [
+              "Treino mais pesado"
+            ]
+          },
+          {
+            "sx": 444,
+            "sy": 88,
+            "text": "Seu ciclo",
+            "tone": "sand"
+          },
+          {
+            "sx": 740,
+            "sy": 110,
+            "text": "Lútea",
+            "tone": "cream",
+            "sub": [
+              "Proteína, fibra e sono"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "cta",
+      "title": "Em que semana do ciclo você sente que muda?",
+      "lead": "Me conta aqui embaixo. Energia, fome, humor, sono. Tudo vale.",
+      "hint": "Comenta aqui"
+    }
+  ],
+  "caption": "Primeiro siga @bellabrasao 🤍\n\nO corpo dele repete o mesmo ciclo hormonal todo dia. A testosterona sobe de manhã, cai à noite e amanhã começa de novo.\n\nO seu muda ao longo de 28 dias, em média. Estrogênio, LH, progesterona e FSH sobem e descem em fases diferentes, e com eles mudam a energia, a fome, o humor, o sono e a força no treino. Não é instabilidade. É fisiologia. 🌙\n\nPor décadas, boa parte da pesquisa em dieta, treino e remédio foi feita principalmente em homens. Por isso tanto plano não conversa com o corpo da mulher.\n\nMe conta: em que semana do ciclo você sente que muda?"
+}
