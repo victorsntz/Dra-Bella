@@ -22,8 +22,38 @@
             ]
           },
           {
+            "sx": 24,
+            "sy": 201,
+            "text": "Dia 1",
+            "tone": "plain"
+          },
+          {
+            "sx": 211,
+            "sy": 201,
+            "text": "Dia 7",
+            "tone": "plain"
+          },
+          {
+            "sx": 428,
+            "sy": 201,
+            "text": "Dia 14",
+            "tone": "plain"
+          },
+          {
+            "sx": 646,
+            "sy": 201,
+            "text": "Dia 21",
+            "tone": "plain"
+          },
+          {
+            "sx": 864,
+            "sy": 201,
+            "text": "Dia 28",
+            "tone": "plain"
+          },
+          {
             "sx": 120,
-            "sy": 330,
+            "sy": 322,
             "text": "Você",
             "tone": "sand",
             "sub": [

@@ -2,11 +2,11 @@ import { g, svg, hormoneChart, testoChart, cycle, muscle, plate, moon } from "..
 
 // Curvas esquemáticas, não dosagens. Eixos e nomes vão como etiquetas HTML (ver content/ciclo-ele-ela.json).
 export default {
-  // capa: figura de largura cheia 888 x 470. Em cima o ciclo dele (a mesma onda todo dia),
-  // embaixo o dela (quatro hormônios em 28 dias).
+  // capa: figura de largura cheia 888 x 470. Dois gráficos do mesmo tamanho e no mesmo eixo de 28 dias:
+  // em cima o dele (a mesma onda todo dia), embaixo o dela (quatro hormônios mudando ao longo do mês).
   "01-ele-ela": () => svg(888, 470, `
-    ${testoChart({ w: 888, h: 150 })}
-    ${g(0, 190, hormoneChart({ w: 888, h: 280 }))}`),
+    ${testoChart({ w: 888, h: 215 })}
+    ${g(0, 255, hormoneChart({ w: 888, h: 215 }))}`),
 
   // texto café, 888 x 300: um dia de testosterona, pico de manhã, vale à noite.
   "02-um-dia": () => svg(888, 420, `
@@ -21,10 +21,10 @@ export default {
     ${g(0, 40, hormoneChart({ w: 888, h: 340, dark: true, bands: [
       { from: 1, to: 5, tone: 1 }, { from: 6, to: 12.6, tone: 4 }, { from: 12.8, to: 15.2, tone: 2 }, { from: 15.4, to: 28, tone: 3 }] }))}`),
 
-  // diagrama, 888 x 310: a onda dele (onde a regra foi testada) sobre as curvas dela (onde é aplicada).
+  // diagrama, 888 x 310: a onda dele e as curvas dela, do mesmo tamanho (onde a regra foi testada x onde é aplicada).
   "05-pesquisa": () => svg(888, 310, `
-    ${testoChart({ w: 888, h: 120 })}
-    ${g(0, 140, hormoneChart({ w: 888, h: 170, areas: false }))}`),
+    ${testoChart({ w: 888, h: 145 })}
+    ${g(0, 165, hormoneChart({ w: 888, h: 145, areas: false }))}`),
 
   // texto café, 888 x 420: o ciclo no meio, músculo (treino) de um lado, prato (comida) do outro.
   "06-plano": () => svg(888, 420, `
