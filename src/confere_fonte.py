@@ -18,7 +18,7 @@ from pathlib import Path
 try:
     from fontTools.ttLib import TTFont
 except ImportError:
-    sys.exit("confere_fonte: instale fonttools (pip install fonttools)")
+    print("confere_fonte: instale fonttools (pip install fonttools)"); sys.exit(2)  # 2 = não conferiu, não é erro de fonte
 
 ROOT = Path(__file__).resolve().parent.parent
 FONTES = [ROOT / "brand/fonts/Cherston-Light.ttf", ROOT / "brand/fonts/Cherston-Regular.ttf"]
