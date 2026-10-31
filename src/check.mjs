@@ -2,12 +2,14 @@
 //   - texto ou figura invadindo a zona do rodapé (reserva de 252 px na base)
 //   - pílula/etiqueta saindo da área do slide
 //   - ilustração faltando (placeholder no lugar)
+//   - fonte dos títulos sem algum acento (src/confere_fonte.py)
 //
 //   node src/check.mjs exemplo        # precisa de build/exemplo/index.html (rode o render antes)
 //   node src/check.mjs --all
 import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
+import { spawnSync } from "node:child_process";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const H = 1350, RESERVE = 252, TOL = 4;
@@ -17,10 +19,15 @@ if (argv.includes("--all") || names.length === 0) {
   names = (await fs.readdir(path.join(ROOT, "content"))).filter((f) => f.endsWith(".json")).map((f) => f.slice(0, -5));
 }
 
+// a fonte dos títulos desenha todos os acentos? (a Cherston original vinha com o "á" sem acento)
+const fonte = spawnSync("python3", [path.join(ROOT, "src", "confere_fonte.py")], { encoding: "utf8" });
+let problems = 0;
+if (fonte.status === 1) { console.log(fonte.stdout.trim()); problems++; }
+else if (fonte.error || fonte.status !== 0) console.log("  (conferência da fonte pulada: " + (fonte.stdout || fonte.stderr || fonte.error?.message || "").trim().split("\n")[0] + ")");
+
 const { chromium } = await import("playwright");
 const browser = await chromium.launch();
 const page = await browser.newPage({ viewport: { width: 1080, height: H } });
-let problems = 0;
 
 for (const name of names) {
   const html = path.join(ROOT, "build", name, "index.html");
