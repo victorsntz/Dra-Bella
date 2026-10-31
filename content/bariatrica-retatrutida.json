@@ -4,7 +4,7 @@
   "slides": [
     {
       "type": "cover",
-      "title": "A bariátrica **está caindo.**",
+      "title": "A bariátrica\n**está\ncaindo.**",
       "lead": "E a retatrutida ainda nem chegou. Os números, e o que eu espero.",
       "figure": {
         "src": "assets/illustrations/bariatrica-retatrutida/01-sleeve-caneta.svg",
@@ -24,7 +24,9 @@
             "align": "right"
           }
         ]
-      }
+      },
+      "titleSize": 96,
+      "titleWidth": 690
     },
     {
       "type": "text",

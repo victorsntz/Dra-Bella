@@ -4,15 +4,15 @@
   "slides": [
     {
       "type": "cover",
-      "title": "Músculo é\no seguro\n**contra o\nefeito\nsanfona.**",
+      "title": "Músculo\né o seguro\n**contra\no efeito\nsanfona.**",
       "lead": "Peso que sai sem músculo volta. E volta mais fácil.",
       "figure": {
         "src": "assets/illustrations/musculo-sanfona/01-corredora-musculo.svg",
         "prompt": "mulher correndo de perfil com musculatura visível, um músculo ampliado em destaque no alto à esquerda, balança de chão pequena no canto inferior",
         "labels": [
           {
-            "x": 28,
-            "y": 11,
+            "x": 40,
+            "y": 4,
             "text": "Músculo",
             "tone": "coffee"
           },
@@ -31,7 +31,7 @@
           }
         ]
       },
-      "titleSize": 96
+      "titleSize": 86
     },
     {
       "type": "text",

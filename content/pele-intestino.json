@@ -4,7 +4,7 @@
   "slides": [
     {
       "type": "cover",
-      "title": "O melhor\nskincare\n**começa no\nintestino.**",
+      "title": "O melhor\nskincare\n**começa\nno intestino.**",
       "titleSize": 88,
       "titleWidth": 700,
       "lead": "Colágeno, inflamação e microbiota decidem mais sobre a sua pele do que o creme.",
@@ -19,8 +19,8 @@
             "tone": "cream"
           },
           {
-            "x": 30,
-            "y": 38,
+            "x": 44,
+            "y": 50,
             "text": "Intestino",
             "tone": "coffee"
           },

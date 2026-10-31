@@ -4,7 +4,7 @@
   "slides": [
     {
       "type": "cover",
-      "title": "Ozempic, Mounjaro e a tal da retatrutida. **Qual a diferença?**",
+      "title": "Ozempic,\nMounjaro\ne a tal\nda retatrutida.\n**Qual\na diferença?**",
       "lead": "Explicado sem decoreba,\ndo jeito da consulta.",
       "figure": {
         "src": "assets/illustrations/tres-canetas/01-tres-canetas.svg",
@@ -36,8 +36,8 @@
           }
         ]
       },
-      "titleSize": 80,
-      "titleWidth": 500
+      "titleSize": 72,
+      "titleWidth": 580
     },
     {
       "type": "text",

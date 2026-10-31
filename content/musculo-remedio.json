@@ -4,7 +4,7 @@
   "slides": [
     {
       "type": "cover",
-      "title": "Seu músculo fabrica o próprio **remédio.**",
+      "title": "Seu músculo\nfabrica\no próprio\n**remédio.**",
       "lead": "O que acontece no seu corpo, célula por célula, toda vez que você treina.",
       "figure": {
         "src": "assets/illustrations/musculo-remedio/01-corpo-correndo.svg",
@@ -54,7 +54,9 @@
           }
         ],
         "prompt": "ilustração: mulher correndo de perfil, musculatura visível em corte anatômico, fundo claro"
-      }
+      },
+      "titleSize": 96,
+      "titleWidth": 620
     },
     {
       "type": "diagram",

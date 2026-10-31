@@ -75,6 +75,9 @@ body.preview .slide-wrap::after {
   color: var(--deep-coffee);
 }
 .title strong { font-weight: 400; }
+/* blocos equilibrados: título e subtítulo com linhas de tamanho parecido, parágrafos sem linha curta no fim */
+.title, .lead, .hint { text-wrap: balance; }
+.body p, .bullets li, .note { text-wrap: pretty; }
 .lead {
   margin-top: 22px;
   font: 300 29px/1.4 var(--font-body);

@@ -4,10 +4,10 @@
   "slides": [
     {
       "type": "cover",
-      "title": "Dormir mal\nengorda.\n**E a barriga é\no primeiro lugar.**",
+      "title": "Dormir mal\nengorda.\n**E começa\npela barriga.**",
       "lead": "O que o sono curto faz com o cortisol. E o que o cortisol faz com a gordura da barriga.",
-      "titleSize": 96,
-      "titleWidth": 620,
+      "titleSize": 88,
+      "titleWidth": 720,
       "figure": {
         "src": "assets/illustrations/cortisol-barriga/01-lua-adrenal.svg",
         "prompt": "lua grande no alto, rim com adrenal embaixo, fluxo de esferas de cortisol subindo da adrenal até a noite",

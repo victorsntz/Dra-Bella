@@ -17,6 +17,15 @@ import { promisify } from "node:util";
 import { fileURLToPath, pathToFileURL } from "node:url";
 
 const exec = promisify(execFile);
+// Chromium: o do Playwright se existir; senão o pré-instalado do ambiente (ou CHROMIUM_PATH)
+async function launchOpts() {
+  const cand = [process.env.CHROMIUM_PATH, "/opt/pw-browsers/chromium"].filter(Boolean);
+  const { chromium } = await import("playwright");
+  try { await fs.access(chromium.executablePath()); return {}; } catch {}
+  for (const c of cand) { try { await fs.access(c); return { executablePath: c }; } catch {} }
+  return {};
+}
+
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const W = 1080, H = 1350;
 
@@ -28,9 +37,24 @@ const names = argv.filter((a) => !a.startsWith("--"));
 const esc = (s = "") =>
   String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 
+// Tipografia dos blocos (pedido do Victor/Bella, 31/out/2026): nada de palavra curta solta no fim
+// da linha nem viúva na última. Espaço que não quebra (U+00A0) depois de palavra de 1 letra e das
+// miudinhas de ligação (de, da, do, em, no, na, um, os, as, ao, ou, se, me, te), e entre as duas últimas
+// palavras do bloco. O \n manual não é tocado. Mesma lista no src/check.mjs.
+const NB = "\u00A0";
+export const CURTAS = ["de", "da", "do", "em", "no", "na", "um", "os", "as", "ao", "ou", "se", "me", "te"];
+const curta = (w) => { const t = w.replace(/[*“"(]/g, "").toLowerCase(); return t.length === 1 || CURTAS.includes(t); };
+export const tipografia = (s = "") =>
+  String(s)
+    .split("\n")
+    .map((seg) => seg
+      .replace(/(?<=^|[ \u00A0(“"])([^ \u00A0]+) +(?=\S)/g, (m, w) => (curta(w) ? `${w}${NB}` : m))
+      .replace(/ +(?=[^ \u00A0]+$)/, NB))
+    .join("\n");
+
 // **negrito**, *destaque*, quebra de linha
 const rich = (s = "") =>
-  esc(s)
+  esc(tipografia(s))
     .replace(/\*\*([\s\S]+?)\*\*/g, "<strong>$1</strong>")
     .replace(/\*(.+?)\*/g, "<em>$1</em>")
     .replace(/\n/g, "<br>");
@@ -215,7 +239,7 @@ async function buildOne(name, brand) {
   if (flags.has("--html")) return { name, outDir, count: doc.slides.length };
 
   const { chromium } = await import("playwright");
-  const browser = await chromium.launch();
+  const browser = await chromium.launch(await launchOpts());
   const page = await browser.newPage({ viewport: { width: W, height: H }, deviceScaleFactor: 1 });
   await page.goto(pathToFileURL(htmlPath).href);
   await page.evaluate(() => document.fonts.ready);

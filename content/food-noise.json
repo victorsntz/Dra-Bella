@@ -4,7 +4,7 @@
   "slides": [
     {
       "type": "cover",
-      "title": "Não é falta de força de vontade. É **food noise.**",
+      "title": "Não é falta\nde força\nde vontade.\n**É food\nnoise.**",
       "lead": "O que acontece no seu cérebro quando a comida não sai da cabeça.",
       "figure": {
         "src": "assets/illustrations/food-noise/01-cerebro-ruido.svg",
@@ -37,7 +37,9 @@
             "align": "right"
           }
         ]
-      }
+      },
+      "titleSize": 84,
+      "titleWidth": 640
     },
     {
       "type": "text",

@@ -40,6 +40,23 @@ errado. O arquivo em `brand/fonts/` já está consertado. Regras daqui pra frent
   ê, í, ó, ô, õ, ú, ç. Se um acento sumir, é fonte, não texto.
 - Escreva o texto com acento sempre (você, já, há, não, também, até, saúde, hormônio...).
 
+## Blocos de texto equilibrados (lição de 31/out/2026)
+
+O Victor apontou um "O" solto no fim da linha e "baixo." sozinho na última linha do subtítulo da
+capa da caneta. Regra: nenhum bloco (título, subtítulo, parágrafo, bullet) termina linha com
+palavra de 1 letra (o, a, e, é) nem com as miudinhas de ligação (de, da, do, em, no, na, um, os,
+as, ao, ou, se, me, te), e nenhum bloco termina com uma palavra sozinha na última linha.
+
+- O `render.mjs` já cuida disso sozinho (`tipografia()`: espaço que não quebra depois dessas
+  palavras e entre as duas últimas do bloco) e o CSS equilibra as linhas (`text-wrap: balance`
+  no título e no subtítulo, `pretty` nos parágrafos). Não tire isso.
+- O `check.mjs` acusa palavra curta solta e viúva. Tem que passar limpo antes de entregar.
+- Capa com quebra manual (`\n`) é responsabilidade sua: escolha onde quebrar pra nenhuma linha
+  terminar em "um", "é", "o", "no", "da". Se precisar, reescreva a frase ("O ciclo dele / dura 24h"
+  em vez de "Ele tem um / ciclo de 24h"). Uma palavra por linha na capa empilhada é desenho, ok.
+- A cola deixa grupos maiores ("de·um·terço"): em capa estreita isso pode estourar a largura; o
+  check acusa "texto cortado na largura" e aí você quebra à mão ou desce um degrau o título.
+
 ## Título: quanto cabe
 
 Cherston é estreita só na aparência: a 112 px (padrão da capa, largura 510) cabem uns 8
@@ -60,6 +77,12 @@ Quebre com `\n` e nunca deixe uma palavra sozinha na linha. Título de miolo que
 - Legenda: primeira linha "Primeiro siga @bellabrasao 🤍", 90 a 130 palavras, até 2 emojis.
 - Conteúdo médico: mecanismo, nunca dose, valor de exame ou porcentagem crua. Dado de estudo
   com reserva. Liste no relatório o que a Bella precisa validar.
+
+## Ritmo de trabalho
+
+Combinado com o Victor (31/out/2026): a cada 3 a 5 carrosséis, o próximo lote vai pra um chat
+novo. Fica melhor assim. Ao fechar um lote, lembre ele disso e deixe tudo commitado e no ar, pra
+sessão nova começar só lendo este arquivo.
 
 ## Referência do Instagram
 
