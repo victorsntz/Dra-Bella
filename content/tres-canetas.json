@@ -35,7 +35,9 @@
             "tone": "outline"
           }
         ]
-      }
+      },
+      "titleSize": 80,
+      "titleWidth": 500
     },
     {
       "type": "text",
