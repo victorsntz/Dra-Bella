@@ -16,7 +16,7 @@ node src/draw.mjs <slug>      # cenas → assets/illustrations/<slug>/*.svg
 node src/render.mjs <slug>    # → output/<slug>/01..NN.jpg, legenda.txt, <slug>.zip
 node src/check.mjs <slug>     # estouro, pílula fora, figura faltando, fonte sem acento
 montage output/<slug>/0?.jpg -tile 4x -geometry 360x450+10+10 -background '#d9d5cd' output/<slug>/_folha-de-contato.jpg
-node src/capas.mjs <slug> [<slug>...] --out <pasta>   # página de revisão completa em build/<pasta>/
+node src/capas.mjs <slug> [<slug>...] --out capas-<nome>   # página de revisão em build/capas-<nome>/ (nunca use o nome de um slug: o render usa build/<slug>/)
 ```
 
 Depois do check, **olhe a folha de contato** (leia a imagem). O check pega estouro; só o olho
