@@ -65,7 +65,7 @@ pergunta final pequena no meio, ilustração com borda vazia. Isso agora é auto
 - `templates/fit.js` roda em cada slide (no render e nas páginas de revisão) antes da foto. Amplia
   a ilustração pelo desenho de fato (o render mede e guarda em `assets/illustrations/<slug>/_recorte.json`),
   leva as pílulas junto, cresce a figura do diagrama com a sobra, sobe a letra até o maior degrau que
-  cabe e divide o que sobrar como respiro. Capa não passa pelo encaixe.
+  cabe e divide o que sobrar como respiro. A capa tem encaixe próprio (abaixo).
 - Não volte a fixar tamanho de letra no CSS sem a variável (`--fs`, `--ts`), nem tire o fit.js das
   páginas: sem ele a página de revisão mostra outra coisa que o JPG.
 - Ao desenhar cena nova, desenhe o assunto ocupando a cena; a borda vazia o encaixe corta, mas a
