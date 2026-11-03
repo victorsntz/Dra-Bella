@@ -7,7 +7,21 @@
    "x": 96,
    "y": 91,
    "bw": 386,
-   "bh": 745
+   "bh": 745,
+   "p": [
+    [
+     102,
+     97,
+     315,
+     471
+    ],
+    [
+     192,
+     624,
+     284,
+     206
+    ]
+   ]
   }
  },
  "assets/illustrations/bariatrica-retatrutida/02-queda-eua.svg": {
@@ -18,7 +32,27 @@
    "x": 86,
    "y": 0,
    "bw": 736,
-   "bh": 357
+   "bh": 357,
+   "p": [
+    [
+     92,
+     -8,
+     240,
+     359
+    ],
+    [
+     423,
+     76,
+     173,
+     258
+    ],
+    [
+     696,
+     146,
+     120,
+     179
+    ]
+   ]
   }
  },
  "assets/illustrations/bariatrica-retatrutida/03-brasil.svg": {
@@ -29,7 +63,21 @@
    "x": 194,
    "y": 66,
    "bw": 594,
-   "bh": 265
+   "bh": 265,
+   "p": [
+    [
+     200,
+     72,
+     208,
+     253
+    ],
+    [
+     504,
+     116,
+     277,
+     162
+    ]
+   ]
   }
  },
  "assets/illustrations/bariatrica-retatrutida/04-tres-canetas.svg": {
@@ -40,7 +88,27 @@
    "x": 48,
    "y": 49,
    "bw": 392,
-   "bh": 291
+   "bh": 291,
+   "p": [
+    [
+     129,
+     55,
+     230,
+     42
+    ],
+    [
+     94,
+     168,
+     300,
+     48
+    ],
+    [
+     54,
+     281,
+     380,
+     53
+    ]
+   ]
   }
  },
  "assets/illustrations/bariatrica-retatrutida/05-previsao.svg": {
@@ -51,7 +119,21 @@
    "x": 142,
    "y": 55,
    "bw": 658,
-   "bh": 248
+   "bh": 248,
+   "p": [
+    [
+     148,
+     61,
+     194,
+     236
+    ],
+    [
+     452,
+     127,
+     342,
+     164
+    ]
+   ]
   }
  },
  "assets/illustrations/bariatrica-retatrutida/06-cronica.svg": {
@@ -62,7 +144,15 @@
    "x": 59,
    "y": 21,
    "bw": 194,
-   "bh": 270
+   "bh": 270,
+   "p": [
+    [
+     65,
+     27,
+     182,
+     258
+    ]
+   ]
   }
  }
 }

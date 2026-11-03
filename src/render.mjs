@@ -128,7 +128,7 @@ function figure(fig) {
     .join("");
   const style = fig.style ? ` style="${esc(fig.style)}"` : "";
   const r = fig.recorte; // { w, h, x, y, bw, bh }: tamanho da cena e caixa do desenho de fato (src/render.mjs → medeRecortes)
-  const data = r ? ` data-nat="${r.w} ${r.h}" data-bbox="${r.x} ${r.y} ${r.bw} ${r.bh}"` : "";
+  const data = r ? ` data-nat="${r.w} ${r.h}" data-bbox="${r.x} ${r.y} ${r.bw} ${r.bh}"${fig.capa && r.p ? ` data-partes="${r.p.map((q) => q.join(",")).join(";")}"` : ""}` : "";
   const i = fig.inset || {};
   const inner = `<div class="fig-inner" style="top:${i.top || 0}px;right:${i.right || 0}px;bottom:${i.bottom || 0}px;left:${i.left || 0}px">${img}</div>`;
   return `<figure class="fig"${style}${data}>${inner}${labels}</figure>`;
@@ -138,7 +138,7 @@ const renderers = {
   cover: (s) => `
     <h1 class="title"${s.titleSize || s.titleWidth ? ` style="${s.titleSize ? `font-size:${s.titleSize}px;` : ""}${s.titleWidth ? `max-width:${s.titleWidth}px;` : ""}"` : ""}>${rich(s.title)}</h1>
     ${s.lead ? `<p class="lead">${rich(s.lead)}</p>` : ""}
-    ${figure(s.figure)}`,
+    ${figure(s.figure && { ...s.figure, capa: true })}`,
 
   diagram: (s) => `
     <h2 class="title">${rich(s.title)}</h2>
@@ -213,20 +213,21 @@ export async function medeRecortes(name, doc, browser) {
   for (const s of doc.slides) {
     const src = s.figure?.src; if (!src || !src.endsWith(".svg")) continue;
     const st = await fs.stat(path.join(ROOT, src)).catch(() => null); if (!st) continue;
-    if (cache[src] && cache[src].mtime === st.mtimeMs) continue;
+    if (cache[src] && cache[src].mtime === st.mtimeMs && cache[src].r.p) continue;
     page ||= await browser.newPage();
     await page.setContent(`<body style="margin:0">${await fs.readFile(path.join(ROOT, src), "utf8")}</body>`);
     const r = await page.evaluate(() => {
       const svg = document.querySelector("svg"), o = svg.getBoundingClientRect();
-      let x0 = 1e9, y0 = 1e9, x1 = -1e9, y1 = -1e9;
+      let x0 = 1e9, y0 = 1e9, x1 = -1e9, y1 = -1e9; const p = [];
       svg.querySelectorAll(":scope > :not(defs)").forEach((el) => {
         const b = el.getBoundingClientRect(); if (!b.width && !b.height) return;
+        p.push([Math.round(b.left - o.left), Math.round(b.top - o.top), Math.round(b.width), Math.round(b.height)]);
         x0 = Math.min(x0, b.left - o.left); y0 = Math.min(y0, b.top - o.top); x1 = Math.max(x1, b.right - o.left); y1 = Math.max(y1, b.bottom - o.top);
       });
       const w = svg.viewBox.baseVal.width || o.width, h = svg.viewBox.baseVal.height || o.height, pad = 6;
-      if (x0 > x1) return { w, h, x: 0, y: 0, bw: w, bh: h };
+      if (x0 > x1) return { w, h, x: 0, y: 0, bw: w, bh: h, p: [] };
       x0 = Math.max(0, x0 - pad); y0 = Math.max(0, y0 - pad); x1 = Math.min(w, x1 + pad); y1 = Math.min(h, y1 + pad);
-      return { w, h, x: Math.round(x0), y: Math.round(y0), bw: Math.round(x1 - x0), bh: Math.round(y1 - y0) };
+      return { w, h, x: Math.round(x0), y: Math.round(y0), bw: Math.round(x1 - x0), bh: Math.round(y1 - y0), p: p.slice(0, 400) };
     });
     cache[src] = { mtime: st.mtimeMs, r }; mudou = true;
   }

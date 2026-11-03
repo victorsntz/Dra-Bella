@@ -8,7 +8,8 @@
 //               que ainda sobrar vira respiro dividido acima e abaixo da figura.
 //   texto     → a letra sobe só enquanto a ilustração não diminui.
 //   pergunta, fechamento → título e texto sobem até ocupar o miolo, bloco centrado.
-//   capa      → não mexe (é composta à mão).
+//   capa      → subtítulo maior e o bloco título + subtítulo centrado entre o @ e o card de perfil
+//               (o título não muda de tamanho nem de quebra, só desce).
 //
 // Mede com offsetTop/offsetHeight (layout), então funciona igual com o slide escalado na revisão.
 (function () {
@@ -81,8 +82,79 @@
     return q.h * Math.max(k0, Math.min(w / q.w, KMAX)) + insetV;
   }
 
+  // ---------- capa: subtítulo maior e bloco título + subtítulo centrado entre o @ e o card ----------
+  // O título não muda (cada capa foi quebrada à mão); só desce. Pedido do Victor, 03/nov/2026.
+  const CAPA = { topo: 196, folgaCard: 80, fsMax: 1.36, otico: 0.42, desceMax: 260 };
+  // retângulos em coordenadas do slide (funciona com o slide escalado na revisão)
+  function emSlide(s) {
+    const o = s.getBoundingClientRect(), sc = o.width / 1080 || 1;
+    return (x) => ({ l: (x.left - o.left) / sc, t: (x.top - o.top) / sc, r: (x.right - o.left) / sc, b: (x.bottom - o.top) / sc });
+  }
+  function linhas(el, conv) {
+    if (!el) return [];
+    const r = document.createRange(); r.selectNodeContents(el);
+    return [...r.getClientRects()].filter((x) => x.width > 1).map(conv);
+  }
+  // o que a letra não pode tocar: pílulas da capa e o desenho de fato da ilustração
+  function obstaculos(s, conv) {
+    const fig = s.querySelector(":scope > .fig"); if (!fig) return [];
+    const out = [...fig.querySelectorAll(".label")].map((l) => conv(l.getBoundingClientRect()));
+    const c = cena(fig);
+    if (c) {
+      const tf = tfOriginal(c), ir = conv(c.inner.getBoundingClientRect());
+      const sc = (ir.r - ir.l) / (c.inner.offsetWidth || 1);
+      const caixa = (x, y, w, h) => ({ l: ir.l + (tf.ox + x * tf.k) * sc, t: ir.t + (tf.oy + y * tf.k) * sc,
+                                        r: ir.l + (tf.ox + (x + w) * tf.k) * sc, b: ir.t + (tf.oy + (y + h) * tf.k) * sc });
+      // uma caixa por peça (mais justa que a caixa da ilustração inteira); sem o dado, a caixa geral
+      const partes = (fig.dataset.partes || "").split(";").filter(Boolean).map((q) => q.split(",").map(Number));
+      if (partes.length) partes.forEach(([x, y, w, h]) => out.push(caixa(x - 6, y - 6, w + 12, h + 12)));
+      else out.push(caixa(c.bb.x, c.bb.y, c.bb.w, c.bb.h));
+    }
+    return out;
+  }
+  const inter = (a, b) => Math.max(0, Math.min(a.r, b.r) - Math.max(a.l, b.l)) * Math.max(0, Math.min(a.b, b.b) - Math.max(a.t, b.t));
+  function encaixaCapa(s) {
+    const title = s.querySelector(":scope > .title"), lead = s.querySelector(":scope > .lead");
+    if (!title) return;
+    const conv = emSlide(s), obs = obstaculos(s, conv);
+    const colisao = () => { let a = 0; for (const r of [...linhas(title, conv), ...linhas(lead, conv)]) for (const o of obs) a += inter(r, o); return a; };
+    const card = s.querySelector(".ftr-left");
+    const limite = (card ? card.offsetTop : H - 144 - 88) - CAPA.folgaCard;
+    const fim = () => (lead ? lead.offsetTop + lead.offsetHeight : title.offsetTop + title.offsetHeight);
+    const antes = colisao(), livreDeColisao = () => colisao() <= antes + 4;
+    // 1. subtítulo cresce até onde cabe sem encostar na ilustração
+    if (lead) {
+      const base = parseFloat(getComputedStyle(lead).fontSize);
+      for (const k of passos([1, CAPA.fsMax])) {
+        lead.style.fontSize = base * k + "px";
+        if (fim() <= limite && lead.scrollWidth <= lead.clientWidth + 2 && livreDeColisao()) break;
+      }
+    }
+    // 2. o bloco desce até o centro ótico, ou até onde a ilustração deixar
+    const m0 = parseFloat(getComputedStyle(title).marginTop), altura = fim() - title.offsetTop;
+    const alvo = CAPA.topo + Math.max(0, limite - CAPA.topo - altura) * CAPA.otico;
+    let desceu = false;
+    for (let d = Math.min(CAPA.desceMax, alvo - title.offsetTop); d > 0; d -= 8) {
+      title.style.marginTop = m0 + d + "px";
+      if (fim() <= limite && livreDeColisao()) { desceu = true; break; }
+    }
+    if (!desceu) title.style.marginTop = m0 + "px";
+    // 3. se ainda sobra mais vão embaixo do que em cima, o subtítulo desce sozinho (sem encostar em nada)
+    if (lead) {
+      const hdr = s.querySelector(".hdr"), emCima = title.offsetTop - (hdr ? hdr.offsetTop + hdr.offsetHeight : 114);
+      const embaixo = (card ? card.offsetTop : H - 232) - fim();
+      const l0 = parseFloat(getComputedStyle(lead).marginTop);
+      for (let d = Math.min(120, (embaixo - emCima) / 2); d > 8; d -= 8) {
+        lead.style.marginTop = l0 + d + "px";
+        if (fim() <= limite && livreDeColisao()) return;
+      }
+      lead.style.marginTop = l0 + "px";
+    }
+  }
+
   function encaixa(s) {
-    const t = tipo(s); if (!t || t === "cover") return;
+    const t = tipo(s); if (!t) return;
+    if (t === "cover") { if (!s.dataset.capaFixa) encaixaCapa(s); return; }
     const faixa = FAIXAS[t]; aplica(s, 1, 1);
     const fig = s.querySelector(":scope > .fig");
     const c = fig ? cena(fig) : null;

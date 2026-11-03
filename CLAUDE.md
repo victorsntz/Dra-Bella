@@ -72,6 +72,11 @@ pergunta final pequena no meio, ilustração com borda vazia. Isso agora é auto
   ampliação tem teto de 1,3x pra não engrossar o traço.
 - Ainda assim olhe a folha: pílula de coluna (edge) não muda de lugar na horizontal, então confira se
   ela continua apontando pra peça certa.
+- Capa (03/nov/2026, o Victor achou o título "muito em cima" e um vão entre o subtítulo e o card):
+  o encaixe cresce o subtítulo e desce o bloco título + subtítulo até o centro ótico entre o @ e o
+  card de perfil, testando colisão com cada pílula e cada peça da ilustração (caixas por peça medidas
+  no render). Se o título não pode descer sem encostar, o subtítulo desce sozinho. O título nunca muda
+  de tamanho nem de quebra. Capa nova: componha deixando a coluna da esquerda livre pra isso.
 
 ## Título: quanto cabe
 
