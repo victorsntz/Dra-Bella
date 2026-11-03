@@ -1,0 +1,68 @@
+{
+ "assets/illustrations/leptina/01-sinal-esmaece.svg": {
+  "mtime": 1793483515081.2144,
+  "r": {
+   "w": 520,
+   "h": 900,
+   "x": 13,
+   "y": 139,
+   "bw": 486,
+   "bh": 722
+  }
+ },
+ "assets/illustrations/leptina/02-leptina-nasce.svg": {
+  "mtime": 1793483515082.3013,
+  "r": {
+   "w": 888,
+   "h": 440,
+   "x": 37,
+   "y": 67,
+   "bw": 761,
+   "bh": 318
+  }
+ },
+ "assets/illustrations/leptina/03-paradoxo.svg": {
+  "mtime": 1793483515082.3013,
+  "r": {
+   "w": 488,
+   "h": 370,
+   "x": 6,
+   "y": 40,
+   "bw": 461,
+   "bh": 329
+  }
+ },
+ "assets/illustrations/leptina/04-ruidos.svg": {
+  "mtime": 1793483515082.3013,
+  "r": {
+   "w": 488,
+   "h": 370,
+   "x": 1,
+   "y": 25,
+   "bw": 485,
+   "bh": 328
+  }
+ },
+ "assets/illustrations/leptina/05-despenca.svg": {
+  "mtime": 1793483515082.3013,
+  "r": {
+   "w": 888,
+   "h": 440,
+   "x": 53,
+   "y": 67,
+   "bw": 795,
+   "bh": 318
+  }
+ },
+ "assets/illustrations/leptina/06-ruido.svg": {
+  "mtime": 1793483515082.3013,
+  "r": {
+   "w": 888,
+   "h": 440,
+   "x": 44,
+   "y": 64,
+   "bw": 785,
+   "bh": 343
+  }
+ }
+}

@@ -1,0 +1,68 @@
+{
+ "assets/illustrations/dieta-restritiva/01-prato-cerebro.svg": {
+  "mtime": 1793483515076.811,
+  "r": {
+   "w": 520,
+   "h": 900,
+   "x": 48,
+   "y": 49,
+   "bw": 472,
+   "bh": 825
+  }
+ },
+ "assets/illustrations/dieta-restritiva/02-escassez.svg": {
+  "mtime": 1793483515077.8276,
+  "r": {
+   "w": 888,
+   "h": 440,
+   "x": 24,
+   "y": 72,
+   "bw": 863,
+   "bh": 284
+  }
+ },
+ "assets/illustrations/dieta-restritiva/03-ciclo.svg": {
+  "mtime": 1793483515077.8276,
+  "r": {
+   "w": 488,
+   "h": 370,
+   "x": 67,
+   "y": 4,
+   "bw": 354,
+   "bh": 354
+  }
+ },
+ "assets/illustrations/dieta-restritiva/04-recompensa.svg": {
+  "mtime": 1793483515077.8276,
+  "r": {
+   "w": 488,
+   "h": 370,
+   "x": 19,
+   "y": 74,
+   "bw": 469,
+   "bh": 229
+  }
+ },
+ "assets/illustrations/dieta-restritiva/05-fisiologia.svg": {
+  "mtime": 1793483515077.8276,
+  "r": {
+   "w": 888,
+   "h": 440,
+   "x": 252,
+   "y": 59,
+   "bw": 598,
+   "bh": 343
+  }
+ },
+ "assets/illustrations/dieta-restritiva/06-saida.svg": {
+  "mtime": 1793483515077.8276,
+  "r": {
+   "w": 888,
+   "h": 440,
+   "x": 89,
+   "y": 44,
+   "bw": 794,
+   "bh": 362
+  }
+ }
+}

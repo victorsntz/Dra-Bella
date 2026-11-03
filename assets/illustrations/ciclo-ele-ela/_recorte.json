@@ -1,0 +1,68 @@
+{
+ "assets/illustrations/ciclo-ele-ela/01-ele-ela.svg": {
+  "mtime": 1793483515069.8494,
+  "r": {
+   "w": 888,
+   "h": 470,
+   "x": 14,
+   "y": 49,
+   "bw": 860,
+   "bh": 399
+  }
+ },
+ "assets/illustrations/ciclo-ele-ela/02-um-dia.svg": {
+  "mtime": 1793483515071.4585,
+  "r": {
+   "w": 888,
+   "h": 420,
+   "x": 14,
+   "y": 72,
+   "bw": 860,
+   "bh": 326
+  }
+ },
+ "assets/illustrations/ciclo-ele-ela/03-quatro-hormonios.svg": {
+  "mtime": 1793483515071.4585,
+  "r": {
+   "w": 888,
+   "h": 310,
+   "x": 14,
+   "y": 4,
+   "bw": 860,
+   "bh": 284
+  }
+ },
+ "assets/illustrations/ciclo-ele-ela/04-fases.svg": {
+  "mtime": 1793483515071.4585,
+  "r": {
+   "w": 888,
+   "h": 380,
+   "x": 14,
+   "y": 44,
+   "bw": 860,
+   "bh": 314
+  }
+ },
+ "assets/illustrations/ciclo-ele-ela/05-pesquisa.svg": {
+  "mtime": 1793483515071.4585,
+  "r": {
+   "w": 888,
+   "h": 310,
+   "x": 14,
+   "y": 34,
+   "bw": 860,
+   "bh": 254
+  }
+ },
+ "assets/illustrations/ciclo-ele-ela/06-plano.svg": {
+  "mtime": 1793483515071.4585,
+  "r": {
+   "w": 888,
+   "h": 420,
+   "x": 0,
+   "y": 114,
+   "bw": 846,
+   "bh": 251
+  }
+ }
+}

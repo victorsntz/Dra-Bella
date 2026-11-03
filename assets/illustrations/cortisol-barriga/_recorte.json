@@ -1,0 +1,68 @@
+{
+ "assets/illustrations/cortisol-barriga/01-lua-adrenal.svg": {
+  "mtime": 1793483515075.7395,
+  "r": {
+   "w": 520,
+   "h": 900,
+   "x": 93,
+   "y": 66,
+   "bw": 427,
+   "bh": 815
+  }
+ },
+ "assets/illustrations/cortisol-barriga/02-relogio-adrenal.svg": {
+  "mtime": 1793483515076.811,
+  "r": {
+   "w": 888,
+   "h": 440,
+   "x": 64,
+   "y": 61,
+   "bw": 747,
+   "bh": 337
+  }
+ },
+ "assets/illustrations/cortisol-barriga/03-quatro-sinais.svg": {
+  "mtime": 1793483515076.811,
+  "r": {
+   "w": 488,
+   "h": 370,
+   "x": 8,
+   "y": 19,
+   "bw": 480,
+   "bh": 324
+  }
+ },
+ "assets/illustrations/cortisol-barriga/04-visceral.svg": {
+  "mtime": 1793483515076.811,
+  "r": {
+   "w": 888,
+   "h": 440,
+   "x": 121,
+   "y": 98,
+   "bw": 730,
+   "bh": 285
+  }
+ },
+ "assets/illustrations/cortisol-barriga/05-ciclo.svg": {
+  "mtime": 1793483515076.811,
+  "r": {
+   "w": 488,
+   "h": 370,
+   "x": 58,
+   "y": 5,
+   "bw": 374,
+   "bh": 363
+  }
+ },
+ "assets/illustrations/cortisol-barriga/06-lua-ondas.svg": {
+  "mtime": 1793483515076.811,
+  "r": {
+   "w": 888,
+   "h": 440,
+   "x": 79,
+   "y": 11,
+   "bw": 717,
+   "bh": 429
+  }
+ }
+}

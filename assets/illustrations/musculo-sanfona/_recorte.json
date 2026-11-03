@@ -1,0 +1,68 @@
+{
+ "assets/illustrations/musculo-sanfona/01-corredora-musculo.svg": {
+  "mtime": 1793483515084.1892,
+  "r": {
+   "w": 520,
+   "h": 900,
+   "x": 0,
+   "y": 38,
+   "bw": 508,
+   "bh": 836
+  }
+ },
+ "assets/illustrations/musculo-sanfona/02-restricao.svg": {
+  "mtime": 1793483515085.425,
+  "r": {
+   "w": 888,
+   "h": 440,
+   "x": 0,
+   "y": 139,
+   "bw": 868,
+   "bh": 246
+  }
+ },
+ "assets/illustrations/musculo-sanfona/03-parado.svg": {
+  "mtime": 1793483515085.425,
+  "r": {
+   "w": 488,
+   "h": 370,
+   "x": 0,
+   "y": 31,
+   "bw": 451,
+   "bh": 297
+  }
+ },
+ "assets/illustrations/musculo-sanfona/04-dois-caminhos.svg": {
+  "mtime": 1793483515085.425,
+  "r": {
+   "w": 488,
+   "h": 370,
+   "x": 0,
+   "y": 14,
+   "bw": 476,
+   "bh": 342
+  }
+ },
+ "assets/illustrations/musculo-sanfona/05-caneta.svg": {
+  "mtime": 1793483515085.425,
+  "r": {
+   "w": 888,
+   "h": 440,
+   "x": 61,
+   "y": 141,
+   "bw": 819,
+   "bh": 286
+  }
+ },
+ "assets/illustrations/musculo-sanfona/06-o-que-fazer.svg": {
+  "mtime": 1793483515085.425,
+  "r": {
+   "w": 888,
+   "h": 440,
+   "x": 0,
+   "y": 110,
+   "bw": 863,
+   "bh": 275
+  }
+ }
+}

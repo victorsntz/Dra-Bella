@@ -1,0 +1,68 @@
+{
+ "assets/illustrations/coca-prebiotica/01-lata-intestino.svg": {
+  "mtime": 1793483515073.9097,
+  "r": {
+   "w": 520,
+   "h": 900,
+   "x": 80,
+   "y": 54,
+   "bw": 341,
+   "bh": 808
+  }
+ },
+ "assets/illustrations/coca-prebiotica/02-duas-latas.svg": {
+  "mtime": 1793483515075.7395,
+  "r": {
+   "w": 888,
+   "h": 440,
+   "x": 169,
+   "y": 86,
+   "bw": 552,
+   "bh": 321
+  }
+ },
+ "assets/illustrations/coca-prebiotica/03-era-das-canetas.svg": {
+  "mtime": 1793483515075.7395,
+  "r": {
+   "w": 488,
+   "h": 370,
+   "x": 0,
+   "y": 36,
+   "bw": 461,
+   "bh": 280
+  }
+ },
+ "assets/illustrations/coca-prebiotica/04-microbiota.svg": {
+  "mtime": 1793483515075.7395,
+  "r": {
+   "w": 488,
+   "h": 370,
+   "x": 49,
+   "y": 77,
+   "bw": 417,
+   "bh": 290
+  }
+ },
+ "assets/illustrations/coca-prebiotica/05-resto-da-lata.svg": {
+  "mtime": 1793483515075.7395,
+  "r": {
+   "w": 888,
+   "h": 440,
+   "x": 139,
+   "y": 44,
+   "bw": 627,
+   "bh": 362
+  }
+ },
+ "assets/illustrations/coca-prebiotica/06-arvore.svg": {
+  "mtime": 1793483515075.7395,
+  "r": {
+   "w": 420,
+   "h": 250,
+   "x": 129,
+   "y": 10,
+   "bw": 165,
+   "bh": 228
+  }
+ }
+}

@@ -1,0 +1,79 @@
+{
+ "assets/illustrations/pele-intestino/01-intestino-pele.svg": {
+  "mtime": 1793483515085.425,
+  "r": {
+   "w": 520,
+   "h": 900,
+   "x": 72,
+   "y": 44,
+   "bw": 424,
+   "bh": 822
+  }
+ },
+ "assets/illustrations/pele-intestino/02-por-dentro.svg": {
+  "mtime": 1793483515086.4229,
+  "r": {
+   "w": 888,
+   "h": 440,
+   "x": 40,
+   "y": 34,
+   "bw": 835,
+   "bh": 406
+  }
+ },
+ "assets/illustrations/pele-intestino/03-colageno.svg": {
+  "mtime": 1793483515086.4229,
+  "r": {
+   "w": 488,
+   "h": 370,
+   "x": 28,
+   "y": 0,
+   "bw": 409,
+   "bh": 336
+  }
+ },
+ "assets/illustrations/pele-intestino/04-eixo.svg": {
+  "mtime": 1793483515086.4229,
+  "r": {
+   "w": 488,
+   "h": 370,
+   "x": 21,
+   "y": 54,
+   "bw": 465,
+   "bh": 279
+  }
+ },
+ "assets/illustrations/pele-intestino/05-acucar.svg": {
+  "mtime": 1793483515086.4229,
+  "r": {
+   "w": 888,
+   "h": 440,
+   "x": 44,
+   "y": 144,
+   "bw": 822,
+   "bh": 212
+  }
+ },
+ "assets/illustrations/pele-intestino/06-nutrientes.svg": {
+  "mtime": 1793483515086.4229,
+  "r": {
+   "w": 488,
+   "h": 370,
+   "x": 14,
+   "y": 14,
+   "bw": 472,
+   "bh": 353
+  }
+ },
+ "assets/illustrations/pele-intestino/07-prato-sol.svg": {
+  "mtime": 1793483515086.4229,
+  "r": {
+   "w": 888,
+   "h": 440,
+   "x": 34,
+   "y": 94,
+   "bw": 832,
+   "bh": 293
+  }
+ }
+}

@@ -127,9 +127,11 @@ function figure(fig) {
     })
     .join("");
   const style = fig.style ? ` style="${esc(fig.style)}"` : "";
+  const r = fig.recorte; // { w, h, x, y, bw, bh }: tamanho da cena e caixa do desenho de fato (src/render.mjs → medeRecortes)
+  const data = r ? ` data-nat="${r.w} ${r.h}" data-bbox="${r.x} ${r.y} ${r.bw} ${r.bh}"` : "";
   const i = fig.inset || {};
   const inner = `<div class="fig-inner" style="top:${i.top || 0}px;right:${i.right || 0}px;bottom:${i.bottom || 0}px;left:${i.left || 0}px">${img}</div>`;
-  return `<figure class="fig"${style}>${inner}${labels}</figure>`;
+  return `<figure class="fig"${style}${data}>${inner}${labels}</figure>`;
 }
 
 const renderers = {
@@ -179,6 +181,7 @@ function deckHTML(doc) {
 <title>${esc(doc.title)}</title>
 <link rel="stylesheet" href="../../brand/brand.css">
 <link rel="stylesheet" href="../../templates/slide.css">
+<script src="../../templates/fit.js"></script>
 <script>if (location.search.includes("preview")) document.documentElement.classList.add("pv");</script>
 <style>html.pv body{padding:40px}</style>
 </head><body>
@@ -198,6 +201,40 @@ export async function loadBrand() {
   return brand;
 }
 
+// Recorte das cenas: onde está o desenho de fato dentro de cada SVG (as cenas têm borda vazia).
+// O fit.js usa isso pra ampliar a ilustração até o desenho preencher a caixa, e leva as pílulas junto.
+const recorteArq = (name) => path.join(ROOT, "assets", "illustrations", name, "_recorte.json");
+async function leRecortes(name) { try { return JSON.parse(await fs.readFile(recorteArq(name), "utf8")); } catch { return {}; } }
+function aplicaRecortes(doc, cache) {
+  for (const s of doc.slides) if (s.figure?.src && cache[s.figure.src]) s.figure.recorte = cache[s.figure.src].r;
+}
+export async function medeRecortes(name, doc, browser) {
+  const cache = await leRecortes(name); let mudou = false, page = null;
+  for (const s of doc.slides) {
+    const src = s.figure?.src; if (!src || !src.endsWith(".svg")) continue;
+    const st = await fs.stat(path.join(ROOT, src)).catch(() => null); if (!st) continue;
+    if (cache[src] && cache[src].mtime === st.mtimeMs) continue;
+    page ||= await browser.newPage();
+    await page.setContent(`<body style="margin:0">${await fs.readFile(path.join(ROOT, src), "utf8")}</body>`);
+    const r = await page.evaluate(() => {
+      const svg = document.querySelector("svg"), o = svg.getBoundingClientRect();
+      let x0 = 1e9, y0 = 1e9, x1 = -1e9, y1 = -1e9;
+      svg.querySelectorAll(":scope > :not(defs)").forEach((el) => {
+        const b = el.getBoundingClientRect(); if (!b.width && !b.height) return;
+        x0 = Math.min(x0, b.left - o.left); y0 = Math.min(y0, b.top - o.top); x1 = Math.max(x1, b.right - o.left); y1 = Math.max(y1, b.bottom - o.top);
+      });
+      const w = svg.viewBox.baseVal.width || o.width, h = svg.viewBox.baseVal.height || o.height, pad = 6;
+      if (x0 > x1) return { w, h, x: 0, y: 0, bw: w, bh: h };
+      x0 = Math.max(0, x0 - pad); y0 = Math.max(0, y0 - pad); x1 = Math.min(w, x1 + pad); y1 = Math.min(h, y1 + pad);
+      return { w, h, x: Math.round(x0), y: Math.round(y0), bw: Math.round(x1 - x0), bh: Math.round(y1 - y0) };
+    });
+    cache[src] = { mtime: st.mtimeMs, r }; mudou = true;
+  }
+  if (page) await page.close();
+  if (mudou) await fs.writeFile(recorteArq(name), JSON.stringify(cache, null, 1));
+  aplicaRecortes(doc, cache);
+}
+
 export async function loadDoc(name, brand) {
   const file = path.join(ROOT, "content", `${name}.json`);
   const doc = JSON.parse(await fs.readFile(file, "utf8"));
@@ -208,6 +245,7 @@ export async function loadDoc(name, brand) {
       catch { s.figure.missing = s.figure.src; s.figure.src = null; }
     }
   }
+  aplicaRecortes(doc, await leRecortes(name));
   return doc;
 }
 
@@ -231,18 +269,20 @@ async function buildOne(name, brand) {
   await fs.mkdir(buildDir, { recursive: true });
   await fs.mkdir(outDir, { recursive: true });
 
+  const { chromium } = await import("playwright");
+  const browser = await chromium.launch(await launchOpts());
+  await medeRecortes(name, doc, browser);
   const html = deckHTML(doc);
   const htmlPath = path.join(buildDir, "index.html");
   await fs.writeFile(htmlPath, html);
   await fs.writeFile(path.join(outDir, "legenda.txt"), (doc.caption || "").trim() + "\n");
   console.log(`✓ ${name}: ${doc.slides.length} slides → build/${name}/index.html`);
-  if (flags.has("--html")) return { name, outDir, count: doc.slides.length };
+  if (flags.has("--html")) { await browser.close(); return { name, outDir, count: doc.slides.length }; }
 
-  const { chromium } = await import("playwright");
-  const browser = await chromium.launch(await launchOpts());
   const page = await browser.newPage({ viewport: { width: W, height: H }, deviceScaleFactor: 1 });
   await page.goto(pathToFileURL(htmlPath).href);
   await page.evaluate(() => document.fonts.ready);
+  await page.waitForFunction(() => document.documentElement.dataset.fit === "done", null, { timeout: 30000 });
   await page.waitForTimeout(150);
 
   for (let i = 0; i < doc.slides.length; i++) {

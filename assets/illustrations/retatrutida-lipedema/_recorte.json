@@ -1,0 +1,68 @@
+{
+ "assets/illustrations/retatrutida-lipedema/01-pernas-lipedema.svg": {
+  "mtime": 1793483515088.5845,
+  "r": {
+   "w": 888,
+   "h": 960,
+   "x": 65,
+   "y": 24,
+   "bw": 741,
+   "bh": 874
+  }
+ },
+ "assets/illustrations/retatrutida-lipedema/02-tecido.svg": {
+  "mtime": 1793483515089.6604,
+  "r": {
+   "w": 888,
+   "h": 440,
+   "x": 113,
+   "y": 94,
+   "bw": 659,
+   "bh": 245
+  }
+ },
+ "assets/illustrations/retatrutida-lipedema/03-tres-chaves.svg": {
+  "mtime": 1793483515089.6604,
+  "r": {
+   "w": 488,
+   "h": 370,
+   "x": 28,
+   "y": 0,
+   "bw": 432,
+   "bh": 350
+  }
+ },
+ "assets/illustrations/retatrutida-lipedema/04-mounjaro.svg": {
+  "mtime": 1793483515089.6604,
+  "r": {
+   "w": 888,
+   "h": 380,
+   "x": 42,
+   "y": 105,
+   "bw": 719,
+   "bh": 227
+  }
+ },
+ "assets/illustrations/retatrutida-lipedema/05-glucagon.svg": {
+  "mtime": 1793483515089.6604,
+  "r": {
+   "w": 488,
+   "h": 370,
+   "x": 0,
+   "y": 20,
+   "bw": 455,
+   "bh": 341
+  }
+ },
+ "assets/illustrations/retatrutida-lipedema/06-estudo.svg": {
+  "mtime": 1793483515089.6604,
+  "r": {
+   "w": 888,
+   "h": 380,
+   "x": 126,
+   "y": 14,
+   "bw": 641,
+   "bh": 342
+  }
+ }
+}

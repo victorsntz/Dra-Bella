@@ -1,0 +1,68 @@
+{
+ "assets/illustrations/tres-canetas/01-tres-canetas.svg": {
+  "mtime": 1793483515089.6604,
+  "r": {
+   "w": 520,
+   "h": 900,
+   "x": 44,
+   "y": 146,
+   "bw": 432,
+   "bh": 680
+  }
+ },
+ "assets/illustrations/tres-canetas/02-hormonios.svg": {
+  "mtime": 1793483515090.6584,
+  "r": {
+   "w": 888,
+   "h": 440,
+   "x": 77,
+   "y": 12,
+   "bw": 714,
+   "bh": 421
+  }
+ },
+ "assets/illustrations/tres-canetas/03-uma-chave.svg": {
+  "mtime": 1793483515090.6584,
+  "r": {
+   "w": 488,
+   "h": 370,
+   "x": 28,
+   "y": 9,
+   "bw": 432,
+   "bh": 297
+  }
+ },
+ "assets/illustrations/tres-canetas/04-duas-chaves.svg": {
+  "mtime": 1793483515090.6584,
+  "r": {
+   "w": 488,
+   "h": 370,
+   "x": 28,
+   "y": 8,
+   "bw": 432,
+   "bh": 298
+  }
+ },
+ "assets/illustrations/tres-canetas/05-tres-chaves.svg": {
+  "mtime": 1793483515090.6584,
+  "r": {
+   "w": 488,
+   "h": 370,
+   "x": 28,
+   "y": 8,
+   "bw": 432,
+   "bh": 342
+  }
+ },
+ "assets/illustrations/tres-canetas/06-escolha.svg": {
+  "mtime": 1793483515090.6584,
+  "r": {
+   "w": 888,
+   "h": 380,
+   "x": 228,
+   "y": 68,
+   "bw": 432,
+   "bh": 274
+  }
+ }
+}

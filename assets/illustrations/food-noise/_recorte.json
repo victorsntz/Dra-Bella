@@ -1,0 +1,68 @@
+{
+ "assets/illustrations/food-noise/01-cerebro-ruido.svg": {
+  "mtime": 1793483515077.8276,
+  "r": {
+   "w": 520,
+   "h": 900,
+   "x": 63,
+   "y": 231,
+   "bw": 457,
+   "bh": 560
+  }
+ },
+ "assets/illustrations/food-noise/02-estomago-cheio.svg": {
+  "mtime": 1793483515079.2373,
+  "r": {
+   "w": 888,
+   "h": 440,
+   "x": 99,
+   "y": 31,
+   "bw": 789,
+   "bh": 343
+  }
+ },
+ "assets/illustrations/food-noise/03-hipotalamo.svg": {
+  "mtime": 1793483515079.2373,
+  "r": {
+   "w": 488,
+   "h": 370,
+   "x": 7,
+   "y": 44,
+   "bw": 457,
+   "bh": 317
+  }
+ },
+ "assets/illustrations/food-noise/04-tres-fontes.svg": {
+  "mtime": 1793483515079.2373,
+  "r": {
+   "w": 488,
+   "h": 370,
+   "x": 1,
+   "y": 33,
+   "bw": 468,
+   "bh": 294
+  }
+ },
+ "assets/illustrations/food-noise/05-ciclo-dopamina.svg": {
+  "mtime": 1793483515079.2373,
+  "r": {
+   "w": 888,
+   "h": 400,
+   "x": 40,
+   "y": 42,
+   "bw": 806,
+   "bh": 333
+  }
+ },
+ "assets/illustrations/food-noise/06-arvore.svg": {
+  "mtime": 1793483515079.2373,
+  "r": {
+   "w": 420,
+   "h": 250,
+   "x": 129,
+   "y": 10,
+   "bw": 165,
+   "bh": 228
+  }
+ }
+}

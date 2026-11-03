@@ -1,0 +1,79 @@
+{
+ "assets/illustrations/ciclo-maridos/01-mapa.svg": {
+  "mtime": 1793483515072.8066,
+  "r": {
+   "w": 888,
+   "h": 400,
+   "x": 14,
+   "y": 44,
+   "bw": 860,
+   "bh": 334
+  }
+ },
+ "assets/illustrations/ciclo-maridos/02-menstruacao.svg": {
+  "mtime": 1793483515073.9097,
+  "r": {
+   "w": 888,
+   "h": 420,
+   "x": 0,
+   "y": 0,
+   "bw": 888,
+   "bh": 398
+  }
+ },
+ "assets/illustrations/ciclo-maridos/03-folicular.svg": {
+  "mtime": 1793483515073.9097,
+  "r": {
+   "w": 888,
+   "h": 420,
+   "x": 0,
+   "y": 0,
+   "bw": 888,
+   "bh": 398
+  }
+ },
+ "assets/illustrations/ciclo-maridos/04-ovulacao.svg": {
+  "mtime": 1793483515073.9097,
+  "r": {
+   "w": 888,
+   "h": 420,
+   "x": 0,
+   "y": 0,
+   "bw": 888,
+   "bh": 398
+  }
+ },
+ "assets/illustrations/ciclo-maridos/05-lutea.svg": {
+  "mtime": 1793483515073.9097,
+  "r": {
+   "w": 888,
+   "h": 420,
+   "x": 0,
+   "y": 0,
+   "bw": 888,
+   "bh": 398
+  }
+ },
+ "assets/illustrations/ciclo-maridos/06-regras.svg": {
+  "mtime": 1793483515073.9097,
+  "r": {
+   "w": 488,
+   "h": 310,
+   "x": 120,
+   "y": 31,
+   "bw": 247,
+   "bh": 247
+  }
+ },
+ "assets/illustrations/ciclo-maridos/07-mapa-completo.svg": {
+  "mtime": 1793483515073.9097,
+  "r": {
+   "w": 888,
+   "h": 380,
+   "x": 14,
+   "y": 44,
+   "bw": 860,
+   "bh": 314
+  }
+ }
+}

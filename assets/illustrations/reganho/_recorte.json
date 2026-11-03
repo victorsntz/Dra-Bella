@@ -1,0 +1,68 @@
+{
+ "assets/illustrations/reganho/01-balanca-cerebro.svg": {
+  "mtime": 1793483515087.539,
+  "r": {
+   "w": 1080,
+   "h": 930,
+   "x": 596,
+   "y": 70,
+   "bw": 461,
+   "bh": 779
+  }
+ },
+ "assets/illustrations/reganho/02-set-point.svg": {
+  "mtime": 1793483515088.5845,
+  "r": {
+   "w": 888,
+   "h": 440,
+   "x": 28,
+   "y": 106,
+   "bw": 836,
+   "bh": 301
+  }
+ },
+ "assets/illustrations/reganho/03-sinais.svg": {
+  "mtime": 1793483515088.5845,
+  "r": {
+   "w": 488,
+   "h": 370,
+   "x": 15,
+   "y": 20,
+   "bw": 467,
+   "bh": 345
+  }
+ },
+ "assets/illustrations/reganho/04-tempo.svg": {
+  "mtime": 1793483515088.5845,
+  "r": {
+   "w": 888,
+   "h": 440,
+   "x": 89,
+   "y": 99,
+   "bw": 776,
+   "bh": 286
+  }
+ },
+ "assets/illustrations/reganho/05-protecao.svg": {
+  "mtime": 1793483515088.5845,
+  "r": {
+   "w": 488,
+   "h": 370,
+   "x": 0,
+   "y": 26,
+   "bw": 482,
+   "bh": 344
+  }
+ },
+ "assets/illustrations/reganho/06-arvore.svg": {
+  "mtime": 1793483515088.5845,
+  "r": {
+   "w": 888,
+   "h": 440,
+   "x": 316,
+   "y": 40,
+   "bw": 258,
+   "bh": 360
+  }
+ }
+}

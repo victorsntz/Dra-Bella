@@ -1,0 +1,79 @@
+{
+ "assets/illustrations/barriga-estufa/01-intestino-inchaco.svg": {
+  "mtime": 1793483515066.927,
+  "r": {
+   "w": 520,
+   "h": 900,
+   "x": 136,
+   "y": 0,
+   "bw": 384,
+   "bh": 889
+  }
+ },
+ "assets/illustrations/barriga-estufa/02-manha-noite.svg": {
+  "mtime": 1793483515068.593,
+  "r": {
+   "w": 888,
+   "h": 440,
+   "x": 54,
+   "y": 114,
+   "bw": 834,
+   "bh": 249
+  }
+ },
+ "assets/illustrations/barriga-estufa/03-origens.svg": {
+  "mtime": 1793483515068.593,
+  "r": {
+   "w": 488,
+   "h": 370,
+   "x": 7,
+   "y": 18,
+   "bw": 475,
+   "bh": 311
+  }
+ },
+ "assets/illustrations/barriga-estufa/04-barreira.svg": {
+  "mtime": 1793483515068.593,
+  "r": {
+   "w": 488,
+   "h": 370,
+   "x": 80,
+   "y": 55,
+   "bw": 302,
+   "bh": 276
+  }
+ },
+ "assets/illustrations/barriga-estufa/05-sibo-fruto.svg": {
+  "mtime": 1793483515068.593,
+  "r": {
+   "w": 420,
+   "h": 250,
+   "x": 129,
+   "y": 10,
+   "bw": 165,
+   "bh": 228
+  }
+ },
+ "assets/illustrations/barriga-estufa/06-pesquisa.svg": {
+  "mtime": 1793483515068.593,
+  "r": {
+   "w": 888,
+   "h": 440,
+   "x": 49,
+   "y": 135,
+   "bw": 732,
+   "bh": 228
+  }
+ },
+ "assets/illustrations/barriga-estufa/07-mulher-inteira.svg": {
+  "mtime": 1793483515068.593,
+  "r": {
+   "w": 888,
+   "h": 380,
+   "x": 39,
+   "y": 122,
+   "bw": 848,
+   "bh": 165
+  }
+ }
+}

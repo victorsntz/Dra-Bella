@@ -70,7 +70,7 @@ body.preview .slide-wrap::after {
 
 /* ---------- tipografia ---------- */
 .title {
-  font: 300 58px/1.06 var(--font-display);
+  font: 300 calc(58px * var(--ts, 1))/1.06 var(--font-display);
   letter-spacing: var(--tracking-display);
   color: var(--deep-coffee);
 }
@@ -80,10 +80,10 @@ body.preview .slide-wrap::after {
 .body p, .bullets li, .note { text-wrap: pretty; }
 .lead {
   margin-top: 22px;
-  font: 300 29px/1.4 var(--font-body);
+  font: 300 calc(29px * var(--fs, 1))/1.4 var(--font-body);
 }
 .body {
-  font: 300 29px/1.5 var(--font-body);
+  font: 300 calc(29px * var(--fs, 1))/1.5 var(--font-body);
   display: flex; flex-direction: column; gap: 18px;
 }
 strong { font-weight: 600; }
@@ -92,14 +92,14 @@ em { font-style: normal; font-weight: 500; color: var(--cozy-brown); }
 .bullets { list-style: none; display: flex; flex-direction: column; gap: 10px; }
 .bullets li {
   position: relative; padding-left: 38px;
-  font: 300 26px/1.38 var(--font-body);
+  font: 300 calc(26px * var(--fs, 1))/1.38 var(--font-body);
 }
 .bullets li::before {
-  content: ""; position: absolute; left: 6px; top: 16px;
+  content: ""; position: absolute; left: 6px; top: calc(16px * var(--fs, 1));
   width: 9px; height: 9px; border-radius: 50%; background: var(--serene-sand);
 }
 .bullets li .k { font-weight: 600; }
-.bullets li .arr { display: inline-block; margin: 0 10px; color: var(--cozy-brown); font-weight: 400; }
+.bullets li .arr { display: inline; margin: 0 10px; color: var(--cozy-brown); font-weight: 400; }
 
 /* ---------- figura + etiquetas ---------- */
 .fig { position: relative; }
@@ -165,15 +165,15 @@ em { font-style: normal; font-weight: 500; color: var(--cozy-brown); }
 /* ---------- FECHAMENTO (só texto) ---------- */
 .slide.closing { justify-content: center; }
 .slide.closing .body {
-  font: 300 40px/1.4 var(--font-body);
+  font: 300 calc(40px * var(--fs, 1))/1.4 var(--font-body);
   gap: 52px; max-width: 880px; margin-top: -40px;
 }
 .slide.closing .body strong { font-weight: 600; }
 
 /* ---------- CTA ---------- */
 .slide.cta { justify-content: center; }
-.slide.cta .title { font-size: 78px; max-width: 820px; margin-top: -60px; }
-.slide.cta .lead  { margin-top: 44px; font-size: 32px; max-width: 740px; }
+.slide.cta .title { font-size: calc(78px * var(--ts, 1)); max-width: 820px; margin-top: -60px; }
+.slide.cta .lead  { margin-top: 44px; font-size: calc(32px * var(--fs, 1)); max-width: 740px; }
 .slide.cta .hint {
   margin-top: 90px; display: inline-flex; align-items: center; gap: 18px;
   font: 500 20px/1 var(--font-body); letter-spacing: 0.18em; text-transform: uppercase; color: var(--cozy-brown);

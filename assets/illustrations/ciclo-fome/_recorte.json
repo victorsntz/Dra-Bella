@@ -1,0 +1,68 @@
+{
+ "assets/illustrations/ciclo-fome/01-ciclo.svg": {
+  "mtime": 1793483515071.4585,
+  "r": {
+   "w": 520,
+   "h": 900,
+   "x": 55,
+   "y": 69,
+   "bw": 451,
+   "bh": 803
+  }
+ },
+ "assets/illustrations/ciclo-fome/02-fases.svg": {
+  "mtime": 1793483515072.8066,
+  "r": {
+   "w": 888,
+   "h": 440,
+   "x": 60,
+   "y": 55,
+   "bw": 679,
+   "bh": 341
+  }
+ },
+ "assets/illustrations/ciclo-fome/03-duas-fases.svg": {
+  "mtime": 1793483515072.8066,
+  "r": {
+   "w": 488,
+   "h": 370,
+   "x": 94,
+   "y": 35,
+   "bw": 301,
+   "bh": 301
+  }
+ },
+ "assets/illustrations/ciclo-fome/04-doce.svg": {
+  "mtime": 1793483515072.8066,
+  "r": {
+   "w": 488,
+   "h": 370,
+   "x": 20,
+   "y": 59,
+   "bw": 436,
+   "bh": 282
+  }
+ },
+ "assets/illustrations/ciclo-fome/05-retencao.svg": {
+  "mtime": 1793483515072.8066,
+  "r": {
+   "w": 888,
+   "h": 440,
+   "x": 93,
+   "y": 107,
+   "bw": 723,
+   "bh": 255
+  }
+ },
+ "assets/illustrations/ciclo-fome/06-semana.svg": {
+  "mtime": 1793483515072.8066,
+  "r": {
+   "w": 888,
+   "h": 440,
+   "x": 34,
+   "y": 104,
+   "bw": 827,
+   "bh": 271
+  }
+ }
+}

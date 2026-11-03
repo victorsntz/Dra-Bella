@@ -1,0 +1,68 @@
+{
+ "assets/illustrations/caneta-acompanhamento/01-caneta-balanca.svg": {
+  "mtime": 1793483515068.593,
+  "r": {
+   "w": 520,
+   "h": 900,
+   "x": 102,
+   "y": 17,
+   "bw": 419,
+   "bh": 794
+  }
+ },
+ "assets/illustrations/caneta-acompanhamento/02-caneta-cerebro.svg": {
+  "mtime": 1793483515069.8494,
+  "r": {
+   "w": 888,
+   "h": 440,
+   "x": 39,
+   "y": 57,
+   "bw": 821,
+   "bh": 318
+  }
+ },
+ "assets/illustrations/caneta-acompanhamento/03-o-que-faz.svg": {
+  "mtime": 1793483515069.8494,
+  "r": {
+   "w": 488,
+   "h": 370,
+   "x": 44,
+   "y": 24,
+   "bw": 436,
+   "bh": 318
+  }
+ },
+ "assets/illustrations/caneta-acompanhamento/04-o-que-nao-faz.svg": {
+  "mtime": 1793483515069.8494,
+  "r": {
+   "w": 488,
+   "h": 370,
+   "x": 0,
+   "y": 25,
+   "bw": 460,
+   "bh": 335
+  }
+ },
+ "assets/illustrations/caneta-acompanhamento/05-quando-para.svg": {
+  "mtime": 1793483515069.8494,
+  "r": {
+   "w": 888,
+   "h": 440,
+   "x": 37,
+   "y": 75,
+   "bw": 818,
+   "bh": 349
+  }
+ },
+ "assets/illustrations/caneta-acompanhamento/06-metodo.svg": {
+  "mtime": 1793483515069.8494,
+  "r": {
+   "w": 888,
+   "h": 440,
+   "x": 364,
+   "y": 0,
+   "bw": 466,
+   "bh": 440
+  }
+ }
+}

@@ -32,6 +32,7 @@ const html = `<!doctype html>
 <title>${outName === "capas" ? "Lote de carrosséis" : "Carrosséis · " + esc(outName)}</title>
 <link rel="stylesheet" href="brand/brand.css">
 <link rel="stylesheet" href="templates/slide.css">
+<script src="templates/fit.js"></script>
 <style>
   :root { --bg: #ECE8E1; --fg: #362D28; --mu: #6F6356; --ln: #CFCABF; --card: #F6F4F0; }
   @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg: #2A2420; --fg: #E6E3DC; --mu: #ABA597; --ln: #4A403A; --card: #362D28; color-scheme: dark; } }
@@ -73,5 +74,6 @@ for (const it of ["brand.css", "fonts", "profile.jpg", "logo.png", "logo-light.p
   try { await fs.cp(path.join(ROOT, "brand", it), path.join(outDir, "brand", it), { recursive: true }); } catch {}
 }
 await fs.cp(path.join(ROOT, "templates", "slide.css"), path.join(outDir, "templates", "slide.css"));
+await fs.cp(path.join(ROOT, "templates", "fit.js"), path.join(outDir, "templates", "fit.js"));
 for (const n of names) { try { await fs.cp(path.join(ROOT, "assets", "illustrations", n), path.join(outDir, "assets", "illustrations", n), { recursive: true }); } catch {} }
 console.log(`✓ build/${outName}/index.html (${docs.length} carrosséis, pasta completa)`);

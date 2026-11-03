@@ -28,6 +28,7 @@ const palette = [
 const html = `<title>${name === "musculo-remedio" ? "Design System Dra. Bella" : "Carrossel " + doc.title.replace(/\*\*/g, "")}</title>
 <link rel="stylesheet" href="brand/brand.css">
 <link rel="stylesheet" href="templates/slide.css">
+<script src="templates/fit.js"></script>
 <style>
   /* página de revisão: cartela de atelier, slides como peças sobre a mesa */
   :root {

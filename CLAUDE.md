@@ -57,6 +57,22 @@ as, ao, ou, se, me, te), e nenhum bloco termina com uma palavra sozinha na últi
 - A cola deixa grupos maiores ("de·um·terço"): em capa estreita isso pode estourar a largura; o
   check acusa "texto cortado na largura" e aí você quebra à mão ou desce um degrau o título.
 
+## Proporção e respiro (lição de 03/nov/2026)
+
+O Victor achou os slides com respiro mal usado: diagrama acabando nos dois terços do slide,
+pergunta final pequena no meio, ilustração com borda vazia. Isso agora é automático:
+
+- `templates/fit.js` roda em cada slide (no render e nas páginas de revisão) antes da foto. Amplia
+  a ilustração pelo desenho de fato (o render mede e guarda em `assets/illustrations/<slug>/_recorte.json`),
+  leva as pílulas junto, cresce a figura do diagrama com a sobra, sobe a letra até o maior degrau que
+  cabe e divide o que sobrar como respiro. Capa não passa pelo encaixe.
+- Não volte a fixar tamanho de letra no CSS sem a variável (`--fs`, `--ts`), nem tire o fit.js das
+  páginas: sem ele a página de revisão mostra outra coisa que o JPG.
+- Ao desenhar cena nova, desenhe o assunto ocupando a cena; a borda vazia o encaixe corta, mas a
+  ampliação tem teto de 1,3x pra não engrossar o traço.
+- Ainda assim olhe a folha: pílula de coluna (edge) não muda de lugar na horizontal, então confira se
+  ela continua apontando pra peça certa.
+
 ## Título: quanto cabe
 
 Cherston é estreita só na aparência: a 112 px (padrão da capa, largura 510) cabem uns 8

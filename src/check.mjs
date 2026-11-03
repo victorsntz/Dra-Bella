@@ -45,6 +45,7 @@ for (const name of names) {
   try { await fs.access(html); } catch { console.log(`✗ ${name}: build/${name}/index.html não existe (rode npm run render ${name})`); problems++; continue; }
   await page.goto(pathToFileURL(html).href);
   await page.evaluate(() => document.fonts.ready);
+  await page.waitForFunction(() => document.documentElement.dataset.fit === "done", null, { timeout: 30000 }).catch(() => {});
   const report = await page.evaluate(({ H, RESERVE, TOL }) => {
     const out = [];
     document.querySelectorAll(".slide").forEach((slide, i) => {

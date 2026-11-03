@@ -1,0 +1,68 @@
+{
+ "assets/illustrations/intestino-fome/01-intestino-cerebro.svg": {
+  "mtime": 1793483515080.2878,
+  "r": {
+   "w": 520,
+   "h": 900,
+   "x": 63,
+   "y": 42,
+   "bw": 434,
+   "bh": 819
+  }
+ },
+ "assets/illustrations/intestino-fome/02-eixo.svg": {
+  "mtime": 1793483515081.2144,
+  "r": {
+   "w": 888,
+   "h": 440,
+   "x": 64,
+   "y": 72,
+   "bw": 793,
+   "bh": 307
+  }
+ },
+ "assets/illustrations/intestino-fome/03-saudavel.svg": {
+  "mtime": 1793483515081.2144,
+  "r": {
+   "w": 488,
+   "h": 370,
+   "x": 40,
+   "y": 23,
+   "bw": 442,
+   "bh": 325
+  }
+ },
+ "assets/illustrations/intestino-fome/04-inflamado.svg": {
+  "mtime": 1793483515081.2144,
+  "r": {
+   "w": 488,
+   "h": 370,
+   "x": 36,
+   "y": 23,
+   "bw": 446,
+   "bh": 329
+  }
+ },
+ "assets/illustrations/intestino-fome/05-gatilhos.svg": {
+  "mtime": 1793483515081.2144,
+  "r": {
+   "w": 420,
+   "h": 250,
+   "x": 19,
+   "y": 19,
+   "bw": 401,
+   "bh": 212
+  }
+ },
+ "assets/illustrations/intestino-fome/06-arvore.svg": {
+  "mtime": 1793483515081.2144,
+  "r": {
+   "w": 420,
+   "h": 300,
+   "x": 59,
+   "y": 21,
+   "bw": 194,
+   "bh": 270
+  }
+ }
+}

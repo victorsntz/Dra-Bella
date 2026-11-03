@@ -1,0 +1,68 @@
+{
+ "assets/illustrations/insulina-alta/01-pancreas-insulina.svg": {
+  "mtime": 1793483515079.2373,
+  "r": {
+   "w": 520,
+   "h": 900,
+   "x": 38,
+   "y": 189,
+   "bw": 471,
+   "bh": 595
+  }
+ },
+ "assets/illustrations/insulina-alta/02-guarda-energia.svg": {
+  "mtime": 1793483515080.2878,
+  "r": {
+   "w": 888,
+   "h": 440,
+   "x": 48,
+   "y": 145,
+   "bw": 828,
+   "bh": 238
+  }
+ },
+ "assets/illustrations/insulina-alta/03-resistencia.svg": {
+  "mtime": 1793483515080.2878,
+  "r": {
+   "w": 488,
+   "h": 370,
+   "x": 9,
+   "y": 11,
+   "bw": 480,
+   "bh": 359
+  }
+ },
+ "assets/illustrations/insulina-alta/04-dia-inteiro.svg": {
+  "mtime": 1793483515080.2878,
+  "r": {
+   "w": 488,
+   "h": 370,
+   "x": 18,
+   "y": 18,
+   "bw": 458,
+   "bh": 330
+  }
+ },
+ "assets/illustrations/insulina-alta/05-exame-normal.svg": {
+  "mtime": 1793483515080.2878,
+  "r": {
+   "w": 888,
+   "h": 440,
+   "x": 73,
+   "y": 134,
+   "bw": 763,
+   "bh": 232
+  }
+ },
+ "assets/illustrations/insulina-alta/06-raiz-hormonal.svg": {
+  "mtime": 1793483515080.2878,
+  "r": {
+   "w": 888,
+   "h": 440,
+   "x": 0,
+   "y": 107,
+   "bw": 836,
+   "bh": 279
+  }
+ }
+}

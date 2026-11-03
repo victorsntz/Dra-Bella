@@ -1,0 +1,68 @@
+{
+ "assets/illustrations/musculo-remedio/01-corpo-correndo.svg": {
+  "mtime": 1793483515082.3013,
+  "r": {
+   "w": 520,
+   "h": 900,
+   "x": 63,
+   "y": 53,
+   "bw": 410,
+   "bh": 723
+  }
+ },
+ "assets/illustrations/musculo-remedio/02-musculo-central.svg": {
+  "mtime": 1793483515084.1892,
+  "r": {
+   "w": 488,
+   "h": 370,
+   "x": 6,
+   "y": 28,
+   "bw": 482,
+   "bh": 313
+  }
+ },
+ "assets/illustrations/musculo-remedio/03-cerebro.svg": {
+  "mtime": 1793483515084.1892,
+  "r": {
+   "w": 888,
+   "h": 380,
+   "x": 81,
+   "y": 29,
+   "bw": 726,
+   "bh": 343
+  }
+ },
+ "assets/illustrations/musculo-remedio/04-gordura-mitocondria.svg": {
+  "mtime": 1793483515084.1892,
+  "r": {
+   "w": 508,
+   "h": 370,
+   "x": 20,
+   "y": 31,
+   "bw": 488,
+   "bh": 312
+  }
+ },
+ "assets/illustrations/musculo-remedio/05-inflamacao.svg": {
+  "mtime": 1793483515084.1892,
+  "r": {
+   "w": 888,
+   "h": 380,
+   "x": 40,
+   "y": 0,
+   "bw": 692,
+   "bh": 380
+  }
+ },
+ "assets/illustrations/musculo-remedio/06-figado-vaso.svg": {
+  "mtime": 1793483515084.1892,
+  "r": {
+   "w": 888,
+   "h": 380,
+   "x": 4,
+   "y": 36,
+   "bw": 851,
+   "bh": 343
+  }
+ }
+}

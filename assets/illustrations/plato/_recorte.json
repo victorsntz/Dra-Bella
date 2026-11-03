@@ -1,0 +1,68 @@
+{
+ "assets/illustrations/plato/01-balanca-parou.svg": {
+  "mtime": 1793483515086.4229,
+  "r": {
+   "w": 520,
+   "h": 900,
+   "x": 54,
+   "y": 122,
+   "bw": 412,
+   "bh": 627
+  }
+ },
+ "assets/illustrations/plato/02-esperado.svg": {
+  "mtime": 1793483515087.539,
+  "r": {
+   "w": 888,
+   "h": 440,
+   "x": 120,
+   "y": 109,
+   "bw": 692,
+   "bh": 262
+  }
+ },
+ "assets/illustrations/plato/03-o-que-acontece.svg": {
+  "mtime": 1793483515087.539,
+  "r": {
+   "w": 488,
+   "h": 370,
+   "x": 15,
+   "y": 56,
+   "bw": 473,
+   "bh": 295
+  }
+ },
+ "assets/illustrations/plato/04-balanca-x-corpo.svg": {
+  "mtime": 1793483515087.539,
+  "r": {
+   "w": 488,
+   "h": 370,
+   "x": 0,
+   "y": 25,
+   "bw": 450,
+   "bh": 306
+  }
+ },
+ "assets/illustrations/plato/05-cortar-mais.svg": {
+  "mtime": 1793483515087.539,
+  "r": {
+   "w": 888,
+   "h": 440,
+   "x": 94,
+   "y": 64,
+   "bw": 762,
+   "bh": 312
+  }
+ },
+ "assets/illustrations/plato/06-o-que-fazer.svg": {
+  "mtime": 1793483515087.539,
+  "r": {
+   "w": 888,
+   "h": 440,
+   "x": 364,
+   "y": 0,
+   "bw": 320,
+   "bh": 440
+  }
+ }
+}
